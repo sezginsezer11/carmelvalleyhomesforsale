@@ -1,0 +1,588 @@
+{
+ "slug": "lexington",
+ "name": "Lexington",
+ "path": "/lexington-carmel-valley-homes-for-sale/",
+ "type": "sfr",
+ "parent_name": "Neighborhoods",
+ "parent_url": "/carmel-valley-neighborhoods/",
+ "api_community": "Lexington",
+ "seo": {
+  "title": "Lexington Homes for Sale | Carmel Valley, San Diego 92130",
+  "description": "Lexington homes for sale in Carmel Valley 92130: live listings, sold prices by bedroom, school area, map and FAQs.",
+  "jsonld_description": "Lexington single-family homes for sale in Carmel Country Highlands, Carmel Valley, San Diego. 5-year median sale $3.27M."
+ },
+ "geo": {
+  "lat": 32.92851,
+  "lng": -117.201067
+ },
+ "boundary": [
+  [
+   [
+    32.93105,
+    -117.19704
+   ],
+   [
+    32.93089,
+    -117.1965
+   ],
+   [
+    32.93067,
+    -117.19577
+   ],
+   [
+    32.93035,
+    -117.19538
+   ],
+   [
+    32.92939,
+    -117.19539
+   ],
+   [
+    32.92939,
+    -117.19445
+   ],
+   [
+    32.92911,
+    -117.19297
+   ],
+   [
+    32.9289,
+    -117.19185
+   ],
+   [
+    32.92888,
+    -117.19096
+   ],
+   [
+    32.92967,
+    -117.19128
+   ],
+   [
+    32.93214,
+    -117.19621
+   ],
+   [
+    32.93223,
+    -117.19644
+   ],
+   [
+    32.9322,
+    -117.19677
+   ],
+   [
+    32.93274,
+    -117.1974
+   ],
+   [
+    32.93291,
+    -117.19772
+   ],
+   [
+    32.93317,
+    -117.19865
+   ],
+   [
+    32.9331,
+    -117.19925
+   ],
+   [
+    32.93354,
+    -117.20046
+   ],
+   [
+    32.93348,
+    -117.20097
+   ],
+   [
+    32.93359,
+    -117.20115
+   ],
+   [
+    32.93565,
+    -117.20354
+   ],
+   [
+    32.9361,
+    -117.20513
+   ],
+   [
+    32.93594,
+    -117.20619
+   ],
+   [
+    32.93552,
+    -117.20736
+   ],
+   [
+    32.93557,
+    -117.20882
+   ],
+   [
+    32.93485,
+    -117.20913
+   ],
+   [
+    32.93472,
+    -117.20857
+   ],
+   [
+    32.93465,
+    -117.20592
+   ],
+   [
+    32.9346,
+    -117.20481
+   ],
+   [
+    32.93442,
+    -117.20416
+   ],
+   [
+    32.93405,
+    -117.20355
+   ],
+   [
+    32.93375,
+    -117.20327
+   ],
+   [
+    32.93312,
+    -117.20254
+   ],
+   [
+    32.93189,
+    -117.20031
+   ],
+   [
+    32.93166,
+    -117.19986
+   ],
+   [
+    32.93182,
+    -117.19909
+   ],
+   [
+    32.93193,
+    -117.19907
+   ],
+   [
+    32.93218,
+    -117.19893
+   ],
+   [
+    32.9316,
+    -117.19777
+   ],
+   [
+    32.93153,
+    -117.19763
+   ],
+   [
+    32.93135,
+    -117.19701
+   ],
+   [
+    32.93133,
+    -117.19693
+   ],
+   [
+    32.93105,
+    -117.19704
+   ]
+  ],
+  [
+   [
+    32.92627,
+    -117.20103
+   ],
+   [
+    32.9263,
+    -117.20115
+   ],
+   [
+    32.92695,
+    -117.20093
+   ],
+   [
+    32.92703,
+    -117.20107
+   ],
+   [
+    32.92702,
+    -117.20147
+   ],
+   [
+    32.92639,
+    -117.20154
+   ],
+   [
+    32.92609,
+    -117.20165
+   ],
+   [
+    32.92576,
+    -117.20177
+   ],
+   [
+    32.92565,
+    -117.20185
+   ],
+   [
+    32.92528,
+    -117.202
+   ],
+   [
+    32.9249,
+    -117.20221
+   ],
+   [
+    32.92449,
+    -117.2024
+   ],
+   [
+    32.92453,
+    -117.20263
+   ],
+   [
+    32.92501,
+    -117.20368
+   ],
+   [
+    32.92521,
+    -117.20412
+   ],
+   [
+    32.92446,
+    -117.20457
+   ],
+   [
+    32.92451,
+    -117.20471
+   ],
+   [
+    32.92461,
+    -117.205
+   ],
+   [
+    32.9246,
+    -117.20546
+   ],
+   [
+    32.92449,
+    -117.20572
+   ],
+   [
+    32.92425,
+    -117.20618
+   ],
+   [
+    32.92362,
+    -117.20578
+   ],
+   [
+    32.92303,
+    -117.20594
+   ],
+   [
+    32.92249,
+    -117.20543
+   ],
+   [
+    32.92223,
+    -117.20429
+   ],
+   [
+    32.92258,
+    -117.20336
+   ],
+   [
+    32.92323,
+    -117.20377
+   ],
+   [
+    32.92386,
+    -117.20415
+   ],
+   [
+    32.92441,
+    -117.20397
+   ],
+   [
+    32.92356,
+    -117.20174
+   ],
+   [
+    32.92309,
+    -117.20182
+   ],
+   [
+    32.92265,
+    -117.20176
+   ],
+   [
+    32.92218,
+    -117.20123
+   ],
+   [
+    32.92231,
+    -117.2004
+   ],
+   [
+    32.92254,
+    -117.1999
+   ],
+   [
+    32.92288,
+    -117.19964
+   ],
+   [
+    32.92325,
+    -117.2002
+   ],
+   [
+    32.92369,
+    -117.20025
+   ],
+   [
+    32.92422,
+    -117.20005
+   ],
+   [
+    32.92468,
+    -117.20111
+   ],
+   [
+    32.92614,
+    -117.20053
+   ],
+   [
+    32.92627,
+    -117.20103
+   ]
+  ]
+ ],
+ "hero": {
+  "eyebrow": "Carmel Country Highlands &middot; Single-family",
+  "h1": "Lexington Homes for Sale",
+  "lead": "265 single-family homes built 1998&ndash;2003 in Carmel Country Highlands, in the Sage Canyon Elementary area. Live listings, real sold prices and what to know before you buy.",
+  "img": "",
+  "alt": ""
+ },
+ "facts": [
+  {
+   "icon": "price",
+   "value": "$2.6M&ndash;$3.88M",
+   "label": "Sold, 5 yrs"
+  },
+  {
+   "icon": "price",
+   "value": "$3.27M",
+   "label": "Median sale"
+  },
+  {
+   "icon": "units",
+   "value": "265",
+   "label": "Homes"
+  },
+  {
+   "icon": "built",
+   "value": "1998&ndash;2003",
+   "label": "Built"
+  },
+  {
+   "icon": "sqft",
+   "value": "2,945&ndash;4,930",
+   "label": "Sq ft"
+  },
+  {
+   "icon": "sqft",
+   "value": "8,448 sq ft",
+   "label": "Median lot"
+  },
+  {
+   "icon": "time",
+   "value": "9 days",
+   "label": "Median on market"
+  }
+ ],
+ "location_intro": "Lexington is in <a href=\"/carmel-country-highlands-homes-for-sale/\">Carmel Country Highlands</a>. Its closest neighbors are Steeplechase, Belmont, Breakers.",
+ "schools": [
+  {
+   "level": "Elementary",
+   "name": "Sage Canyon Elementary",
+   "district": "Del Mar Union School District"
+  },
+  {
+   "level": "Middle School",
+   "name": "Confirm with the district",
+   "district": "San Dieguito Union High School District"
+  },
+  {
+   "level": "High School",
+   "name": "Torrey Pines High",
+   "district": "San Dieguito Union High School District (Canyon Crest Academy and San Dieguito Academy by lottery)"
+  }
+ ],
+ "nearby": [
+  [
+   "Steeplechase",
+   "next door"
+  ],
+  [
+   "Belmont",
+   "next door"
+  ],
+  [
+   "Breakers",
+   "next door"
+  ],
+  [
+   "Bridle Ridge",
+   "next door"
+  ],
+  [
+   "Highlands Village",
+   "0.1 mi"
+  ],
+  [
+   "Alta Del Mar",
+   "0.1 mi"
+  ]
+ ],
+ "glance": {
+  "h2": "What a Lexington Home Costs by Bedrooms",
+  "lede": "Closed single-family sales in Lexington over the last 5 years, by bedroom count.",
+  "cards": [
+   {
+    "beds": 4,
+    "count": "",
+    "size": "",
+    "median": "",
+    "range": ""
+   },
+   {
+    "beds": 5,
+    "count": "",
+    "size": "",
+    "median": "",
+    "range": ""
+   },
+   {
+    "beds": 6,
+    "count": "",
+    "size": "",
+    "median": "",
+    "range": ""
+   }
+  ],
+  "ratio": "5-bedroom homes made up 12 of the 26 sales."
+ },
+ "life": {
+  "lead": "Lexington is a neighborhood of 265 homes built 1998&ndash;2003 in Carmel Country Highlands. Homes run 2,945&ndash;4,930 sq ft on lots around 8,448 sq ft, and about 5 sell each year.",
+  "reasons": [
+   [
+    "Big floor plans.",
+    "The median home here has 4,537 sq ft, and 5-bedroom homes are the most common."
+   ],
+   [
+    "Bigger lots.",
+    "The median lot is about 8,448 sq ft, larger than the Carmel Valley median of 6,979."
+   ],
+   [
+    "School area.",
+    "Homes here are in the <a href=\"/sage-canyon-elementary-homes-for-sale/\">Sage Canyon Elementary</a> attendance area."
+   ],
+   [
+    "Homes sell quickly.",
+    "The median home sold in 9 days, versus 10 across Carmel Valley."
+   ]
+  ]
+ },
+ "similar": {
+  "h2": "Neighborhoods Near Lexington",
+  "intro": "Worth comparing if you like Lexington's location.",
+  "cards": [
+   {
+    "href": "/carmel-country-highlands-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Steeplechase",
+    "meta": "13 sales in 5 yrs &middot; median $2.35M",
+    "desc": "Next door in Carmel Country Highlands.",
+    "cta": "Carmel Country Highlands guide"
+   },
+   {
+    "href": "/carmel-country-highlands-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Belmont",
+    "meta": "28 sales in 5 yrs &middot; median $2.64M",
+    "desc": "Next door in Carmel Country Highlands.",
+    "cta": "Carmel Country Highlands guide"
+   },
+   {
+    "href": "/carmel-country-highlands-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Breakers",
+    "meta": "8 sales in 5 yrs &middot; median $2.68M",
+    "desc": "Next door in Carmel Country Highlands.",
+    "cta": "Carmel Country Highlands guide"
+   }
+  ]
+ },
+ "fit": {
+  "good": [
+   [
+    "Buyers who want space",
+    "2,945&ndash;4,930 sq ft homes with 4, 5, 6 bedrooms."
+   ],
+   [
+    "School-focused families",
+    "Sage Canyon Elementary for elementary, Torrey Pines High for high school."
+   ],
+   [
+    "Buyers who like predictable comps",
+    "About 5 sales a year, so pricing is easy to check."
+   ]
+  ],
+  "weigh": [
+   [
+    "Prices above the Carmel Valley median",
+    "Lexington's 5-year median is $3.27M, versus $2.5M for all Carmel Valley houses."
+   ],
+   [
+    "Homes are 20+ years old",
+    "Check roofs, windows and HVAC, and budget for updates in homes that haven't been remodeled."
+   ],
+   [
+    "Move fast",
+    "Half of all homes sell within 9 days. Get pre-approved before you start touring."
+   ]
+  ]
+ },
+ "faq_h2": "Lexington Homes: Common Questions",
+ "faq": [
+  {
+   "q": "How much do homes in Lexington cost?",
+   "a": "<p>Over the last 5 years, 26 single-family homes in Lexington sold between $2.6M and $3.88M, with a median of $3.27M. See the price-by-bedroom cards and recent sales on this page for current numbers.</p>"
+  },
+  {
+   "q": "How many homes are in Lexington?",
+   "a": "<p>Lexington has about 265 homes, built 1998 to 2003.</p>"
+  },
+  {
+   "q": "What school area is Lexington in?",
+   "a": "<p>Lexington is in the Sage Canyon Elementary attendance area (Del Mar Union School District). High school is Torrey Pines High (San Dieguito Union HSD), with Canyon Crest Academy and San Dieguito Academy available by lottery. School boundaries change, so confirm any address with the district before you buy.</p>"
+  },
+  {
+   "q": "How fast do homes sell in Lexington?",
+   "a": "<p>The median Lexington home sold in 9 days on market over the last 5 years. Well-priced homes often go under contract in the first week.</p>"
+  },
+  {
+   "q": "Where is Lexington in Carmel Valley?",
+   "a": "<p>Lexington is in Carmel Country Highlands, next to Steeplechase, Belmont, Breakers. See the map on this page for its boundary.</p>"
+  }
+ ],
+ "contact_lead": "Buying or selling in Lexington? I track every sale here and can tell you what a home is really worth, with the comps to back it up."
+}

@@ -1,0 +1,336 @@
+#!/usr/bin/env python3
+"""Build a school-area page: single-family homes inside one elementary attendance area.
+
+    python3 tools/build_school.py "Sage Canyon Elementary"
+
+Sales are matched to the school by their map location (tools/schools.py), so the
+numbers cover exactly the homes inside the attendance boundary. Shell (CSS, masthead,
+contact, footer) comes from tools/community-template.html. Stdlib only.
+"""
+import collections
+import datetime
+import html
+import json
+import os
+import re
+import statistics
+import sys
+
+TOOLS = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(TOOLS)
+sys.path.insert(0, TOOLS)
+from sold_data import load_sales  # noqa: E402
+from schools import elementary_for, school_polygons, DMUSD, DMUSD_URL, SDUHSD_URL  # noqa: E402
+from make_neighborhood import NEIGHBORHOOD_PAGES, SCHOOL_PAGES, slug  # noqa: E402
+
+SITE = "https://carmelvalleyhomesforsale.com"
+e = html.escape
+
+
+def years_ago(n):
+    t = datetime.date.today()
+    try:
+        return t.replace(year=t.year - n)
+    except ValueError:
+        return t.replace(year=t.year - n, day=28)
+
+
+def short(n):
+    return "${}M".format(("%.2f" % (n / 1e6 + 1e-9)).rstrip("0").rstrip(".")) if n >= 1e6 else "${:,.0f}K".format(n / 1e3)
+
+
+def money(n):
+    return "${:,.0f}".format(n)
+
+
+def med(v):
+    v = [x for x in v if x is not None]
+    return statistics.median(v) if v else None
+
+
+def fmt_date(d):
+    return f"{d.strftime('%b')} {d.day}, {d.year}"
+
+
+def build(school):
+    path = SCHOOL_PAGES[school]
+    short_name = school.replace(" Elementary", "")
+    rows = [r for r in load_sales() if elementary_for(r.get("lat"), r.get("lng")) == school]
+    all5 = [r for r in load_sales() if r["_d"] >= years_ago(5)]
+    five = [r for r in rows if r["_d"] >= years_ago(5)]
+    t12 = [r for r in rows if r["_d"] >= years_ago(1)]
+    if len(five) < 10:
+        raise SystemExit(f"{school}: only {len(five)} sales in 5 years")
+    m5, cv5 = med([r["close_price"] for r in five]), med([r["close_price"] for r in all5])
+    psf = med([r["close_price"] / r["living_area"] for r in five if r.get("living_area")])
+    dom = med([r.get("days_on_market") for r in five])
+    rings = school_polygons(school)
+    pts = [p for r in rings for p in r]
+    lat, lng = sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)
+    today = datetime.date.today()
+    stamp = f'{today.strftime("%B")} {today.day}, {today.year}'
+
+    # neighborhoods inside the area (by where their sales are)
+    groups = collections.defaultdict(list)
+    for r in five:
+        groups[(r.get("community_name") or "").strip()].append(r)
+    unnamed = len(groups.pop("", []))
+    nbh = sorted(groups.items(), key=lambda kv: -len(kv[1]))
+    nb_rows = []
+    for n, g in nbh:
+        link = NEIGHBORHOOD_PAGES.get(n)
+        name_html = f'<a href="{link}">{e(n)}</a>' if link else e(n)
+        nb_rows.append(f'<tr><td class="nm">{name_html}</td><td class="num">{len(g)}</td>'
+                       f'<td class="num">{short(med([r["close_price"] for r in g]))}</td></tr>')
+
+    # price by bedroom
+    beds = collections.defaultdict(list)
+    for r in five:
+        if r.get("beds_total"):
+            beds[r["beds_total"]].append(r)
+    bed_cards = []
+    top = max(len(g) for g in beds.values())
+    for b in sorted(beds):
+        g = beds[b]
+        if len(g) < 3:
+            continue
+        p = [r["close_price"] for r in g]
+        bed_cards.append(f'<div class="bc"><div class="bc-h"><h3>{b} bedrooms</h3><b>{short(med(p))}</b></div>'
+                         f'<div class="bc-bar"><i style="width:{round(100 * len(g) / top)}%"></i></div>'
+                         f'<div class="bc-m">{len(g)} sales &middot; {short(min(p))}&ndash;{short(max(p))}</div></div>')
+
+    recent = "".join(
+        f'<tr><td class="addr">{e(r.get("address") or "")}<span>{e(r.get("community_name") or "")}</span></td>'
+        f'<td class="num">{r.get("beds_total") or "&mdash;"} / {r.get("baths_total") or "&mdash;"}</td>'
+        f'<td class="num">{("{:,}".format(r["living_area"]) if r.get("living_area") else "&mdash;")}</td>'
+        f'<td class="num price">{money(r["close_price"])}</td><td class="num">{fmt_date(r["_d"])}</td></tr>' for r in rows[:10])
+
+    biggest = nbh[0][0] if nbh else ""
+    faqs = [
+        (f"How much does a house in the {school} area cost?",
+         f"Over the last 5 years, {len(five)} single-family homes in the {school} attendance area sold at a median of {money(m5)} "
+         f"(about {money(psf)} per sq ft), versus {money(cv5)} for all Carmel Valley houses."
+         + (f" In the last 12 months, {len(t12)} sold at a median of {money(med([r['close_price'] for r in t12]))}." if t12 else "")),
+        (f"Which neighborhoods are in the {school} area?",
+         f"Based on where homes have sold, the area includes {', '.join(n for n, _ in nbh[:8])}"
+         + (", and more" if len(nbh) > 8 else "") + f". {biggest} has had the most sales. Boundaries can split a neighborhood, so check the exact address."),
+        (f"What middle and high school go with {school}?",
+         "High school is Torrey Pines High (San Dieguito Union HSD); Canyon Crest Academy and San Dieguito Academy are available by lottery. "
+         "Middle school depends on the address, so confirm it with San Dieguito Union HSD."),
+        (f"How do I confirm a home is in the {school} boundary?",
+         f"Use the {DMUSD} school locator with the exact address before you make an offer. Boundaries change, and this map is for research only."),
+        (f"How fast do homes sell in the {school} area?",
+         f"The median home sold in {round(dom)} days on market over the last 5 years. Homes in sought-after school areas often go under contract in the first week."),
+    ]
+    faq_html = "\n".join(f'      <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faqs)
+    ld = [
+        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": f"{school} Area Homes", "item": SITE + path}]},
+        {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]},
+    ]
+    jsonld = "\n".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
+
+    tpl = open(os.path.join(TOOLS, "community-template.html"), encoding="utf-8").read()
+    css = re.search(r"<style>(.*?)</style>", tpl, re.S).group(1)
+    masthead = tpl[tpl.index("<!-- ============ PRIMARY NAVIGATION"):tpl.index("</header>") + len("</header>")]
+    contact_footer = tpl[tpl.index("<!-- ============ CONTACT BLOCK"):tpl.index("</footer>") + len("</footer>")]
+    contact_footer = contact_footer.replace("Thinking About {{name}}?", f"Looking in the {short_name} Area?").replace(
+        "{{contact_lead}}", f"Tell me your budget and must-haves and I&rsquo;ll send you every home that comes up inside the {school} boundary, including ones that haven&rsquo;t hit the market yet.")
+    hide_js = tpl[tpl.rindex("<script>"):tpl.rindex("</script>") + len("</script>")]
+
+    title = f"Homes for Sale in the {school} Area | Carmel Valley 92130"
+    desc = f"Carmel Valley houses in the {school} attendance area: median {short(m5)}, neighborhoods in the boundary, sold prices and a map."
+    assert len(desc) <= 160, len(desc)
+    mapdata = json.dumps({"rings": rings}, separators=(",", ":"))
+
+    page = f'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{e(title)}</title>
+<meta name="description" content="{e(desc)}">
+<link rel="canonical" href="{SITE}{path}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Carmel Valley Homes for Sale">
+<meta property="og:title" content="{e(title)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="{SITE}{path}">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="{SITE}{path}index.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="/assets/rs-embed.css?v=3">
+<script src="/assets/rs-embed.js?v=3" defer></script>
+<style>{css}
+  /* ============ SCHOOL AREA ============ */
+  .sa-hero{{padding:28px 0 8px}}
+  .sa-hero .eyebrow{{display:inline-block;font-size:12.5px;color:var(--lake);background:#e6f0f6;padding:5px 12px;border-radius:6px;font-weight:700;margin-bottom:12px}}
+  .sa-hero h1{{font-size:clamp(26px,4vw,42px);font-weight:800;line-height:1.12;letter-spacing:-.02em;max-width:820px}}
+  .sa-hero p{{font-size:16px;color:#3f4852;margin-top:12px;max-width:720px}}
+  .sa-map{{position:relative;z-index:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}}
+  #saMap{{height:min(56vh,480px);background:#e8ecef}}
+  .note{{font-size:13px;color:var(--label);margin-top:10px}}
+  .two{{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}}
+  .tbl{{width:100%;border-collapse:collapse;font-size:15px}}
+  .tbl th{{text-align:left;font-size:12.5px;color:var(--label);font-weight:600;padding:0 8px 8px;border-bottom:1px solid var(--line)}}
+  .tbl td{{padding:11px 8px;border-bottom:1px solid var(--mist);vertical-align:top}}
+  .tbl .num,.tbl th.num{{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}}
+  .tbl .nm{{font-weight:700}}
+  .tbl .addr{{font-weight:600}}
+  .tbl .addr span{{display:block;font-weight:400;font-size:12.5px;color:var(--label)}}
+  .tbl .price{{font-weight:700}}
+  .bcs{{display:grid;gap:10px}}
+  .bc{{border:1px solid var(--line);border-radius:12px;padding:12px 14px}}
+  .bc-h{{display:flex;justify-content:space-between;align-items:baseline}}
+  .bc h3{{font-size:15.5px;font-weight:700}}
+  .bc-bar{{height:6px;background:#e6f0f6;border-radius:3px;margin:8px 0 6px}}
+  .bc-bar i{{display:block;height:6px;background:var(--lake);border-radius:3px}}
+  .bc-m{{font-size:13px;color:var(--label)}}
+  .path{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}}
+  .path div{{border:1px solid var(--line);border-radius:12px;padding:14px}}
+  .path .lv{{font-size:12px;font-weight:700;color:var(--lake);text-transform:uppercase;letter-spacing:.04em}}
+  .path .sn{{font-size:16px;font-weight:700;margin-top:4px}}
+  .path .sd{{font-size:13px;color:var(--label);margin-top:2px}}
+  .h3{{font-size:18px;font-weight:800;margin-bottom:10px}}
+  .scroll{{overflow-x:auto}}
+  @media(max-width:760px){{
+    .two{{grid-template-columns:minmax(0,1fr)}}
+    .path{{grid-template-columns:minmax(0,1fr)}}
+    .tbl{{font-size:13.5px}}
+    .tbl td{{padding:10px 5px}}
+    #saMap{{height:52vh}}
+  }}
+</style>
+</head>
+<body>
+
+{masthead}
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="wrap"><a href="/">Home</a><span class="sep">/</span><span class="current">{e(school)} Area</span></div>
+</nav>
+
+<section class="sa-hero" style="padding-left:0;padding-right:0">
+  <div class="wrap">
+    <span class="eyebrow">{DMUSD} &middot; Carmel Valley</span>
+    <h1>Homes for Sale in the {e(school)} Area</h1>
+    <p>Single-family homes inside the {e(school)} attendance boundary: which neighborhoods are in it, what houses sell for, and how to confirm an address.</p>
+  </div>
+</section>
+
+<section class="facts" style="padding-top:12px">
+  <div class="wrap facts-grid">
+    <div class="fact"><div class="num">{short(m5)}</div><div class="lbl">Median sale, 5 yrs</div></div>
+    <div class="fact"><div class="num">{len(t12)}</div><div class="lbl">Sold, last 12 months</div></div>
+    <div class="fact"><div class="num">{money(psf)}</div><div class="lbl">Median per sq ft</div></div>
+    <div class="fact"><div class="num">{round(dom)} days</div><div class="lbl">Median on market</div></div>
+  </div>
+</section>
+
+<section id="map-section" style="padding-top:28px;padding-bottom:20px">
+  <div class="wrap">
+    <h2 class="h3">The {e(short_name)} attendance boundary</h2>
+    <div class="sa-map"><div id="saMap" role="img" aria-label="Map of the {e(school)} attendance boundary in Carmel Valley"></div></div>
+    <p class="note">Boundary from the {DMUSD} attendance map. Boundaries change: confirm any address with <a href="{DMUSD_URL}" target="_blank" rel="noopener">{DMUSD}</a> before you buy.</p>
+  </div>
+</section>
+
+<section class="listings" id="listings" style="padding-top:12px;padding-bottom:16px">
+  <div class="wrap">
+    <div class="listings-head"><h2 class="listings-title">Carmel Valley houses for sale now</h2><span class="listings-tag">Live MLS</span></div>
+    <p class="note" style="margin:-6px 0 12px">This search shows all of 92130. Ask me which listings are inside the {e(short_name)} boundary.</p>
+    <div class="rs-embed" style="max-width:1100px;margin:0 auto">
+      <iframe data-src="https://sezsezer.realscout.com/homesearch/map?ptype=SFR&amp;geo_type=zipcode&amp;geo_id=92130&amp;for_sale=1&amp;for_rent=0" title="Carmel Valley Single-Family Homes for Sale"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="neighborhoods">
+  <div class="wrap two">
+    <div>
+      <h2 class="h3">Neighborhoods in the {e(short_name)} area</h2>
+      <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 5 yrs</th><th class="num">Median</th></tr></thead>
+      <tbody>{"".join(nb_rows)}</tbody></table>
+      <p class="note">From where homes sold in the last 5 years.{f" {unnamed} more sales had no neighborhood name." if unnamed else ""}</p>
+    </div>
+    <div id="prices">
+      <h2 class="h3">Prices by bedroom</h2>
+      <div class="bcs">{"".join(bed_cards)}</div>
+      <p class="note">Single-family sales inside the boundary, last 5 years. As of {stamp}.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sold" style="padding-top:8px">
+  <div class="wrap">
+    <h2 class="h3">Recently sold in the {e(short_name)} area</h2>
+    <div class="scroll"><table class="tbl"><thead><tr><th>Address</th><th class="num">Bd / Ba</th><th class="num">Sq ft</th><th class="num">Price</th><th class="num">Closed</th></tr></thead>
+    <tbody>{recent}</tbody></table></div>
+  </div>
+</section>
+
+<section id="schools" style="padding-top:8px">
+  <div class="wrap">
+    <h2 class="h3">School path</h2>
+    <div class="path">
+      <div><div class="lv">Elementary</div><div class="sn">{e(school)}</div><div class="sd">{DMUSD}</div></div>
+      <div><div class="lv">Middle</div><div class="sn">Confirm by address</div><div class="sd">San Dieguito Union HSD</div></div>
+      <div><div class="lv">High</div><div class="sn">Torrey Pines High</div><div class="sd">Canyon Crest Academy and San Dieguito Academy by lottery</div></div>
+    </div>
+    <p class="note">Confirm middle and high school with <a href="{SDUHSD_URL}" target="_blank" rel="noopener">San Dieguito Union HSD</a>.</p>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><h2>{e(school)} Area Homes: Common Questions</h2></div>
+    <div class="faq-list">
+{faq_html}
+    </div>
+  </div>
+</section>
+
+{contact_footer}
+
+{jsonld}
+
+<nav class="bottom-nav" aria-label="Jump to section">
+  <a href="#map-section"><svg viewBox="0 0 24 24"><path d="M12 21s7-7.1 7-12a7 7 0 0 0-14 0c0 4.9 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Map</a>
+  <a href="#neighborhoods"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Areas</a>
+  <a href="#sold"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Sold</a>
+  <a href="#contact"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Contact</a>
+  <a href="#" class="bn-menu" onclick="event.preventDefault();window.__showMasthead&&window.__showMasthead();document.getElementById('pnav').classList.toggle('open')"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Menu</a>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){{
+  var D={mapdata};
+  var map=L.map('saMap',{{scrollWheelZoom:false}});
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:19,attribution:'Map &copy; Esri, HERE, Garmin, OpenStreetMap contributors'}}).addTo(map);
+  var poly=L.polygon(D.rings,{{stroke:false,fillColor:'#0b5c8c',fillOpacity:.32}}).addTo(map);
+  function fit(){{map.invalidateSize();map.fitBounds(poly.getBounds(),{{padding:[14,14]}});}}
+  fit();window.addEventListener('load',fit);
+}})();
+</script>
+{hide_js}
+</body>
+</html>
+'''
+    left = re.findall(r"\{\{\w+\}\}", page)
+    if left:
+        raise SystemExit(f"unfilled placeholders: {sorted(set(left))}")
+    dest = os.path.join(ROOT, path.strip("/"), "index.html")
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    open(dest, "w", encoding="utf-8").write(page)
+    print(f"wrote {path}: {len(five)} sales in 5 yrs, {len(nbh)} neighborhoods, {len(page)//1024} KB")
+
+
+if __name__ == "__main__":
+    for s in sys.argv[1:] or list(SCHOOL_PAGES):
+        build(s)

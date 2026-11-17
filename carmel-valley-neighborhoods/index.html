@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carmel Valley Neighborhoods Map: Single-Family Homes by Area</title>
+<meta name="description" content="Map of 127 Carmel Valley single-family neighborhoods by area, with home counts and median sale prices. San Diego 92130.">
+<link rel="canonical" href="https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Carmel Valley Homes for Sale">
+<meta property="og:title" content="Carmel Valley Neighborhoods Map: Single-Family Homes by Area">
+<meta property="og:description" content="Map of 127 Carmel Valley single-family neighborhoods by area, with home counts and median sale prices. San Diego 92130.">
+<meta property="og:url" content="https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/index.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+  :root{
+    --ink:#101418;
+    --lake:#0b5c8c;
+    --lake-dark:#084769;
+    --gold:#0b5c8c;
+    --label:#5b6470;
+    --paper:#f5f6f8;
+    --mist:#eef0f3;
+    --line:#e1e4e9;
+    --white:#ffffff;
+    --up:#15803d;
+    --serif:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased}
+  a{color:var(--lake);text-decoration:none;transition:color .15s ease}
+  a:hover{color:var(--lake-dark)}
+  img{max-width:100%;height:auto;display:block}
+  .wrap{max-width:1156px;margin:0 auto;padding:0 28px}
+
+  /* ============ PRIMARY NAV ============ */
+  .masthead{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .masthead .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 28px}
+  .brand{display:flex;align-items:center;gap:10px;line-height:1}
+  .brand .b-mark{width:34px;height:34px;border-radius:9px;background:var(--lake);display:flex;align-items:center;justify-content:center;flex:none}
+  .brand .b-mark svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .brand .b-text{display:flex;flex-direction:column}
+  .brand .b-name{font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+  .brand .b-sub{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--label);margin-top:4px;font-weight:600}
+  .primary-nav{display:flex;gap:4px;align-items:center}
+  .primary-nav a{font-size:14px;color:#37404a;font-weight:500;position:relative;padding:9px 12px;border-radius:7px}
+  .primary-nav a:hover{background:var(--paper);color:var(--ink)}
+  .nav-cta{background:var(--lake);color:var(--white)!important;padding:10px 18px!important;font-weight:600;border-radius:7px;margin-left:6px}
+  .nav-cta:hover{background:var(--lake-dark)!important}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:24px;color:var(--ink)}
+  .nav-group{display:none}
+  @media(max-width:1080px){
+    .primary-nav{display:none;position:absolute;top:100%;left:0;right:0;max-height:calc(100vh - 65px);overflow-y:auto;background:var(--white);flex-direction:column;gap:0;border-bottom:1px solid var(--line);box-shadow:0 16px 32px rgba(16,20,24,.1)}
+    .primary-nav.open{display:flex}
+    .primary-nav a{width:100%;padding:16px 28px;border-bottom:1px solid var(--mist);border-radius:0}
+    .nav-cta{margin:16px 28px;text-align:center;border-radius:7px}
+    .menu-toggle{display:block}
+    .nav-group{display:block;width:100%}
+    .nav-group-label{padding:16px 28px 6px;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--label);font-weight:700;background:var(--paper)}
+    .nav-item{display:flex!important;align-items:center;gap:14px}
+    .nav-item svg{width:19px;height:19px;color:var(--lake);flex:none;stroke:currentColor;fill:none;stroke-width:1.6}
+  }
+
+  /* ============ BREADCRUMB ============ */
+  .breadcrumb{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px}
+  .breadcrumb .wrap{display:flex;align-items:center;gap:8px;padding:12px 28px;color:var(--label)}
+  .breadcrumb a{color:var(--label)}
+  .breadcrumb a:hover{color:var(--lake)}
+  .breadcrumb .sep{color:#c3c8cf}
+  .breadcrumb .current{color:var(--ink);font-weight:500}
+
+  /* ============ PAGE HERO (interior) ============ */
+  .page-hero{background:var(--white);color:var(--ink)}
+  .page-hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:36px;align-items:center;padding-top:28px;padding-bottom:28px}
+  .page-hero-img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;background:var(--mist)}
+  .page-hero-inner{max-width:560px}
+  .page-hero .wrap:not(:has(img)){grid-template-columns:minmax(0,1fr)}
+  .page-hero .wrap:not(:has(img)) .page-hero-inner{max-width:760px}
+  .page-hero .eyebrow{display:inline-block;font-size:12.5px;color:var(--lake);background:#e6f0f6;padding:5px 12px;border-radius:6px;margin-bottom:14px;font-weight:700}
+  .page-hero h1{font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.12;letter-spacing:-.02em;color:var(--ink)}
+  .page-hero p{font-size:16px;margin-top:14px;color:#3f4852}
+  .hero-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .hero-ctas .btn{padding:12px 22px}
+  .page-hero .btn-solid{background:var(--lake);color:#fff!important}
+  .page-hero .btn-solid:hover{background:var(--lake-dark)}
+  .page-hero .btn-outline{color:var(--lake)!important;border-color:var(--lake)}
+  .page-hero .btn-outline:hover{background:#e6f0f6}
+
+  /* ============ SECTION SCAFFOLD ============ */
+  section{padding:64px 0}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 40px}
+  .sec-head .eyebrow{display:inline-block;font-size:12.5px;letter-spacing:.02em;color:var(--lake);background:#e6f0f6;padding:5px 14px;border-radius:100px;font-weight:700;margin-bottom:14px}
+  .sec-head h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;line-height:1.18;color:var(--ink);letter-spacing:-.02em}
+  .sec-head p{margin-top:14px;font-size:16px;color:var(--label);font-weight:400}
+
+  /* quick facts (moved under hero, before listings) */
+  .facts{background:var(--white);padding:0 0 8px}
+  .facts-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .fact{border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+  .fact svg{display:none}
+  .fact .num{font-size:20px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .fact .lbl{font-size:13px;color:var(--label);font-weight:500}
+  @media(max-width:760px){.facts-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.fact{padding:10px 12px}.fact .num{font-size:17px}.fact .lbl{font-size:12px}}
+
+  /* price & size at a glance (dashboard panel) */
+  .glance{background:var(--white)}
+  .glance-lede{max-width:680px;margin:0 auto 32px;font-size:15.5px;color:#333a42;text-align:center}
+  .glance-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .glance-grid.g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:760px){.glance-grid.g3{grid-template-columns:1fr 1fr}.glance-grid.g3 .glance-card:last-child{grid-column:1/-1}}
+
+  .glance-card{background:var(--white);padding:26px 26px 22px}
+  .glance-card .gc-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+  .glance-card .gc-head h3{font-size:16px;font-weight:800;color:var(--ink)}
+  .glance-card .gc-head .gc-count{font-family:var(--mono);font-size:12px;color:var(--label)}
+  .glance-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-top:1px solid var(--mist)}
+  .glance-row:first-of-type{border-top:none}
+  .glance-row .gr-lbl{font-size:13px;color:var(--label)}
+  .glance-row .gr-val{font-family:var(--mono);font-size:15px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;text-align:right}
+
+  /* realscout listings CTA / map */
+  .listings{background:var(--white)}
+  .listings-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+  .listings-title{font-size:18px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+  .listings-tag{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--lake);background:#e6f0f6;padding:5px 10px;border-radius:100px;font-weight:700;white-space:nowrap}
+  .rs-embed{width:100%;background:var(--white);position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .rs-embed iframe{width:100%;height:760px;border:0;display:block}
+
+  .btn{display:inline-block;padding:13px 26px;font-size:14.5px;font-weight:600;border:1.5px solid transparent;cursor:pointer;transition:all .15s ease;border-radius:8px}
+  .btn-solid{background:var(--white);color:var(--ink)!important}
+  .btn-solid:hover{background:var(--mist)}
+  .btn-outline{background:transparent;color:var(--white)!important;border:1.5px solid rgba(255,255,255,.55)}
+  .btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.1)}
+
+  /* sticky jump nav */
+  section[id]{scroll-margin-top:118px}
+
+  /* collapsible secondary sections */
+  .collapsible{text-align:center}
+  .collapsible summary{display:inline-flex;align-items:center;gap:8px;list-style:none;cursor:pointer;font-size:14px;font-weight:600;color:var(--lake);margin-bottom:32px;padding:11px 20px;border:1.5px solid var(--line);border-radius:8px;white-space:nowrap;background:var(--white)}
+  .collapsible summary:hover{border-color:var(--lake);background:#e6f0f6}
+  .collapsible summary::-webkit-details-marker{display:none}
+  .collapsible summary .cl-icon{font-size:16px;font-weight:400}
+  .collapsible summary .cl-open{display:none}
+  .collapsible[open] summary .cl-closed{display:none}
+  .collapsible[open] summary .cl-open{display:inline}
+  .collapsible>:not(summary){text-align:left}
+
+  /* intro */
+  .intro{background:var(--white)}
+  .intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .intro-grid h2{font-size:clamp(24px,3.4vw,34px);font-weight:800;line-height:1.18;margin-bottom:20px;letter-spacing:-.02em}
+  .intro-grid .lead{font-size:17px;color:#333a42;margin-bottom:16px;font-weight:500}
+  .intro-grid p{color:var(--label);margin-bottom:16px}
+  .intro-img img{border-radius:14px;border:1px solid var(--line)}
+  @media(max-width:860px){.intro-grid{grid-template-columns:1fr;gap:32px}}
+
+  /* HOA cost breakdown */
+  .hoa{background:var(--white)}
+  .hoa-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .hoa-covers{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .hoa-covers li{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;background:var(--paper);border:1px solid var(--line);border-radius:999px;color:#333a42;font-size:14px;line-height:1.3}
+  .hoa-covers li::before{content:"\2713";color:var(--lake);font-weight:800}
+  .hoa-compare{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:24px}
+  .hoa-compare h3{font-size:13px;letter-spacing:.03em;text-transform:uppercase;font-weight:700;color:var(--label);margin-bottom:18px}
+  .hoa-bar-row{margin-bottom:14px}
+  .hoa-bar-row:last-of-type{margin-bottom:0}
+  .hoa-bar-label{display:flex;justify-content:space-between;align-items:baseline;font-size:13.5px;color:#333a42;margin-bottom:6px}
+  .hoa-bar-label .amt{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600}
+  .hoa-bar-track{background:var(--mist);height:6px;border-radius:3px;overflow:hidden}
+  .hoa-bar-fill{height:100%;border-radius:3px;background:var(--line)}
+  .hoa-bar-row.this-community .hoa-bar-label{font-weight:700;color:var(--ink)}
+  .hoa-bar-row.this-community .hoa-bar-fill{background:var(--lake)}
+  @media(max-width:860px){.hoa-grid{grid-template-columns:1fr;gap:28px}}
+
+  /* market snapshot (stat boxes + by-year table) */
+  .snapshot{background:var(--white)}
+  .stat-grid{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:28px}
+  .stat-box{background:var(--white);padding:22px 20px;text-align:left;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat-box:nth-child(2n){border-right:none}
+  .stat-box:nth-last-child(-n+2){border-bottom:none}
+  .stat-box .num{font-family:var(--mono);font-size:clamp(20px,2.6vw,26px);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .stat-box .delta{font-family:var(--mono);font-size:11.5px;margin-top:3px;color:var(--label)}
+  .stat-box .delta.up{color:var(--up)}
+  .stat-box .lbl{font-size:12.5px;color:var(--label);margin-top:8px;font-weight:500}
+  @media(max-width:760px){.stat-grid{margin-bottom:18px}.stat-box{padding:14px 12px}.stat-box .num{font-size:18px}.stat-box .delta{font-size:10.5px}.stat-box .lbl{margin-top:4px;font-size:12px}}
+  .snap-caption{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--label);font-weight:700;margin:0 0 14px}
+  .hist-table-wrap{overflow-x:auto;background:var(--white);border:1px solid var(--line);border-radius:10px}
+  table.hist{width:100%;border-collapse:collapse;min-width:520px}
+  table.hist th,table.hist td{padding:12px 16px;text-align:left;font-size:13.5px;border-bottom:1px solid var(--mist)}
+  table.hist th{color:var(--label);font-weight:600;font-size:11px;letter-spacing:.03em;text-transform:uppercase}
+  table.hist td{color:#333a42}
+  table.hist tr:last-child td{border-bottom:none}
+  table.hist tr.ytd td{background:#f5f8ff}
+  table.hist td.num{font-family:var(--mono);font-weight:600;color:var(--ink);font-size:14px;font-variant-numeric:tabular-nums}
+  table.hist td.yr{font-family:var(--mono);color:var(--label)}
+  table.hist .bar-cell{display:flex;align-items:center;gap:10px}
+  table.hist .bar-wrap{position:relative;height:6px;background:var(--mist);border-radius:3px;flex:1;min-width:48px}
+  table.hist .bar-fill{position:absolute;inset:0;background:var(--lake);border-radius:3px}
+  .snap-note{text-align:center;font-size:13px;color:var(--label);margin-top:16px}
+  .snap-state{text-align:center;padding:40px;color:var(--label);font-size:15px;background:var(--paper);border:1px solid var(--line);border-radius:14px}
+
+  /* recently sold */
+  .sold{background:var(--paper)}
+  .sold-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line);border-radius:10px;font-size:13.5px}
+  .sold-table th{text-align:left;font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:var(--label);font-weight:600;padding:12px 16px;border-bottom:1px solid var(--line)}
+  .sold-table td{padding:13px 16px;border-bottom:1px solid var(--mist);color:#333a42}
+  .sold-table tr:last-child td{border-bottom:none}
+  .sold-table td.price{font-family:var(--mono);font-weight:600;font-size:14.5px;color:var(--ink);font-variant-numeric:tabular-nums}
+  .sold-table td.addr{color:var(--ink);font-weight:500}
+  .sold-table .num{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--label)}
+  .sold-note{text-align:center;font-size:13px;color:var(--label);margin-top:16px}
+  .sold-state{text-align:center;padding:40px;color:var(--label);font-size:15px;background:var(--white);border:1px solid var(--line);border-radius:14px}
+  .sold-table-wrap{overflow-x:auto;border-radius:10px}
+  .sold-group{margin-bottom:28px}
+  .sold-group:last-of-type{margin-bottom:0}
+  .sold-group-head{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+  .sold-group-head h3{font-size:16px;font-weight:800;color:var(--ink)}
+  .sold-group-head .cnt{font-family:var(--mono);font-size:12px;color:var(--label)}
+  @media(max-width:700px){.sold-table th:nth-child(4),.sold-table td:nth-child(4){display:none}}
+
+  /* price trend chart */
+  .trend{background:var(--white)}
+  .trend-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:24px}
+  .trend-chart{width:100%;height:auto;display:block}
+  .trend-chart .gridline{stroke:var(--line);stroke-width:1}
+  .trend-chart .axis-label{font-family:var(--mono);font-size:10.5px;fill:var(--label)}
+  .trend-legend{display:flex;gap:24px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+  .trend-legend span{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#333a42}
+  .trend-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .trend-note{text-align:center;font-size:13px;color:var(--label);margin-top:16px}
+  .trend-state{text-align:center;padding:40px;color:var(--label);font-size:15px}
+
+  /* crawlable sales summary */
+  .px-summary{max-width:760px;margin:-14px auto 22px;text-align:center;font-size:15px;color:#333a42;line-height:1.6}
+  /* seller section */
+  .seller{background:var(--white)}
+  .seller-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 18px}
+  .seller-tile{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .seller-tile .sv{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .seller-tile .sl{font-size:13px;color:var(--label);margin-top:2px}
+  .seller-copy{font-size:15px;color:#333a42;line-height:1.6;max-width:820px;margin:0 0 18px}
+  .seller-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .seller-cta a{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:10px;font-weight:700;font-size:15px;border:1.5px solid var(--lake)}
+  .seller-cta a.solid{background:var(--lake);color:#fff!important}
+  .seller-cta a.line{background:#fff;color:var(--lake)!important}
+  @media(max-width:760px){.seller-grid{grid-template-columns:1fr 1fr;gap:8px}.seller-tile{padding:12px}.seller-tile .sv{font-size:17px}.seller-grid .seller-tile:last-child{grid-column:1/-1}.seller-copy{font-size:14px}.seller-cta a{flex:1 1 140px;padding:12px 14px}.px-summary{font-size:14px;margin:-8px auto 16px}}
+
+  /* prices & sales tabs */
+  .prices{background:var(--white)}
+  .data-stamp{font-size:12.5px;color:var(--label);margin-top:8px}
+  .glance .data-stamp{text-align:center;margin-top:10px}
+  .px-tabs{display:flex;gap:4px;max-width:760px;margin:0 auto 22px;padding:4px;background:var(--mist);border-radius:12px;overflow-x:auto;scrollbar-width:none}
+  .px-tabs::-webkit-scrollbar{display:none}
+  .px-tabs button{flex:1 0 auto;border:0;background:none;font:inherit;font-size:14px;font-weight:600;color:var(--label);padding:9px 14px;border-radius:9px;cursor:pointer;white-space:nowrap}
+  .px-tabs button[aria-selected="true"]{background:var(--white);color:var(--lake);box-shadow:0 1px 4px rgba(16,20,24,.1)}
+  .px-tabs button:focus-visible{outline:2px solid var(--lake);outline-offset:2px}
+  .px-panel{scroll-margin-top:130px}
+  .px-intro{text-align:center;font-size:14px;color:var(--label);margin:0 auto 18px;max-width:620px}
+  .px-h{font-size:21px;font-weight:800;letter-spacing:-.01em;margin:0 auto}
+  #analysis .data-stamp{margin:6px auto 18px}
+  .takeaways{margin:0 auto 18px;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:860px){.takeaways{grid-template-columns:1fr;gap:10px}}
+  .takeaways li{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px;color:#2b323a;line-height:1.5}
+  .takeaways strong{color:var(--ink);display:block;margin-bottom:2px}
+  .px-more{margin:0 auto}
+  .px-more > summary{list-style:none;cursor:pointer;text-align:center;font-weight:700;color:var(--lake);padding:10px 0 18px}
+  .px-more > summary::-webkit-details-marker{display:none}
+  .px-more .cl-open{display:none}
+  .px-more[open] .cl-open{display:inline}
+  .px-more[open] .cl-closed{display:none}
+
+  /* market analysis (article-style content) */
+  .analysis-body{max-width:760px;margin:0 auto;text-align:left}
+  .analysis-body h3{font-size:19px;font-weight:800;letter-spacing:-.01em;margin:36px 0 12px}
+  .analysis-body h3:first-child{margin-top:0}
+  .analysis-body p{font-size:15.5px;color:#2b323a;margin-bottom:14px}
+  .analysis-body strong{color:var(--ink);font-weight:700}
+  .analysis-callout{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0}
+  .analysis-chip{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 20px;flex:1;min-width:140px}
+  .analysis-chip .cv{font-size:21px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+  .analysis-chip .cl{font-size:12px;color:var(--label);font-weight:600;margin-top:4px}
+  .analysis-pull{border-left:3px solid var(--lake);padding:4px 0 4px 20px;margin:22px 0;font-size:17px;font-weight:600;color:var(--ink);line-height:1.4}
+
+  /* who it's for */
+  .fit{background:var(--paper)}
+  .fit-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+  .fit-col{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .fit-col-h{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;font-weight:800;color:var(--ink);margin-bottom:6px}
+  .fit-col-h::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--up) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+  .fit-col.weigh .fit-col-h::before{background:#b7791f url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M12 6v8M12 18v.5'/%3E%3C/svg%3E") center/14px no-repeat}
+  .fit-list{list-style:none;margin:0;padding:0}
+  .fit-list li{padding:12px 0;border-top:1px solid var(--line)}
+  .fit-list li:first-child{border-top:0}
+  .fit-list h4{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:3px}
+  .fit-list p{font-size:14px;color:var(--label);margin:0;line-height:1.55}
+  @media(max-width:860px){.fit-cols{grid-template-columns:1fr;gap:12px}}
+  @media(min-width:861px){
+    .life-wrap{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;grid-template-areas:"h sub" "lead list";align-items:start}
+    .life-wrap h2{grid-area:h}
+    .life-wrap .lead{grid-area:lead}
+    .life-wrap .life-sub{grid-area:sub;margin-top:10px!important}
+    .life-wrap .reasons{grid-area:list}
+  }
+  .life-wrap h2{font-size:clamp(24px,3.4vw,34px);font-weight:800;line-height:1.18;margin-bottom:14px;letter-spacing:-.02em}
+  .life-wrap .lead{font-size:16.5px;color:#333a42;line-height:1.6}
+  .life-sub{font-size:13px;letter-spacing:.04em;text-transform:uppercase;font-weight:800;color:var(--label);margin:26px 0 8px}
+  .reasons{list-style:none;margin:0;padding:0}
+  .reasons li{position:relative;padding:10px 0 10px 28px;border-top:1px solid var(--line);font-size:15px;color:var(--label);line-height:1.5}
+  .reasons li:first-child{border-top:0}
+  .reasons li::before{content:"\2713";position:absolute;left:2px;top:10px;color:var(--lake);font-weight:800}
+  .reasons strong{color:var(--ink)}
+  .cost-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:32px}
+  .cost-tile{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .cost-tile .ct-val{font-family:var(--mono);font-size:24px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .cost-tile .ct-val span{font-size:14px;color:var(--label);font-weight:500}
+  .cost-tile .ct-lbl{font-size:13px;font-weight:700;color:var(--ink);margin-top:4px}
+  .cost-tile .ct-note{font-size:12.5px;color:var(--label);margin-top:2px}
+  .hoa-fee{display:flex;align-items:center;gap:18px;background:var(--lake-soft,#e6f0f6);border:1px solid #d6e2fc;border-radius:14px;padding:18px 22px;margin-bottom:28px}
+  .hoa-fee .hf-amt{font-family:var(--mono);font-size:34px;font-weight:700;color:var(--lake-dark);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .hoa-fee .hf-amt span{font-size:15px;font-weight:500;color:var(--label)}
+  .hoa-fee .hf-text{font-size:14.5px;color:#333a42;line-height:1.5}
+  .hoa-fee .hf-text strong{display:block;color:var(--ink);font-size:15px}
+  .amen-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .amen-grid li{display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.3}
+  .amen-grid svg{flex:none;width:24px;height:24px;fill:none;stroke:var(--lake);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .hoa-also{font-size:13.5px;color:var(--label);margin:12px 0 0}
+  .hoa-also strong{color:var(--ink)}
+  .hoa-h{font-size:13px;letter-spacing:.03em;text-transform:uppercase;font-weight:700;color:var(--label);margin-bottom:8px}
+  .fit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .fit-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:26px 24px}
+  .fit-card svg{width:26px;height:26px;color:var(--lake);margin-bottom:16px}
+  .fit-card h3{font-size:17px;font-weight:700;margin-bottom:10px;color:var(--ink)}
+  .fit-card p{font-size:14.5px;color:var(--label)}
+  @media(max-width:860px){.fit-grid{grid-template-columns:1fr}}
+
+  /* what to know before buying */
+  .know{background:var(--white)}
+  .know-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .know-item{display:flex;gap:14px;align-items:flex-start}
+  .know-item svg{flex:none;width:20px;height:20px;color:var(--lake);margin-top:2px}
+  .know-item h3{font-size:15px;font-weight:700;margin-bottom:4px;color:var(--ink)}
+  .know-item p{font-size:14px;color:var(--label);margin:0}
+  @media(max-width:760px){.know-grid{grid-template-columns:1fr}}
+
+  /* photo walkthrough */
+  .walkthrough{background:var(--paper)}
+  .walk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .walk-tile{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--white);border-radius:12px;border:1px solid var(--line)}
+  .walk-tile img{width:100%;height:100%;object-fit:cover}
+  .walk-tile .cap{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;background:linear-gradient(transparent,rgba(16,20,24,.72));color:var(--white);font-size:12.5px}
+  .walk-tile.placeholder{border:1.5px dashed var(--line);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--label);font-size:13px;padding:16px}
+  @media(max-width:760px){.walk-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.walk-grid{grid-template-columns:1fr}.walk-tile{aspect-ratio:16/10}}
+
+  /* touring checklist */
+
+  /* location & schools */
+  .location{background:var(--paper)}
+  .loc-map{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:40px;background:var(--mist)}
+  .loc-map-canvas{width:100%;height:400px}
+  .loc-map-tools{position:absolute;top:10px;left:10px;z-index:500;display:inline-flex;gap:2px;padding:3px;background:rgba(255,255,255,.96);border-radius:10px;box-shadow:0 2px 8px rgba(16,20,24,.18)}
+  .loc-map-tools button{border:0;background:none;font:inherit;font-size:12.5px;font-weight:600;color:var(--label);padding:5px 11px;border-radius:7px;cursor:pointer}
+  .loc-map-tools button[aria-pressed="true"]{background:var(--lake);color:#fff}
+  .loc-map-open{position:absolute;right:10px;top:10px;z-index:500;background:rgba(255,255,255,.96);border-radius:10px;padding:6px 11px;font-size:12.5px;font-weight:700;box-shadow:0 2px 8px rgba(16,20,24,.18)}
+  .loc-map.is-fallback .loc-map-canvas{display:none}
+  .loc-map.is-fallback .loc-map-tools{display:none}
+  .loc-map.is-fallback .loc-map-open{position:static;display:block;text-align:center;box-shadow:none;padding:28px}
+  .loc-map .leaflet-tooltip.loc-lbl{background:none;border:0;box-shadow:none;padding:0;color:#fff;font-family:var(--sans);font-weight:800;font-size:15px;text-shadow:0 0 4px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.9)}
+  .loc-map .leaflet-tooltip.loc-lbl::before{display:none}
+  .loc-map.is-street .leaflet-tooltip.loc-lbl{color:#084769;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff}
+  .loc-map .leaflet-control-attribution{font-size:9.5px;line-height:1.3}
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .loc-list{list-style:none}
+  .loc-list li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:#333a42}
+  .loc-list li span:last-child{color:var(--lake);font-weight:700;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+  .school-list{list-style:none}
+  .school-list li{padding:14px 0;border-bottom:1px solid var(--line)}
+  .school-list .s-level{font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:var(--label);font-weight:700;margin-bottom:4px}
+  .school-list .s-name{font-size:16px;font-weight:700;color:var(--ink)}
+  .school-list .s-district{font-size:13.5px;color:var(--label);margin-top:2px}
+  @media(max-width:860px){.loc-grid{grid-template-columns:1fr;gap:28px}}
+  .loc-tabs{max-width:440px}
+  .px-wide{max-width:none}
+  .btn-tabs{margin:0 auto 16px;padding:0;gap:8px;background:none;border-radius:0}
+  .btn-tabs button{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 10px;font-size:15px;font-weight:700;color:var(--lake);background:var(--white);border:1.5px solid var(--lake);border-radius:12px;box-shadow:none}
+  .btn-tabs button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .btn-tabs button[aria-selected="true"]{background:var(--lake);color:#fff;box-shadow:0 4px 12px rgba(11,92,140,.25)}
+  .location .loc-panel .sec-head{display:none}
+  @media(min-width:861px){
+    .loc-tabs{display:none}
+    .loc-panel[hidden]{display:block}
+    .location .loc-panel .sec-head{display:block}
+  }
+
+  /* compare communities */
+  .compare{background:var(--paper)}
+  .cmp-carousel{position:relative}
+  .cmp-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 2px 6px;margin:0;list-style:none}
+  .cmp-track::-webkit-scrollbar{display:none}
+  .cmp-card{flex:0 0 calc((100% - 48px)/4);scroll-snap-align:start;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;background:var(--white);overflow:hidden;color:inherit;text-decoration:none!important;transition:box-shadow .2s,transform .2s}
+  .cmp-card:hover{box-shadow:0 6px 18px rgba(16,20,24,.08);transform:translateY(-2px)}
+  .cmp-img{aspect-ratio:16/10;background:var(--mist);overflow:hidden}
+  .cmp-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .cmp-img.ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eef5f9,#dbe9f1);font-family:var(--serif);font-size:26px;font-weight:600;color:var(--lake-dark);text-align:center;padding:12px}
+  .cmp-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+  .cmp-card h3{font-size:16px;font-weight:700;margin-bottom:4px;color:var(--lake)}
+  .cmp-meta{font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:6px}
+  .cmp-card p{font-size:13.5px;line-height:1.5;color:var(--label);margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .cmp-go{margin-top:auto;font-size:13px;font-weight:700;color:var(--lake)}
+  .cmp-arrow{position:absolute;top:calc(50% - 22px);width:40px;height:44px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.95);color:var(--ink);font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(16,20,24,.08);z-index:2;transition:opacity .2s}
+  .cmp-arrow.prev{left:-20px}
+  .cmp-arrow.next{right:-20px}
+  .cmp-arrow[disabled]{opacity:0;pointer-events:none}
+  @media(max-width:1100px){.cmp-card{flex-basis:calc((100% - 32px)/3)}}
+  @media(max-width:860px){.cmp-card{flex-basis:calc((100% - 16px)/2)}}
+
+  /* FAQ */
+  .faq-ol{margin:0 30px 18px 20px;padding:0;color:var(--label);font-size:14.5px;display:grid;gap:6px}
+  .faq-ol strong{color:var(--ink)}
+  .faq{background:var(--white)}
+  .faq-list{margin:0 auto}
+  .faq-list details{border-bottom:1px solid var(--line);padding:4px 0}
+  .faq-list summary{font-size:16.5px;font-weight:700;padding:20px 40px 20px 0;cursor:pointer;list-style:none;position:relative;color:var(--ink)}
+  .faq-list summary::-webkit-details-marker{display:none}
+  .faq-list summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:400;color:var(--lake);transition:transform .2s ease}
+  .faq-list details[open] summary::after{content:"\2013"}
+  .faq-list details p{padding:0 40px 22px 0;color:var(--label);font-size:15px}
+
+  /* contact block — white CTA text on accent bg */
+  .contact{background:#eef5f9;color:var(--ink);border-top:1px solid #d3e4ee}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .contact h2{font-size:clamp(26px,3.8vw,38px);font-weight:800;line-height:1.15;margin-bottom:18px;letter-spacing:-.02em;color:var(--ink)}
+  .contact .c-lead{font-size:16.5px;color:#333a42;margin-bottom:26px;font-weight:400}
+  .contact .c-detail{font-size:14.5px;color:var(--label);margin-bottom:9px}
+  .contact .c-detail strong{color:var(--ink);font-weight:700}
+  .contact-cta{background:var(--white);padding:24px;border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 20px rgba(16,20,24,.06)}
+  .agent{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+  .agent-photo{flex:none;width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid #eef5f9;box-shadow:0 2px 8px rgba(16,20,24,.12)}
+  .agent-info{min-width:0}
+  .contact-cta .agent-name{font-size:21px;font-weight:800;color:var(--ink);line-height:1.2}
+  .contact-cta .agent-role{font-size:13px;color:var(--label);margin:2px 0 4px;font-weight:500}
+  .agent-phone{font-size:15px;font-weight:700;color:var(--lake);white-space:nowrap}
+  .contact-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .contact-btns .contact-btn{margin:0;text-align:center}
+  .contact-btns .contact-btn.wide{grid-column:1/-1}
+  .contact-btn{display:block;width:100%;background:var(--lake);color:var(--white)!important;padding:14px;font-size:14.5px;font-weight:700;margin-bottom:12px;transition:background .15s ease;border-radius:10px;border:1.5px solid var(--lake)}
+  .contact-btn:hover{background:var(--lake-dark)}
+  .contact-btn.outline{background:var(--white);color:var(--lake)!important;border:1.5px solid var(--lake)}
+  .contact-btn.outline:hover{background:#eef5f9}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+
+  /* ============ FOOTER (light) ============ */
+  .footer{background:var(--paper);color:var(--label);padding:52px 0 0;font-size:14.5px;border-top:1px solid var(--line)}
+  .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line)}
+  .footer h4{font-size:14px;color:var(--ink);font-weight:700;margin-bottom:14px}
+  .footer .f-brand .b-name{font-size:20px;color:var(--ink);font-weight:800;line-height:1.1}
+  .footer .f-brand .b-sub{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--label);margin:6px 0 14px;font-weight:600}
+  .footer .f-brand p{font-size:14px;color:var(--label);max-width:300px}
+  .footer-nav{list-style:none}
+  .footer-nav li{margin-bottom:10px}
+  .footer-nav a{color:#333a42;font-size:14px}
+  .footer-nav a:hover{color:var(--lake)}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding:20px 0;font-size:12.5px;color:var(--label)}
+  .footer-bottom .secondary-nav{display:flex;gap:22px;flex-wrap:wrap}
+  .footer-bottom .secondary-nav a{color:var(--label)}
+  .footer-bottom .secondary-nav a:hover{color:var(--lake)}
+  .disclaimer{padding:18px 0 32px;font-size:11.5px;line-height:1.7;color:#7a8389;border-top:1px solid var(--line)}
+  @media(max-width:860px){.footer-top{grid-template-columns:1fr 1fr;gap:32px}}
+  @media(max-width:520px){.footer-top{grid-template-columns:1fr}}
+  @media(max-width:860px){.footer-top{grid-template-columns:1fr 1fr;gap:32px}}
+  @media(max-width:520px){.footer-top{grid-template-columns:1fr}}
+
+  /* ============ MOBILE SPACING TIGHTENING ============ */
+  @media(max-width:760px){
+    .wrap{padding:0 18px}
+    .masthead{transition:transform .25s ease}
+    .masthead .wrap{padding:14px 20px}
+    .brand .b-name{font-size:16.5px}
+    .brand .b-sub{font-size:9px;margin-top:3px}
+    .brand .b-mark{width:30px;height:30px}
+    .breadcrumb .wrap{padding:9px 18px}
+    section{padding:22px 0}
+    .sec-head{margin:0 auto 12px}
+    .sec-head .eyebrow{margin-bottom:10px}
+    .sec-head h2{font-size:clamp(22px,6.5vw,28px)}
+    .sec-head p{margin-top:8px;font-size:14.5px}
+
+    .page-hero .wrap{grid-template-columns:minmax(0,1fr);gap:14px;padding-top:12px;padding-bottom:16px}
+    .page-hero-img{aspect-ratio:16/9;border-radius:12px}
+    .page-hero .eyebrow{font-size:11px;padding:4px 10px;margin-bottom:8px}
+    .page-hero h1{font-size:clamp(22px,6.6vw,28px)}
+    .page-hero p{font-size:14.5px;margin-top:8px}
+    .hero-ctas .btn{padding:11px 16px;font-size:14px}
+    .hero-ctas{margin-top:12px;gap:8px}
+    .hero-ctas .btn{padding:9px 16px;font-size:13px}
+
+    .fact{padding:10px 4px;column-gap:4px}
+    .fact .lbl{font-size:12.5px}
+    .fact .num{font-size:13.5px}
+
+    .glance-lede{margin-bottom:12px;font-size:14px}
+    .glance-card{padding:12px 12px 8px}
+    .glance-card .gc-head{display:block;margin-bottom:4px}
+    .glance-card .gc-head .gc-count{font-size:11px}
+    .glance-row{display:block;padding:6px 0}
+    .glance-row .gr-lbl{display:block;font-size:11.5px}
+    .glance-row .gr-val{display:block;text-align:left;font-size:14px}
+
+    .listings-head{margin-bottom:10px}
+    .listings-title{font-size:16px}
+    .rs-embed iframe{height:460px}
+
+    section[id]{scroll-margin-top:85px}
+
+    .collapsible summary{margin-bottom:12px;padding:8px 14px}
+
+    .intro-grid{gap:20px}
+    .intro-grid h2{margin-bottom:12px}
+    .intro-grid .lead{margin-bottom:10px;font-size:15.5px}
+    .intro-grid p{margin-bottom:10px}
+
+    .hoa-grid{gap:12px}
+    .hoa-fee{gap:12px;padding:12px 14px;margin-bottom:16px}
+    .hoa-fee .hf-amt{font-size:24px}
+    .hoa-fee .hf-amt span{font-size:12px}
+    .hoa-fee .hf-text{font-size:13px}
+    .hoa-fee .hf-text strong{font-size:14px}
+    .amen-grid{gap:6px}
+    .amen-grid li{padding:9px 10px;font-size:13px;gap:8px}
+    .amen-grid svg{width:20px;height:20px}
+    .hoa-also{font-size:12.5px;margin-top:8px}
+    .hoa-covers{gap:6px}
+    .hoa-covers li{padding:5px 10px;font-size:12.5px}
+    .hoa-compare{padding:18px}
+    .hoa-bar-row{margin-bottom:8px}
+    .hoa-bar-label{font-size:12.5px;margin-bottom:4px}
+    .hoa-compare h3{margin-bottom:10px}
+
+    .stat-grid{margin-bottom:18px}
+    .stat-box{padding:16px 16px}
+    .stat-box .lbl{margin-top:5px}
+    .snap-caption{margin:0 0 8px}
+    table.hist th,table.hist td{padding:9px 12px;font-size:12.5px}
+
+    .sold-table-wrap{overflow-x:visible}
+    table.sold-table{min-width:0;table-layout:fixed;font-size:12px}
+    .sold-table th,.sold-table td{padding:9px 8px}
+    .sold-table td.addr{font-size:12px;line-height:1.35}
+    .sold-table th:nth-child(1),.sold-table td:nth-child(1){width:38%}
+    .sold-table th:nth-child(2),.sold-table td:nth-child(2){width:20%}
+    .sold-table th:nth-child(3),.sold-table td:nth-child(3){width:18%}
+    .sold-table th:nth-child(5),.sold-table td:nth-child(5){width:24%}
+    .sold-table th:nth-child(6),.sold-table td:nth-child(6){display:none}
+
+    .trend-card{padding:16px}
+    .trend-legend{margin-top:12px;gap:14px}
+
+    .analysis-body h3{margin:24px 0 8px;font-size:17px}
+    .analysis-body p{font-size:14.5px;margin-bottom:11px}
+    .analysis-callout{gap:10px;margin:16px 0}
+    .analysis-chip{padding:13px 15px}
+    .analysis-pull{font-size:15.5px;margin:18px 0}
+
+    .fit-grid{gap:7px}
+    .fit-card{padding:16px 16px}
+    .fit-card svg{width:19px;height:19px;margin-bottom:9px}
+    .fit-card h3{font-size:15px;margin-bottom:5px}
+    .fit-card p{font-size:13px;line-height:1.5}
+
+    .know-grid{gap:11px}
+
+    .walk-grid{gap:8px}
+
+
+    .loc-map{margin-bottom:20px}
+    .loc-map-canvas{height:280px}
+    .life-wrap .lead{font-size:15px}
+    .life-sub{margin:18px 0 4px}
+    .reasons li{font-size:14px;padding:9px 0 9px 26px}
+    .reasons li::before{top:9px}
+    .cost-tiles{grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:18px}
+    .cost-tile{padding:11px 10px}
+    .cost-tile .ct-val{font-size:17px}
+    .cost-tile .ct-val span{font-size:11px}
+    .cost-tile .ct-lbl{font-size:11.5px}
+    .cost-tile .ct-note{display:none}
+    .fit-col{padding:14px 16px}
+    .fit-list li{padding:9px 0}
+    .fit-list h4{font-size:14px}
+    .fit-list p{font-size:13px}
+    .px-tabs{margin-bottom:16px;gap:2px;padding:3px}
+    .px-tabs button{flex:1 1 0;padding:8px 4px;font-size:13px}
+    .btn-tabs button{padding:10px 6px;font-size:14.5px}
+    #sold-data .btn-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .px-intro{font-size:12.5px;margin-bottom:12px}
+    .px-h{font-size:18px}
+    .takeaways li{font-size:14px;padding:12px 14px}
+    .loc-grid{gap:12px}
+    .loc-list li{display:block;padding:8px 0;font-size:14px}
+    .loc-list li span:last-child{display:block;padding-left:0;font-size:13px;margin-top:1px}
+    .school-list li{padding:11px 0}
+
+
+    .cmp-track{gap:10px;margin:0 -20px;padding:2px 20px 6px;scroll-padding:0 20px}
+    .cmp-card{flex-basis:62%}
+    .cmp-body{padding:10px 12px 12px}
+    .cmp-card h3{font-size:15px}
+    .cmp-meta{font-size:12px}
+    .cmp-card p{font-size:13px;margin-bottom:8px}
+    .cmp-arrow{display:none}
+
+    .faq-list summary{padding:15px 28px 15px 0;font-size:15.5px}
+    .faq-list details p{padding:0 28px 16px 0;font-size:14px}
+
+    .contact-grid{gap:16px}
+    .contact h2{font-size:clamp(22px,7vw,26px);margin-bottom:12px}
+    .contact .c-lead{margin-bottom:18px}
+    .contact .c-lead{font-size:14.5px}
+    .contact-cta{padding:16px}
+    .agent{gap:14px;margin-bottom:14px}
+    .agent-photo{width:76px;height:76px}
+    .contact-cta .agent-name{font-size:19px}
+    .contact-cta .agent-role{font-size:12.5px}
+    .footer .f-brand .b-name{font-size:21px}
+    .contact-btns{gap:8px}
+    .contact-btns .contact-btn{padding:12px 8px}
+
+    .footer{padding:24px 0 0}
+    .footer-top{grid-template-columns:1fr 1fr;padding-bottom:14px;gap:14px 16px}
+    .footer .f-brand{grid-column:1/-1}
+    .footer .f-brand p,.footer .f-explore{display:none}
+    .footer .f-brand .b-sub{margin:4px 0 0}
+    .footer h4{margin-bottom:8px;font-size:14px}
+    .footer-nav li{margin-bottom:6px;font-size:13px}
+    .footer-nav a{font-size:13px}
+    .footer-bottom{padding:12px 0;gap:6px}
+    .disclaimer{padding:12px 0 20px}
+  }
+
+  /* ============ QUICK-JUMP RAIL ============ */
+  /* ============ MOBILE BOTTOM NAV ============ */
+  .bottom-nav{display:none}
+  @media(max-width:760px){
+    body{padding-bottom:64px}
+    .bottom-nav{
+      display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;
+      background:var(--white);border-top:1px solid var(--line);
+      padding:6px 2px calc(6px + env(safe-area-inset-bottom));
+      box-shadow:0 -2px 12px rgba(0,0,0,.07);
+    }
+    .bottom-nav a{
+      flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      gap:2px;padding:5px 1px;color:#8b909a;font-size:9.5px;font-weight:600;
+      text-align:center;letter-spacing:0;line-height:1.1;white-space:nowrap;
+    }
+    .bottom-nav a svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8}
+    .bottom-nav a.active{color:var(--lake)}
+    .bottom-nav a.active svg{stroke-width:2.1}
+  }
+
+  /* ============ COMMUNITIES HUB ============ */
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .hub-intro{padding:40px 0 8px;text-align:center}
+  .hub-intro .eyebrow{display:inline-block;font-size:12.5px;color:var(--lake);background:#eaf0fe;padding:5px 14px;border-radius:100px;font-weight:700;margin-bottom:14px}
+  .hub-intro h1{font-size:clamp(28px,4.4vw,44px);font-weight:800;line-height:1.12;letter-spacing:-.02em;max-width:820px;margin:0 auto}
+  .hub-intro p{max-width:680px;margin:14px auto 0;color:var(--label);font-size:16px}
+  .hub-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .hub-stats div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-size:14px;color:var(--label)}
+  .hub-stats b{color:var(--ink);font-size:16px;margin-right:4px}
+  .map-sec{padding:24px 0 8px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
+  .chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--ink);font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:100px;cursor:pointer}
+  .chip:hover{border-color:var(--ac);color:var(--ink)}
+  .chip b{color:var(--label);font-weight:600}
+  .chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
+  .chip.on b{color:rgba(255,255,255,.85)}
+  .chip.on .dot{background:#fff}
+  .dot{width:10px;height:10px;border-radius:50%;background:var(--ac);flex:none;display:inline-block}
+  .map-box{position:relative;z-index:0;isolation:isolate;max-width:1100px;margin:0 auto;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  #map{height:min(64vh,560px);background:#e8ecef}
+  .map-views{position:absolute;top:10px;right:10px;z-index:500;display:flex;background:#fff;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.18);overflow:hidden}
+  .map-views button{border:0;background:#fff;font:600 12.5px var(--sans);padding:7px 11px;cursor:pointer;color:#37404a}
+  .map-views button[aria-pressed="true"]{background:var(--lake);color:#fff}
+  .map-card{position:absolute;left:10px;bottom:10px;z-index:500;background:#fff;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.18);padding:14px 16px;max-width:300px;display:none}
+  .map-card.show{display:block}
+  .map-card h3{font-size:17px;font-weight:800;margin-right:22px}
+  .map-card .mc-area{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--label);margin-top:4px}
+  .map-card .mc-homes{font-size:14px;margin-top:6px}
+  .map-card a.mc-go{display:inline-block;margin-top:10px;background:var(--lake);color:#fff;font-weight:600;font-size:13.5px;padding:8px 14px;border-radius:7px}
+  .map-card .mc-x{position:absolute;top:8px;right:10px;border:0;background:none;font-size:20px;line-height:1;color:var(--label);cursor:pointer}
+  .map-note{text-align:center;font-size:13px;color:var(--label);margin-top:10px}
+  .leaflet-container{font-family:var(--sans)}
+  .leaflet-control-attribution{font-size:9.5px!important}
+  .leaflet-tooltip.lbl{background:none;border:0;box-shadow:none;padding:0;color:#101418;font-weight:700;font-size:11.5px;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 2px #fff;white-space:nowrap}
+  .leaflet-tooltip.lbl::before{display:none}
+  .sat .leaflet-tooltip.lbl{color:#fff;text-shadow:0 0 3px #000,0 0 3px #000,0 0 2px #000}
+  .areas-wrap{padding:32px 0 8px}
+  .area{padding:28px 0}
+  .area + .area{border-top:1px solid var(--line)}
+  .area-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .area-head h3{display:flex;align-items:center;gap:10px;font-size:clamp(20px,2.6vw,26px);font-weight:800;letter-spacing:-.01em}
+  .area-head .dot{width:14px;height:14px}
+  .area-stats{font-size:14px;color:var(--label);font-weight:600}
+  .area-text{margin:8px 0 18px;color:#333a42;font-size:15.5px;max-width:820px}
+  .cc-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+  .cc{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--white);display:flex;flex-direction:column}
+  .cc img,.cc-ph{width:100%;aspect-ratio:16/10;object-fit:cover}
+  .cc-ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--paper),var(--mist));color:var(--ac);font:700 34px var(--serif);border-bottom:3px solid var(--ac)}
+  .cc-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
+  .cc:not(:has(img)){border-left:4px solid var(--ac)}
+  .cc h4{font-size:16px;font-weight:800}
+  .cc-meta{font-size:13.5px;color:var(--label)}
+  .cc-cta{font-size:13.5px;font-weight:700;color:var(--lake);margin-top:auto;padding-top:4px}
+  .cc-link{position:absolute;inset:0;z-index:1}
+  .cc:has(.cc-link):hover{border-color:var(--lake);box-shadow:0 4px 14px rgba(20,86,232,.12)}
+  .cc-map{position:relative;z-index:2;align-self:flex-start;border:0;background:none;padding:0;font:600 12.5px var(--sans);color:var(--label);text-decoration:underline;cursor:pointer}
+  .cc-map:hover{color:var(--lake)}
+  @media(max-width:760px){
+    .hub-intro{padding:26px 0 0}
+    .hub-intro p{font-size:15px}
+    .hub-stats{gap:6px;flex-wrap:nowrap}
+    .hub-stats div{padding:6px 9px;font-size:12.5px}
+    .hub-stats b{font-size:14px;margin-right:3px}
+    .map-card{padding:12px 14px}
+    .map-card a.mc-go{margin-top:8px;padding:7px 12px}
+    #map{height:58vh}
+    .chips{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding:0 2px 4px;scrollbar-width:none}
+    .chips::-webkit-scrollbar{display:none}
+    .chip{white-space:nowrap}
+    .map-box{border-radius:10px}
+    .map-card{right:10px;max-width:none}
+    .cc-grid{grid-template-columns:1fr 1fr;gap:10px}
+    .cc h4{font-size:14.5px}
+    .cc-body{padding:10px 10px 12px}
+    .area{padding:22px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PRIMARY NAVIGATION ============ -->
+<header class="masthead">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <span class="b-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg></span>
+      <span class="b-text"><span class="b-name">Carmel Valley Homes</span><span class="b-sub">Single-family &middot; San Diego 92130</span></span>
+    </a>
+    <nav class="primary-nav" id="pnav">
+      <a href="/">Home</a>
+      <a href="/carmel-valley-neighborhoods/">Neighborhoods</a>
+      <a href="/pacific-highlands-ranch-homes-for-sale/">Pacific Highlands Ranch</a>
+      <a href="https://carmelvalley.com">All Listings</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+      <div class="nav-group">
+        <div class="nav-group-label">Also in Carmel Valley</div>
+        <a href="https://carmelvalleycondos.com" class="nav-item"><svg viewBox="0 0 24 24"><path d="M3 21V9l6-4 6 4v12"/><path d="M15 21V11l6 2v8z"/></svg>Carmel Valley condos and townhomes</a>
+        <a href="https://carmelvalley.com" class="nav-item"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>All Carmel Valley listings</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Finances</div>
+        <a href="mailto:sez@carmelvalley.com" class="nav-item"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2"/></svg>Discover your buying power</a>
+        <a href="mailto:sez@carmelvalley.com" class="nav-item"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 14l6 6M15 14l-6 6"/></svg>Compare mortgage rates</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Prepare to Move with Sez Sezer</div>
+        <a href="tel:+18584366585" class="nav-item"><svg viewBox="0 0 24 24"><path d="M20.59 13.41 11 3.83a2 2 0 0 0-2.83 0L3.83 8.17a2 2 0 0 0 0 2.83L13.41 20.6a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.83z"/><circle cx="8.5" cy="8.5" r="1.2"/></svg>Sell my home</a>
+        <a href="mailto:sez@carmelvalley.com" class="nav-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>Why sell with Sez Sezer</a>
+        <a href="tel:+18584366585" class="nav-item"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.6 2.7-6.5 6-6.5s6 2.9 6 6.5"/><path d="M16.5 9.5 19 7l2.5 2.5M19 7v7"/></svg>Connect with a Carmel Valley real estate agent</a>
+        <a href="mailto:sez@carmelvalley.com" class="nav-item"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V11l4-3 4 3v9M13 20v-6l6-3v9"/></svg>Real estate news</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="wrap"><a href="/">Home</a><span class="sep">/</span><span class="current">Carmel Valley Neighborhoods</span></div>
+</nav>
+
+<section class="hub-intro">
+  <div class="wrap">
+    <span class="eyebrow">Carmel Valley &middot; San Diego 92130</span>
+    <h1>Carmel Valley Neighborhoods: Single-Family Homes by Area</h1>
+    <p>Every single-family neighborhood in Carmel Valley on one map, grouped by area. Tap a neighborhood to see where it sits, how many homes it has and what houses there sell for.</p>
+    <div class="hub-stats"><div><b>127</b>neighborhoods</div><div><b>11,300+</b>homes</div><div><b>8</b>areas</div></div>
+  </div>
+</section>
+
+<section class="map-sec" id="map-section">
+  <div class="wrap">
+    <div class="chips" id="chips"><a class="chip" href="#area-north-of-del-mar-heights-road" data-a="n" style="--ac:#0d8f84"><span class="dot"></span>North of Del Mar Hts Rd <b>19</b></a><a class="chip" href="#area-south-of-del-mar-heights-road" data-a="s" style="--ac:#0b5c8c"><span class="dot"></span>South of Del Mar Hts Rd <b>25</b></a><a class="chip" href="#area-carmel-country-highlands" data-a="cch" style="--ac:#c27a0e"><span class="dot"></span>Carmel Country Highlands <b>8</b></a><a class="chip" href="#area-pacific-highlands-ranch" data-a="phr" style="--ac:#e0691c"><span class="dot"></span>Pacific Highlands Ranch <b>36</b></a><a class="chip" href="#area-torrey-highlands" data-a="tdm" style="--ac:#3f9a2a"><span class="dot"></span>Torrey Highlands <b>7</b></a><a class="chip" href="#area-torrey-hills" data-a="th" style="--ac:#d0346f"><span class="dot"></span>Torrey Hills <b>17</b></a><a class="chip" href="#area-del-mar-mesa" data-a="dmm" style="--ac:#7a4ce0"><span class="dot"></span>Del Mar Mesa <b>14</b></a><a class="chip" href="#area-rancho-pacifica" data-a="rp" style="--ac:#64748b"><span class="dot"></span>Rancho Pacifica <b>1</b></a></div>
+    <div class="map-box">
+      <div id="map" role="region" aria-label="Map of Carmel Valley single-family neighborhoods"></div>
+      <div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="map" aria-pressed="true">Map</button><button type="button" data-b="sat" aria-pressed="false">Satellite</button></div>
+      <div class="map-card" id="mcard" aria-live="polite"></div>
+    </div>
+    <p class="map-note">Boundaries are approximate. Home counts are from the California Title Company community chart. Median prices are single-family sales over the last 5 years.</p>
+  </div>
+</section>
+
+<div class="areas-wrap" id="areas">
+<div class="wrap"><div class="sec-head" style="margin-bottom:8px"><h2>Neighborhoods by Area</h2><p>Each area has its own age of homes, lot sizes and prices. Start with the area, then compare the neighborhoods in it.</p></div></div>
+<section class="area" id="area-north-of-del-mar-heights-road" style="--ac:#0d8f84">
+  <div class="wrap">
+    <div class="area-head">
+      <h3><span class="dot"></span>North of Del Mar Heights Road</h3>
+      <div class="area-stats">19 neighborhoods &middot; 1,932 homes</div>
+    </div>
+    <p class="area-text">Established 1980s and 1990s neighborhoods north of Del Mar Heights Road, close to the beach, Torrey Pines and the I-5 / SR-56 interchange. <a href="/north-of-del-mar-heights-road-homes-for-sale/">North of Del Mar Heights Road guide &rarr;</a></p>
+    <ul class="cc-grid">
+      <li class="cc"><div class="cc-body"><h4>4x4 Construction</h4><div class="cc-meta">4 homes &middot; median $3.5M</div><button type="button" class="cc-map" data-n="4x4 Construction">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Alta Mar</h4><div class="cc-meta">216 homes &middot; median $2.1M</div><button type="button" class="cc-map" data-n="Alta Mar">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Del Mar Summit</h4><div class="cc-meta">5 homes &middot; median $2.28M</div><button type="button" class="cc-map" data-n="Del Mar Summit">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Derby Point</h4><div class="cc-meta">10 homes &middot; median $3.21M</div><button type="button" class="cc-map" data-n="Derby Point">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Heights</h4><div class="cc-meta">566 homes &middot; median $2.56M</div><button type="button" class="cc-map" data-n="Heights">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Lexington Summit</h4><div class="cc-meta">14 homes &middot; median $3.11M</div><button type="button" class="cc-map" data-n="Lexington Summit">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Mayfield</h4><div class="cc-meta">66 homes &middot; median $2.13M</div><button type="button" class="cc-map" data-n="Mayfield">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Promontory</h4><div class="cc-meta">190 homes &middot; median $2.89M</div><button type="button" class="cc-map" data-n="Promontory">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>San Remo</h4><div class="cc-meta">289 homes &middot; median $1.91M</div><button type="button" class="cc-map" data-n="San Remo">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Santa Fe Summit</h4><div class="cc-meta">187 homes &middot; median $3.1M</div><button type="button" class="cc-map" data-n="Santa Fe Summit">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Senterra</h4><div class="cc-meta">median $2.63M</div><button type="button" class="cc-map" data-n="Senterra">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Stallions Crossing</h4><div class="cc-meta">48 homes &middot; median $2.31M</div><button type="button" class="cc-map" data-n="Stallions Crossing">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Stratford</h4><div class="cc-meta">median $2.73M</div><button type="button" class="cc-map" data-n="Stratford">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Sundowner Estates</h4><div class="cc-meta">6 homes &middot; median $2.87M</div><button type="button" class="cc-map" data-n="Sundowner Estates">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Torrey Del Mar West</h4><div class="cc-meta">47 homes &middot; median $3.33M</div><button type="button" class="cc-map" data-n="Torrey Del Mar West">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Torrey Glen</h4><div class="cc-meta">151 homes &middot; median $1.76M</div><button type="button" class="cc-map" data-n="Torrey Glen">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Venezia</h4><div class="cc-meta">42 homes &middot; median $2.53M</div><button type="button" class="cc-map" data-n="Venezia">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Vista Santa Barbara</h4><div class="cc-meta">85 homes &middot; median $2.84M</div><button type="button" class="cc-map" data-n="Vista Santa Barbara">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Windmill Estates</h4><div class="cc-meta">6 homes</div><button type="button" class="cc-map" data-n="Windmill Estates">Show on map</button></div></li>
+    </ul>
+  </div>
+</section>
+<section class="area" id="area-south-of-del-mar-heights-road" style="--ac:#0b5c8c">
+  <div class="wrap">
+    <div class="area-head">
+      <h3><span class="dot"></span>South of Del Mar Heights Road</h3>
+      <div class="area-stats">25 neighborhoods &middot; 3,468 homes</div>
+    </div>
+    <p class="area-text">The original heart of Carmel Valley: mature trees, parks and walking paths, with homes from the late 1980s and 1990s close to Del Mar Highlands Town Center. <a href="/south-of-del-mar-heights-road-homes-for-sale/">South of Del Mar Heights Road guide &rarr;</a></p>
+    <ul class="cc-grid">
+      <li class="cc"><div class="cc-body"><h4>Amador</h4><div class="cc-meta">38 homes &middot; median $2.72M</div><button type="button" class="cc-map" data-n="Amador">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Bayshore</h4><div class="cc-meta">149 homes &middot; median $1.74M</div><button type="button" class="cc-map" data-n="Bayshore">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Cantamar</h4><div class="cc-meta">227 homes &middot; median $2.38M</div><button type="button" class="cc-map" data-n="Cantamar">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Carmel Village</h4><div class="cc-meta">51 homes &middot; median $1.9M</div><button type="button" class="cc-map" data-n="Carmel Village">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Creek Park</h4><div class="cc-meta">155 homes &middot; median $1.93M</div><button type="button" class="cc-map" data-n="Creek Park">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Del Mar Bluffs</h4><div class="cc-meta">120 homes &middot; median $1.96M</div><button type="button" class="cc-map" data-n="Del Mar Bluffs">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Del Mar Place</h4><div class="cc-meta">241 homes &middot; median $2.43M</div><button type="button" class="cc-map" data-n="Del Mar Place">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Estates</h4><div class="cc-meta">99 homes &middot; median $2.42M</div><button type="button" class="cc-map" data-n="Estates">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Granada</h4><div class="cc-meta">73 homes &middot; median $2.08M</div><button type="button" class="cc-map" data-n="Granada">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Heights</h4><div class="cc-meta">566 homes &middot; median $2.56M</div><button type="button" class="cc-map" data-n="Heights">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Hunt Club</h4><div class="cc-meta">50 homes &middot; median $2.94M</div><button type="button" class="cc-map" data-n="Hunt Club">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Huntington Heights</h4><div class="cc-meta">132 homes &middot; median $2.84M</div><button type="button" class="cc-map" data-n="Huntington Heights">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Palisades</h4><div class="cc-meta">164 homes &middot; median $2.25M</div><button type="button" class="cc-map" data-n="Palisades">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Palma Del Mar</h4><div class="cc-meta">78 homes &middot; median $2.25M</div><button type="button" class="cc-map" data-n="Palma Del Mar">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Pines</h4><div class="cc-meta">176 homes &middot; median $1.66M</div><button type="button" class="cc-map" data-n="Pines">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Private Collection</h4><div class="cc-meta">40 homes &middot; median $3.32M</div><button type="button" class="cc-map" data-n="Private Collection">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Promontory</h4><div class="cc-meta">190 homes &middot; median $2.89M</div><button type="button" class="cc-map" data-n="Promontory">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Provence</h4><div class="cc-meta">57 homes &middot; median $2.82M</div><button type="button" class="cc-map" data-n="Provence">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>San Remo</h4><div class="cc-meta">289 homes &middot; median $1.91M</div><button type="button" class="cc-map" data-n="San Remo">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Seabridge</h4><div class="cc-meta">171 homes &middot; median $2.01M</div><button type="button" class="cc-map" data-n="Seabridge">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Sonoma</h4><div class="cc-meta">219 homes &middot; median $2.73M</div><button type="button" class="cc-map" data-n="Sonoma">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Triple Crown</h4><div class="cc-meta">41 homes &middot; median $2.9M</div><button type="button" class="cc-map" data-n="Triple Crown">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Verona</h4><div class="cc-meta">8 homes</div><button type="button" class="cc-map" data-n="Verona">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Watercolors</h4><div class="cc-meta">79 homes &middot; median $2.09M</div><button type="button" class="cc-map" data-n="Watercolors">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Wild Horse</h4><div class="cc-meta">55 homes &middot; median $2.4M</div><button type="button" class="cc-map" data-n="Wild Horse">Show on map</button></div></li>
+    </ul>
+  </div>
+</section>
+<section class="area" id="area-carmel-country-highlands" style="--ac:#c27a0e">
+  <div class="wrap">
+    <div class="area-head">
+      <h3><span class="dot"></span>Carmel Country Highlands</h3>
+      <div class="area-stats">8 neighborhoods &middot; 1,354 homes</div>
+    </div>
+    <p class="area-text">Larger 1990s and early-2000s homes on bigger lots in the hills of Carmel Country Highlands, many with five or more bedrooms. <a href="/carmel-country-highlands-homes-for-sale/">Carmel Country Highlands guide &rarr;</a></p>
+    <ul class="cc-grid">
+      <li class="cc"><div class="cc-body"><h4>Belmont</h4><div class="cc-meta">316 homes &middot; median $2.64M</div><button type="button" class="cc-map" data-n="Belmont">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Breakers</h4><div class="cc-meta">72 homes &middot; median $2.68M</div><button type="button" class="cc-map" data-n="Breakers">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Bridle Ridge</h4><div class="cc-meta">53 homes &middot; median $2.03M</div><button type="button" class="cc-map" data-n="Bridle Ridge">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Carriage Run</h4><div class="cc-meta">169 homes &middot; median $2M</div><button type="button" class="cc-map" data-n="Carriage Run">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Derby Hill</h4><div class="cc-meta">172 homes &middot; median $3.01M</div><button type="button" class="cc-map" data-n="Derby Hill">Show on map</button></div></li><li class="cc"><a class="cc-link" href="/lexington-carmel-valley-homes-for-sale/"><span class="sr">Lexington</span></a><div class="cc-body"><h4>Lexington</h4><div class="cc-meta">265 homes &middot; median $3.27M</div><button type="button" class="cc-map" data-n="Lexington">Show on map</button><span class="cc-cta">Community guide &rarr;</span></div></li><li class="cc"><div class="cc-body"><h4>Saratoga</h4><div class="cc-meta">114 homes &middot; median $2.41M</div><button type="button" class="cc-map" data-n="Saratoga">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Steeplechase</h4><div class="cc-meta">193 homes &middot; median $2.35M</div><button type="button" class="cc-map" data-n="Steeplechase">Show on map</button></div></li>
+    </ul>
+  </div>
+</section>
+<section class="area" id="area-pacific-highlands-ranch" style="--ac:#e0691c">
+  <div class="wrap">
+    <div class="area-head">
+      <h3><span class="dot"></span>Pacific Highlands Ranch</h3>
+      <div class="area-stats">36 neighborhoods &middot; 1,358 homes</div>
+    </div>
+    <p class="area-text">Carmel Valley&#x27;s newest homes, built from the 2000s onward, east of the SR-56. Many neighborhoods pay Mello-Roos on top of property tax. <a href="/pacific-highlands-ranch-homes-for-sale/">Pacific Highlands Ranch guide &rarr;</a></p>
+    <ul class="cc-grid">
+      <li class="cc"><div class="cc-body"><h4>Almeria</h4><div class="cc-meta">median $3.3M</div><button type="button" class="cc-map" data-n="Almeria">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Alta Del Mar-Coastal</h4><div class="cc-meta">median $5.05M</div><button type="button" class="cc-map" data-n="Alta Del Mar-Coastal">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Arabella</h4><div class="cc-meta">140 homes &middot; median $1.91M</div><button type="button" class="cc-map" data-n="Arabella">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Artesana</h4><div class="cc-meta">median $3.67M</div><button type="button" class="cc-map" data-n="Artesana">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Bordeaux</h4><div class="cc-meta">106 homes &middot; median $2.38M</div><button type="button" class="cc-map" data-n="Bordeaux">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Brightwater</h4><div class="cc-meta">77 homes &middot; median $3M</div><button type="button" class="cc-map" data-n="Brightwater">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Canterra</h4><div class="cc-meta">median $1.87M</div><button type="button" class="cc-map" data-n="Canterra">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Carmel</h4><div class="cc-meta">median $3.6M</div><button type="button" class="cc-map" data-n="Carmel">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Casabella</h4><div class="cc-meta">median $2.16M</div><button type="button" class="cc-map" data-n="Casabella">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Casabella Collection</h4><div class="cc-meta">median $2.19M</div><button type="button" class="cc-map" data-n="Casabella Collection">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Cassavia</h4><div class="cc-meta">median $2.25M</div><button type="button" class="cc-map" data-n="Cassavia">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Costa Del Sol</h4><div class="cc-meta">165 homes &middot; median $1.59M</div><button type="button" class="cc-map" data-n="Costa Del Sol">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Costa Del Sol West</h4><div class="cc-meta">median $1.6M</div><button type="button" class="cc-map" data-n="Costa Del Sol West">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Elms</h4><div class="cc-meta">median $2.26M</div><button type="button" class="cc-map" data-n="Elms">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Hampton Lane</h4><div class="cc-meta">118 homes &middot; median $2.11M</div><button type="button" class="cc-map" data-n="Hampton Lane">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Ivy</h4><div class="cc-meta">median $1.8M</div><button type="button" class="cc-map" data-n="Ivy">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Manzanita Trail</h4><div class="cc-meta">148 homes &middot; median $2.11M</div><button type="button" class="cc-map" data-n="Manzanita Trail">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Meadowood</h4><div class="cc-meta">median $2.43M</div><button type="button" class="cc-map" data-n="Meadowood">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Olvera</h4><div class="cc-meta">median $3.33M</div><button type="button" class="cc-map" data-n="Olvera">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Palomar</h4><div class="cc-meta">median $4.75M</div><button type="button" class="cc-map" data-n="Palomar">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Portico</h4><div class="cc-meta">186 homes &middot; median $1.93M</div><button type="button" class="cc-map" data-n="Portico">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Portofino</h4><div class="cc-meta">median $2.56M</div><button type="button" class="cc-map" data-n="Portofino">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Rancho Glens Estates</h4><div class="cc-meta">33 homes &middot; median $3.83M</div><button type="button" class="cc-map" data-n="Rancho Glens Estates">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Sandy Lane</h4><div class="cc-meta">Single-family homes</div><button type="button" class="cc-map" data-n="Sandy Lane">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Santa Barbara</h4><div class="cc-meta">98 homes &middot; median $2.9M</div><button type="button" class="cc-map" data-n="Santa Barbara">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Santa Rosa</h4><div class="cc-meta">124 homes &middot; median $2.68M</div><button type="button" class="cc-map" data-n="Santa Rosa">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Sendero</h4><div class="cc-meta">median $3.02M</div><button type="button" class="cc-map" data-n="Sendero">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Sendero Collection</h4><div class="cc-meta">median $2.44M</div><button type="button" class="cc-map" data-n="Sendero Collection">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Soleil at Bordeaux</h4><div class="cc-meta">163 homes &middot; median $2.28M</div><button type="button" class="cc-map" data-n="Soleil at Bordeaux">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Sterling</h4><div class="cc-meta">median $3.12M</div><button type="button" class="cc-map" data-n="Sterling">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Terraza</h4><div class="cc-meta">median $3.03M</div><button type="button" class="cc-map" data-n="Terraza">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>The Highlands</h4><div class="cc-meta">median $4.4M</div><button type="button" class="cc-map" data-n="The Highlands">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Verana</h4><div class="cc-meta">median $2.53M</div><button type="button" class="cc-map" data-n="Verana">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Villa Andalucia</h4><div class="cc-meta">median $1.5M</div><button type="button" class="cc-map" data-n="Villa Andalucia">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Vista Del Mar</h4><div class="cc-meta">median $3.92M</div><button type="button" class="cc-map" data-n="Vista Del Mar">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Vista Santa Fe</h4><div class="cc-meta">median $3.99M</div><button type="button" class="cc-map" data-n="Vista Santa Fe">Show on map</button></div></li>
+    </ul>
+  </div>
+</section>
+<section class="area" id="area-torrey-highlands" style="--ac:#3f9a2a">
+  <div class="wrap">
+    <div class="area-head">
+      <h3><span class="dot"></span>Torrey Highlands</h3>
+      <div class="area-stats">7 neighborhoods &middot; 419 homes</div>
+    </div>
+    <p class="area-text">Newer homes in Torrey Highlands, at the eastern edge of Carmel Valley near the SR-56 and Del Sur. <a href="/torrey-highlands-homes-for-sale/">Torrey Highlands guide &rarr;</a></p>
+    <ul class="cc-grid">
+      <li class="cc"><div class="cc-body"><h4>Collins Ranch</h4><div class="cc-meta">53 homes &middot; median $2.93M</div><button type="button" class="cc-map" data-n="Collins Ranch">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Fairbanks Highlands</h4><div class="cc-meta">93 homes &middot; median $3.7M</div><button type="button" class="cc-map" data-n="Fairbanks Highlands">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Maricel</h4><div class="cc-meta">median $2.15M</div><button type="button" class="cc-map" data-n="Maricel">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Palma Real</h4><div class="cc-meta">82 homes &middot; median $2.11M</div><button type="button" class="cc-map" data-n="Palma Real">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Terrazzo</h4><div class="cc-meta">59 homes &middot; median $2.04M</div><button type="button" class="cc-map" data-n="Terrazzo">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Valencia Collection</h4><div class="cc-meta">8 homes &middot; median $2.37M</div><button type="button" class="cc-map" data-n="Valencia Collection">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Villamontes</h4><div class="cc-meta">124 homes &middot; median $1.75M</div><button type="button" class="cc-map" data-n="Villamontes">Show on map</button></div></li>
+    </ul>
+  </div>
+</section>
+<section class="area" id="area-torrey-hills" style="--ac:#d0346f">
+  <div class="wrap">
+    <div class="area-head">
+      <h3><span class="dot"></span>Torrey Hills</h3>
+      <div class="area-stats">17 neighborhoods &middot; 1,586 homes</div>
+    </div>
+    <p class="area-text">A self-contained valley south of the SR-56 with its own parks and shopping, and homes from the late 1990s and 2000s. <a href="/torrey-hills-homes-for-sale/">Torrey Hills guide &rarr;</a></p>
+    <ul class="cc-grid">
+      <li class="cc"><div class="cc-body"><h4>Coves</h4><div class="cc-meta">108 homes &middot; median $1.91M</div><button type="button" class="cc-map" data-n="Coves">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Gables</h4><div class="cc-meta">44 homes &middot; median $2.91M</div><button type="button" class="cc-map" data-n="Gables">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Greenbriar</h4><div class="cc-meta">107 homes &middot; median $1.93M</div><button type="button" class="cc-map" data-n="Greenbriar">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>La Strada</h4><div class="cc-meta">69 homes &middot; median $2.63M</div><button type="button" class="cc-map" data-n="La Strada">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Monte Claire</h4><div class="cc-meta">50 homes &middot; median $2.97M</div><button type="button" class="cc-map" data-n="Monte Claire">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Montecito</h4><div class="cc-meta">81 homes &middot; median $2.78M</div><button type="button" class="cc-map" data-n="Montecito">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Sands</h4><div class="cc-meta">107 homes &middot; median $2M</div><button type="button" class="cc-map" data-n="Sands">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Sansonnet</h4><div class="cc-meta">183 homes &middot; median $2.6M</div><button type="button" class="cc-map" data-n="Sansonnet">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Sea Country</h4><div class="cc-meta">53 homes &middot; median $2.7M</div><button type="button" class="cc-map" data-n="Sea Country">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Searidge</h4><div class="cc-meta">57 homes &middot; median $2.01M</div><button type="button" class="cc-map" data-n="Searidge">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Shores</h4><div class="cc-meta">111 homes &middot; median $2.25M</div><button type="button" class="cc-map" data-n="Shores">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>St. Augustine</h4><div class="cc-meta">108 homes &middot; median $2.17M</div><button type="button" class="cc-map" data-n="St. Augustine">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Torrey Point</h4><div class="cc-meta">81 homes &middot; median $2.43M</div><button type="button" class="cc-map" data-n="Torrey Point">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Torrey View</h4><div class="cc-meta">121 homes &middot; median $2.21M</div><button type="button" class="cc-map" data-n="Torrey View">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Torrey Woods Estates</h4><div class="cc-meta">93 homes &middot; median $2.75M</div><button type="button" class="cc-map" data-n="Torrey Woods Estates">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Trilogy</h4><div class="cc-meta">189 homes &middot; median $1.41M</div><button type="button" class="cc-map" data-n="Trilogy">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Vantage Point</h4><div class="cc-meta">24 homes &middot; median $2.3M</div><button type="button" class="cc-map" data-n="Vantage Point">Show on map</button></div></li>
+    </ul>
+  </div>
+</section>
+<section class="area" id="area-del-mar-mesa" style="--ac:#7a4ce0">
+  <div class="wrap">
+    <div class="area-head">
+      <h3><span class="dot"></span>Del Mar Mesa</h3>
+      <div class="area-stats">14 neighborhoods &middot; 1,039 homes</div>
+    </div>
+    <p class="area-text">Estate homes on large lots next to the Del Mar Mesa preserve, with horse trails and a rural feel. <a href="/del-mar-mesa-homes-for-sale/">Del Mar Mesa guide &rarr;</a></p>
+    <ul class="cc-grid">
+      <li class="cc"><div class="cc-body"><h4>Alta Del Mar</h4><div class="cc-meta">216 homes &middot; median $4.5M</div><button type="button" class="cc-map" data-n="Alta Del Mar">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Bougainvillea</h4><div class="cc-meta">76 homes &middot; median $4.3M</div><button type="button" class="cc-map" data-n="Bougainvillea">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Del Mar Mesa Estates</h4><div class="cc-meta">median $5.2M</div><button type="button" class="cc-map" data-n="Del Mar Mesa Estates">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Duck Pond Ranch</h4><div class="cc-meta">15 homes &middot; median $8.4M</div><button type="button" class="cc-map" data-n="Duck Pond Ranch">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Meadows Del Mar</h4><div class="cc-meta">200 homes &middot; median $4.36M</div><button type="button" class="cc-map" data-n="Meadows Del Mar">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Palacio Del Mar</h4><div class="cc-meta">422 homes &middot; median $2.12M</div><button type="button" class="cc-map" data-n="Palacio Del Mar">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Paso Fino</h4><div class="cc-meta">12 homes &middot; median $3.79M</div><button type="button" class="cc-map" data-n="Paso Fino">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Ridge</h4><div class="cc-meta">19 homes &middot; median $4.55M</div><button type="button" class="cc-map" data-n="Ridge">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Ridge Estates</h4><div class="cc-meta">19 homes &middot; median $5.42M</div><button type="button" class="cc-map" data-n="Ridge Estates">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Silver Oaks Estates / Anderson Estates</h4><div class="cc-meta">8 homes</div><button type="button" class="cc-map" data-n="Silver Oaks Estates / Anderson Estates">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>The Preserve</h4><div class="cc-meta">14 homes &middot; median $6.4M</div><button type="button" class="cc-map" data-n="The Preserve">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Three Canyons</h4><div class="cc-meta">12 homes &middot; median $4.3M</div><button type="button" class="cc-map" data-n="Three Canyons">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Valencia</h4><div class="cc-meta">7 homes &middot; median $4.25M</div><button type="button" class="cc-map" data-n="Valencia">Show on map</button></div></li><li class="cc"><div class="cc-body"><h4>Whitehorse</h4><div class="cc-meta">19 homes &middot; median $4.72M</div><button type="button" class="cc-map" data-n="Whitehorse">Show on map</button></div></li>
+    </ul>
+  </div>
+</section>
+<section class="area" id="area-rancho-pacifica" style="--ac:#64748b">
+  <div class="wrap">
+    <div class="area-head">
+      <h3><span class="dot"></span>Rancho Pacifica</h3>
+      <div class="area-stats">1 neighborhood &middot; 148 homes</div>
+    </div>
+    <p class="area-text">A gated community of large custom and semi-custom estates in the hills.</p>
+    <ul class="cc-grid">
+      <li class="cc"><div class="cc-body"><h4>Rancho Pacifica</h4><div class="cc-meta">148 homes &middot; median $5.58M</div><button type="button" class="cc-map" data-n="Rancho Pacifica">Show on map</button></div></li>
+    </ul>
+  </div>
+</section>
+</div>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><h2>Carmel Valley Neighborhoods: Common Questions</h2></div>
+    <div class="faq-list">
+      <details><summary>How many single-family neighborhoods are in Carmel Valley?</summary><p>This map shows 127 single-family neighborhoods in Carmel Valley (San Diego, 92130), with more than 11,300 homes between them. They are spread across 8 areas, and 36 of them are in Pacific Highlands Ranch.</p></details>
+      <details><summary>Which Carmel Valley neighborhoods have the lowest and highest home prices?</summary><p>Among neighborhoods with at least five house sales in the last 5 years, Trilogy had the lowest median ($1.41M) and Rancho Pacifica the highest ($5.58M). Lot size, home age and school area explain most of the gap.</p></details>
+      <details><summary>What are the largest single-family neighborhoods in Carmel Valley?</summary><p>By number of homes, the largest are Heights (566 homes), Heights (566 homes), Palacio Del Mar (422 homes). Bigger neighborhoods have more sales each year, which makes prices easier to compare.</p></details>
+      <details><summary>Where are the newest houses in Carmel Valley?</summary><p>Pacific Highlands Ranch, east of the SR-56, was built out from the 2000s onward and still has some of the newest homes. Many of its neighborhoods pay Mello-Roos on top of property tax, so compare the full yearly cost.</p></details>
+      <details><summary>How do I see what is for sale in a specific neighborhood?</summary><p>Tap the neighborhood on the map or its card below. Where there is a guide, it shows live listings, recent sales and schools. For any other neighborhood, call or email Sez Sezer for current listings and recent sales.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT BLOCK ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <h2>Not Sure Which Neighborhood Fits?</h2>
+      <p class="c-lead">Tell me what matters to you (budget, school area, lot size, single-story, commute) and I&rsquo;ll point you to the neighborhoods that fit, with current listings and recent sales for each.</p>
+    </div>
+    <div class="contact-cta">
+      <div class="agent">
+        <img class="agent-photo" src="/images/sez-sezer-carmel-valley-realtor.jpg" alt="Sez Sezer, Carmel Valley real estate agent with Keller Williams Realty" width="96" height="96" loading="lazy">
+        <div class="agent-info">
+          <div class="agent-name">Sez Sezer</div>
+          <div class="agent-role">Keller Williams Realty &middot; DRE #01988197</div>
+          <a class="agent-phone" href="tel:+18584366585">(858) 436-6585</a>
+        </div>
+      </div>
+      <div class="contact-btns">
+        <a href="tel:+18584366585" class="contact-btn">Call Now</a>
+        <a href="mailto:sez@carmelvalley.com" class="contact-btn outline">Email Sez</a>
+        <a href="https://carmelvalley.com" class="contact-btn outline wide">Search All Listings</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="f-brand">
+        <div class="b-name">Carmel Valley Homes</div>
+        <div class="b-sub">Sez Sezer &middot; Keller Williams</div>
+        <p>Single-family homes for sale in Carmel Valley, San Diego, by price, school area and neighborhood, with real sold data for every community.</p>
+      </div>
+      <div class="f-explore">
+        <h4>Explore</h4>
+        <ul class="footer-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/carmel-valley-neighborhoods/">Neighborhoods</a></li>
+          <li><a href="/pacific-highlands-ranch-homes-for-sale/">Pacific Highlands Ranch</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Network</h4>
+        <ul class="footer-nav">
+          <li><a href="https://carmelvalley.com">All Carmel Valley listings</a></li>
+          <li><a href="https://carmelvalleycondos.com">Carmel Valley condos and townhomes</a></li>
+          <li><a href="https://homesforsaleinranchosantafe.com">Rancho Santa Fe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-nav">
+          <li>12750 High Bluff Drive</li>
+          <li>San Diego, CA 92130</li>
+          <li><a href="tel:+18584366585">(858) 436-6585</a></li>
+          <li><a href="mailto:sez@carmelvalley.com">Email Sez</a></li>
+          <li>DRE #01988197</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Carmel Valley Homes for Sale &middot; Sez Sezer, Keller Williams Realty</div>
+      <nav class="secondary-nav">
+        <a href="/sitemap.xml">Sitemap</a>
+      </nav>
+    </div>
+    <div class="disclaimer">
+      Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Carmel Valley Single-Family Neighborhoods", "url": "https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/", "about": {"@type": "Place", "name": "Carmel Valley, San Diego, CA 92130"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 127, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "4x4 Construction"}, {"@type": "ListItem", "position": 2, "name": "Alta Mar"}, {"@type": "ListItem", "position": 3, "name": "Del Mar Summit"}, {"@type": "ListItem", "position": 4, "name": "Derby Point"}, {"@type": "ListItem", "position": 5, "name": "Heights"}, {"@type": "ListItem", "position": 6, "name": "Lexington Summit"}, {"@type": "ListItem", "position": 7, "name": "Mayfield"}, {"@type": "ListItem", "position": 8, "name": "Promontory"}, {"@type": "ListItem", "position": 9, "name": "San Remo"}, {"@type": "ListItem", "position": 10, "name": "Santa Fe Summit"}, {"@type": "ListItem", "position": 11, "name": "Senterra"}, {"@type": "ListItem", "position": 12, "name": "Stallions Crossing"}, {"@type": "ListItem", "position": 13, "name": "Stratford"}, {"@type": "ListItem", "position": 14, "name": "Sundowner Estates"}, {"@type": "ListItem", "position": 15, "name": "Torrey Del Mar West"}, {"@type": "ListItem", "position": 16, "name": "Torrey Glen"}, {"@type": "ListItem", "position": 17, "name": "Venezia"}, {"@type": "ListItem", "position": 18, "name": "Vista Santa Barbara"}, {"@type": "ListItem", "position": 19, "name": "Windmill Estates"}, {"@type": "ListItem", "position": 20, "name": "Amador"}, {"@type": "ListItem", "position": 21, "name": "Bayshore"}, {"@type": "ListItem", "position": 22, "name": "Cantamar"}, {"@type": "ListItem", "position": 23, "name": "Carmel Village"}, {"@type": "ListItem", "position": 24, "name": "Creek Park"}, {"@type": "ListItem", "position": 25, "name": "Del Mar Bluffs"}, {"@type": "ListItem", "position": 26, "name": "Del Mar Place"}, {"@type": "ListItem", "position": 27, "name": "Estates"}, {"@type": "ListItem", "position": 28, "name": "Granada"}, {"@type": "ListItem", "position": 29, "name": "Heights"}, {"@type": "ListItem", "position": 30, "name": "Hunt Club"}, {"@type": "ListItem", "position": 31, "name": "Huntington Heights"}, {"@type": "ListItem", "position": 32, "name": "Palisades"}, {"@type": "ListItem", "position": 33, "name": "Palma Del Mar"}, {"@type": "ListItem", "position": 34, "name": "Pines"}, {"@type": "ListItem", "position": 35, "name": "Private Collection"}, {"@type": "ListItem", "position": 36, "name": "Promontory"}, {"@type": "ListItem", "position": 37, "name": "Provence"}, {"@type": "ListItem", "position": 38, "name": "San Remo"}, {"@type": "ListItem", "position": 39, "name": "Seabridge"}, {"@type": "ListItem", "position": 40, "name": "Sonoma"}, {"@type": "ListItem", "position": 41, "name": "Triple Crown"}, {"@type": "ListItem", "position": 42, "name": "Verona"}, {"@type": "ListItem", "position": 43, "name": "Watercolors"}, {"@type": "ListItem", "position": 44, "name": "Wild Horse"}, {"@type": "ListItem", "position": 45, "name": "Belmont"}, {"@type": "ListItem", "position": 46, "name": "Breakers"}, {"@type": "ListItem", "position": 47, "name": "Bridle Ridge"}, {"@type": "ListItem", "position": 48, "name": "Carriage Run"}, {"@type": "ListItem", "position": 49, "name": "Derby Hill"}, {"@type": "ListItem", "position": 50, "name": "Lexington", "url": "https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/"}, {"@type": "ListItem", "position": 51, "name": "Saratoga"}, {"@type": "ListItem", "position": 52, "name": "Steeplechase"}, {"@type": "ListItem", "position": 53, "name": "Almeria"}, {"@type": "ListItem", "position": 54, "name": "Alta Del Mar-Coastal"}, {"@type": "ListItem", "position": 55, "name": "Arabella"}, {"@type": "ListItem", "position": 56, "name": "Artesana"}, {"@type": "ListItem", "position": 57, "name": "Bordeaux"}, {"@type": "ListItem", "position": 58, "name": "Brightwater"}, {"@type": "ListItem", "position": 59, "name": "Canterra"}, {"@type": "ListItem", "position": 60, "name": "Carmel"}, {"@type": "ListItem", "position": 61, "name": "Casabella"}, {"@type": "ListItem", "position": 62, "name": "Casabella Collection"}, {"@type": "ListItem", "position": 63, "name": "Cassavia"}, {"@type": "ListItem", "position": 64, "name": "Costa Del Sol"}, {"@type": "ListItem", "position": 65, "name": "Costa Del Sol West"}, {"@type": "ListItem", "position": 66, "name": "Elms"}, {"@type": "ListItem", "position": 67, "name": "Hampton Lane"}, {"@type": "ListItem", "position": 68, "name": "Ivy"}, {"@type": "ListItem", "position": 69, "name": "Manzanita Trail"}, {"@type": "ListItem", "position": 70, "name": "Meadowood"}, {"@type": "ListItem", "position": 71, "name": "Olvera"}, {"@type": "ListItem", "position": 72, "name": "Palomar"}, {"@type": "ListItem", "position": 73, "name": "Portico"}, {"@type": "ListItem", "position": 74, "name": "Portofino"}, {"@type": "ListItem", "position": 75, "name": "Rancho Glens Estates"}, {"@type": "ListItem", "position": 76, "name": "Sandy Lane"}, {"@type": "ListItem", "position": 77, "name": "Santa Barbara"}, {"@type": "ListItem", "position": 78, "name": "Santa Rosa"}, {"@type": "ListItem", "position": 79, "name": "Sendero"}, {"@type": "ListItem", "position": 80, "name": "Sendero Collection"}, {"@type": "ListItem", "position": 81, "name": "Soleil at Bordeaux"}, {"@type": "ListItem", "position": 82, "name": "Sterling"}, {"@type": "ListItem", "position": 83, "name": "Terraza"}, {"@type": "ListItem", "position": 84, "name": "The Highlands"}, {"@type": "ListItem", "position": 85, "name": "Verana"}, {"@type": "ListItem", "position": 86, "name": "Villa Andalucia"}, {"@type": "ListItem", "position": 87, "name": "Vista Del Mar"}, {"@type": "ListItem", "position": 88, "name": "Vista Santa Fe"}, {"@type": "ListItem", "position": 89, "name": "Collins Ranch"}, {"@type": "ListItem", "position": 90, "name": "Fairbanks Highlands"}, {"@type": "ListItem", "position": 91, "name": "Maricel"}, {"@type": "ListItem", "position": 92, "name": "Palma Real"}, {"@type": "ListItem", "position": 93, "name": "Terrazzo"}, {"@type": "ListItem", "position": 94, "name": "Valencia Collection"}, {"@type": "ListItem", "position": 95, "name": "Villamontes"}, {"@type": "ListItem", "position": 96, "name": "Coves"}, {"@type": "ListItem", "position": 97, "name": "Gables"}, {"@type": "ListItem", "position": 98, "name": "Greenbriar"}, {"@type": "ListItem", "position": 99, "name": "La Strada"}, {"@type": "ListItem", "position": 100, "name": "Monte Claire"}, {"@type": "ListItem", "position": 101, "name": "Montecito"}, {"@type": "ListItem", "position": 102, "name": "Sands"}, {"@type": "ListItem", "position": 103, "name": "Sansonnet"}, {"@type": "ListItem", "position": 104, "name": "Sea Country"}, {"@type": "ListItem", "position": 105, "name": "Searidge"}, {"@type": "ListItem", "position": 106, "name": "Shores"}, {"@type": "ListItem", "position": 107, "name": "St. Augustine"}, {"@type": "ListItem", "position": 108, "name": "Torrey Point"}, {"@type": "ListItem", "position": 109, "name": "Torrey View"}, {"@type": "ListItem", "position": 110, "name": "Torrey Woods Estates"}, {"@type": "ListItem", "position": 111, "name": "Trilogy"}, {"@type": "ListItem", "position": 112, "name": "Vantage Point"}, {"@type": "ListItem", "position": 113, "name": "Alta Del Mar"}, {"@type": "ListItem", "position": 114, "name": "Bougainvillea"}, {"@type": "ListItem", "position": 115, "name": "Del Mar Mesa Estates"}, {"@type": "ListItem", "position": 116, "name": "Duck Pond Ranch"}, {"@type": "ListItem", "position": 117, "name": "Meadows Del Mar"}, {"@type": "ListItem", "position": 118, "name": "Palacio Del Mar"}, {"@type": "ListItem", "position": 119, "name": "Paso Fino"}, {"@type": "ListItem", "position": 120, "name": "Ridge"}, {"@type": "ListItem", "position": 121, "name": "Ridge Estates"}, {"@type": "ListItem", "position": 122, "name": "Silver Oaks Estates / Anderson Estates"}, {"@type": "ListItem", "position": 123, "name": "The Preserve"}, {"@type": "ListItem", "position": 124, "name": "Three Canyons"}, {"@type": "ListItem", "position": 125, "name": "Valencia"}, {"@type": "ListItem", "position": 126, "name": "Whitehorse"}, {"@type": "ListItem", "position": 127, "name": "Rancho Pacifica"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://carmelvalleyhomesforsale.com/"}, {"@type": "ListItem", "position": 2, "name": "Carmel Valley Neighborhoods", "item": "https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many single-family neighborhoods are in Carmel Valley?", "acceptedAnswer": {"@type": "Answer", "text": "This map shows 127 single-family neighborhoods in Carmel Valley (San Diego, 92130), with more than 11,300 homes between them. They are spread across 8 areas, and 36 of them are in Pacific Highlands Ranch."}}, {"@type": "Question", "name": "Which Carmel Valley neighborhoods have the lowest and highest home prices?", "acceptedAnswer": {"@type": "Answer", "text": "Among neighborhoods with at least five house sales in the last 5 years, Trilogy had the lowest median ($1.41M) and Rancho Pacifica the highest ($5.58M). Lot size, home age and school area explain most of the gap."}}, {"@type": "Question", "name": "What are the largest single-family neighborhoods in Carmel Valley?", "acceptedAnswer": {"@type": "Answer", "text": "By number of homes, the largest are Heights (566 homes), Heights (566 homes), Palacio Del Mar (422 homes). Bigger neighborhoods have more sales each year, which makes prices easier to compare."}}, {"@type": "Question", "name": "Where are the newest houses in Carmel Valley?", "acceptedAnswer": {"@type": "Answer", "text": "Pacific Highlands Ranch, east of the SR-56, was built out from the 2000s onward and still has some of the newest homes. Many of its neighborhoods pay Mello-Roos on top of property tax, so compare the full yearly cost."}}, {"@type": "Question", "name": "How do I see what is for sale in a specific neighborhood?", "acceptedAnswer": {"@type": "Answer", "text": "Tap the neighborhood on the map or its card below. Where there is a guide, it shows live listings, recent sales and schools. For any other neighborhood, call or email Sez Sezer for current listings and recent sales."}}]}</script>
+
+<nav class="bottom-nav" aria-label="Jump to section">
+  <a href="#map-section"><svg viewBox="0 0 24 24"><path d="M12 21s7-7.1 7-12a7 7 0 0 0-14 0c0 4.9 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Map</a>
+  <a href="#areas"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Areas</a>
+  <a href="#faq"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2-2.5 4"/><circle cx="12" cy="16.5" r=".6"/></svg>FAQ</a>
+  <a href="#contact"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Contact</a>
+  <a href="#" class="bn-menu" onclick="event.preventDefault();window.__showMasthead&&window.__showMasthead();document.getElementById('pnav').classList.toggle('open')"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Menu</a>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+var HUB={"c":[{"n":"Paso Fino","a":"dmm","h":12,"u":null,"g":false,"m":"$3.79M","p":[[[32.94488,-117.18271],[32.94551,-117.18271],[32.94663,-117.18273],[32.9466,-117.18309],[32.94857,-117.18383],[32.94855,-117.18445],[32.94858,-117.18486],[32.94856,-117.18665],[32.94628,-117.18601],[32.94577,-117.18531],[32.94506,-117.18528],[32.94484,-117.18491],[32.94488,-117.18271]]]},{"n":"Duck Pond Ranch","a":"dmm","h":15,"u":null,"g":false,"m":"$8.4M","p":[[[32.94126,-117.18265],[32.93943,-117.18255],[32.93939,-117.17868],[32.93977,-117.17762],[32.94015,-117.17723],[32.94179,-117.17822],[32.94178,-117.17955],[32.94164,-117.17961],[32.9413,-117.17979],[32.94126,-117.18265]]]},{"n":"Valencia","a":"dmm","h":7,"u":null,"g":false,"m":"$4.25M","p":[[[32.94307,-117.1827],[32.94263,-117.18269],[32.94261,-117.18363],[32.94213,-117.18363],[32.94205,-117.18392],[32.94203,-117.18478],[32.94181,-117.18483],[32.94179,-117.18464],[32.94161,-117.1844],[32.94149,-117.18408],[32.94142,-117.18376],[32.94142,-117.18328],[32.94145,-117.18274],[32.94167,-117.18276],[32.94196,-117.18264],[32.94262,-117.18263],[32.94269,-117.17845],[32.9432,-117.17845],[32.94318,-117.17917],[32.94313,-117.17978],[32.94312,-117.18049],[32.94307,-117.1827]]]},{"n":"The Preserve","a":"dmm","h":14,"u":null,"g":false,"m":"$6.4M","p":[[[32.94615,-117.17459],[32.94314,-117.17454],[32.94309,-117.1745],[32.94282,-117.17433],[32.94135,-117.17341],[32.94072,-117.17229],[32.9414,-117.17116],[32.94245,-117.16941],[32.94302,-117.1702],[32.9438,-117.16936],[32.94392,-117.16949],[32.94471,-117.16838],[32.94535,-117.16875],[32.94612,-117.17364],[32.94615,-117.17459]]]},{"n":"Del Mar Mesa Estates","a":"dmm","h":null,"u":null,"g":false,"m":"$5.2M","p":[[[32.94653,-117.17844],[32.94307,-117.17833],[32.9433,-117.17684],[32.94317,-117.17592],[32.94332,-117.1752],[32.94323,-117.17466],[32.94474,-117.17473],[32.94614,-117.17472],[32.94719,-117.176],[32.9472,-117.17716],[32.94666,-117.17751],[32.94669,-117.17812],[32.94653,-117.17844]]]},{"n":"Three Canyons","a":"dmm","h":12,"u":null,"g":false,"m":"$4.3M","p":[[[32.94868,-117.18274],[32.94856,-117.18368],[32.94673,-117.18303],[32.94672,-117.1806],[32.94673,-117.17997],[32.9473,-117.18026],[32.94843,-117.18095],[32.94868,-117.18274]]]},{"n":"Alta Del Mar","a":"dmm","h":216,"u":null,"g":false,"m":"$4.5M","p":[[[32.94119,-117.18682],[32.94119,-117.18694],[32.93748,-117.18692],[32.93541,-117.18667],[32.93484,-117.18663],[32.93435,-117.18792],[32.93261,-117.19031],[32.93075,-117.19085],[32.93016,-117.18996],[32.92908,-117.18989],[32.92868,-117.18862],[32.92848,-117.18622],[32.92833,-117.18338],[32.92814,-117.18163],[32.92841,-117.18155],[32.92988,-117.18125],[32.93192,-117.18079],[32.93291,-117.18048],[32.9352,-117.17932],[32.93538,-117.18014],[32.93574,-117.18018],[32.93603,-117.17997],[32.93751,-117.18026],[32.93766,-117.17972],[32.93907,-117.17985],[32.93907,-117.18271],[32.94128,-117.18276],[32.94119,-117.18682]]]},{"n":"Bougainvillea","a":"dmm","h":76,"u":null,"g":false,"m":"$4.3M","p":[[[32.94678,-117.17833],[32.94725,-117.17836],[32.94764,-117.17862],[32.94842,-117.17848],[32.94874,-117.17911],[32.94876,-117.18],[32.94842,-117.18072],[32.94666,-117.17976],[32.94669,-117.18153],[32.94669,-117.18256],[32.94317,-117.18258],[32.94326,-117.17843],[32.94291,-117.17843],[32.94266,-117.17841],[32.94259,-117.18256],[32.942,-117.18259],[32.9413,-117.18265],[32.94132,-117.17981],[32.94178,-117.17958],[32.94182,-117.17956],[32.94184,-117.17838],[32.94268,-117.17838],[32.94291,-117.17838],[32.94314,-117.17839],[32.94337,-117.1784],[32.94506,-117.17847],[32.94655,-117.1785],[32.94678,-117.17833]]]},{"n":"Meadows Del Mar","a":"dmm","h":200,"u":null,"g":false,"m":"$4.36M","p":[[[32.93768,-117.19368],[32.93723,-117.19202],[32.93653,-117.18989],[32.93676,-117.18897],[32.93559,-117.18835],[32.9353,-117.18689],[32.93564,-117.18681],[32.93656,-117.18691],[32.93674,-117.18693],[32.93686,-117.18694],[32.93787,-117.18703],[32.93954,-117.18702],[32.9412,-117.18703],[32.94127,-117.18825],[32.94129,-117.19017],[32.94131,-117.19144],[32.94131,-117.19306],[32.94131,-117.19395],[32.94138,-117.19484],[32.9414,-117.19547],[32.94167,-117.19574],[32.9421,-117.1958],[32.94248,-117.19565],[32.94292,-117.1957],[32.94326,-117.19597],[32.94341,-117.19679],[32.94357,-117.19733],[32.94359,-117.1979],[32.94353,-117.19848],[32.94347,-117.19923],[32.94302,-117.1997],[32.94245,-117.1997],[32.94182,-117.19968],[32.94151,-117.1998],[32.94165,-117.20409],[32.93986,-117.20412],[32.93971,-117.2037],[32.94011,-117.20319],[32.94061,-117.20275],[32.94061,-117.20253],[32.94037,-117.20252],[32.94007,-117.20262],[32.93975,-117.20283],[32.93931,-117.20282],[32.93826,-117.20262],[32.93803,-117.20217],[32.93822,-117.20164],[32.93863,-117.20118],[32.93921,-117.20076],[32.93987,-117.20025],[32.94035,-117.19984],[32.94028,-117.19453],[32.93886,-117.19419],[32.93775,-117.19409],[32.93768,-117.19368]]]},{"n":"Ridge Estates","a":"dmm","h":19,"u":null,"g":false,"m":"$5.42M","p":[[[32.94389,-117.18705],[32.9426,-117.18706],[32.94125,-117.18708],[32.94126,-117.18488],[32.94387,-117.18493],[32.94389,-117.18705]]]},{"n":"Ridge","a":"dmm","h":19,"u":null,"g":false,"m":"$4.55M","p":[[[32.94258,-117.20933],[32.94197,-117.21],[32.94167,-117.21],[32.94113,-117.21186],[32.9401,-117.21172],[32.94006,-117.21124],[32.93929,-117.21152],[32.93856,-117.21085],[32.93814,-117.21033],[32.93769,-117.20945],[32.9379,-117.20838],[32.93931,-117.20841],[32.94178,-117.20841],[32.94177,-117.20583],[32.94178,-117.20502],[32.94187,-117.20495],[32.94258,-117.20498],[32.94228,-117.20566],[32.9425,-117.20625],[32.94234,-117.20637],[32.94258,-117.20696],[32.94244,-117.20723],[32.9423,-117.2078],[32.94212,-117.20869],[32.94258,-117.20933]]]},{"n":"Whitehorse","a":"dmm","h":19,"u":null,"g":false,"m":"$4.72M","p":[[[32.94182,-117.20409],[32.94184,-117.20369],[32.94169,-117.20269],[32.94165,-117.20231],[32.94164,-117.20223],[32.94155,-117.19981],[32.94188,-117.19974],[32.94208,-117.19971],[32.9425,-117.19974],[32.94302,-117.19974],[32.94351,-117.19973],[32.94409,-117.19973],[32.94428,-117.20013],[32.94466,-117.20107],[32.94465,-117.20152],[32.94438,-117.20177],[32.94396,-117.20233],[32.94375,-117.20233],[32.94341,-117.20164],[32.94308,-117.20156],[32.94282,-117.20254],[32.9432,-117.2031],[32.94308,-117.20412],[32.94263,-117.20413],[32.94182,-117.20409]]]},{"n":"Palacio Del Mar","a":"dmm","h":422,"u":null,"g":false,"m":"$2.12M","p":[[[32.94122,-117.21289],[32.94159,-117.211],[32.94249,-117.21014],[32.94316,-117.20895],[32.94315,-117.20764],[32.94303,-117.20585],[32.94336,-117.20495],[32.94395,-117.20517],[32.9439,-117.20366],[32.94524,-117.20198],[32.94566,-117.19942],[32.94636,-117.19787],[32.94675,-117.19775],[32.9478,-117.19787],[32.94766,-117.20065],[32.94704,-117.20217],[32.94796,-117.20217],[32.94859,-117.20261],[32.94818,-117.20413],[32.94686,-117.20656],[32.94627,-117.20783],[32.94556,-117.21007],[32.94479,-117.21203],[32.94416,-117.21287],[32.94347,-117.21353],[32.94257,-117.21304],[32.94189,-117.21285],[32.94122,-117.21289]]]},{"n":"Silver Oaks Estates / Anderson Estates","a":"dmm","h":8,"u":null,"g":false,"m":null,"p":[[[32.94396,-117.19351],[32.94249,-117.19341],[32.94235,-117.19241],[32.94235,-117.19154],[32.94341,-117.19148],[32.94368,-117.19164],[32.94482,-117.19113],[32.94505,-117.19182],[32.94468,-117.19239],[32.9443,-117.19286],[32.94396,-117.19351]]]},{"n":"Sea Country","a":"th","h":53,"u":null,"g":false,"m":"$2.7M","p":[[[32.92044,-117.22616],[32.92046,-117.2262],[32.92,-117.22648],[32.91978,-117.22638],[32.9194,-117.22672],[32.91908,-117.22699],[32.91853,-117.22716],[32.91789,-117.22703],[32.91733,-117.22664],[32.91747,-117.22608],[32.91777,-117.2246],[32.91772,-117.22363],[32.91781,-117.22358],[32.91817,-117.22361],[32.91833,-117.22376],[32.91909,-117.22406],[32.91961,-117.22386],[32.92044,-117.22616]]]},{"n":"Vantage Point","a":"th","h":24,"u":null,"g":false,"m":"$2.3M","p":[[[32.91206,-117.22117],[32.91203,-117.2212],[32.91199,-117.22115],[32.91167,-117.22077],[32.91149,-117.22064],[32.91137,-117.22061],[32.91129,-117.22073],[32.91089,-117.22117],[32.91058,-117.22152],[32.91044,-117.22127],[32.91026,-117.22106],[32.90991,-117.22082],[32.90988,-117.2205],[32.91038,-117.22021],[32.91079,-117.21986],[32.91151,-117.22001],[32.9118,-117.21978],[32.91217,-117.21991],[32.91264,-117.21962],[32.9126,-117.22026],[32.91239,-117.22073],[32.91206,-117.22117]]]},{"n":"Montecito","a":"th","h":81,"u":null,"g":false,"m":"$2.78M","p":[[[32.92152,-117.216],[32.92177,-117.21436],[32.92183,-117.21411],[32.92204,-117.21275],[32.9227,-117.21279],[32.92291,-117.21278],[32.92288,-117.21278],[32.92372,-117.21277],[32.92372,-117.21386],[32.92373,-117.21431],[32.92373,-117.21467],[32.92373,-117.21697],[32.92345,-117.21684],[32.92287,-117.21649],[32.9227,-117.21642],[32.92152,-117.216]]]},{"n":"Sansonnet","a":"th","h":183,"u":null,"g":false,"m":"$2.6M","p":[[[32.9263,-117.22138],[32.92632,-117.22148],[32.92354,-117.22147],[32.92342,-117.22333],[32.92252,-117.22471],[32.92204,-117.22444],[32.92172,-117.2239],[32.92155,-117.22326],[32.92159,-117.2225],[32.92184,-117.22187],[32.92216,-117.22137],[32.9225,-117.22068],[32.92275,-117.21999],[32.9228,-117.21919],[32.9229,-117.21881],[32.92316,-117.21824],[32.92308,-117.21764],[32.9231,-117.21745],[32.92328,-117.21699],[32.92353,-117.21714],[32.9241,-117.21719],[32.92436,-117.21719],[32.92602,-117.21721],[32.92602,-117.21731],[32.92588,-117.21842],[32.9264,-117.21842],[32.9264,-117.2199],[32.92602,-117.21993],[32.92596,-117.22051],[32.92635,-117.2209],[32.9263,-117.22138]]]},{"n":"Shores","a":"th","h":111,"u":null,"g":false,"m":"$2.25M","p":[[[32.91614,-117.22182],[32.91617,-117.22299],[32.91742,-117.22325],[32.91762,-117.22362],[32.91768,-117.22429],[32.91767,-117.22454],[32.91718,-117.22651],[32.91603,-117.22582],[32.91561,-117.22526],[32.9154,-117.22445],[32.91531,-117.22369],[32.91472,-117.22239],[32.91479,-117.22203],[32.91428,-117.2214],[32.91456,-117.22068],[32.91436,-117.22031],[32.91441,-117.21966],[32.91473,-117.21873],[32.91595,-117.21939],[32.91608,-117.22044],[32.91607,-117.22123],[32.91614,-117.22182]]]},{"n":"Torrey View","a":"th","h":121,"u":null,"g":false,"m":"$2.21M","p":[[[32.92004,-117.23519],[32.92015,-117.23166],[32.92081,-117.23106],[32.92106,-117.23178],[32.92106,-117.23394],[32.92108,-117.23417],[32.92313,-117.23422],[32.92342,-117.23447],[32.92333,-117.2347],[32.9239,-117.2351],[32.92457,-117.23676],[32.92444,-117.23694],[32.92351,-117.23708],[32.92341,-117.2368],[32.92343,-117.23648],[32.92309,-117.23657],[32.92254,-117.23647],[32.92181,-117.23674],[32.92136,-117.23649],[32.92135,-117.23609],[32.92117,-117.23575],[32.9208,-117.23597],[32.92004,-117.23519]]]},{"n":"Greenbriar","a":"th","h":107,"u":null,"g":false,"m":"$1.93M","p":[[[32.9237,-117.22625],[32.92373,-117.22523],[32.9238,-117.22491],[32.92379,-117.22197],[32.92549,-117.222],[32.92626,-117.22299],[32.92639,-117.22321],[32.9261,-117.2241],[32.92587,-117.2245],[32.92561,-117.22518],[32.92517,-117.22557],[32.92497,-117.22554],[32.9248,-117.22572],[32.92449,-117.2259],[32.92375,-117.22666],[32.9237,-117.22625]]]},{"n":"Sands","a":"th","h":107,"u":null,"g":false,"m":"$2M","p":[[[32.92247,-117.22484],[32.92189,-117.22584],[32.92123,-117.22675],[32.92068,-117.22583],[32.92035,-117.22497],[32.92012,-117.22374],[32.92013,-117.22256],[32.92031,-117.22158],[32.92178,-117.22177],[32.92168,-117.22205],[32.92151,-117.22244],[32.92145,-117.2228],[32.92148,-117.22324],[32.9215,-117.22338],[32.92166,-117.2239],[32.92199,-117.22447],[32.92247,-117.22484]]]},{"n":"Coves","a":"th","h":108,"u":null,"g":false,"m":"$1.91M","p":[[[32.92049,-117.2208],[32.92112,-117.21824],[32.92149,-117.21628],[32.92213,-117.21643],[32.92266,-117.21659],[32.92316,-117.21689],[32.92301,-117.21747],[32.92307,-117.21825],[32.92288,-117.21866],[32.92271,-117.21913],[32.92263,-117.22001],[32.92234,-117.22056],[32.92195,-117.22111],[32.9217,-117.22096],[32.92152,-117.22099],[32.92072,-117.22089],[32.92049,-117.2208]]]},{"n":"Monte Claire","a":"th","h":50,"u":null,"g":false,"m":"$2.97M","p":[[[32.92595,-117.22644],[32.92573,-117.22716],[32.92522,-117.22788],[32.9251,-117.22821],[32.92529,-117.22847],[32.9257,-117.22874],[32.92531,-117.22964],[32.92501,-117.22991],[32.92451,-117.23006],[32.9238,-117.23013],[32.92375,-117.22714],[32.92437,-117.22632],[32.92481,-117.22594],[32.92512,-117.22585],[32.92545,-117.22616],[32.92595,-117.22644]]]},{"n":"La Strada","a":"th","h":69,"u":null,"g":false,"m":"$2.63M","p":[[[32.91257,-117.22546],[32.91213,-117.22517],[32.91176,-117.22471],[32.91148,-117.22382],[32.91134,-117.22294],[32.91109,-117.22295],[32.91061,-117.22322],[32.91025,-117.22324],[32.91008,-117.22324],[32.91003,-117.22387],[32.90951,-117.22398],[32.90926,-117.224],[32.90886,-117.2234],[32.90919,-117.22229],[32.90948,-117.22185],[32.90989,-117.22191],[32.91028,-117.22196],[32.91048,-117.2218],[32.9106,-117.22154],[32.91133,-117.22072],[32.91147,-117.22074],[32.91161,-117.22089],[32.91195,-117.22128],[32.912,-117.22156],[32.91208,-117.22173],[32.91208,-117.22188],[32.91212,-117.22218],[32.91254,-117.22276],[32.91261,-117.22292],[32.91281,-117.22475],[32.91257,-117.22546]]]},{"n":"Gables","a":"th","h":44,"u":null,"g":false,"m":"$2.91M","p":[[[32.92555,-117.21703],[32.92556,-117.21595],[32.92555,-117.21494],[32.92737,-117.21495],[32.92737,-117.21618],[32.92741,-117.21664],[32.92626,-117.21708],[32.92555,-117.21703]]]},{"n":"Torrey Point","a":"th","h":81,"u":null,"g":false,"m":"$2.43M","p":[[[32.92158,-117.22822],[32.9209,-117.2296],[32.92055,-117.22988],[32.91987,-117.22937],[32.91939,-117.22944],[32.91886,-117.22925],[32.9178,-117.22934],[32.91773,-117.22858],[32.91799,-117.2273],[32.9188,-117.22727],[32.91921,-117.22708],[32.91978,-117.22662],[32.92048,-117.22622],[32.92158,-117.22822]]]},{"n":"Searidge","a":"th","h":57,"u":null,"g":false,"m":"$2.01M","p":[[[32.91449,-117.21725],[32.9144,-117.21723],[32.91405,-117.21719],[32.91366,-117.21726],[32.91333,-117.21743],[32.91307,-117.21763],[32.91282,-117.21813],[32.91273,-117.21835],[32.91262,-117.21882],[32.91173,-117.21841],[32.91137,-117.21854],[32.91091,-117.21819],[32.91079,-117.21761],[32.91095,-117.21713],[32.91141,-117.21682],[32.91222,-117.21715],[32.91257,-117.21664],[32.91275,-117.21595],[32.91315,-117.21601],[32.91342,-117.21591],[32.91383,-117.21552],[32.91395,-117.21557],[32.91417,-117.21572],[32.91437,-117.21619],[32.91454,-117.21679],[32.91451,-117.2172],[32.91449,-117.21725]]]},{"n":"St. Augustine","a":"th","h":108,"u":null,"g":false,"m":"$2.17M","p":[[[32.91453,-117.21725],[32.91456,-117.21678],[32.91435,-117.21596],[32.91425,-117.21573],[32.91492,-117.21532],[32.9146,-117.21441],[32.91528,-117.21284],[32.91584,-117.21318],[32.91604,-117.21373],[32.91627,-117.21442],[32.91675,-117.2145],[32.91707,-117.21427],[32.91717,-117.21464],[32.91746,-117.21536],[32.9176,-117.21581],[32.91774,-117.21666],[32.91685,-117.21668],[32.91652,-117.2167],[32.91616,-117.21682],[32.91573,-117.21714],[32.91522,-117.21734],[32.91491,-117.21737],[32.91453,-117.21725]]]},{"n":"Trilogy","a":"th","h":189,"u":null,"g":false,"m":"$1.41M","p":[[[32.9237,-117.23013],[32.92343,-117.23015],[32.92249,-117.22846],[32.92178,-117.22746],[32.92128,-117.22682],[32.92176,-117.22613],[32.92373,-117.22302],[32.92376,-117.22336],[32.92376,-117.22495],[32.9237,-117.22519],[32.92342,-117.2257],[32.92366,-117.22679],[32.92365,-117.22709],[32.92371,-117.22738],[32.92375,-117.23013],[32.9237,-117.23013]]]},{"n":"Torrey Woods Estates","a":"th","h":93,"u":null,"g":false,"m":"$2.75M","p":[[[32.92927,-117.22776],[32.92757,-117.22787],[32.92768,-117.22714],[32.92783,-117.22655],[32.92787,-117.22605],[32.92843,-117.22577],[32.92918,-117.22544],[32.92898,-117.22364],[32.92915,-117.22179],[32.93018,-117.22198],[32.9313,-117.22202],[32.93115,-117.22361],[32.93135,-117.2254],[32.93109,-117.22566],[32.93119,-117.22613],[32.93102,-117.22664],[32.93027,-117.22707],[32.92927,-117.22776]]]},{"n":"Fairbanks Highlands","a":"tdm","h":93,"u":null,"g":false,"m":"$3.7M","p":[[[32.9708,-117.16033],[32.97093,-117.15802],[32.97101,-117.15606],[32.97112,-117.15446],[32.97127,-117.1542],[32.97211,-117.15382],[32.97286,-117.1537],[32.97322,-117.1536],[32.97364,-117.15358],[32.97433,-117.15426],[32.97455,-117.15382],[32.97483,-117.15349],[32.97533,-117.15328],[32.97622,-117.1537],[32.97705,-117.15406],[32.97729,-117.15406],[32.97751,-117.15406],[32.97794,-117.15408],[32.97763,-117.16184],[32.97768,-117.16245],[32.97772,-117.16319],[32.97751,-117.16354],[32.97726,-117.16366],[32.97695,-117.1636],[32.97667,-117.1635],[32.97393,-117.16552],[32.97205,-117.1655],[32.97044,-117.16551],[32.97046,-117.1648],[32.97045,-117.16435],[32.9705,-117.16367],[32.9706,-117.16282],[32.97074,-117.16181],[32.97076,-117.16129],[32.97078,-117.16085],[32.9708,-117.16033]]]},{"n":"Maricel","a":"tdm","h":null,"u":null,"g":false,"m":"$2.15M","p":[[[32.97057,-117.15815],[32.96936,-117.15816],[32.96938,-117.15773],[32.9694,-117.15697],[32.96942,-117.1564],[32.96973,-117.15639],[32.96981,-117.1554],[32.96983,-117.15517],[32.97014,-117.15516],[32.97021,-117.1546],[32.97022,-117.15455],[32.97074,-117.15458],[32.9707,-117.15517],[32.97068,-117.15617],[32.97062,-117.15716],[32.97057,-117.15815]]]},{"n":"Palma Real","a":"tdm","h":82,"u":null,"g":false,"m":"$2.11M","p":[[[32.96596,-117.16592],[32.96517,-117.16429],[32.9651,-117.16412],[32.96557,-117.16369],[32.96572,-117.16337],[32.96583,-117.1629],[32.96653,-117.16216],[32.96662,-117.16213],[32.96672,-117.16208],[32.96682,-117.16212],[32.96696,-117.16221],[32.96719,-117.16236],[32.96738,-117.1625],[32.96772,-117.16193],[32.96801,-117.16193],[32.96875,-117.16199],[32.96868,-117.16313],[32.96857,-117.16318],[32.9684,-117.1633],[32.96811,-117.16372],[32.96793,-117.164],[32.96768,-117.16427],[32.9664,-117.16561],[32.9663,-117.16575],[32.96628,-117.16578],[32.96602,-117.16603],[32.96596,-117.16592]]]},{"n":"Terrazzo","a":"tdm","h":59,"u":null,"g":false,"m":"$2.04M","p":[[[32.96865,-117.16319],[32.96874,-117.16354],[32.9688,-117.1637],[32.96897,-117.16368],[32.96898,-117.1637],[32.9689,-117.164],[32.96862,-117.16445],[32.96832,-117.16484],[32.96739,-117.1658],[32.9666,-117.16684],[32.96653,-117.16695],[32.96603,-117.16604],[32.96621,-117.16587],[32.9663,-117.1658],[32.96643,-117.16559],[32.96713,-117.16486],[32.96763,-117.16434],[32.96794,-117.16401],[32.96815,-117.16367],[32.96841,-117.16331],[32.96864,-117.16316],[32.96865,-117.16319]]]},{"n":"Valencia Collection","a":"tdm","h":8,"u":null,"g":false,"m":"$2.37M","p":[[[32.96984,-117.1676],[32.96939,-117.16765],[32.96899,-117.16766],[32.9684,-117.16747],[32.96826,-117.16721],[32.96823,-117.1669],[32.96841,-117.16647],[32.96862,-117.1662],[32.96881,-117.1661],[32.96891,-117.166],[32.96905,-117.16601],[32.96928,-117.16606],[32.9694,-117.16608],[32.96963,-117.16593],[32.96966,-117.16647],[32.96971,-117.16697],[32.96984,-117.1676]]]},{"n":"Villamontes","a":"tdm","h":124,"u":null,"g":false,"m":"$1.75M","p":[[[32.96833,-117.16177],[32.96837,-117.16063],[32.96784,-117.16054],[32.96785,-117.15962],[32.96842,-117.15972],[32.96861,-117.15952],[32.96864,-117.15943],[32.96866,-117.15891],[32.96886,-117.15859],[32.96914,-117.15838],[32.96937,-117.15832],[32.96972,-117.15839],[32.96958,-117.16065],[32.96979,-117.16067],[32.96977,-117.16209],[32.97035,-117.16217],[32.97037,-117.16228],[32.96979,-117.16443],[32.9697,-117.165],[32.96969,-117.16439],[32.96948,-117.16439],[32.96947,-117.16515],[32.96941,-117.16563],[32.96931,-117.16604],[32.96929,-117.16606],[32.96901,-117.16598],[32.96898,-117.16594],[32.96913,-117.16524],[32.96916,-117.16501],[32.96913,-117.16451],[32.969,-117.16385],[32.96901,-117.16369],[32.969,-117.1635],[32.96875,-117.16354],[32.96866,-117.16316],[32.9687,-117.16314],[32.96876,-117.16197],[32.96876,-117.16181],[32.96833,-117.16177]]]},{"n":"Collins Ranch","a":"tdm","h":53,"u":null,"g":false,"m":"$2.93M","p":[[[32.97389,-117.1676],[32.9737,-117.16763],[32.97175,-117.16759],[32.97019,-117.16764],[32.97006,-117.16697],[32.96998,-117.16588],[32.97051,-117.16566],[32.97136,-117.1656],[32.97191,-117.16557],[32.97242,-117.16556],[32.97394,-117.16559],[32.97399,-117.16745],[32.97389,-117.1676]]]},{"n":"Senterra","a":"n","h":null,"u":null,"g":false,"m":"$2.63M","p":[[[32.97609,-117.20565],[32.97589,-117.20569],[32.97571,-117.20581],[32.97517,-117.20582],[32.97463,-117.20574],[32.97408,-117.20564],[32.9736,-117.20573],[32.97324,-117.206],[32.97303,-117.20625],[32.97289,-117.20668],[32.97281,-117.20714],[32.97281,-117.2076],[32.97292,-117.20833],[32.97282,-117.20881],[32.97198,-117.20875],[32.97181,-117.20813],[32.97091,-117.20748],[32.97045,-117.2069],[32.97044,-117.20642],[32.97049,-117.20589],[32.97063,-117.20556],[32.97129,-117.20546],[32.97135,-117.20523],[32.97134,-117.20489],[32.97142,-117.20447],[32.97326,-117.2045],[32.97382,-117.20447],[32.9739,-117.20445],[32.97433,-117.20341],[32.97423,-117.20288],[32.97424,-117.20235],[32.97456,-117.20217],[32.97511,-117.20201],[32.97535,-117.20165],[32.97609,-117.2018],[32.97747,-117.20269],[32.9781,-117.20382],[32.97821,-117.20458],[32.97838,-117.20503],[32.97835,-117.20545],[32.9778,-117.20535],[32.97724,-117.20537],[32.97662,-117.20549],[32.97609,-117.20565]]]},{"n":"Stratford","a":"n","h":null,"u":null,"g":false,"m":"$2.73M","p":[[[32.97896,-117.20684],[32.97803,-117.2082],[32.97771,-117.20785],[32.97722,-117.20838],[32.97466,-117.21009],[32.97443,-117.21],[32.97409,-117.20887],[32.97288,-117.20882],[32.97296,-117.20835],[32.9729,-117.20742],[32.973,-117.20666],[32.97331,-117.20611],[32.97387,-117.20582],[32.97444,-117.20586],[32.97477,-117.20592],[32.9752,-117.20598],[32.97564,-117.20597],[32.97611,-117.20587],[32.97662,-117.20571],[32.97703,-117.2057],[32.9774,-117.20592],[32.97806,-117.20619],[32.97889,-117.2067],[32.97896,-117.20684]]]},{"n":"Alta Mar","a":"n","h":216,"u":null,"g":false,"m":"$2.1M","p":[[[32.9559,-117.23879],[32.95438,-117.23882],[32.95424,-117.23832],[32.95438,-117.23759],[32.9547,-117.23702],[32.95499,-117.23676],[32.95538,-117.23672],[32.95586,-117.23668],[32.9559,-117.23879]],[[32.96103,-117.23882],[32.96117,-117.23881],[32.961,-117.23989],[32.9594,-117.24174],[32.95864,-117.24286],[32.95854,-117.24327],[32.95788,-117.2433],[32.95741,-117.24371],[32.95676,-117.24361],[32.95688,-117.24224],[32.95689,-117.24183],[32.95684,-117.24134],[32.95681,-117.24092],[32.95745,-117.24098],[32.95751,-117.24083],[32.95751,-117.24033],[32.95746,-117.23992],[32.95738,-117.23954],[32.95739,-117.23887],[32.95812,-117.23888],[32.96103,-117.23882]]]},{"n":"Torrey Glen","a":"n","h":151,"u":null,"g":false,"m":"$1.76M","p":[[[32.96098,-117.23123],[32.96055,-117.23153],[32.96013,-117.23158],[32.95959,-117.23151],[32.95826,-117.2311],[32.95807,-117.23108],[32.95785,-117.23098],[32.9575,-117.23073],[32.95759,-117.23035],[32.95759,-117.22995],[32.95757,-117.22958],[32.95762,-117.22928],[32.95775,-117.22897],[32.95804,-117.22865],[32.9584,-117.2285],[32.95869,-117.22844],[32.96039,-117.22853],[32.96096,-117.22886],[32.96125,-117.2293],[32.96146,-117.22988],[32.96147,-117.23035],[32.96137,-117.23084],[32.96098,-117.23123]]]},{"n":"Santa Fe Summit","a":"n","h":187,"u":null,"g":false,"m":"$3.1M","p":[[[32.96122,-117.23879],[32.96122,-117.23823],[32.96119,-117.23768],[32.96113,-117.2373],[32.96135,-117.23706],[32.96188,-117.23663],[32.96207,-117.23657],[32.96251,-117.23706],[32.96302,-117.23653],[32.96317,-117.23651],[32.96334,-117.23696],[32.96175,-117.23878],[32.96122,-117.23879]],[[32.96599,-117.21754],[32.966,-117.21577],[32.96591,-117.21592],[32.96533,-117.21624],[32.96481,-117.21636],[32.96414,-117.21626],[32.96343,-117.21611],[32.96293,-117.21572],[32.96293,-117.21629],[32.96283,-117.21634],[32.96233,-117.21629],[32.9619,-117.21624],[32.96096,-117.21592],[32.96039,-117.21603],[32.96017,-117.2155],[32.95996,-117.21553],[32.95976,-117.21551],[32.95957,-117.21533],[32.95944,-117.21475],[32.95966,-117.21405],[32.96145,-117.21402],[32.96224,-117.21455],[32.9625,-117.21413],[32.96251,-117.21379],[32.96256,-117.21336],[32.96303,-117.21338],[32.96319,-117.21361],[32.96341,-117.2137],[32.96357,-117.21398],[32.96416,-117.21424],[32.9648,-117.21411],[32.96519,-117.21411],[32.96519,-117.21427],[32.96534,-117.21437],[32.96551,-117.21436],[32.96555,-117.21401],[32.96564,-117.2137],[32.96541,-117.21298],[32.96509,-117.21258],[32.96481,-117.21217],[32.96482,-117.21194],[32.96491,-117.2118],[32.96484,-117.21148],[32.96485,-117.21101],[32.96486,-117.21076],[32.96473,-117.21051],[32.96453,-117.21024],[32.96424,-117.21],[32.96392,-117.20971],[32.96361,-117.20934],[32.96341,-117.20914],[32.96343,-117.20843],[32.96353,-117.20838],[32.96391,-117.20811],[32.96396,-117.20795],[32.96429,-117.20773],[32.96433,-117.20764],[32.96498,-117.20722],[32.96592,-117.20771],[32.96594,-117.20793],[32.96564,-117.20829],[32.96557,-117.209],[32.96507,-117.20901],[32.96466,-117.20973],[32.96555,-117.21042],[32.96631,-117.21157],[32.96627,-117.21233],[32.96603,-117.21246],[32.96595,-117.2127],[32.96603,-117.21275],[32.96702,-117.21535],[32.96647,-117.21793],[32.96667,-117.21811],[32.96669,-117.21851],[32.96678,-117.21865],[32.96657,-117.21891],[32.96565,-117.21878],[32.96547,-117.21893],[32.96523,-117.21899],[32.96489,-117.21902],[32.96458,-117.21893],[32.9643,-117.21902],[32.96395,-117.21938],[32.96367,-117.21945],[32.96327,-117.21872],[32.96329,-117.21825],[32.96334,-117.21823],[32.96383,-117.21831],[32.96453,-117.21843],[32.96505,-117.21844],[32.96543,-117.21833],[32.96568,-117.21829],[32.96581,-117.21831],[32.96593,-117.21816],[32.96599,-117.21754]]]},{"n":"Heights","a":"n","h":566,"u":null,"g":false,"m":"$2.56M","p":[[[32.9619,-117.21901],[32.96166,-117.21892],[32.96146,-117.21899],[32.96037,-117.21873],[32.96015,-117.21877],[32.96018,-117.21959],[32.9602,-117.22447],[32.96214,-117.22623],[32.96191,-117.22675],[32.96205,-117.22714],[32.96376,-117.22677],[32.96378,-117.22868],[32.9636,-117.22933],[32.96355,-117.22993],[32.9637,-117.23059],[32.96364,-117.23111],[32.96352,-117.23198],[32.96288,-117.2319],[32.96219,-117.23212],[32.9619,-117.23157],[32.9614,-117.23103],[32.96154,-117.2307],[32.96161,-117.23032],[32.9616,-117.22985],[32.96151,-117.2294],[32.96109,-117.22876],[32.96062,-117.22842],[32.95997,-117.22826],[32.96,-117.22438],[32.96,-117.21958],[32.95958,-117.21933],[32.95873,-117.21931],[32.9584,-117.21923],[32.95853,-117.21842],[32.95885,-117.21733],[32.95986,-117.21731],[32.95988,-117.2172],[32.96173,-117.21704],[32.96463,-117.21758],[32.96597,-117.21742],[32.96592,-117.21815],[32.96548,-117.21819],[32.96503,-117.21831],[32.96439,-117.2183],[32.96353,-117.21812],[32.96283,-117.21826],[32.96286,-117.21883],[32.9619,-117.21901]],[[32.96106,-117.23878],[32.95738,-117.23877],[32.95738,-117.23884],[32.95736,-117.23954],[32.95744,-117.23989],[32.9575,-117.24033],[32.9575,-117.24055],[32.95749,-117.2408],[32.95679,-117.2407],[32.95678,-117.24091],[32.95687,-117.24183],[32.95687,-117.24207],[32.95681,-117.243],[32.95674,-117.2436],[32.95671,-117.24359],[32.95296,-117.24355],[32.95299,-117.24283],[32.95296,-117.24251],[32.95296,-117.24198],[32.95297,-117.24133],[32.95308,-117.24087],[32.95325,-117.24045],[32.95424,-117.24081],[32.95532,-117.24101],[32.95622,-117.24098],[32.95624,-117.24078],[32.95632,-117.23802],[32.95647,-117.23669],[32.95673,-117.23662],[32.95853,-117.23597],[32.95915,-117.23585],[32.95985,-117.23609],[32.96052,-117.23651],[32.96077,-117.23684],[32.96172,-117.23593],[32.9621,-117.23519],[32.96217,-117.23447],[32.96226,-117.23447],[32.96322,-117.23494],[32.96374,-117.23627],[32.9638,-117.23683],[32.96344,-117.23704],[32.96319,-117.23647],[32.96304,-117.23641],[32.96252,-117.23686],[32.9625,-117.2369],[32.96244,-117.23687],[32.96224,-117.2366],[32.96205,-117.2365],[32.96185,-117.23653],[32.96096,-117.23736],[32.9611,-117.23805],[32.96106,-117.23878]]]},{"n":"Derby Point","a":"n","h":10,"u":null,"g":false,"m":"$3.21M","p":[[[32.96599,-117.23272],[32.96574,-117.2329],[32.96529,-117.23318],[32.9647,-117.2333],[32.96448,-117.23203],[32.96499,-117.23183],[32.96519,-117.23162],[32.96551,-117.23118],[32.96599,-117.23272]]]},{"n":"Torrey Del Mar West","a":"n","h":47,"u":null,"g":false,"m":"$3.33M","p":[[[32.96525,-117.23461],[32.96506,-117.23451],[32.96474,-117.23439],[32.96445,-117.23431],[32.96423,-117.23425],[32.96366,-117.23416],[32.96369,-117.23221],[32.96368,-117.23103],[32.9637,-117.23069],[32.96374,-117.23061],[32.96393,-117.23053],[32.96398,-117.23056],[32.96413,-117.23082],[32.96484,-117.23077],[32.96505,-117.23166],[32.96451,-117.23192],[32.96442,-117.23206],[32.96459,-117.23343],[32.96514,-117.23334],[32.96537,-117.23327],[32.96611,-117.23282],[32.96614,-117.23298],[32.96614,-117.23317],[32.96613,-117.23353],[32.96612,-117.23394],[32.96613,-117.23416],[32.96614,-117.23434],[32.96602,-117.23452],[32.9659,-117.23456],[32.96534,-117.2346],[32.96525,-117.23461]]]},{"n":"Promontory","a":"n","h":190,"u":null,"g":false,"m":"$2.89M","p":[[[32.96481,-117.21189],[32.96446,-117.21215],[32.96422,-117.21264],[32.96428,-117.21315],[32.96415,-117.21359],[32.9639,-117.2137],[32.96362,-117.21366],[32.96315,-117.21315],[32.96254,-117.21268],[32.96221,-117.2129],[32.96208,-117.21313],[32.96213,-117.21378],[32.9616,-117.21393],[32.96121,-117.21391],[32.96081,-117.21352],[32.96062,-117.21291],[32.9606,-117.21255],[32.96,-117.21258],[32.95983,-117.21257],[32.95983,-117.21302],[32.95974,-117.213],[32.95928,-117.21299],[32.95905,-117.2129],[32.9588,-117.21137],[32.95751,-117.21238],[32.95675,-117.21149],[32.95784,-117.21046],[32.95902,-117.20959],[32.95958,-117.21057],[32.95971,-117.21091],[32.95993,-117.21088],[32.96174,-117.2109],[32.96186,-117.21091],[32.96186,-117.21078],[32.96182,-117.20961],[32.96191,-117.20933],[32.96194,-117.20918],[32.96201,-117.20839],[32.96207,-117.20596],[32.9622,-117.20433],[32.96314,-117.20431],[32.96429,-117.20617],[32.96428,-117.2077],[32.96396,-117.20793],[32.96388,-117.20808],[32.96364,-117.20825],[32.96354,-117.20832],[32.96326,-117.20691],[32.96291,-117.20534],[32.96262,-117.20546],[32.96256,-117.20598],[32.96212,-117.20592],[32.96209,-117.20752],[32.96202,-117.20923],[32.9622,-117.2091],[32.96247,-117.20911],[32.96309,-117.2091],[32.96344,-117.20927],[32.96398,-117.20988],[32.96452,-117.21039],[32.96476,-117.21073],[32.96476,-117.21108],[32.96475,-117.21138],[32.96479,-117.21183],[32.96481,-117.21189]]]},{"n":"Windmill Estates","a":"n","h":6,"u":null,"g":false,"m":null,"p":[[[32.9599,-117.21714],[32.9599,-117.21717],[32.95987,-117.21717],[32.95985,-117.21728],[32.95982,-117.21729],[32.95888,-117.21728],[32.9592,-117.21664],[32.95932,-117.21635],[32.95986,-117.21633],[32.9599,-117.21714]]]},{"n":"San Remo","a":"n","h":289,"u":null,"g":false,"m":"$1.91M","p":[[[32.9564,-117.22081],[32.95629,-117.21776],[32.95646,-117.2174],[32.95666,-117.21734],[32.95862,-117.21739],[32.95861,-117.21755],[32.95832,-117.21859],[32.95822,-117.21956],[32.95815,-117.22023],[32.95803,-117.2206],[32.95783,-117.22078],[32.95762,-117.22085],[32.95738,-117.22091],[32.95716,-117.22085],[32.95674,-117.22077],[32.9564,-117.22081]]]},{"n":"Vista Santa Barbara","a":"n","h":85,"u":null,"g":false,"m":"$2.84M","p":[[[32.9587,-117.21728],[32.957,-117.21723],[32.95693,-117.2162],[32.95697,-117.21588],[32.95701,-117.21546],[32.95693,-117.2152],[32.95665,-117.21498],[32.95647,-117.21485],[32.9562,-117.21485],[32.95618,-117.21472],[32.95631,-117.2144],[32.95634,-117.214],[32.95627,-117.21363],[32.95627,-117.21329],[32.95678,-117.21329],[32.95677,-117.21293],[32.95822,-117.21298],[32.95879,-117.21303],[32.95982,-117.2131],[32.95968,-117.21377],[32.95952,-117.21412],[32.95938,-117.21447],[32.95937,-117.215],[32.95939,-117.21533],[32.95922,-117.2162],[32.9591,-117.21647],[32.95889,-117.21694],[32.9587,-117.21728]]]},{"n":"Venezia","a":"n","h":42,"u":null,"g":false,"m":"$2.53M","p":[[[32.96686,-117.23587],[32.96618,-117.23523],[32.96573,-117.23491],[32.96527,-117.23465],[32.96606,-117.23458],[32.96616,-117.23435],[32.96614,-117.23396],[32.96615,-117.23316],[32.96617,-117.23273],[32.9663,-117.23253],[32.96719,-117.23256],[32.96734,-117.23262],[32.96722,-117.23394],[32.96741,-117.23443],[32.96727,-117.23478],[32.96729,-117.23508],[32.96727,-117.23563],[32.96686,-117.23587]]]},{"n":"4x4 Construction","a":"n","h":4,"u":null,"g":false,"m":"$3.5M","p":[[[32.95689,-117.21721],[32.95666,-117.21724],[32.9564,-117.21735],[32.95621,-117.21729],[32.95627,-117.21706],[32.95636,-117.21655],[32.95637,-117.21586],[32.95689,-117.21584],[32.95689,-117.21721]]]},{"n":"Mayfield","a":"n","h":66,"u":null,"g":false,"m":"$2.13M","p":[[[32.95936,-117.23413],[32.95937,-117.23423],[32.95751,-117.23437],[32.95757,-117.23583],[32.95757,-117.23609],[32.95687,-117.23639],[32.9568,-117.23627],[32.95678,-117.23575],[32.95674,-117.23425],[32.95819,-117.23419],[32.95828,-117.23368],[32.95838,-117.23357],[32.95841,-117.23271],[32.95841,-117.23214],[32.95854,-117.23197],[32.95863,-117.23176],[32.95872,-117.2314],[32.95964,-117.2317],[32.95945,-117.23239],[32.95934,-117.23298],[32.95931,-117.23367],[32.95936,-117.23413]]]},{"n":"Lexington Summit","a":"n","h":14,"u":null,"g":false,"m":"$3.11M","p":[[[32.96154,-117.21079],[32.96155,-117.21085],[32.95989,-117.21084],[32.95961,-117.21023],[32.95933,-117.20974],[32.96153,-117.20978],[32.96154,-117.21079]]]},{"n":"Stallions Crossing","a":"n","h":48,"u":null,"g":false,"m":"$2.31M","p":[[[32.97025,-117.23878],[32.96959,-117.23879],[32.96706,-117.23606],[32.96731,-117.23588],[32.96734,-117.23513],[32.96822,-117.23533],[32.96873,-117.23626],[32.96881,-117.2365],[32.96929,-117.23698],[32.97003,-117.23708],[32.97019,-117.23716],[32.97025,-117.23878]]]},{"n":"Del Mar Summit","a":"n","h":5,"u":null,"g":false,"m":"$2.28M","p":[[[32.96333,-117.20868],[32.96213,-117.20869],[32.96217,-117.20814],[32.96216,-117.20777],[32.96271,-117.20777],[32.96274,-117.20703],[32.96328,-117.20704],[32.96333,-117.20868]]]},{"n":"Sundowner Estates","a":"n","h":6,"u":null,"g":false,"m":"$2.87M","p":[[[32.96254,-117.20776],[32.96217,-117.20775],[32.96215,-117.20716],[32.96215,-117.20669],[32.96217,-117.206],[32.96252,-117.206],[32.96251,-117.20664],[32.96253,-117.20713],[32.96254,-117.20776]]]},{"n":"Alta Del Mar-Coastal","a":"phr","h":null,"u":null,"g":false,"m":"$5.05M","p":[[[32.97244,-117.23402],[32.97227,-117.23418],[32.97203,-117.23433],[32.97151,-117.23399],[32.97162,-117.23377],[32.97133,-117.23362],[32.97117,-117.23303],[32.97093,-117.23297],[32.97104,-117.23275],[32.97123,-117.23254],[32.97139,-117.23222],[32.9715,-117.23219],[32.97209,-117.23204],[32.97275,-117.23198],[32.97285,-117.23195],[32.97274,-117.23272],[32.97254,-117.23379],[32.97244,-117.23402]]]},{"n":"Hampton Lane","a":"phr","h":118,"u":null,"g":false,"m":"$2.11M","p":[[[32.96892,-117.18523],[32.96888,-117.18534],[32.96763,-117.18399],[32.96742,-117.18383],[32.96716,-117.18372],[32.96719,-117.18327],[32.96715,-117.18287],[32.96719,-117.18268],[32.96764,-117.18171],[32.96798,-117.18081],[32.96812,-117.18035],[32.96819,-117.18027],[32.96891,-117.18062],[32.96932,-117.18097],[32.96964,-117.18124],[32.96919,-117.18197],[32.96902,-117.18232],[32.96887,-117.18279],[32.96876,-117.1832],[32.96864,-117.1835],[32.9685,-117.1837],[32.96887,-117.18411],[32.96918,-117.18434],[32.96892,-117.18523]]]},{"n":"Villa Andalucia","a":"phr","h":null,"u":null,"g":false,"m":"$1.5M","p":[[[32.96463,-117.1788],[32.96427,-117.17869],[32.96427,-117.17799],[32.96443,-117.17723],[32.96525,-117.17769],[32.96463,-117.1788]]]},{"n":"Bordeaux","a":"phr","h":106,"u":null,"g":false,"m":"$2.38M","p":[[[32.95553,-117.19977],[32.95533,-117.19793],[32.95575,-117.19788],[32.95572,-117.1974],[32.95579,-117.19731],[32.95649,-117.19727],[32.95719,-117.197],[32.95781,-117.19668],[32.95792,-117.19717],[32.95806,-117.19833],[32.95808,-117.19836],[32.95841,-117.19891],[32.95798,-117.19921],[32.95741,-117.19947],[32.95676,-117.19958],[32.95553,-117.19977]]]},{"n":"Soleil at Bordeaux","a":"phr","h":163,"u":null,"g":false,"m":"$2.28M","p":[[[32.96099,-117.19735],[32.96017,-117.19753],[32.95965,-117.19776],[32.9585,-117.19884],[32.95823,-117.1984],[32.95811,-117.19821],[32.95801,-117.19724],[32.95783,-117.19664],[32.95647,-117.19721],[32.95585,-117.19721],[32.95565,-117.19726],[32.95568,-117.19776],[32.95285,-117.19814],[32.95289,-117.19827],[32.9531,-117.20053],[32.95204,-117.20156],[32.95168,-117.20196],[32.95106,-117.20124],[32.95079,-117.20113],[32.95039,-117.20112],[32.95122,-117.19877],[32.9517,-117.19782],[32.95578,-117.19716],[32.95644,-117.19715],[32.95785,-117.19655],[32.95796,-117.19653],[32.95808,-117.19649],[32.95857,-117.19636],[32.95967,-117.19622],[32.96027,-117.19633],[32.96045,-117.19637],[32.96072,-117.19665],[32.96097,-117.1971],[32.96099,-117.19735]]]},{"n":"Palomar","a":"phr","h":null,"u":null,"g":false,"m":"$4.75M","p":[[[32.97071,-117.19359],[32.97012,-117.19316],[32.97018,-117.19289],[32.97021,-117.19237],[32.97021,-117.19179],[32.97022,-117.19135],[32.97025,-117.19096],[32.9703,-117.1907],[32.97054,-117.19021],[32.97066,-117.18991],[32.97091,-117.18919],[32.97112,-117.18865],[32.97131,-117.18837],[32.97149,-117.18813],[32.97179,-117.18746],[32.9721,-117.1867],[32.97219,-117.18596],[32.97216,-117.18554],[32.97298,-117.1855],[32.97349,-117.18596],[32.9734,-117.18653],[32.9732,-117.18689],[32.97309,-117.18745],[32.97343,-117.18834],[32.97316,-117.18876],[32.97266,-117.18864],[32.97222,-117.18898],[32.97174,-117.18911],[32.97163,-117.18949],[32.9724,-117.19032],[32.97239,-117.19084],[32.97159,-117.19128],[32.97139,-117.19133],[32.97126,-117.19155],[32.97156,-117.19189],[32.97191,-117.19216],[32.97215,-117.19241],[32.97223,-117.19293],[32.97214,-117.19364],[32.97173,-117.19378],[32.9713,-117.19365],[32.97115,-117.19371],[32.97089,-117.19365],[32.97071,-117.19359]]]},{"n":"Manzanita Trail","a":"phr","h":148,"u":null,"g":false,"m":"$2.11M","p":[[[32.96583,-117.1866],[32.96581,-117.18658],[32.96604,-117.18595],[32.96644,-117.18535],[32.96653,-117.1851],[32.96657,-117.18458],[32.96666,-117.18386],[32.96706,-117.18397],[32.96733,-117.18411],[32.96756,-117.18427],[32.96876,-117.18555],[32.96915,-117.18588],[32.969,-117.18625],[32.96871,-117.18651],[32.96858,-117.18695],[32.96824,-117.18728],[32.96809,-117.18801],[32.9679,-117.18857],[32.96765,-117.18896],[32.96743,-117.18985],[32.96697,-117.18959],[32.96668,-117.18939],[32.96628,-117.18914],[32.96624,-117.18912],[32.96629,-117.18887],[32.96642,-117.18834],[32.96644,-117.18798],[32.96651,-117.18738],[32.96665,-117.18691],[32.96638,-117.1868],[32.96583,-117.1866]]]},{"n":"Rancho Glens Estates","a":"phr","h":33,"u":null,"g":false,"m":"$3.83M","p":[[[32.95518,-117.18301],[32.95506,-117.18216],[32.95587,-117.18196],[32.95676,-117.18069],[32.95691,-117.18015],[32.95748,-117.17991],[32.95757,-117.17953],[32.95829,-117.17829],[32.95891,-117.17626],[32.95904,-117.17626],[32.95935,-117.17634],[32.96174,-117.1768],[32.96408,-117.17691],[32.96426,-117.17691],[32.96442,-117.1769],[32.96426,-117.17766],[32.96421,-117.1779],[32.96421,-117.17803],[32.96422,-117.17828],[32.96424,-117.17869],[32.9632,-117.17862],[32.95949,-117.17867],[32.95934,-117.18011],[32.95867,-117.18099],[32.95823,-117.18142],[32.95706,-117.18282],[32.95669,-117.18294],[32.95518,-117.18301]]]},{"n":"Santa Barbara","a":"phr","h":98,"u":null,"g":false,"m":"$2.9M","p":[[[32.96368,-117.2043],[32.96218,-117.20426],[32.96212,-117.20368],[32.96152,-117.20124],[32.96128,-117.20021],[32.9612,-117.19928],[32.96123,-117.19878],[32.96171,-117.1988],[32.96216,-117.19898],[32.96313,-117.20078],[32.96301,-117.20179],[32.96377,-117.20199],[32.96422,-117.20222],[32.96483,-117.2022],[32.96544,-117.20285],[32.96581,-117.20436],[32.96368,-117.2043]]]},{"n":"Santa Rosa","a":"phr","h":124,"u":null,"g":false,"m":"$2.68M","p":[[[32.96348,-117.19703],[32.96292,-117.19694],[32.96256,-117.19656],[32.96222,-117.19612],[32.96197,-117.19565],[32.96186,-117.19505],[32.96169,-117.19437],[32.96187,-117.19431],[32.96221,-117.19418],[32.96248,-117.194],[32.96299,-117.19369],[32.96313,-117.1936],[32.96341,-117.19336],[32.96377,-117.19282],[32.96416,-117.19236],[32.96439,-117.19255],[32.96459,-117.19266],[32.96548,-117.19299],[32.96606,-117.19323],[32.96662,-117.1937],[32.96661,-117.19432],[32.96599,-117.1947],[32.96571,-117.19541],[32.9643,-117.19628],[32.96348,-117.19703]]]},{"n":"Portico","a":"phr","h":186,"u":null,"g":false,"m":"$1.93M","p":[[[32.96457,-117.19233],[32.96406,-117.19197],[32.9632,-117.19059],[32.96365,-117.19008],[32.96404,-117.18951],[32.96442,-117.18871],[32.96468,-117.18801],[32.96509,-117.18648],[32.96617,-117.1869],[32.9666,-117.18702],[32.9665,-117.18738],[32.96639,-117.18833],[32.96633,-117.18862],[32.9662,-117.18921],[32.9659,-117.18999],[32.96554,-117.19072],[32.96501,-117.19183],[32.96471,-117.19239],[32.96457,-117.19233]]]},{"n":"Ivy","a":"phr","h":null,"u":null,"g":false,"m":"$1.8M","p":[[[32.96302,-117.18299],[32.963,-117.18238],[32.9637,-117.18179],[32.96403,-117.18146],[32.96477,-117.18121],[32.96503,-117.18159],[32.96545,-117.18238],[32.96543,-117.18286],[32.96372,-117.18281],[32.9636,-117.18283],[32.9636,-117.18296],[32.96302,-117.18299]]]},{"n":"Artesana","a":"phr","h":null,"u":null,"g":false,"m":"$3.67M","p":[[[32.97331,-117.18418],[32.97331,-117.18423],[32.97332,-117.18429],[32.97319,-117.18468],[32.9731,-117.18488],[32.97279,-117.18521],[32.97266,-117.1854],[32.97217,-117.18546],[32.97212,-117.18432],[32.97215,-117.18418],[32.9724,-117.18373],[32.97254,-117.18345],[32.97252,-117.18323],[32.97244,-117.18305],[32.97229,-117.18286],[32.97197,-117.18253],[32.97213,-117.18215],[32.97221,-117.18181],[32.97223,-117.18146],[32.97219,-117.18072],[32.97217,-117.1803],[32.97218,-117.1801],[32.97224,-117.17967],[32.97229,-117.1791],[32.97231,-117.17865],[32.97395,-117.17858],[32.97398,-117.18074],[32.97343,-117.18165],[32.97296,-117.18264],[32.97319,-117.18324],[32.97302,-117.1838],[32.97323,-117.18396],[32.97331,-117.18418]]]},{"n":"Arabella","a":"phr","h":140,"u":null,"g":false,"m":"$1.91M","p":[[[32.96394,-117.19209],[32.96414,-117.19234],[32.96369,-117.19289],[32.9634,-117.19334],[32.9631,-117.1936],[32.9622,-117.19417],[32.96169,-117.19435],[32.96087,-117.19435],[32.95864,-117.19428],[32.95841,-117.1938],[32.96004,-117.19261],[32.961,-117.19213],[32.96299,-117.19083],[32.96394,-117.19209]]]},{"n":"Elms","a":"phr","h":null,"u":null,"g":false,"m":"$2.26M","p":[[[32.96605,-117.18299],[32.96555,-117.18279],[32.96549,-117.18237],[32.96511,-117.18164],[32.9648,-117.18112],[32.96494,-117.18091],[32.96513,-117.1801],[32.96574,-117.17921],[32.96745,-117.1798],[32.96741,-117.18006],[32.96651,-117.18214],[32.96605,-117.18299]]]},{"n":"Vista Santa Fe","a":"phr","h":null,"u":null,"g":false,"m":"$3.99M","p":[[[32.96959,-117.19449],[32.96987,-117.19433],[32.97028,-117.1942],[32.97096,-117.19497],[32.97172,-117.19525],[32.97238,-117.19569],[32.97311,-117.19543],[32.97336,-117.19608],[32.97311,-117.19667],[32.97328,-117.19737],[32.97342,-117.19795],[32.97322,-117.19838],[32.97251,-117.19844],[32.97222,-117.19913],[32.97193,-117.1996],[32.9717,-117.19955],[32.97136,-117.19949],[32.97132,-117.19976],[32.97098,-117.19978],[32.97096,-117.19951],[32.97108,-117.19906],[32.97124,-117.19865],[32.97154,-117.19809],[32.97168,-117.19761],[32.9717,-117.19699],[32.97151,-117.19653],[32.97113,-117.19627],[32.97056,-117.19601],[32.97019,-117.19575],[32.96981,-117.19541],[32.96965,-117.19518],[32.9696,-117.19498],[32.96959,-117.19449]]]},{"n":"Costa Del Sol","a":"phr","h":165,"u":null,"g":false,"m":"$1.59M","p":[[[32.96746,-117.17977],[32.96575,-117.17919],[32.96636,-117.17807],[32.96654,-117.17768],[32.96695,-117.17644],[32.96848,-117.17644],[32.96827,-117.17748],[32.96746,-117.17977]]]},{"n":"Brightwater","a":"phr","h":77,"u":null,"g":false,"m":"$3M","p":[[[32.97229,-117.17865],[32.97227,-117.17912],[32.97215,-117.18008],[32.97215,-117.18048],[32.97219,-117.18124],[32.97219,-117.18172],[32.97209,-117.18219],[32.97193,-117.18253],[32.97241,-117.18304],[32.97252,-117.18343],[32.9721,-117.18423],[32.97217,-117.18596],[32.97209,-117.18667],[32.97148,-117.18811],[32.97131,-117.18835],[32.97103,-117.18821],[32.96946,-117.18728],[32.96918,-117.18703],[32.96948,-117.18662],[32.96972,-117.18614],[32.96996,-117.18571],[32.97003,-117.18512],[32.97022,-117.18464],[32.97049,-117.18404],[32.97121,-117.18229],[32.97144,-117.1817],[32.97141,-117.181],[32.97138,-117.18017],[32.97152,-117.17939],[32.97152,-117.17861],[32.97229,-117.17865]],[[32.96929,-117.18558],[32.96928,-117.18562],[32.96896,-117.1854],[32.96933,-117.18427],[32.96922,-117.1842],[32.96899,-117.18407],[32.96868,-117.18367],[32.96885,-117.18333],[32.96911,-117.18236],[32.96932,-117.18198],[32.96976,-117.1813],[32.96891,-117.18058],[32.96836,-117.18031],[32.96807,-117.18018],[32.96773,-117.18124],[32.96707,-117.18276],[32.96711,-117.18321],[32.96707,-117.18371],[32.96665,-117.18355],[32.96623,-117.18328],[32.96685,-117.18231],[32.96756,-117.18049],[32.9677,-117.17995],[32.96893,-117.18055],[32.96994,-117.18139],[32.97067,-117.18201],[32.97019,-117.18281],[32.96964,-117.18443],[32.96929,-117.18558]]]},{"n":"Costa Del Sol West","a":"phr","h":null,"u":null,"g":false,"m":"$1.6M","p":[[[32.96152,-117.18195],[32.95935,-117.18316],[32.95928,-117.18313],[32.95931,-117.18187],[32.95984,-117.18164],[32.95972,-117.18109],[32.96014,-117.18023],[32.96052,-117.17954],[32.9609,-117.17957],[32.96161,-117.18183],[32.96152,-117.18195]]]},{"n":"Almeria","a":"phr","h":null,"u":null,"g":false,"m":"$3.3M","p":[[[32.96843,-117.1942],[32.96844,-117.19428],[32.96773,-117.19422],[32.96757,-117.19419],[32.96705,-117.19379],[32.9675,-117.19268],[32.96771,-117.19128],[32.9679,-117.19075],[32.96794,-117.1891],[32.96846,-117.18849],[32.9687,-117.18793],[32.96909,-117.18819],[32.9702,-117.1888],[32.96989,-117.18969],[32.96964,-117.19009],[32.96888,-117.19106],[32.96873,-117.19136],[32.96854,-117.19284],[32.96843,-117.1942]]]},{"n":"Meadowood","a":"phr","h":null,"u":null,"g":false,"m":"$2.43M","p":[[[32.97025,-117.1776],[32.96992,-117.17762],[32.96921,-117.17774],[32.96849,-117.17803],[32.96878,-117.17738],[32.96936,-117.17645],[32.96961,-117.17604],[32.97004,-117.17493],[32.97024,-117.17491],[32.97025,-117.1776]]]},{"n":"Portofino","a":"phr","h":null,"u":null,"g":false,"m":"$2.56M","p":[[[32.9666,-117.17094],[32.9666,-117.17101],[32.96598,-117.17106],[32.96548,-117.17108],[32.96499,-117.17105],[32.96458,-117.17111],[32.96413,-117.17131],[32.96372,-117.17037],[32.96345,-117.17056],[32.96324,-117.17022],[32.96354,-117.17],[32.96363,-117.16995],[32.96405,-117.16978],[32.96449,-117.16969],[32.96628,-117.16964],[32.96632,-117.17021],[32.96648,-117.1702],[32.9666,-117.17094]]]},{"n":"Terraza","a":"phr","h":null,"u":null,"g":false,"m":"$3.03M","p":[[[32.97016,-117.19584],[32.96999,-117.19609],[32.96979,-117.19656],[32.97083,-117.19718],[32.97072,-117.19773],[32.97047,-117.19821],[32.97025,-117.19873],[32.97015,-117.19927],[32.97016,-117.19983],[32.97002,-117.19995],[32.9697,-117.19972],[32.96933,-117.19956],[32.96886,-117.19951],[32.96864,-117.19958],[32.96858,-117.19914],[32.96863,-117.19898],[32.96864,-117.19794],[32.96899,-117.19702],[32.96947,-117.19629],[32.96945,-117.19618],[32.9692,-117.19585],[32.96896,-117.19552],[32.96888,-117.19521],[32.96882,-117.19493],[32.96866,-117.19497],[32.96857,-117.19455],[32.96943,-117.19438],[32.96952,-117.19493],[32.96967,-117.19528],[32.96995,-117.19564],[32.97016,-117.19584]]]},{"n":"Olvera","a":"phr","h":null,"u":null,"g":false,"m":"$3.33M","p":[[[32.96861,-117.1942],[32.96856,-117.19422],[32.96857,-117.19388],[32.96857,-117.19293],[32.96876,-117.19142],[32.96879,-117.1913],[32.96893,-117.1911],[32.96983,-117.18991],[32.96993,-117.18968],[32.97019,-117.18895],[32.9703,-117.18876],[32.96921,-117.18812],[32.96907,-117.18814],[32.96875,-117.18793],[32.96886,-117.18747],[32.96916,-117.18701],[32.96941,-117.18724],[32.96946,-117.18735],[32.97083,-117.1882],[32.97085,-117.18815],[32.97126,-117.18836],[32.97118,-117.18847],[32.97058,-117.19004],[32.97031,-117.1906],[32.97022,-117.19096],[32.9702,-117.19128],[32.97019,-117.19195],[32.97017,-117.19273],[32.97012,-117.1931],[32.96997,-117.19347],[32.96966,-117.19387],[32.96944,-117.19401],[32.96861,-117.1942]]]},{"n":"Sendero Collection","a":"phr","h":null,"u":null,"g":false,"m":"$2.44M","p":[[[32.97061,-117.18174],[32.97053,-117.18187],[32.969,-117.18053],[32.96854,-117.18028],[32.9681,-117.18007],[32.96781,-117.17989],[32.96815,-117.17854],[32.96865,-117.17863],[32.97082,-117.17857],[32.97076,-117.18012],[32.97085,-117.18123],[32.97061,-117.18174]]]},{"n":"Sendero","a":"phr","h":null,"u":null,"g":false,"m":"$3.02M","p":[[[32.96859,-117.19899],[32.96854,-117.19903],[32.96857,-117.19925],[32.96859,-117.19952],[32.9686,-117.1996],[32.96849,-117.19962],[32.9682,-117.19969],[32.96778,-117.1999],[32.96767,-117.19944],[32.96745,-117.19888],[32.96717,-117.19861],[32.9666,-117.19835],[32.9666,-117.19824],[32.96681,-117.19781],[32.96711,-117.19703],[32.9672,-117.1966],[32.96684,-117.19647],[32.96687,-117.19607],[32.96646,-117.19597],[32.96657,-117.1952],[32.96711,-117.19419],[32.96755,-117.19443],[32.96836,-117.19446],[32.96831,-117.19504],[32.96853,-117.195],[32.96881,-117.19504],[32.96889,-117.19543],[32.96909,-117.19576],[32.96943,-117.19624],[32.96896,-117.19701],[32.96878,-117.19747],[32.96862,-117.19793],[32.96859,-117.19899]]]},{"n":"Carmel","a":"phr","h":null,"u":null,"g":false,"m":"$3.6M","p":[[[32.97125,-117.20337],[32.97127,-117.203],[32.97118,-117.20172],[32.97029,-117.20169],[32.97026,-117.20122],[32.9702,-117.20087],[32.97023,-117.20063],[32.97002,-117.19998],[32.9702,-117.19982],[32.97019,-117.1992],[32.97035,-117.1985],[32.97078,-117.19772],[32.97087,-117.19714],[32.96983,-117.19654],[32.9702,-117.19585],[32.97102,-117.19629],[32.97146,-117.19654],[32.97168,-117.197],[32.97166,-117.1976],[32.97152,-117.19809],[32.97124,-117.1986],[32.97106,-117.19905],[32.97094,-117.19952],[32.97097,-117.19991],[32.97126,-117.20059],[32.97153,-117.20084],[32.97237,-117.20122],[32.97277,-117.20142],[32.97302,-117.20163],[32.97303,-117.20178],[32.97302,-117.20286],[32.97302,-117.20343],[32.97125,-117.20337]]]},{"n":"Vista Del Mar","a":"phr","h":null,"u":null,"g":false,"m":"$3.92M","p":[[[32.97064,-117.20242],[32.9697,-117.20244],[32.96875,-117.20246],[32.96881,-117.20183],[32.96915,-117.20103],[32.96885,-117.2009],[32.96793,-117.20125],[32.96786,-117.20087],[32.96708,-117.20093],[32.96649,-117.20026],[32.96661,-117.19971],[32.9657,-117.19985],[32.9653,-117.19852],[32.96596,-117.19714],[32.96645,-117.19598],[32.96681,-117.19609],[32.96675,-117.1965],[32.96712,-117.19662],[32.96705,-117.19692],[32.96701,-117.19719],[32.96655,-117.19822],[32.96657,-117.19839],[32.96714,-117.19864],[32.96742,-117.19893],[32.96777,-117.19997],[32.96814,-117.19975],[32.96877,-117.19959],[32.96928,-117.19962],[32.96999,-117.2],[32.9702,-117.20066],[32.97018,-117.20092],[32.97023,-117.2013],[32.97024,-117.20146],[32.97025,-117.20172],[32.97027,-117.20187],[32.97108,-117.20186],[32.97115,-117.20283],[32.97107,-117.20357],[32.9709,-117.20375],[32.97055,-117.20337],[32.97068,-117.20319],[32.97071,-117.20241],[32.97064,-117.20242]]]},{"n":"The Highlands","a":"phr","h":null,"u":null,"g":false,"m":"$4.4M","p":[[[32.9704,-117.20867],[32.96849,-117.20865],[32.96857,-117.20561],[32.96904,-117.20501],[32.96973,-117.20418],[32.97053,-117.20339],[32.97091,-117.20378],[32.97121,-117.20386],[32.97123,-117.20338],[32.97306,-117.20345],[32.97306,-117.20163],[32.97307,-117.20159],[32.97291,-117.20147],[32.97225,-117.20111],[32.97154,-117.20081],[32.97127,-117.20054],[32.971,-117.19992],[32.971,-117.1998],[32.97138,-117.19977],[32.97182,-117.19961],[32.97213,-117.19995],[32.97256,-117.19995],[32.97317,-117.20035],[32.97358,-117.20075],[32.9739,-117.20107],[32.97408,-117.20186],[32.97398,-117.20296],[32.97404,-117.20354],[32.97387,-117.20395],[32.97373,-117.20444],[32.9708,-117.20445],[32.97038,-117.20445],[32.97041,-117.20631],[32.9704,-117.20867]]]},{"n":"Cassavia","a":"phr","h":null,"u":null,"g":false,"m":"$2.25M","p":[[[32.96613,-117.17313],[32.96606,-117.17313],[32.96518,-117.17314],[32.96485,-117.17325],[32.96467,-117.17349],[32.96459,-117.1738],[32.96462,-117.17404],[32.96391,-117.17431],[32.96382,-117.1741],[32.96382,-117.17358],[32.96386,-117.17326],[32.96365,-117.17319],[32.96305,-117.17294],[32.96317,-117.17256],[32.96362,-117.17194],[32.96407,-117.17145],[32.96478,-117.17117],[32.96557,-117.17122],[32.96602,-117.17117],[32.96609,-117.17205],[32.96609,-117.17216],[32.9661,-117.17229],[32.96613,-117.17313]]]},{"n":"Casabella","a":"phr","h":null,"u":null,"g":false,"m":"$2.16M","p":[[[32.96999,-117.17169],[32.96999,-117.17222],[32.97,-117.17316],[32.96995,-117.17387],[32.96972,-117.17487],[32.96941,-117.17563],[32.96895,-117.17645],[32.96699,-117.17642],[32.96717,-117.17611],[32.96874,-117.17608],[32.96888,-117.17593],[32.96916,-117.1755],[32.9695,-117.17462],[32.96964,-117.17382],[32.96971,-117.17314],[32.96971,-117.17283],[32.96968,-117.17283],[32.96906,-117.1728],[32.9691,-117.17229],[32.96912,-117.1719],[32.96854,-117.17192],[32.96758,-117.17201],[32.96725,-117.16958],[32.96995,-117.16935],[32.96999,-117.17169]]]},{"n":"Verana","a":"phr","h":null,"u":null,"g":false,"m":"$2.53M","p":[[[32.96602,-117.1764],[32.96537,-117.17645],[32.96468,-117.17641],[32.96431,-117.1758],[32.964,-117.17487],[32.9639,-117.17435],[32.96462,-117.17408],[32.9647,-117.17386],[32.96494,-117.17375],[32.96486,-117.1734],[32.96516,-117.17328],[32.96612,-117.17327],[32.96625,-117.17328],[32.96621,-117.17226],[32.96654,-117.17223],[32.96655,-117.17308],[32.96653,-117.1739],[32.96641,-117.17447],[32.9662,-117.17557],[32.96602,-117.1764]]]},{"n":"Sterling","a":"phr","h":null,"u":null,"g":false,"m":"$3.12M","p":[[[32.96405,-117.17137],[32.96368,-117.17168],[32.96351,-117.17182],[32.96335,-117.17205],[32.9631,-117.17249],[32.96293,-117.1729],[32.96305,-117.17296],[32.96366,-117.1732],[32.9636,-117.17353],[32.9622,-117.17321],[32.96178,-117.17295],[32.96203,-117.17218],[32.96232,-117.17145],[32.96289,-117.17059],[32.96324,-117.17024],[32.96343,-117.17057],[32.96353,-117.17064],[32.96368,-117.17057],[32.96405,-117.17137]]]},{"n":"Canterra","a":"phr","h":null,"u":null,"g":false,"m":"$1.87M","p":[[[32.96872,-117.17596],[32.96711,-117.176],[32.96741,-117.17485],[32.96811,-117.17495],[32.96814,-117.1745],[32.96818,-117.17426],[32.96824,-117.17327],[32.96825,-117.17318],[32.96833,-117.17304],[32.96849,-117.17298],[32.96962,-117.17301],[32.96961,-117.17341],[32.96959,-117.17365],[32.96959,-117.17372],[32.96959,-117.17378],[32.96933,-117.17484],[32.96897,-117.17564],[32.96872,-117.17596]]]},{"n":"Casabella Collection","a":"phr","h":null,"u":null,"g":false,"m":"$2.19M","p":[[[32.97027,-117.17844],[32.96862,-117.17846],[32.96839,-117.1784],[32.96844,-117.17807],[32.96921,-117.17776],[32.9697,-117.17766],[32.97025,-117.17764],[32.97027,-117.17844]]]},{"n":"Sandy Lane","a":"phr","h":null,"u":null,"g":false,"m":null,"p":[[[32.96526,-117.17765],[32.96446,-117.17723],[32.96472,-117.17667],[32.96547,-117.17716],[32.96526,-117.17765]]]},{"n":"Bridle Ridge","a":"cch","h":53,"u":null,"g":false,"m":"$2.03M","p":[[[32.92685,-117.19436],[32.92629,-117.19459],[32.92611,-117.19289],[32.92667,-117.19271],[32.92677,-117.19195],[32.92746,-117.191],[32.92864,-117.19105],[32.92868,-117.19209],[32.92804,-117.1922],[32.92772,-117.19212],[32.92749,-117.19197],[32.92714,-117.19272],[32.92713,-117.19315],[32.92718,-117.19364],[32.92681,-117.19381],[32.92685,-117.19436]],[[32.92292,-117.21275],[32.92243,-117.21274],[32.92206,-117.21272],[32.92213,-117.21236],[32.92226,-117.2119],[32.92237,-117.21158],[32.92249,-117.21133],[32.92292,-117.21144],[32.9232,-117.21149],[32.9232,-117.21173],[32.92299,-117.21223],[32.92295,-117.21254],[32.92292,-117.21275]]]},{"n":"Belmont","a":"cch","h":316,"u":null,"g":false,"m":"$2.64M","p":[[[32.93268,-117.20639],[32.9331,-117.20646],[32.9332,-117.20612],[32.93329,-117.20615],[32.93359,-117.20625],[32.93381,-117.20631],[32.9344,-117.20634],[32.93445,-117.20816],[32.93444,-117.20841],[32.93481,-117.20993],[32.93426,-117.21011],[32.93389,-117.21011],[32.93314,-117.20979],[32.93294,-117.20918],[32.93282,-117.20862],[32.9328,-117.20784],[32.93273,-117.20726],[32.93269,-117.20672],[32.93268,-117.20639]],[[32.92341,-117.20974],[32.9232,-117.20931],[32.92311,-117.20908],[32.92276,-117.20825],[32.92294,-117.20806],[32.92335,-117.20806],[32.92373,-117.20827],[32.92505,-117.2076],[32.92507,-117.20746],[32.92468,-117.20694],[32.92455,-117.20602],[32.92458,-117.20558],[32.92461,-117.20547],[32.92462,-117.20499],[32.92452,-117.20468],[32.92533,-117.20423],[32.92535,-117.2041],[32.92455,-117.2024],[32.92459,-117.20238],[32.92535,-117.202],[32.92566,-117.20187],[32.92587,-117.20175],[32.92628,-117.20159],[32.92658,-117.20153],[32.92705,-117.20151],[32.92707,-117.20103],[32.92695,-117.20082],[32.92629,-117.20099],[32.92614,-117.20047],[32.92618,-117.19997],[32.92582,-117.19955],[32.92537,-117.19936],[32.92484,-117.19913],[32.92407,-117.19826],[32.92431,-117.19788],[32.92489,-117.19775],[32.9253,-117.19778],[32.92556,-117.19814],[32.92573,-117.1983],[32.92648,-117.19892],[32.92711,-117.19779],[32.92667,-117.19692],[32.92674,-117.19637],[32.92738,-117.19637],[32.92767,-117.19649],[32.92799,-117.19637],[32.92867,-117.19699],[32.92841,-117.19749],[32.92747,-117.19939],[32.92713,-117.20036],[32.92719,-117.20094],[32.92707,-117.20252],[32.92509,-117.2033],[32.92543,-117.20409],[32.9254,-117.20427],[32.92549,-117.20571],[32.92573,-117.20655],[32.926,-117.20686],[32.92637,-117.20726],[32.9266,-117.20746],[32.92609,-117.20812],[32.92531,-117.20869],[32.92341,-117.20974]],[[32.93298,-117.20278],[32.93298,-117.20284],[32.93273,-117.20314],[32.93242,-117.20348],[32.93202,-117.20376],[32.93193,-117.20401],[32.93162,-117.20418],[32.9315,-117.20421],[32.93106,-117.20361],[32.93106,-117.20309],[32.93122,-117.20256],[32.93126,-117.20201],[32.93108,-117.20157],[32.93076,-117.20129],[32.93019,-117.20119],[32.93031,-117.20047],[32.93067,-117.19961],[32.93098,-117.19918],[32.93156,-117.20021],[32.93206,-117.20112],[32.93255,-117.20206],[32.93298,-117.20278]]]},{"n":"Steeplechase","a":"cch","h":193,"u":null,"g":false,"m":"$2.35M","p":[[[32.9287,-117.19223],[32.92905,-117.19368],[32.92917,-117.19444],[32.9292,-117.19525],[32.9292,-117.19542],[32.93023,-117.19543],[32.93065,-117.19585],[32.93075,-117.19615],[32.93087,-117.19648],[32.93093,-117.19672],[32.93106,-117.19713],[32.93134,-117.19703],[32.93143,-117.19736],[32.93151,-117.19763],[32.93167,-117.19793],[32.93212,-117.19882],[32.93185,-117.19899],[32.93181,-117.19911],[32.93169,-117.19967],[32.93165,-117.19984],[32.93098,-117.19857],[32.93051,-117.19788],[32.93033,-117.19768],[32.9288,-117.19663],[32.92803,-117.19619],[32.92825,-117.19524],[32.9282,-117.19459],[32.92803,-117.19424],[32.92757,-117.19425],[32.92726,-117.19427],[32.92711,-117.19431],[32.92686,-117.19439],[32.92683,-117.19391],[32.927,-117.19385],[32.9273,-117.19372],[32.92725,-117.19348],[32.92724,-117.1933],[32.92724,-117.19277],[32.9273,-117.19253],[32.92753,-117.19213],[32.92771,-117.19224],[32.92825,-117.19231],[32.9287,-117.19223]],[[32.9331,-117.20292],[32.93353,-117.20337],[32.93392,-117.20377],[32.93415,-117.2042],[32.93431,-117.20456],[32.93439,-117.2051],[32.93439,-117.20565],[32.93439,-117.2059],[32.93439,-117.20629],[32.93379,-117.20628],[32.93356,-117.20622],[32.93326,-117.20611],[32.93318,-117.2061],[32.93309,-117.20644],[32.93271,-117.20637],[32.93267,-117.20622],[32.93272,-117.2057],[32.93263,-117.20544],[32.93228,-117.20519],[32.93206,-117.20498],[32.9317,-117.20471],[32.93153,-117.20424],[32.93191,-117.20405],[32.93205,-117.20397],[32.9331,-117.20292]]]},{"n":"Saratoga","a":"cch","h":114,"u":null,"g":false,"m":"$2.41M","p":[[[32.92775,-117.20781],[32.92784,-117.20847],[32.92771,-117.20995],[32.92784,-117.21067],[32.92728,-117.21095],[32.92683,-117.21097],[32.92641,-117.21079],[32.92606,-117.21043],[32.92554,-117.21067],[32.92503,-117.21065],[32.92432,-117.21036],[32.92376,-117.20982],[32.92454,-117.20936],[32.92557,-117.20876],[32.92611,-117.2084],[32.92646,-117.20805],[32.92674,-117.20767],[32.92699,-117.20721],[32.92722,-117.2066],[32.92733,-117.20605],[32.9274,-117.20558],[32.92783,-117.20558],[32.92793,-117.20559],[32.92822,-117.20553],[32.92845,-117.20639],[32.92853,-117.20671],[32.92854,-117.20733],[32.92771,-117.20767],[32.92775,-117.20781]]]},{"n":"Lexington","a":"cch","h":265,"u":"/lexington-carmel-valley-homes-for-sale/","g":true,"m":"$3.27M","p":[[[32.93105,-117.19704],[32.93089,-117.1965],[32.93067,-117.19577],[32.93035,-117.19538],[32.92939,-117.19539],[32.92939,-117.19445],[32.92911,-117.19297],[32.9289,-117.19185],[32.92888,-117.19096],[32.92967,-117.19128],[32.93214,-117.19621],[32.93223,-117.19644],[32.9322,-117.19677],[32.93274,-117.1974],[32.93291,-117.19772],[32.93317,-117.19865],[32.9331,-117.19925],[32.93354,-117.20046],[32.93348,-117.20097],[32.93359,-117.20115],[32.93565,-117.20354],[32.9361,-117.20513],[32.93594,-117.20619],[32.93552,-117.20736],[32.93557,-117.20882],[32.93485,-117.20913],[32.93472,-117.20857],[32.93465,-117.20592],[32.9346,-117.20481],[32.93442,-117.20416],[32.93405,-117.20355],[32.93375,-117.20327],[32.93312,-117.20254],[32.93189,-117.20031],[32.93166,-117.19986],[32.93182,-117.19909],[32.93193,-117.19907],[32.93218,-117.19893],[32.9316,-117.19777],[32.93153,-117.19763],[32.93135,-117.19701],[32.93133,-117.19693],[32.93105,-117.19704]],[[32.92627,-117.20103],[32.9263,-117.20115],[32.92695,-117.20093],[32.92703,-117.20107],[32.92702,-117.20147],[32.92639,-117.20154],[32.92609,-117.20165],[32.92576,-117.20177],[32.92565,-117.20185],[32.92528,-117.202],[32.9249,-117.20221],[32.92449,-117.2024],[32.92453,-117.20263],[32.92501,-117.20368],[32.92521,-117.20412],[32.92446,-117.20457],[32.92451,-117.20471],[32.92461,-117.205],[32.9246,-117.20546],[32.92449,-117.20572],[32.92425,-117.20618],[32.92362,-117.20578],[32.92303,-117.20594],[32.92249,-117.20543],[32.92223,-117.20429],[32.92258,-117.20336],[32.92323,-117.20377],[32.92386,-117.20415],[32.92441,-117.20397],[32.92356,-117.20174],[32.92309,-117.20182],[32.92265,-117.20176],[32.92218,-117.20123],[32.92231,-117.2004],[32.92254,-117.1999],[32.92288,-117.19964],[32.92325,-117.2002],[32.92369,-117.20025],[32.92422,-117.20005],[32.92468,-117.20111],[32.92614,-117.20053],[32.92627,-117.20103]]]},{"n":"Derby Hill","a":"cch","h":172,"u":null,"g":false,"m":"$3.01M","p":[[[32.9274,-117.20549],[32.92737,-117.20421],[32.92865,-117.20413],[32.92869,-117.20446],[32.92884,-117.20466],[32.92932,-117.2047],[32.92968,-117.20486],[32.93009,-117.20573],[32.93023,-117.20624],[32.93063,-117.20661],[32.93122,-117.20681],[32.93096,-117.20753],[32.93121,-117.20806],[32.93101,-117.20841],[32.93138,-117.2092],[32.93101,-117.20963],[32.93064,-117.21008],[32.93019,-117.21],[32.92959,-117.20942],[32.92894,-117.21015],[32.92839,-117.20983],[32.9282,-117.20896],[32.92804,-117.20849],[32.92779,-117.20773],[32.92856,-117.20735],[32.92854,-117.2067],[32.92824,-117.20552],[32.92821,-117.20542],[32.92789,-117.20548],[32.92767,-117.20545],[32.9274,-117.20549]],[[32.92552,-117.21491],[32.92552,-117.21703],[32.92412,-117.217],[32.92394,-117.21701],[32.92376,-117.21698],[32.92385,-117.21603],[32.92376,-117.21533],[32.92375,-117.21469],[32.92372,-117.21272],[32.92294,-117.21276],[32.923,-117.21225],[32.92321,-117.21177],[32.92323,-117.21149],[32.9236,-117.21148],[32.92387,-117.21159],[32.92612,-117.21294],[32.92677,-117.21369],[32.92683,-117.21391],[32.927,-117.21405],[32.92738,-117.21432],[32.92737,-117.21492],[32.92557,-117.21492],[32.92552,-117.21491]]]},{"n":"Breakers","a":"cch","h":72,"u":null,"g":false,"m":"$2.68M","p":[[[32.92862,-117.20411],[32.92733,-117.20419],[32.92731,-117.20266],[32.92726,-117.20105],[32.9273,-117.20082],[32.9274,-117.20028],[32.92755,-117.1998],[32.928,-117.1998],[32.92852,-117.19976],[32.92852,-117.20039],[32.92941,-117.20279],[32.92914,-117.20341],[32.92858,-117.20378],[32.92862,-117.20411]]]},{"n":"Carriage Run","a":"cch","h":169,"u":null,"g":false,"m":"$2M","p":[[[32.92172,-117.2127],[32.92008,-117.21267],[32.92003,-117.2114],[32.91996,-117.2106],[32.92003,-117.20901],[32.92072,-117.2091],[32.92107,-117.20943],[32.92124,-117.20977],[32.92167,-117.21027],[32.92268,-117.21046],[32.92244,-117.21086],[32.9222,-117.2114],[32.922,-117.21187],[32.92172,-117.2127]]]},{"n":"Hunt Club","a":"s","h":50,"u":null,"g":false,"m":"$2.94M","p":[[[32.95771,-117.1996],[32.95776,-117.19998],[32.95766,-117.20197],[32.95737,-117.20211],[32.95695,-117.2021],[32.9567,-117.202],[32.95648,-117.2018],[32.95615,-117.2022],[32.95579,-117.20229],[32.95558,-117.20209],[32.95559,-117.20199],[32.95555,-117.20182],[32.95556,-117.20171],[32.95555,-117.20152],[32.95579,-117.20147],[32.95596,-117.2013],[32.95586,-117.20046],[32.95578,-117.20049],[32.9558,-117.20091],[32.95527,-117.20092],[32.95508,-117.20074],[32.95505,-117.20058],[32.955,-117.1999],[32.95655,-117.19979],[32.95739,-117.19967],[32.95771,-117.19954],[32.95771,-117.1996]]]},{"n":"Wild Horse","a":"s","h":55,"u":null,"g":false,"m":"$2.4M","p":[[[32.95456,-117.20036],[32.95456,-117.20039],[32.95425,-117.20048],[32.95368,-117.20075],[32.95385,-117.20118],[32.9536,-117.20138],[32.95352,-117.20152],[32.95323,-117.20184],[32.95313,-117.2024],[32.95298,-117.20272],[32.95272,-117.20304],[32.95241,-117.20337],[32.95167,-117.20341],[32.95141,-117.20384],[32.95115,-117.20418],[32.95087,-117.20382],[32.95104,-117.20368],[32.95133,-117.20325],[32.95125,-117.20316],[32.95084,-117.20271],[32.95168,-117.20212],[32.95314,-117.20069],[32.95386,-117.20022],[32.9545,-117.20003],[32.95456,-117.20036]]]},{"n":"Verona","a":"s","h":8,"u":null,"g":false,"m":null,"p":[[[32.94367,-117.22822],[32.94313,-117.2282],[32.94307,-117.22755],[32.94339,-117.22737],[32.94367,-117.22771],[32.94367,-117.22822]]]},{"n":"Triple Crown","a":"s","h":41,"u":null,"g":false,"m":"$2.9M","p":[[[32.95552,-117.20152],[32.95556,-117.20198],[32.95554,-117.20209],[32.95525,-117.20278],[32.95489,-117.20301],[32.95446,-117.20322],[32.95417,-117.20251],[32.9542,-117.20247],[32.95353,-117.20153],[32.95361,-117.20139],[32.95385,-117.20119],[32.95397,-117.20114],[32.95383,-117.20083],[32.95416,-117.20065],[32.95458,-117.20055],[32.95468,-117.20053],[32.95463,-117.20002],[32.95499,-117.19998],[32.95504,-117.2006],[32.95507,-117.20076],[32.95527,-117.20094],[32.95581,-117.20094],[32.95585,-117.20131],[32.9555,-117.20138],[32.95552,-117.20152]]]},{"n":"Seabridge","a":"s","h":171,"u":null,"g":false,"m":"$2.01M","p":[[[32.94453,-117.22463],[32.94442,-117.22482],[32.94421,-117.22491],[32.94382,-117.22499],[32.94384,-117.22516],[32.94411,-117.22608],[32.94417,-117.2262],[32.94412,-117.2263],[32.94392,-117.22634],[32.94381,-117.22646],[32.94332,-117.22651],[32.94301,-117.22665],[32.94251,-117.22657],[32.94245,-117.22657],[32.94218,-117.22678],[32.94215,-117.22677],[32.94202,-117.22626],[32.94201,-117.22594],[32.94202,-117.22562],[32.94202,-117.22548],[32.94212,-117.22508],[32.94215,-117.2249],[32.94186,-117.22471],[32.94172,-117.22467],[32.94148,-117.22464],[32.94119,-117.22464],[32.94104,-117.22465],[32.94081,-117.22478],[32.94022,-117.2229],[32.94074,-117.22267],[32.94055,-117.22206],[32.94356,-117.22201],[32.94374,-117.22294],[32.94383,-117.22331],[32.94393,-117.22362],[32.94412,-117.22404],[32.94453,-117.22463]]]},{"n":"Granada","a":"s","h":73,"u":null,"g":false,"m":"$2.08M","p":[[[32.95069,-117.22336],[32.95063,-117.22358],[32.95054,-117.22398],[32.95044,-117.22416],[32.95017,-117.22398],[32.9499,-117.22386],[32.94977,-117.22382],[32.94914,-117.22373],[32.94892,-117.22369],[32.94865,-117.22356],[32.94839,-117.22335],[32.94817,-117.22305],[32.94799,-117.22262],[32.94794,-117.2223],[32.94794,-117.22191],[32.95087,-117.2218],[32.95091,-117.22179],[32.95082,-117.22242],[32.95056,-117.22261],[32.95043,-117.22295],[32.95041,-117.22311],[32.95069,-117.22336]]]},{"n":"San Remo","a":"s","h":289,"u":null,"g":false,"m":"$1.91M","p":[[[32.95616,-117.22585],[32.95448,-117.22596],[32.95281,-117.22589],[32.95274,-117.22444],[32.95275,-117.22403],[32.95278,-117.22286],[32.95273,-117.22159],[32.95603,-117.22147],[32.95615,-117.22218],[32.95613,-117.2229],[32.95616,-117.22585]]]},{"n":"Bayshore","a":"s","h":149,"u":null,"g":false,"m":"$1.74M","p":[[[32.94843,-117.22359],[32.94815,-117.22378],[32.94788,-117.22386],[32.94763,-117.22387],[32.94722,-117.22388],[32.94722,-117.22416],[32.94596,-117.22464],[32.94603,-117.22495],[32.94599,-117.22498],[32.94513,-117.22537],[32.94494,-117.22494],[32.94457,-117.22448],[32.94418,-117.22388],[32.94405,-117.22353],[32.94398,-117.22329],[32.94382,-117.22259],[32.94372,-117.22217],[32.94372,-117.22204],[32.94612,-117.22202],[32.9478,-117.22193],[32.94784,-117.22249],[32.94792,-117.22281],[32.94807,-117.22314],[32.94819,-117.22331],[32.94843,-117.22359]]]},{"n":"Del Mar Bluffs","a":"s","h":120,"u":null,"g":false,"m":"$1.96M","p":[[[32.9508,-117.2233],[32.95077,-117.22336],[32.95076,-117.22343],[32.95072,-117.22364],[32.95064,-117.22402],[32.95051,-117.22425],[32.95042,-117.22442],[32.95068,-117.22475],[32.9508,-117.2251],[32.95081,-117.22573],[32.95066,-117.22613],[32.95013,-117.22579],[32.94962,-117.22557],[32.94904,-117.22552],[32.94863,-117.22554],[32.9483,-117.22567],[32.94789,-117.22484],[32.94784,-117.22473],[32.94734,-117.22503],[32.9473,-117.22504],[32.94717,-117.22468],[32.94715,-117.22464],[32.94734,-117.22452],[32.9482,-117.2241],[32.94857,-117.22405],[32.94913,-117.22408],[32.94972,-117.22413],[32.95009,-117.22422],[32.95034,-117.22438],[32.95046,-117.22421],[32.95059,-117.224],[32.95067,-117.22358],[32.95072,-117.22333],[32.95066,-117.22328],[32.95057,-117.22321],[32.95043,-117.22311],[32.95044,-117.22296],[32.95057,-117.22263],[32.95065,-117.22255],[32.95083,-117.22242],[32.95087,-117.22213],[32.95093,-117.22179],[32.95266,-117.22161],[32.95272,-117.22214],[32.95274,-117.22263],[32.95273,-117.22365],[32.95272,-117.22397],[32.95218,-117.22382],[32.95188,-117.22366],[32.95163,-117.22337],[32.95138,-117.2233],[32.95099,-117.22321],[32.9508,-117.2233]]]},{"n":"Carmel Village","a":"s","h":51,"u":null,"g":false,"m":"$1.9M","p":[[[32.94535,-117.21683],[32.94506,-117.21607],[32.94477,-117.21523],[32.94499,-117.21496],[32.94524,-117.21462],[32.94546,-117.21411],[32.94648,-117.21506],[32.94673,-117.2152],[32.94632,-117.21585],[32.94602,-117.21627],[32.94575,-117.21655],[32.94552,-117.21676],[32.94535,-117.21683]]]},{"n":"Pines","a":"s","h":176,"u":null,"g":false,"m":"$1.66M","p":[[[32.94451,-117.22961],[32.94429,-117.2298],[32.94338,-117.2304],[32.94241,-117.23062],[32.94228,-117.23001],[32.94204,-117.22933],[32.94179,-117.22883],[32.94128,-117.22796],[32.94106,-117.22739],[32.94195,-117.22699],[32.94245,-117.22686],[32.94281,-117.22674],[32.94298,-117.22721],[32.94305,-117.22753],[32.94311,-117.22823],[32.94368,-117.22826],[32.94369,-117.2277],[32.94339,-117.22736],[32.94309,-117.2275],[32.94306,-117.22749],[32.94307,-117.22735],[32.94286,-117.22675],[32.94362,-117.22667],[32.94385,-117.22658],[32.94395,-117.22659],[32.94402,-117.22661],[32.94457,-117.22761],[32.94443,-117.22816],[32.9444,-117.22848],[32.94439,-117.22875],[32.94442,-117.22898],[32.94449,-117.22924],[32.9446,-117.22951],[32.94451,-117.22961]]]},{"n":"Heights","a":"s","h":566,"u":null,"g":false,"m":"$2.56M","p":[[[32.95584,-117.22079],[32.95585,-117.22084],[32.95498,-117.22092],[32.95497,-117.22117],[32.95264,-117.22128],[32.95259,-117.21974],[32.95269,-117.21958],[32.95265,-117.21865],[32.9526,-117.21725],[32.95416,-117.21723],[32.95428,-117.21726],[32.95498,-117.21731],[32.95546,-117.2173],[32.95553,-117.21853],[32.95561,-117.21918],[32.95584,-117.22079]]]},{"n":"Del Mar Place","a":"s","h":241,"u":null,"g":false,"m":"$2.43M","p":[[[32.95542,-117.21724],[32.95543,-117.21727],[32.95491,-117.21728],[32.95468,-117.21717],[32.95459,-117.21708],[32.95258,-117.2171],[32.95263,-117.2187],[32.95268,-117.21956],[32.95256,-117.21972],[32.9526,-117.22127],[32.94803,-117.22139],[32.94778,-117.2212],[32.94714,-117.22111],[32.94677,-117.22097],[32.94625,-117.22089],[32.94617,-117.21979],[32.94622,-117.21967],[32.94607,-117.21882],[32.947,-117.21857],[32.94771,-117.21934],[32.94775,-117.21953],[32.94795,-117.2196],[32.94805,-117.21914],[32.94836,-117.2187],[32.94794,-117.21834],[32.94747,-117.21771],[32.94816,-117.21697],[32.94845,-117.21679],[32.9485,-117.21697],[32.94863,-117.21695],[32.94955,-117.21671],[32.94995,-117.21658],[32.95038,-117.21626],[32.95067,-117.21586],[32.95129,-117.21566],[32.95201,-117.21612],[32.95294,-117.21605],[32.95333,-117.21603],[32.9537,-117.21624],[32.95417,-117.21575],[32.95498,-117.21605],[32.9553,-117.216],[32.95542,-117.21724]]]},{"n":"Cantamar","a":"s","h":227,"u":null,"g":false,"m":"$2.38M","p":[[[32.9504,-117.21617],[32.95041,-117.2162],[32.94994,-117.21656],[32.94851,-117.21694],[32.94846,-117.21676],[32.94819,-117.21692],[32.94745,-117.2177],[32.94792,-117.21835],[32.94833,-117.2187],[32.94814,-117.21897],[32.94802,-117.21916],[32.94792,-117.21956],[32.94777,-117.21951],[32.94773,-117.21932],[32.94702,-117.21854],[32.94608,-117.21879],[32.94572,-117.2188],[32.94588,-117.21966],[32.94594,-117.2201],[32.94356,-117.22042],[32.94335,-117.22045],[32.94313,-117.22],[32.94307,-117.21938],[32.94311,-117.21893],[32.94342,-117.21849],[32.94381,-117.21805],[32.94427,-117.2178],[32.94498,-117.21742],[32.94545,-117.21715],[32.94597,-117.21675],[32.94642,-117.2162],[32.9467,-117.21571],[32.94709,-117.21518],[32.94749,-117.21472],[32.94796,-117.21432],[32.94842,-117.21403],[32.94963,-117.2135],[32.94979,-117.21384],[32.94977,-117.21426],[32.9497,-117.21459],[32.94953,-117.21492],[32.95045,-117.21507],[32.95044,-117.21538],[32.95023,-117.21588],[32.9504,-117.21617]]]},{"n":"Amador","a":"s","h":38,"u":null,"g":false,"m":"$2.72M","p":[[[32.95977,-117.20865],[32.95971,-117.20871],[32.95962,-117.20814],[32.95941,-117.20689],[32.95923,-117.20654],[32.959,-117.20632],[32.9592,-117.20593],[32.95927,-117.20537],[32.95931,-117.20495],[32.95936,-117.20458],[32.95933,-117.20449],[32.96008,-117.20454],[32.9605,-117.20449],[32.96081,-117.2044],[32.96188,-117.20435],[32.96187,-117.20485],[32.96174,-117.20572],[32.96153,-117.20641],[32.96126,-117.20701],[32.96089,-117.20758],[32.96031,-117.20825],[32.95977,-117.20865]]]},{"n":"Palisades","a":"s","h":164,"u":null,"g":false,"m":"$2.25M","p":[[[32.94687,-117.215],[32.94673,-117.21517],[32.94646,-117.21502],[32.94547,-117.21409],[32.94541,-117.21403],[32.94535,-117.21326],[32.94541,-117.21234],[32.94557,-117.21164],[32.94578,-117.21141],[32.94586,-117.21182],[32.94583,-117.21208],[32.94595,-117.21208],[32.9463,-117.21211],[32.94662,-117.21223],[32.94704,-117.21241],[32.94707,-117.21226],[32.94708,-117.21138],[32.94715,-117.21091],[32.94734,-117.21042],[32.94785,-117.20993],[32.94804,-117.20981],[32.94832,-117.21042],[32.94848,-117.21081],[32.94904,-117.21172],[32.94914,-117.21197],[32.94953,-117.21319],[32.94832,-117.21377],[32.94791,-117.21398],[32.94754,-117.21424],[32.9472,-117.21458],[32.94687,-117.215]]]},{"n":"Watercolors","a":"s","h":79,"u":null,"g":false,"m":"$2.09M","p":[[[32.94704,-117.21225],[32.9467,-117.21211],[32.94654,-117.21205],[32.94639,-117.212],[32.94596,-117.21194],[32.94588,-117.21137],[32.94594,-117.21105],[32.94632,-117.21005],[32.94651,-117.20942],[32.94654,-117.20917],[32.94648,-117.20914],[32.94655,-117.2089],[32.94703,-117.2075],[32.94794,-117.20575],[32.94803,-117.20572],[32.94789,-117.20682],[32.94782,-117.20725],[32.94767,-117.20818],[32.94769,-117.20869],[32.94773,-117.20909],[32.948,-117.20977],[32.94777,-117.20994],[32.94733,-117.21036],[32.94721,-117.21069],[32.94713,-117.2109],[32.94706,-117.21135],[32.94706,-117.2117],[32.94706,-117.21223],[32.94704,-117.21225]]]},{"n":"Sonoma","a":"s","h":219,"u":null,"g":false,"m":"$2.73M","p":[[[32.95006,-117.20764],[32.94859,-117.20783],[32.94785,-117.20777],[32.94793,-117.20733],[32.94795,-117.20721],[32.94802,-117.20657],[32.94806,-117.20634],[32.94814,-117.20587],[32.94825,-117.20549],[32.94871,-117.20495],[32.94894,-117.20532],[32.94887,-117.20558],[32.94948,-117.20592],[32.9498,-117.20606],[32.94994,-117.20641],[32.94998,-117.20665],[32.95015,-117.20699],[32.95006,-117.20764]],[[32.95568,-117.21248],[32.95531,-117.21334],[32.95476,-117.21341],[32.95416,-117.21336],[32.95362,-117.21328],[32.95282,-117.21284],[32.95169,-117.21248],[32.95122,-117.21263],[32.95062,-117.21272],[32.94974,-117.21307],[32.94932,-117.2119],[32.94966,-117.21161],[32.95042,-117.2109],[32.9507,-117.2107],[32.95065,-117.21055],[32.95023,-117.2099],[32.95049,-117.20946],[32.95062,-117.2094],[32.95063,-117.2079],[32.95109,-117.20795],[32.95282,-117.20802],[32.95317,-117.20807],[32.95388,-117.20861],[32.95464,-117.20969],[32.95425,-117.21044],[32.95441,-117.2107],[32.95462,-117.21124],[32.95461,-117.21159],[32.9547,-117.21205],[32.95514,-117.21207],[32.95568,-117.21248]]]},{"n":"Huntington Heights","a":"s","h":132,"u":null,"g":false,"m":"$2.84M","p":[[[32.95964,-117.20872],[32.95908,-117.2091],[32.95861,-117.20836],[32.95829,-117.20808],[32.95805,-117.2079],[32.95746,-117.20771],[32.95668,-117.20774],[32.95643,-117.20714],[32.95581,-117.20662],[32.95509,-117.20648],[32.95469,-117.20619],[32.95416,-117.20548],[32.95456,-117.20517],[32.95581,-117.20458],[32.95614,-117.20484],[32.95692,-117.20428],[32.95929,-117.20436],[32.95932,-117.20452],[32.95934,-117.20459],[32.95928,-117.20512],[32.95919,-117.20592],[32.95897,-117.20632],[32.95921,-117.20656],[32.95939,-117.20691],[32.95963,-117.20826],[32.95969,-117.20871],[32.95964,-117.20872]]]},{"n":"Estates","a":"s","h":99,"u":null,"g":false,"m":"$2.42M","p":[[[32.95062,-117.21057],[32.95021,-117.2109],[32.95005,-117.21104],[32.94926,-117.21169],[32.94888,-117.21111],[32.94856,-117.21047],[32.94846,-117.21026],[32.94819,-117.2097],[32.94792,-117.209],[32.94784,-117.20858],[32.94823,-117.20831],[32.94855,-117.20801],[32.94901,-117.20802],[32.94922,-117.20792],[32.95012,-117.20776],[32.95061,-117.20791],[32.95061,-117.20938],[32.95048,-117.20945],[32.95019,-117.20991],[32.9506,-117.21058],[32.95062,-117.21057]]]},{"n":"Promontory","a":"s","h":190,"u":null,"g":false,"m":"$2.89M","p":[[[32.95335,-117.20717],[32.95297,-117.20739],[32.95271,-117.20756],[32.95234,-117.20764],[32.95131,-117.20771],[32.95108,-117.20772],[32.95098,-117.20762],[32.95084,-117.20765],[32.95055,-117.20747],[32.95095,-117.20694],[32.95126,-117.20676],[32.95234,-117.20675],[32.95251,-117.20666],[32.95278,-117.20649],[32.95321,-117.20636],[32.95326,-117.20674],[32.95335,-117.20717]]]},{"n":"Private Collection","a":"s","h":40,"u":null,"g":false,"m":"$3.32M","p":[[[32.95667,-117.21084],[32.95671,-117.21088],[32.95633,-117.21124],[32.95618,-117.21146],[32.95571,-117.21246],[32.95564,-117.2124],[32.95515,-117.21205],[32.95471,-117.21203],[32.95462,-117.21159],[32.95463,-117.21123],[32.95455,-117.21101],[32.95442,-117.21069],[32.95425,-117.21043],[32.95534,-117.20907],[32.95667,-117.21084]]]},{"n":"Provence","a":"s","h":57,"u":null,"g":false,"m":"$2.82M","p":[[[32.95614,-117.20812],[32.95515,-117.20907],[32.95466,-117.20968],[32.95405,-117.2088],[32.95389,-117.20859],[32.95372,-117.20843],[32.95353,-117.20825],[32.95323,-117.20796],[32.95297,-117.20741],[32.95345,-117.20714],[32.95336,-117.20679],[32.95341,-117.20662],[32.95377,-117.20634],[32.95415,-117.20636],[32.95516,-117.2076],[32.95551,-117.20729],[32.95614,-117.20812]]]},{"n":"Palma Del Mar","a":"s","h":78,"u":null,"g":false,"m":"$2.25M","p":[[[32.95501,-117.20441],[32.95438,-117.20525],[32.95416,-117.20545],[32.95389,-117.20517],[32.95384,-117.20524],[32.95335,-117.20619],[32.95277,-117.20624],[32.95199,-117.20627],[32.95161,-117.20643],[32.95103,-117.20617],[32.95052,-117.20618],[32.94971,-117.20584],[32.94906,-117.2054],[32.94935,-117.20452],[32.95038,-117.20466],[32.95207,-117.20431],[32.95357,-117.2049],[32.95405,-117.20419],[32.95501,-117.20441]]]},{"n":"Creek Park","a":"s","h":155,"u":null,"g":false,"m":"$1.93M","p":[[[32.94118,-117.22718],[32.94109,-117.22723],[32.94102,-117.2265],[32.94068,-117.2268],[32.9405,-117.22676],[32.93975,-117.2263],[32.93943,-117.22718],[32.93915,-117.22786],[32.93913,-117.22832],[32.9392,-117.22875],[32.93948,-117.2292],[32.93997,-117.22951],[32.94036,-117.22968],[32.94081,-117.22968],[32.94116,-117.22954],[32.94172,-117.22909],[32.94206,-117.22991],[32.9422,-117.23071],[32.94179,-117.2307],[32.94108,-117.23067],[32.94037,-117.23056],[32.93989,-117.23041],[32.93943,-117.23021],[32.93898,-117.22993],[32.9385,-117.22962],[32.93873,-117.22904],[32.93868,-117.2283],[32.93851,-117.22626],[32.93861,-117.22579],[32.93885,-117.225],[32.93924,-117.22416],[32.93994,-117.22315],[32.94023,-117.22301],[32.94083,-117.22492],[32.94106,-117.22492],[32.94162,-117.22484],[32.94184,-117.2249],[32.94209,-117.22505],[32.94199,-117.22548],[32.94199,-117.22626],[32.94212,-117.22677],[32.94118,-117.22718]]]},{"n":"Rancho Pacifica","a":"rp","h":148,"u":null,"g":false,"m":"$5.58M","p":[[[32.97404,-117.20895],[32.97461,-117.21131],[32.9739,-117.21265],[32.97486,-117.21369],[32.97369,-117.21546],[32.97426,-117.21952],[32.97435,-117.22201],[32.97534,-117.22316],[32.97519,-117.22374],[32.97495,-117.22434],[32.97479,-117.22507],[32.97468,-117.22655],[32.97382,-117.22714],[32.97356,-117.22817],[32.97437,-117.22856],[32.97437,-117.23056],[32.97344,-117.23098],[32.9721,-117.23005],[32.97127,-117.22939],[32.97103,-117.22754],[32.97137,-117.22531],[32.97107,-117.22457],[32.97098,-117.22391],[32.9697,-117.22337],[32.96946,-117.22218],[32.97008,-117.2217],[32.97001,-117.22118],[32.96951,-117.22131],[32.9688,-117.22028],[32.96906,-117.21963],[32.96887,-117.21897],[32.96911,-117.21662],[32.96882,-117.21458],[32.96884,-117.21388],[32.96928,-117.21337],[32.96926,-117.21284],[32.96862,-117.21255],[32.9685,-117.2114],[32.96855,-117.21045],[32.96811,-117.21042],[32.96808,-117.20954],[32.96815,-117.20869],[32.97182,-117.20881],[32.97404,-117.20895]]]}],"areas":{"n":["North of Del Mar Heights Road","#0d8f84"],"s":["South of Del Mar Heights Road","#0b5c8c"],"cch":["Carmel Country Highlands","#c27a0e"],"phr":["Pacific Highlands Ranch","#e0691c"],"tdm":["Torrey Highlands","#3f9a2a"],"th":["Torrey Hills","#d0346f"],"dmm":["Del Mar Mesa","#7a4ce0"],"rp":["Rancho Pacifica","#64748b"]}};
+(function(){
+  var C=HUB.c, A=HUB.areas, sel=-1, area=null;
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]});}
+  var map=L.map('map',{scrollWheelZoom:false,zoomSnap:0.5}).setView([32.94,-117.22],13);
+  var ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/';
+  var base={map:L.tileLayer(ESRI+'World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Map &copy; Esri, HERE, Garmin, OpenStreetMap contributors'}),
+    sat:L.layerGroup([L.tileLayer(ESRI+'World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Imagery &copy; Esri, Maxar, Earthstar Geographics'}),
+      L.tileLayer(ESRI+'Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}',{maxZoom:19})])};
+  var cur='map'; base.map.addTo(map);
+  document.querySelectorAll('.map-views button').forEach(function(b){b.addEventListener('click',function(){
+    map.removeLayer(base[cur]); cur=b.dataset.b; base[cur].addTo(map);
+    document.getElementById('map').classList.toggle('sat',cur==='sat');
+    document.querySelectorAll('.map-views button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    style();});});
+  var layers=C.map(function(o,i){var l=L.polygon(o.p,{weight:1.5}).addTo(map);
+    l.on('click',function(e){L.DomEvent.stopPropagation(e);pick(i,false);});
+    l.bindTooltip(o.n,{sticky:true,direction:'top'});return l;});
+  var all=L.latLngBounds([]);layers.forEach(function(l){all.extend(l.getBounds());});
+  function fitAll(){map.invalidateSize();map.fitBounds(all,{padding:[16,16]});}
+  var touched=false;map.getContainer().addEventListener('pointerdown',function(){touched=true;});
+  fitAll();window.addEventListener('load',fitAll);
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(!touched&&!area&&sel<0)fitAll();else map.invalidateSize();},150);});
+  var lbl=L.layerGroup().addTo(map);
+  function style(){var sat=cur==='sat';layers.forEach(function(l,i){var o=C[i],c=A[o.a][1],dim=area&&o.a!==area,on=i===sel;
+    l.setStyle({color:on?'#101418':(sat?'#fff':c),weight:on?3:1.5,fillColor:c,fillOpacity:dim?0.06:(on?0.75:(sat?0.45:0.38)),opacity:dim?0.3:1});});}
+  function labels(){lbl.clearLayers();if(map.getZoom()<15)return;var b=map.getBounds();
+    C.forEach(function(o,i){if(area&&o.a!==area)return;var c=layers[i].getBounds().getCenter();if(!b.contains(c))return;
+      lbl.addLayer(L.tooltip({permanent:true,direction:'center',className:'lbl',interactive:false}).setLatLng(c).setContent(esc(o.n)));});}
+  map.on('zoomend moveend',labels);
+  var card=document.getElementById('mcard');
+  function pick(i,zoom){touched=true;sel=i;var o=C[i];style();
+    var go=o.u?'<a class="mc-go" href="'+o.u+'">'+(o.g?'Community guide &rarr;':'See homes &rarr;')+'</a>':'<a class="mc-go" href="#contact">Ask about '+esc(o.n)+'</a>';
+    card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+A[o.a][1]+'"></span>'+esc(A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'median <b>'+o.m+'</b>':'')+'</div>':'')+go;
+    card.classList.add('show');card.querySelector('.mc-x').onclick=function(){card.classList.remove('show');sel=-1;style();};
+    if(zoom)map.flyToBounds(layers[i].getBounds(),{maxZoom:16,duration:.6,padding:[40,40]});}
+  map.on('click',function(){card.classList.remove('show');sel=-1;style();});
+  function setArea(k){touched=true;area=(area===k)?null:k;
+    document.querySelectorAll('#chips .chip').forEach(function(c){c.classList.toggle('on',c.dataset.a===area);});
+    var b=L.latLngBounds([]);layers.forEach(function(l,i){if(!area||C[i].a===area)b.extend(l.getBounds());});
+    map.flyToBounds(b,{padding:[20,20],duration:.6});card.classList.remove('show');sel=-1;style();labels();}
+  document.querySelectorAll('#chips .chip').forEach(function(c){c.addEventListener('click',function(e){e.preventDefault();setArea(c.dataset.a);});});
+  document.querySelectorAll('.cc-map').forEach(function(b){b.addEventListener('click',function(){
+    var i=C.findIndex(function(o){return o.n===b.dataset.n;});if(i<0)return;
+    if(area&&C[i].a!==area){area=null;document.querySelectorAll('#chips .chip').forEach(function(c){c.classList.remove('on');});}
+    document.getElementById('map-section').scrollIntoView({behavior:'smooth',block:'start'});pick(i,true);});});
+  style();
+})();
+</script>
+<script>
+(function(){
+  var links=Array.prototype.slice.call(document.querySelectorAll('.bottom-nav a[href^="#"]')).filter(function(a){return a.getAttribute('href').length>1&&document.getElementById(a.getAttribute('href').slice(1));});
+  if(!links.length||!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+    links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id);});});},{rootMargin:'-45% 0px -50% 0px'});
+  links.forEach(function(a){io.observe(document.getElementById(a.getAttribute('href').slice(1)));});
+})();
+</script>
+<script>
+(function(){
+  if (window.innerWidth > 760) return;
+  var masthead = document.querySelector('.masthead');
+  var jumpNav = document.querySelector('.jump-nav');
+  var lastY = window.scrollY;
+  var ticking = false;
+  var hidden = false;
+  var upAccum = 0;
+  function setHidden(h){
+    if (h === hidden) return;
+    hidden = h;
+    upAccum = 0;
+    var mh = masthead.getBoundingClientRect().height;
+    masthead.style.transform = h ? 'translateY(-' + mh + 'px)' : '';
+    if (jumpNav) {
+      var jh = jumpNav.getBoundingClientRect().height;
+      jumpNav.style.transform = h ? 'translateY(-' + (mh + jh) + 'px)' : '';
+    }
+  }
+  function onScroll(){
+    var y = Math.max(0, window.scrollY);
+    var delta = y - lastY;
+    if (Math.abs(delta) > 6) {
+      if (delta > 0) {
+        upAccum = 0;
+        if (y > 60) setHidden(true);
+      } else if (hidden) {
+        upAccum += -delta;
+        if (upAccum >= window.innerHeight * 0.25) setHidden(false);
+      }
+      lastY = y;
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+  }, {passive:true});
+  window.__showMasthead = function(){ setHidden(false); };
+})();
+</script>
+</body>
+</html>
