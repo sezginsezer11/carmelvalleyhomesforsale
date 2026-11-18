@@ -1030,7 +1030,9 @@
       var sizes = g.filter(function(r){ return r.living_area; }).map(function(r){ return r.living_area; });
       set('g' + b + '-count', g.length + (g.length === 1 ? ' sale' : ' sales') + ' &middot; 5 yrs');
       if (sizes.length){ var lo = Math.min.apply(null, sizes), hi = Math.max.apply(null, sizes); set('g' + b + '-size', lo.toLocaleString('en-US') + (hi > lo ? '&ndash;' + hi.toLocaleString('en-US') : '') + ' sq ft'); }
-      set('g' + b + '-median', '$' + Math.round(median(prices)).toLocaleString('en-US'));
+      var last = g.slice().sort(function(x, y){ return x.close_date < y.close_date ? 1 : -1; })[0];
+      var mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][parseInt(last.close_date.slice(5, 7), 10) - 1];
+      set('g' + b + '-latest', '$' + Math.round(last.close_price).toLocaleString('en-US') + ' &middot; ' + mo + ' ' + last.close_date.slice(0, 4));
       var pl = Math.min.apply(null, prices), ph = Math.max.apply(null, prices); set('g' + b + '-range', ph > pl ? k(pl) + '&ndash;' + k(ph) : k(pl));
     });
     if (counts[1] && counts[2]){
@@ -1304,7 +1306,7 @@
         '<div class="stat-box"><div class="num">' + (headMedian != null ? '$' + Math.round(headMedian).toLocaleString('en-US') : '&mdash;') + '</div>' +
         deltaHtml(headMedian, prevMedian) +
         '<div class="lbl">Median Sale Price</div></div>' +
-        '<div class="stat-box"><div class="num">$' + (headPsfAvg != null ? Math.round(headPsfAvg) : '&mdash;') + '</div>' +
+        '<div class="stat-box"><div class="num">' + (headPsfAvg != null ? '$' + Math.round(headPsfAvg) : '&mdash;') + '</div>' +
         deltaHtml(headPsfAvg, prevPsf) +
         '<div class="lbl">Price / Sq Ft</div></div>' +
         '<div class="stat-box"><div class="num">' + (headDom.length ? Math.round(avg(headDom)) : '&mdash;') + ' days</div>' +

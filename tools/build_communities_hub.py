@@ -80,14 +80,18 @@ def load():
     sales = {}
     for r in load_sales():
         if r["_d"] >= five:
-            sales.setdefault((r.get("community_name") or "").strip().lower(), []).append(r["close_price"])
+            sales.setdefault((r.get("community_name") or "").strip().lower(), []).append(r)
     comms = []
     for c in data["c"]:
         s, tot = mix.get(c["n"].lower(), (0, 0))
         if is_condo_community(c["n"]) or (s / tot < 0.5 if tot else c["cat"] != "sfr"):
             continue
         p = sales.get(c["n"].lower(), [])
-        c["n5"], c["med5"] = len(p), (statistics.median(p) if p else None)
+        # 5 years = what homes sold for (range); medians only from the last 12 months
+        pr = [r["close_price"] for r in p]
+        p12 = [r["close_price"] for r in p if r["_d"] >= years_ago(1)]
+        c["n5"], c["n12"], c["med12"] = len(p), len(p12), (statistics.median(p12) if p12 else None)
+        c["r5"] = (f"{short(min(pr))}&ndash;{short(max(pr))}" if max(pr) > min(pr) else short(pr[0])) if pr else None
         comms.append(c)
     return data, comms, tpl
 
@@ -115,7 +119,7 @@ def main():
             img = (f'<img src="{ph}" alt="{e(c["n"])} in Carmel Valley" loading="lazy" width="320" height="200">'
                    if ph else '')
             meta = " &middot; ".join(x for x in [f'{c["homes"]} homes' if c.get("homes") else "",
-                                                  f'median {short(c["med5"])}' if c.get("med5") else ""] if x) or "Single-family homes"
+                                                  f'sold {c["r5"]}' if c.get("r5") else ""] if x) or "Single-family homes"
             cta = ""
             if c["n"] in pages:
                 cta = '<span class="cc-cta">Community guide &rarr;</span>'
@@ -148,15 +152,15 @@ def main():
     biggest = max(groups, key=lambda g: len(g[2]))
     n_big = len(biggest[2])
     largest = sorted((c for c in comms if c.get("homes")), key=lambda c: -c["homes"])[:3]
-    priced = [c for c in comms if c.get("med5") and c["n5"] >= 5]
-    lo, hi = min(priced, key=lambda c: c["med5"]), max(priced, key=lambda c: c["med5"])
+    priced = [c for c in comms if c.get("med12") and c["n12"] >= 3]
+    lo, hi = min(priced, key=lambda c: c["med12"]), max(priced, key=lambda c: c["med12"])
     faqs = [
         ("How many single-family neighborhoods are in Carmel Valley?",
          f"This map shows {len(comms)} single-family neighborhoods in Carmel Valley (San Diego, 92130), with more than "
          f"{homes_floor} homes between them. They are spread across {len(groups)} areas, and {n_big} of them are in {biggest[1]}."),
         ("Which Carmel Valley neighborhoods have the lowest and highest home prices?",
-         f"Among neighborhoods with at least five house sales in the last 5 years, {lo['n']} had the lowest median ({short(lo['med5'])}) "
-         f"and {hi['n']} the highest ({short(hi['med5'])}). Lot size, home age and school area explain most of the gap."),
+         f"Among neighborhoods with at least three house sales in the last 12 months, {lo['n']} had the lowest median ({short(lo['med12'])}) "
+         f"and {hi['n']} the highest ({short(hi['med12'])}). Lot size, home age and school area explain most of the gap."),
         ("What are the largest single-family neighborhoods in Carmel Valley?",
          "By number of homes, the largest are " + ", ".join(f"{c['n']} ({c['homes']} homes)" for c in largest) +
          ". Bigger neighborhoods have more sales each year, which makes prices easier to compare."),
@@ -186,7 +190,7 @@ def main():
     jsonld = "\n".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
 
     # ---------- map data ----------
-    mdata = {"c": [{"n": c["n"], "a": c["sub"], "h": c.get("homes"), "u": link(c), "g": c["n"] in pages, "m": short(c["med5"]) if c.get("med5") else None, "p": c["p"]} for c in comms],
+    mdata = {"c": [{"n": c["n"], "a": c["sub"], "h": c.get("homes"), "u": link(c), "g": c["n"] in pages, "m": c.get("r5"), "p": c["p"]} for c in comms],
              "areas": {k: [l, COLORS.get(k)] for k, l, _ in groups}}
 
     # ---------- shell from the community template ----------
@@ -198,7 +202,7 @@ def main():
     hide_js = tpl[tpl.rindex("<script>"):tpl.rindex("</script>") + len("</script>")]
 
     title = "Carmel Valley Neighborhoods Map: Single-Family Homes by Area"
-    desc = f"Map of {len(comms)} Carmel Valley single-family neighborhoods by area, with home counts and median sale prices. San Diego 92130."
+    desc = f"Map of {len(comms)} Carmel Valley single-family neighborhoods by area, with home counts and what homes sold for. San Diego 92130."
     assert len(desc) <= 155, len(desc)
 
     page = f'''<!doctype html>
@@ -324,7 +328,7 @@ def main():
       <div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="map" aria-pressed="true">Map</button><button type="button" data-b="sat" aria-pressed="false">Satellite</button></div>
       <div class="map-card" id="mcard" aria-live="polite"></div>
     </div>
-    <p class="map-note">Boundaries are approximate. Home counts are from the California Title Company community chart. Median prices are single-family sales over the last 5 years.</p>
+    <p class="map-note">Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for over the last 5 years.</p>
   </div>
 </section>
 
@@ -389,7 +393,7 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
   var card=document.getElementById('mcard');
   function pick(i,zoom){{touched=true;sel=i;var o=C[i];style();
     var go=o.u?'<a class="mc-go" href="'+o.u+'">'+(o.g?'Community guide &rarr;':'See homes &rarr;')+'</a>':'<a class="mc-go" href="#contact">Ask about '+esc(o.n)+'</a>';
-    card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+A[o.a][1]+'"></span>'+esc(A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'median <b>'+o.m+'</b>':'')+'</div>':'')+go;
+    card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+A[o.a][1]+'"></span>'+esc(A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'sold <b>'+o.m+'</b> (5 yrs)':'')+'</div>':'')+go;
     card.classList.add('show');card.querySelector('.mc-x').onclick=function(){{card.classList.remove('show');sel=-1;style();}};
     if(zoom)map.flyToBounds(layers[i].getBounds(),{{maxZoom:16,duration:.6,padding:[40,40]}});}}
   map.on('click',function(){{card.classList.remove('show');sel=-1;style();}});

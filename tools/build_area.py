@@ -69,6 +69,11 @@ def med(v):
     return statistics.median(v) if v else None
 
 
+def span(p):
+    """Low-high sold price, for showing what homes sold for (history, not an average)."""
+    return f"{short(min(p))}&ndash;{short(max(p))}" if max(p) > min(p) else short(p[0])
+
+
 def fmt_date(d):
     return f"{d.strftime('%b')} {d.day}, {d.year}"
 
@@ -92,10 +97,13 @@ def build(key, shapes, hub_comms, all_rows):
     cv5 = [r for r in all_rows if r["_d"] >= years_ago(5)]
     if len(five) < 10:
         raise SystemExit(f"{label}: only {len(five)} sales in 5 years")
-    m5, cv_m5 = med([r["close_price"] for r in five]), med([r["close_price"] for r in cv5])
-    m12 = med([r["close_price"] for r in t12])
-    psf = med([r["close_price"] / r["living_area"] for r in five if r.get("living_area")])
-    dom = med([r.get("days_on_market") for r in five])
+    if not t12:
+        raise SystemExit(f"{label}: no sales in the last 12 months")
+    # Medians, $/sq ft and days on market use the last 12 months; 5 years is only for sales history.
+    cv12 = [r for r in cv5 if r["_d"] >= years_ago(1)]
+    m12, cv_m12 = med([r["close_price"] for r in t12]), med([r["close_price"] for r in cv12])
+    psf = med([r["close_price"] / r["living_area"] for r in t12 if r.get("living_area")])
+    dom = med([r.get("days_on_market") for r in t12])
     yb = sorted(r["year_built"] for r in five if r.get("year_built"))
     today = datetime.date.today()
     stamp = f'{today.strftime("%B")} {today.day}, {today.year}'
@@ -109,7 +117,9 @@ def build(key, shapes, hub_comms, all_rows):
     for c in comms:
         g = by_name.get(c["n"].lower(), [])
         ybs = [r["year_built"] for r in g if r.get("year_built")]
-        nb.append({"n": c["n"], "homes": c.get("homes"), "sales": len(g), "med": med([r["close_price"] for r in g]),
+        g12 = [r["close_price"] for r in g if r["_d"] >= years_ago(1)]
+        nb.append({"n": c["n"], "homes": c.get("homes"), "sales": len(g), "prices": [r["close_price"] for r in g],
+                   "med": med(g12), "n12": len(g12),
                    "built": (f"{min(ybs)}" if min(ybs) == max(ybs) else f"{min(ybs)}&ndash;{max(ybs)}") if ybs else "",
                    "url": NEIGHBORHOOD_PAGES.get(c["n"]), "p": c["p"]})
     nb.sort(key=lambda x: (-x["sales"], x["n"]))
@@ -119,8 +129,8 @@ def build(key, shapes, hub_comms, all_rows):
         meta = " &middot; ".join(s for s in ["%s homes" % x["homes"] if x["homes"] else "",
                                              "built " + x["built"] if x["built"] else ""] if s)
         nb_rows += ('<tr><td class="nm">%s<span>%s</span></td><td class="num">%s</td><td class="num">%s</td></tr>'
-                    % (name_html, meta, x["sales"] or "&mdash;", short(x["med"]) if x["med"] else "&mdash;"))
-    priced = [x for x in nb if x["sales"] >= 5]
+                    % (name_html, meta, x["sales"] or "&mdash;", span(x["prices"]) if x["prices"] else "&mdash;"))
+    priced = [x for x in nb if x["n12"] >= 3]
     lo = min(priced, key=lambda x: x["med"]) if priced else None
     hi = max(priced, key=lambda x: x["med"]) if priced else None
 
@@ -128,13 +138,13 @@ def build(key, shapes, hub_comms, all_rows):
     beds = collections.defaultdict(list)
     for r in five:
         if r.get("beds_total"):
-            beds[r["beds_total"]].append(r["close_price"])
+            beds[r["beds_total"]].append(r)  # newest first
     top = max(len(v) for v in beds.values())
     bed_cards = "".join(
-        f'<div class="bc"><div class="bc-h"><h3>{b} bedrooms</h3><b>{short(med(p))}</b></div>'
-        f'<div class="bc-bar"><i style="width:{round(100 * len(p) / top)}%"></i></div>'
-        f'<div class="bc-m">{len(p)} sales &middot; {short(min(p))}&ndash;{short(max(p))}</div></div>'
-        for b, p in sorted(beds.items()) if len(p) >= 3)
+        f'<div class="bc"><div class="bc-h"><h3>{b} bedrooms</h3><b>{span([r["close_price"] for r in g])}</b></div>'
+        f'<div class="bc-bar"><i style="width:{round(100 * len(g) / top)}%"></i></div>'
+        f'<div class="bc-m">{len(g)} sales &middot; last sold {short(g[0]["close_price"])}, {g[0]["_d"].strftime("%b")} {g[0]["_d"].year}</div></div>'
+        for b, g in sorted(beds.items()) if len(g) >= 3)
 
     # schools
     elem = collections.Counter(elementary_for(r.get("lat"), r.get("lng")) for r in five)
@@ -153,15 +163,16 @@ def build(key, shapes, hub_comms, all_rows):
         f'<td class="num">{r.get("beds_total") or "&mdash;"} / {r.get("baths_total") or "&mdash;"}</td>'
         f'<td class="num price">{money(r["close_price"])}</td><td class="num">{fmt_date(r["_d"])}</td></tr>' for r in rows[:10])
 
-    vs = "above" if m5 > cv_m5 else "below"
+    vs = "above" if m12 > cv_m12 else "below"
     notes = " ".join(e(n) for n in NOTES.get(key, []))
     faqs = [
         (f"How much does a house in {label} cost?",
-         f"Over the last 5 years, {len(five)} single-family homes in {label} sold at a median of {money(m5)} (about {money(psf)} per sq ft), "
-         f"{vs} the Carmel Valley median of {money(cv_m5)}." + (f" In the last 12 months, {len(t12)} sold at a median of {money(m12)}." if t12 else "")),
+         f"In the last 12 months, {len(t12)} single-family homes in {label} sold at a median of {money(m12)} (about {money(psf)} per sq ft), "
+         f"{vs} the Carmel Valley median of {money(cv_m12)}. Over the last 5 years, {len(five)} sold for between "
+         f"{money(min(r['close_price'] for r in five))} and {money(max(r['close_price'] for r in five))}."),
         (f"Which neighborhoods are in {label}?",
          f"{label} has {len(comms)} single-family neighborhoods, including {', '.join(x['n'] for x in nb[:6])}."
-         + (f" Among those with at least five sales in 5 years, {lo['n']} had the lowest median ({short(lo['med'])}) and {hi['n']} the highest ({short(hi['med'])})."
+         + (f" Among those with at least three sales in the last 12 months, {lo['n']} had the lowest median ({short(lo['med'])}) and {hi['n']} the highest ({short(hi['med'])})."
             if lo and hi and lo is not hi else "")),
         (f"How old are the homes in {label}?",
          f"Homes that sold in the last 5 years were built between {yb[0]} and {yb[-1]}, with a median year of {yb[len(yb) // 2]}."),
@@ -171,7 +182,7 @@ def build(key, shapes, hub_comms, all_rows):
           if known else "Most homes are served by Solana Beach School District elementary schools. ")
          + "High school is Torrey Pines High, with Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with the district."),
         (f"How fast do homes sell in {label}?",
-         f"The median home sold in {round(dom)} days on market over the last 5 years."),
+         f"Over the last 12 months, the median home sold in {round(dom)} days on market."),
     ]
     if key in NOTES:
         faqs.insert(3, (f"Do homes in {label} pay Mello-Roos?", NOTES[key][0]))
@@ -195,12 +206,12 @@ def build(key, shapes, hub_comms, all_rows):
     hide_js = tpl[tpl.rindex("<script>"):tpl.rindex("</script>") + len("</script>")]
 
     title = f"{label} Homes for Sale | Carmel Valley, San Diego 92130"
-    desc = f"{label} single-family homes in Carmel Valley: median {short(m5)}, {len(comms)} neighborhoods, sold prices, schools and a map."
+    desc = f"{label} single-family homes in Carmel Valley: 12-month median {short(m12)}, {len(comms)} neighborhoods, sold prices, schools and a map."
     if len(desc) > 160:
-        desc = f"{label} homes in Carmel Valley: median {short(m5)}, {len(comms)} neighborhoods, sold prices and a map."
+        desc = f"{label} homes in Carmel Valley: 12-month median {short(m12)}, {len(comms)} neighborhoods, sold prices and a map."
     color = COLORS.get(key, "#0b5c8c")
     mapdata = json.dumps({"area": [[[round(y, 5), round(x, 5)] for x, y in p] for p in rings],
-                          "nb": [{"n": x["n"], "m": short(x["med"]) if x["med"] else None, "s": x["sales"], "u": x["url"], "p": x["p"]} for x in nb]},
+                          "nb": [{"n": x["n"], "m": short(x["med"]) if x["med"] else None, "k": x["n12"], "r": span(x["prices"]) if x["prices"] else "", "s": x["sales"], "u": x["url"], "p": x["p"]} for x in nb]},
                          separators=(",", ":"))
 
     page = f'''<!doctype html>
@@ -291,10 +302,10 @@ def build(key, shapes, hub_comms, all_rows):
 
 <section class="facts" style="padding-top:12px">
   <div class="wrap facts-grid">
-    <div class="fact"><div class="num">{short(m12) if m12 else short(m5)}</div><div class="lbl">Median sale, {"12 mo" if m12 else "5 yrs"}</div></div>
-    <div class="fact"><div class="num">{len(t12)}</div><div class="lbl">Sold, last 12 months</div></div>
+    <div class="fact"><div class="num">{short(m12)}</div><div class="lbl">Median sale, last 12 mo</div></div>
+    <div class="fact"><div class="num">{len(t12)}</div><div class="lbl">Sold, last 12 mo</div></div>
     <div class="fact"><div class="num">{len(comms)}</div><div class="lbl">Neighborhoods</div></div>
-    <div class="fact"><div class="num">{round(dom)} days</div><div class="lbl">Median on market</div></div>
+    <div class="fact"><div class="num">{round(dom)} days</div><div class="lbl">On market, last 12 mo</div></div>
   </div>
 </section>
 
@@ -302,7 +313,7 @@ def build(key, shapes, hub_comms, all_rows):
   <div class="wrap">
     <h2 class="h3">{e(label)} neighborhoods on the map</h2>
     <div class="ar-map"><div id="arMap" role="region" aria-label="Map of {e(label)} and its neighborhoods"></div><div class="map-card" id="mcard" aria-live="polite"></div></div>
-    <p class="note">Tap a neighborhood for its median price. Boundaries are approximate.</p>
+    <p class="note">Tap a neighborhood for what its homes sold for. Boundaries are approximate.</p>
   </div>
 </section>
 
@@ -320,7 +331,7 @@ def build(key, shapes, hub_comms, all_rows):
   <div class="wrap two">
     <div>
       <h2 class="h3">Neighborhoods in {e(label)}</h2>
-      <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 5 yrs</th><th class="num">Median</th></tr></thead>
+      <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 5 yrs</th><th class="num">Sold for, 5 yrs</th></tr></thead>
       <tbody>{nb_rows}</tbody></table>
     </div>
     <div id="prices">
@@ -384,7 +395,7 @@ def build(key, shapes, hub_comms, all_rows):
     return l;}});
   function pick(o,l){{
     if(sel)sel.setStyle({{weight:1.2,color:C,fillOpacity:.32}});sel=l;l.setStyle({{weight:3,color:'#101418',fillOpacity:.6}});
-    card.innerHTML='<button type="button" class="x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-m">'+(o.m?'Median '+o.m+' &middot; '+o.s+' sales in 5 yrs':'No recent single-family sales')+'</div>'
+    card.innerHTML='<button type="button" class="x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-m">'+(o.s?(o.m?'12-mo median '+o.m+' ('+o.k+' sold)':'No sales in the last 12 months')+'<br>'+o.s+' sold in 5 yrs: '+o.r:'No recent single-family sales')+'</div>'
       +(o.u?'<a href="'+o.u+'">Neighborhood guide &rarr;</a>':'<a href="#contact">Ask about '+esc(o.n)+'</a>');
     card.classList.add('show');card.querySelector('.x').onclick=function(){{card.classList.remove('show');l.setStyle({{weight:1.2,color:C,fillOpacity:.32}});sel=null;}};
   }}

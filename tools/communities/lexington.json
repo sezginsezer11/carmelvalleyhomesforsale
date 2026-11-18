@@ -9,7 +9,7 @@
  "seo": {
   "title": "Lexington Homes for Sale | Carmel Valley, San Diego 92130",
   "description": "Lexington homes for sale in Carmel Valley 92130: live listings, sold prices by bedroom, school area, map and FAQs.",
-  "jsonld_description": "Lexington single-family homes for sale in Carmel Country Highlands, Carmel Valley, San Diego. 5-year median sale $3.27M."
+  "jsonld_description": "Lexington single-family homes for sale in Carmel Country Highlands, Carmel Valley, San Diego. 12-month median sale $3.33M."
  },
  "geo": {
   "lat": 32.92851,
@@ -376,8 +376,8 @@
   },
   {
    "icon": "price",
-   "value": "$3.27M",
-   "label": "Median sale"
+   "value": "$3.33M",
+   "label": "Median, last 12 mo"
   },
   {
    "icon": "units",
@@ -401,8 +401,8 @@
   },
   {
    "icon": "time",
-   "value": "9 days",
-   "label": "Median on market"
+   "value": "8 days",
+   "label": "Days on market, 12 mo"
   }
  ],
  "location_intro": "Lexington is in <a href=\"/carmel-country-highlands-homes-for-sale/\">Carmel Country Highlands</a>. Its closest neighbors are Steeplechase, Belmont, Breakers.",
@@ -451,27 +451,27 @@
  ],
  "glance": {
   "h2": "What a Lexington Home Costs by Bedrooms",
-  "lede": "Closed single-family sales in Lexington over the last 5 years, by bedroom count.",
+  "lede": "Closed single-family sales in Lexington over the last 5 years, by bedroom count: what each size sold for and the most recent sale.",
   "cards": [
    {
     "beds": 4,
     "count": "",
     "size": "",
-    "median": "",
+    "latest": "",
     "range": ""
    },
    {
     "beds": 5,
     "count": "",
     "size": "",
-    "median": "",
+    "latest": "",
     "range": ""
    },
    {
     "beds": 6,
     "count": "",
     "size": "",
-    "median": "",
+    "latest": "",
     "range": ""
    }
   ],
@@ -486,7 +486,7 @@
    ],
    [
     "Bigger lots.",
-    "The median lot is about 8,448 sq ft, larger than the Carmel Valley median of 6,979."
+    "The median lot is about 8,448 sq ft, larger than the Carmel Valley median of 6,977."
    ],
    [
     "School area.",
@@ -494,7 +494,7 @@
    ],
    [
     "Homes sell quickly.",
-    "The median home sold in 9 days, versus 10 across Carmel Valley."
+    "Over the last 12 months the median home sold in 8 days, versus 10 across Carmel Valley."
    ]
   ]
  },
@@ -507,7 +507,7 @@
     "img": "",
     "alt": "",
     "name": "Steeplechase",
-    "meta": "13 sales in 5 yrs &middot; median $2.35M",
+    "meta": "13 sales in 5 yrs &middot; 12-mo median $2.41M",
     "desc": "Next door in Carmel Country Highlands.",
     "cta": "Carmel Country Highlands guide"
    },
@@ -516,7 +516,7 @@
     "img": "",
     "alt": "",
     "name": "Belmont",
-    "meta": "28 sales in 5 yrs &middot; median $2.64M",
+    "meta": "28 sales in 5 yrs &middot; 12-mo median $2.66M",
     "desc": "Next door in Carmel Country Highlands.",
     "cta": "Carmel Country Highlands guide"
    },
@@ -525,7 +525,7 @@
     "img": "",
     "alt": "",
     "name": "Breakers",
-    "meta": "8 sales in 5 yrs &middot; median $2.68M",
+    "meta": "7 sales in 5 yrs",
     "desc": "Next door in Carmel Country Highlands.",
     "cta": "Carmel Country Highlands guide"
    }
@@ -549,7 +549,7 @@
   "weigh": [
    [
     "Prices above the Carmel Valley median",
-    "Lexington's 5-year median is $3.27M, versus $2.5M for all Carmel Valley houses."
+    "Lexington's median over the last 12 months is $3.33M, versus $2.63M for all Carmel Valley houses."
    ],
    [
     "Homes are 20+ years old",
@@ -557,7 +557,7 @@
    ],
    [
     "Move fast",
-    "Half of all homes sell within 9 days. Get pre-approved before you start touring."
+    "In the last 12 months, half of all homes sold within 8 days. Get pre-approved before you start touring."
    ]
   ]
  },
@@ -565,7 +565,7 @@
  "faq": [
   {
    "q": "How much do homes in Lexington cost?",
-   "a": "<p>Over the last 5 years, 26 single-family homes in Lexington sold between $2.6M and $3.88M, with a median of $3.27M. See the price-by-bedroom cards and recent sales on this page for current numbers.</p>"
+   "a": "<p>Over the last 5 years, 26 single-family homes in Lexington sold between $2.6M and $3.88M. In the last 12 months, 10 sold at a median of $3.33M. See the price-by-bedroom cards and recent sales on this page for what each kind of home sold for.</p>"
   },
   {
    "q": "How many homes are in Lexington?",
@@ -577,7 +577,7 @@
   },
   {
    "q": "How fast do homes sell in Lexington?",
-   "a": "<p>The median Lexington home sold in 9 days on market over the last 5 years. Well-priced homes often go under contract in the first week.</p>"
+   "a": "<p>Over the last 12 months, the median Lexington home sold in 8 days on market. Well-priced homes often go under contract in the first week.</p>"
   },
   {
    "q": "Where is Lexington in Carmel Valley?",

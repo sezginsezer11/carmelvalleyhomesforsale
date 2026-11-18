@@ -89,8 +89,8 @@ def render_glance_cards(c):
         out.append(f'''      <div class="glance-card" data-beds="{b}">
         <div class="gc-head"><h3>{b} Bedroom</h3><div class="gc-count" id="g{b}-count">{g["count"]}</div></div>
         <div class="glance-row"><span class="gr-lbl">Size</span><span class="gr-val" id="g{b}-size">{g["size"]}</span></div>
-        <div class="glance-row"><span class="gr-lbl">Median sale price</span><span class="gr-val" id="g{b}-median">{g["median"]}</span></div>
-        <div class="glance-row"><span class="gr-lbl">Price range</span><span class="gr-val" id="g{b}-range">{g["range"]}</span></div>
+        <div class="glance-row"><span class="gr-lbl">Sold for</span><span class="gr-val" id="g{b}-range">{g["range"]}</span></div>
+        <div class="glance-row"><span class="gr-lbl">Most recent sale</span><span class="gr-val" id="g{b}-latest">{g.get("latest", "")}</span></div>
       </div>''')
     return "\n".join(out)
 
@@ -295,7 +295,7 @@ def glance_from_sales(c, rows):
             "beds": b,
             "count": f"{len(g)} sale{'s' if len(g) != 1 else ''} &middot; 5 yrs",
             "size": (f"{lo:,}&ndash;{hi:,} sq ft" if hi > lo else f"{lo:,} sq ft") if sizes else card["size"],
-            "median": money(statistics.median(prices)),
+            "latest": f'{money(g[0]["close_price"])} &middot; {MONTHS[g[0]["_d"].month - 1]} {g[0]["_d"].year}',
             "range": f"{k(min(prices))}&ndash;{k(max(prices))}" if max(prices) > min(prices) else k(min(prices)),
         })
     return cards
@@ -310,7 +310,7 @@ def stats(rows):
         v = [r["close_price"] / r["living_area"] for r in rs if r.get("living_area")]
         return sum(v) / len(v) if v else None  # average, like the Overview tab
     return {"t12": t12, "five": five, "t12_median": med(t12), "t12_psf": psf(t12),
-            "five_median": med(five), "five_psf": psf(five), "latest": rows[0] if rows else None}
+            "latest": rows[0] if rows else None}
 
 
 def render_sales_summary(c, st):
@@ -321,7 +321,10 @@ def render_sales_summary(c, st):
     if st["t12"]:
         parts.append(f'In the last 12 months, {len(st["t12"])} {n} home{"s" if len(st["t12"]) != 1 else ""} sold, '
                      f'at a median of {money(st["t12_median"])}' + (f' ({money(st["t12_psf"])}/sq ft)' if st["t12_psf"] else '') + '.')
-    parts.append(f'Over the last 5 years, {len(st["five"])} sold at a median of {money(st["five_median"])}.')
+    else:
+        parts.append(f'No {n} homes sold in the last 12 months.')
+    p5 = [r["close_price"] for r in st["five"]]
+    parts.append(f'Over the last 5 years, {len(p5)} sold for between {money(min(p5))} and {money(max(p5))}.')
     if st["latest"]:
         r = st["latest"]
         desc = f'{r.get("beds_total")}-bedroom' + (f', {r["living_area"]:,} sq ft' if r.get("living_area") else "")

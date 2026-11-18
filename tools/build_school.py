@@ -48,6 +48,11 @@ def med(v):
     return statistics.median(v) if v else None
 
 
+def span(p):
+    """Low-high sold price, for showing what homes sold for (history, not an average)."""
+    return f"{short(min(p))}&ndash;{short(max(p))}" if max(p) > min(p) else short(p[0])
+
+
 def fmt_date(d):
     return f"{d.strftime('%b')} {d.day}, {d.year}"
 
@@ -61,9 +66,13 @@ def build(school):
     t12 = [r for r in rows if r["_d"] >= years_ago(1)]
     if len(five) < 10:
         raise SystemExit(f"{school}: only {len(five)} sales in 5 years")
-    m5, cv5 = med([r["close_price"] for r in five]), med([r["close_price"] for r in all5])
-    psf = med([r["close_price"] / r["living_area"] for r in five if r.get("living_area")])
-    dom = med([r.get("days_on_market") for r in five])
+    if not t12:
+        raise SystemExit(f"{school}: no sales in the last 12 months")
+    # Medians, $/sq ft and days on market use the last 12 months; 5 years is only for sales history.
+    cv12 = [r for r in all5 if r["_d"] >= years_ago(1)]
+    m12, cv_m12 = med([r["close_price"] for r in t12]), med([r["close_price"] for r in cv12])
+    psf = med([r["close_price"] / r["living_area"] for r in t12 if r.get("living_area")])
+    dom = med([r.get("days_on_market") for r in t12])
     rings = school_polygons(school)
     pts = [p for r in rings for p in r]
     lat, lng = sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)
@@ -81,7 +90,7 @@ def build(school):
         link = NEIGHBORHOOD_PAGES.get(n)
         name_html = f'<a href="{link}">{e(n)}</a>' if link else e(n)
         nb_rows.append(f'<tr><td class="nm">{name_html}</td><td class="num">{len(g)}</td>'
-                       f'<td class="num">{short(med([r["close_price"] for r in g]))}</td></tr>')
+                       f'<td class="num">{span([r["close_price"] for r in g])}</td></tr>')
 
     # price by bedroom
     beds = collections.defaultdict(list)
@@ -95,9 +104,9 @@ def build(school):
         if len(g) < 3:
             continue
         p = [r["close_price"] for r in g]
-        bed_cards.append(f'<div class="bc"><div class="bc-h"><h3>{b} bedrooms</h3><b>{short(med(p))}</b></div>'
+        bed_cards.append(f'<div class="bc"><div class="bc-h"><h3>{b} bedrooms</h3><b>{span(p)}</b></div>'
                          f'<div class="bc-bar"><i style="width:{round(100 * len(g) / top)}%"></i></div>'
-                         f'<div class="bc-m">{len(g)} sales &middot; {short(min(p))}&ndash;{short(max(p))}</div></div>')
+                         f'<div class="bc-m">{len(g)} sales &middot; last sold {short(g[0]["close_price"])}, {g[0]["_d"].strftime("%b")} {g[0]["_d"].year}</div></div>')
 
     recent = "".join(
         f'<tr><td class="addr">{e(r.get("address") or "")}<span>{e(r.get("community_name") or "")}</span></td>'
@@ -108,9 +117,10 @@ def build(school):
     biggest = nbh[0][0] if nbh else ""
     faqs = [
         (f"How much does a house in the {school} area cost?",
-         f"Over the last 5 years, {len(five)} single-family homes in the {school} attendance area sold at a median of {money(m5)} "
-         f"(about {money(psf)} per sq ft), versus {money(cv5)} for all Carmel Valley houses."
-         + (f" In the last 12 months, {len(t12)} sold at a median of {money(med([r['close_price'] for r in t12]))}." if t12 else "")),
+         (f"In the last 12 months, {len(t12)} single-family homes in the {school} attendance area sold at a median of {money(m12)} "
+          f"(about {money(psf)} per sq ft), versus {money(cv_m12)} for all Carmel Valley houses. " if t12 else
+          f"No single-family homes in the {school} attendance area sold in the last 12 months. ")
+         + f"Over the last 5 years, {len(five)} sold for between {money(min(r['close_price'] for r in five))} and {money(max(r['close_price'] for r in five))}."),
         (f"Which neighborhoods are in the {school} area?",
          f"Based on where homes have sold, the area includes {', '.join(n for n, _ in nbh[:8])}"
          + (", and more" if len(nbh) > 8 else "") + f". {biggest} has had the most sales. Boundaries can split a neighborhood, so check the exact address."),
@@ -120,7 +130,7 @@ def build(school):
         (f"How do I confirm a home is in the {school} boundary?",
          f"Use the {DMUSD} school locator with the exact address before you make an offer. Boundaries change, and this map is for research only."),
         (f"How fast do homes sell in the {school} area?",
-         f"The median home sold in {round(dom)} days on market over the last 5 years. Homes in sought-after school areas often go under contract in the first week."),
+         f"Over the last 12 months, the median home sold in {round(dom)} days on market. Homes in sought-after school areas often go under contract in the first week."),
     ]
     faq_html = "\n".join(f'      <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faqs)
     ld = [
@@ -141,7 +151,7 @@ def build(school):
     hide_js = tpl[tpl.rindex("<script>"):tpl.rindex("</script>") + len("</script>")]
 
     title = f"Homes for Sale in the {school} Area | Carmel Valley 92130"
-    desc = f"Carmel Valley houses in the {school} attendance area: median {short(m5)}, neighborhoods in the boundary, sold prices and a map."
+    desc = f"Carmel Valley houses in the {school} attendance area: 12-month median {short(m12)}, neighborhoods in the boundary, sold prices and a map."
     assert len(desc) <= 160, len(desc)
     mapdata = json.dumps({"rings": rings}, separators=(",", ":"))
 
@@ -225,10 +235,10 @@ def build(school):
 
 <section class="facts" style="padding-top:12px">
   <div class="wrap facts-grid">
-    <div class="fact"><div class="num">{short(m5)}</div><div class="lbl">Median sale, 5 yrs</div></div>
-    <div class="fact"><div class="num">{len(t12)}</div><div class="lbl">Sold, last 12 months</div></div>
-    <div class="fact"><div class="num">{money(psf)}</div><div class="lbl">Median per sq ft</div></div>
-    <div class="fact"><div class="num">{round(dom)} days</div><div class="lbl">Median on market</div></div>
+    <div class="fact"><div class="num">{short(m12)}</div><div class="lbl">Median sale, last 12 mo</div></div>
+    <div class="fact"><div class="num">{len(t12)}</div><div class="lbl">Sold, last 12 mo</div></div>
+    <div class="fact"><div class="num">{money(psf)}</div><div class="lbl">Per sq ft, last 12 mo</div></div>
+    <div class="fact"><div class="num">{round(dom)} days</div><div class="lbl">On market, last 12 mo</div></div>
   </div>
 </section>
 
@@ -254,14 +264,14 @@ def build(school):
   <div class="wrap two">
     <div>
       <h2 class="h3">Neighborhoods in the {e(short_name)} area</h2>
-      <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 5 yrs</th><th class="num">Median</th></tr></thead>
+      <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 5 yrs</th><th class="num">Sold for, 5 yrs</th></tr></thead>
       <tbody>{"".join(nb_rows)}</tbody></table>
       <p class="note">From where homes sold in the last 5 years.{f" {unnamed} more sales had no neighborhood name." if unnamed else ""}</p>
     </div>
     <div id="prices">
       <h2 class="h3">Prices by bedroom</h2>
       <div class="bcs">{"".join(bed_cards)}</div>
-      <p class="note">Single-family sales inside the boundary, last 5 years. As of {stamp}.</p>
+      <p class="note">What single-family homes inside the boundary sold for over the last 5 years. As of {stamp}.</p>
     </div>
   </div>
 </section>
