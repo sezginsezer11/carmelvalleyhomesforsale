@@ -4,13 +4,13 @@
 
 Source page: https://carmelvalleyhomesforsale.com/carmel-valley-schools/
 
-## Carmel Valley Schools Homes by elementary school area
+## Carmel Valley Schools Homes by school area
 
 11 elementary schools · 116 neighborhoods
 
 ## Carmel Valley Schools
 
-Carmel Valley elementary attendance areas by school district. Open a district, then tap a school to see its area on the map.
+Carmel Valley school attendance areas. Pick Elementary, Middle or High on the map, open a district, then tap a school to see its area.
 
 ### Del Mar Union School District7
 
@@ -23,9 +23,13 @@ Carmel Valley elementary attendance areas by school district. Open a district, t
 
 ### Solana Beach School District4
 
-Attendance areas from the Del Mar Union School District map and the Solana Beach School District school locator. Boundaries change, so confirm any address with the district.
+### Middle schools3
 
-## Elementary schools at a glance
+### High school1
+
+Elementary areas from the Del Mar Union School District map and the Solana Beach School District school locator; middle and high school areas from the 2015–16 San Dieguito Union HSD map (middle-school areas overlap in it). Boundaries change, so confirm any address with the district.
+
+## Schools at a glance
 
 | School | Neighborhoods | Median, 12 mo | Sold, 12 mo |
 |---|---|---|---|
@@ -53,6 +57,16 @@ Attendance areas from the Del Mar Union School District map and the Solana Beach
 | Artesana, Casabella Collection, Meadowood, Palomar, Rancho Pacifica, Sendero Collection, Senterra, Stratford, and more |  |  |  |
 | Carmel Creek Elementary | 10 | $2.57M | 22 |
 | Bayshore, Cantamar, Carmel, Del Mar Bluffs, Del Mar Place, Granada, Heights, San Remo, and more |  |  |  |
+| Middle schools |  |  |  |
+| Carmel Valley Middle | 107 | $2.6M | 180 |
+| 4x4 Construction, Almeria, Alta Del Mar, Alta Mar, Amador, Arabella, Bayshore, Belmont, and more |  |  |  |
+| Earl Warren Middle | 13 | $3.5M | 25 |
+| Alta Del Mar-Coastal, Artesana, Brightwater, Carmel, Olvera, Palomar, Rancho Pacifica, Senterra, and more |  |  |  |
+| Pacific Trails Middle | 54 | $2.8M | 75 |
+| Almeria, Amador, Arabella, Artesana, Bordeaux, Bougainvillea, Brightwater, Canterra, and more |  |  |  |
+| High school |  |  |  |
+| Torrey Pines High | 118 | $2.65M | 205 |
+| 4x4 Construction, Almeria, Alta Del Mar, Alta Del Mar-Coastal, Alta Mar, Amador, Arabella, Artesana, and more |  |  |  |
 
 Single-family homes inside each attendance boundary. Confirm any address with [Del Mar Union School District](https://www.dmusd.org/Page/191) or the [Solana Beach SD locator](https://www.schoolsitelocator.com/apps/solanabeach/).
 
@@ -80,7 +94,7 @@ Canyon Crest Academy
 
 and San Dieguito Academy
 
-All in San Dieguito Union High School District. Confirm with [SDUHSD boundary maps](https://www.sduhsd.net/about/boundary-maps).
+All in San Dieguito Union High School District. Confirm with [SDUHSD boundary maps](https://www.sduhsd.net/Our-District/About-Us-History/Boundaries-Map-/).
 
 ## Carmel Valley Schools: Common Questions
 

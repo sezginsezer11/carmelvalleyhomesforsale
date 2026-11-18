@@ -20,10 +20,11 @@ TOOLS = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(TOOLS)
 sys.path.insert(0, TOOLS)
 from sold_data import load_sales  # noqa: E402
-from schools import school_boundary, share_in, _inside, DMUSD, DMUSD_URL, SDUHSD_URL  # noqa: E402
+from schools import school_boundary, share_in, _inside, sduhsd_zones, DMUSD, DMUSD_URL, SDUHSD_URL  # noqa: E402
 from make_neighborhood import SCHOOL_PAGES, SCHOOLS_HUB as PATH  # noqa: E402
 from build_communities_hub import load as load_communities  # noqa: E402
 from explorer import explorer  # noqa: E402
+from fetch_sbsd import simplify_ring  # noqa: E402
 
 SITE = "https://carmelvalleyhomesforsale.com"
 SBSD_URL = "https://www.schoolsitelocator.com/apps/solanabeach/"
@@ -39,7 +40,12 @@ SCHOOLS = [
 ]
 SBSD_COLORS = {"Solana Ranch Elementary": "#0891b2", "Solana Highlands Elementary": "#b91c1c",
                "Solana Santa Fe Elementary": "#8a8a00", "Carmel Creek Elementary": "#475569"}
-DISTRICTS = {"dmusd": ("Del Mar Union School District", "Del Mar Union SD"),
+SDUHSD_YEAR = "2015\u201316"  # TODO: replace with the current San Dieguito map (PowerSchool locator) when available
+MIDDLE = {"Carmel Valley Middle": "#0b5c8c", "Pacific Trails Middle": "#e0691c", "Earl Warren Middle": "#0d8f84"}
+HIGH = {"Torrey Pines High": "#7a4ce0"}
+DISTRICTS = {"mid": ("Middle schools", "San Dieguito Union HSD"),
+             "high": ("High school", "San Dieguito Union HSD"),
+             "dmusd": ("Del Mar Union School District", "Del Mar Union SD"),
              "sbsd": ("Solana Beach School District", "Solana Beach SD")}
 e = html.escape
 
@@ -56,7 +62,7 @@ def short(n):
     return "${}M".format(("%.2f" % (n / 1e6 + 1e-9)).rstrip("0").rstrip(".")) if n >= 1e6 else "${:,.0f}K".format(n / 1e3)
 
 
-def label_point(rings, n=40):
+def label_point(rings, frame=None, n=40):
     """A point well inside the largest ring, for the map label (bounding-box centers can fall outside)."""
     from schools import _inside
     r = max(rings, key=lambda r: abs(sum(r[k][1] * r[k - 1][0] - r[k - 1][1] * r[k][0] for k in range(len(r)))))  # largest by area
@@ -66,6 +72,8 @@ def label_point(rings, n=40):
     for i in range(n):
         for j in range(n):
             la, lo = la0 + (i + .5) * (la1 - la0) / n, lo0 + (j + .5) * (lo1 - lo0) / n
+            if frame and not (frame[0][0] < la < frame[1][0] and frame[0][1] < lo < frame[1][1]):
+                continue
             if _inside(lo, la, [(q[1], q[0]) for q in r]):
                 d = min((la - q[0]) ** 2 + (lo - q[1]) ** 2 for q in r[::3])
                 if d > bd:
@@ -78,43 +86,53 @@ def main():
     sales = [r for r in load_sales() if r.get("lat") is not None]
     sbsd = json.load(open(os.path.join(TOOLS, "sbsd_zones.json"), encoding="utf-8"))["zones"]
     # (district key, school, color, Leaflet rings, grade note)
+    # frame Carmel Valley (its neighborhoods), not the whole of every district
+    cp = [q for c in comms for r in c["p"] for q in r]
+    frame = [[min(q[0] for q in cp), min(q[1] for q in cp)], [max(q[0] for q in cp), max(q[1] for q in cp)]]
+    ll = lambda rings: [[[round(y, 5), round(x, 5)] for x, y in simplify_ring([(round(x, 6), round(y, 6)) for x, y in r], 0.00004)] for r in rings]
+    # (district key, school, color, Leaflet rings, note, level)
     entries = [("dmusd", n, c, school_boundary(n), "") for n, c in SCHOOLS]
     entries += [("sbsd", z["name"], SBSD_COLORS.get(z["name"], "#64748b"), z["rings"], z.get("note", "")) for z in sbsd]
+    entries = [x + ("el",) for x in entries]
+    entries += [("mid", n, MIDDLE[n], ll(r), f"{SDUHSD_YEAR} map", "mi") for n, r in sduhsd_zones("Middle School") if n in MIDDLE]
+    entries += [("high", n, HIGH[n], ll(r), "Canyon Crest Academy and San Dieguito Academy by lottery", "hi") for n, r in sduhsd_zones("High School") if n in HIGH]
 
-    zones, rows, all_hoods = [], {"dmusd": [], "sbsd": []}, set()
-    for dk, name, color, rings, grades in entries:
+    zones, rows, all_hoods = [], {k: [] for k in DISTRICTS}, set()
+    for dk, name, color, rings, grades, lvl in entries:
         bnd = [[(q[1], q[0]) for q in r] for r in rings]
         rs = [r for r in sales if any(_inside(r["lng"], r["lat"], b) for b in bnd)]
         five = [r["close_price"] for r in rs if r["_d"] >= years_ago(5)]
         t12 = [r["close_price"] for r in rs if r["_d"] >= years_ago(1)]
         med = statistics.median(t12) if t12 else None
         hoods = sorted(c["n"] for c in comms if share_in(c["p"], bnd) >= 0.3)
-        all_hoods.update(hoods)
+        if lvl == "el":
+            all_hoods.update(hoods)
         page = SCHOOL_PAGES.get(name)
         meta = " &middot; ".join(x for x in [f"{len(hoods)} neighborhoods", f"median {short(med)}" if med else "", grades] if x)
         zones.append({"n": name, "sub": dk, "c": color, "p": rings, "note": meta,
                       "r5": f"{short(min(five))}&ndash;{short(max(five))}" if five else None,
-                      "x": DISTRICTS[dk][1] + " \u00b7 " + (f"{len(hoods)} neighborhoods" if hoods else "Carmel Valley"),
+                      "x": DISTRICTS[dk][1] + " \u00b7 " + (f"{SDUHSD_YEAR} map" if lvl != "el" else f"{len(hoods)} neighborhoods" if hoods else "Carmel Valley"),
+                      "v": lvl,
                       "hu": page + "#listings" if page else "", "gu": page if page else "", "gl": "School guide",
-                      "l": name.replace(" Elementary", ""), "lp": label_point(rings)})
+                      "l": re.sub(r" (Elementary|Middle|High)$", "", name), "lp": label_point(rings, frame)})
         name_html = f'<a href="{page}">{e(name)}</a>' if page else e(name)
         rows[dk].append(f'<tr><td class="nm"><span class="dot" style="--ac:{color}"></span> {name_html}</td>'
                         f'<td class="num">{len(hoods)}</td><td class="num">{short(med) if med else "&mdash;"}</td>'
                         f'<td class="num">{len(t12)}</td></tr>'
                         f'<tr class="sub"><td colspan="4">{e(", ".join(hoods[:8]))}{", and more" if len(hoods) > 8 else ""}</td></tr>')
-    table = "".join(f'<tr class="dh"><th colspan="4">{DISTRICTS[k][0]}</th></tr>' + "".join(rows[k]) for k in ("dmusd", "sbsd") if rows[k])
+    table = "".join(f'<tr class="dh"><th colspan="4">{DISTRICTS[k][0]}</th></tr>' + "".join(rows[k]) for k in ("dmusd", "sbsd", "mid", "high") if rows[k])
 
     # frame Carmel Valley (its neighborhoods), not the whole of every district
-    cp = [q for c in comms for r in c["p"] for q in r]
-    frame = [[min(q[0] for q in cp), min(q[1] for q in cp)], [max(q[0] for q in cp), max(q[1] for q in cp)]]
-    groups = [(k, DISTRICTS[k][0], [z for z in zones if z["sub"] == k]) for k in ("dmusd", "sbsd")]
+    LV = {"dmusd": "el", "sbsd": "el", "mid": "mi", "high": "hi"}
+    groups = [(k, DISTRICTS[k][0], [z for z in zones if z["sub"] == k], LV[k]) for k in ("dmusd", "sbsd", "mid", "high")]
     groups = [g for g in groups if g[2]]
-    x = explorer(zones, groups, {"dmusd": "#0b5c8c", "sbsd": "#0891b2"}, SCHOOL_PAGES, {}, list_title="Carmel Valley Schools",
-                 hint="Carmel Valley elementary attendance areas by school district. Open a district, then tap a school to see its area on the map.",
+    x = explorer(zones, groups, {"dmusd": "#0b5c8c", "sbsd": "#0891b2", "mid": "#e0691c", "high": "#7a4ce0"}, SCHOOL_PAGES, {}, list_title="Carmel Valley Schools",
+                 hint="Carmel Valley school attendance areas. Pick Elementary, Middle or High on the map, open a district, then tap a school to see its area.",
                  map_aria="Map of Carmel Valley elementary school attendance areas",
-                 map_note=f"Attendance areas from the {DMUSD} map and the Solana Beach School District school locator. "
+                 map_note=f"Elementary areas from the {DMUSD} map and the Solana Beach School District school locator; middle and high school areas "
+                          f"from the {SDUHSD_YEAR} San Dieguito Union HSD map (middle-school areas overlap in it). "
                           f"Boundaries change, so confirm any address with the district.",
-                 label_zoom=11, frame=frame)
+                 label_zoom=11, frame=frame, levels=[("el", "Elementary"), ("mi", "Middle"), ("hi", "High")])
 
     n_hoods = len(all_hoods)
     faqs = [
@@ -215,8 +233,8 @@ def main():
 
 <section class="hub-intro">
   <div class="wrap hub-bar">
-    <h1>Carmel Valley Schools <span>Homes by elementary school area</span></h1>
-    <p class="hub-stats">{len(zones)} elementary schools &middot; {n_hoods} neighborhoods</p>
+    <h1>Carmel Valley Schools <span>Homes by school area</span></h1>
+    <p class="hub-stats">{sum(z["v"] == "el" for z in zones)} elementary schools &middot; {n_hoods} neighborhoods</p>
   </div>
 </section>
 
@@ -224,7 +242,7 @@ def main():
 
 <section id="schools-list" style="padding-top:28px">
   <div class="wrap">
-    <h2 class="h3">Elementary schools at a glance</h2>
+    <h2 class="h3">Schools at a glance</h2>
     <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>School</th><th class="num">Neighborhoods</th><th class="num">Median, 12 mo</th><th class="num">Sold, 12 mo</th></tr></thead>
     <tbody>{table}</tbody></table></div>
     <p class="note">Single-family homes inside each attendance boundary. Confirm any address with <a href="{DMUSD_URL}" target="_blank" rel="noopener">{DMUSD}</a> or the <a href="{SBSD_URL}" target="_blank" rel="noopener">Solana Beach SD locator</a>.</p>

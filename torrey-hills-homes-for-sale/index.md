@@ -86,7 +86,7 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 - [Ocean Air Elementary](https://carmelvalleyhomesforsale.com/ocean-air-elementary-homes-for-sale/) — 63% of sales
 - [Torrey Hills Elementary](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/) — 37% of sales
 
-Share of the last 5 years of sales inside each attendance area. High school is Torrey Pines High; Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with [Del Mar Union](https://www.dmusd.org/Page/191), Solana Beach SD or [San Dieguito Union HSD](https://www.sduhsd.net/about/boundary-maps).
+Share of the last 5 years of sales inside each attendance area. High school is Torrey Pines High; Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with [Del Mar Union](https://www.dmusd.org/Page/191), Solana Beach SD or [San Dieguito Union HSD](https://www.sduhsd.net/Our-District/About-Us-History/Boundaries-Map-/).
 
 ## Recently sold in Torrey Hills
 

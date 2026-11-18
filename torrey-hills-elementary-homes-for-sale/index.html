@@ -721,6 +721,11 @@
   .nr-go{flex:none;font-size:13px;font-weight:700;color:var(--lake);padding:6px 6px;white-space:nowrap}
   .xp .map-box{max-width:none}
   .sh-grab,.sh-btn{display:none}
+  /* level switch (schools map): Elementary / Middle / High */
+  .lv-tabs{position:absolute;top:10px;left:10px;z-index:500;display:flex;background:#fff;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.18);overflow:hidden}
+  .lv-tabs button{border:0;background:#fff;font:600 12.5px var(--sans);padding:7px 10px;cursor:pointer;color:#37404a}
+  .lv-tabs button[aria-pressed="true"]{background:var(--lake);color:#fff}
+  .ax[hidden]{display:none}
   @media(max-width:979px){
     .map-sec{padding:6px 0 0}
     .xp{position:relative;display:block;height:calc(100svh - 64px);min-height:440px;padding:0}
@@ -932,7 +937,7 @@
       <div><div class="lv">Middle</div><div class="sn">Confirm by address</div><div class="sd">San Dieguito Union HSD</div></div>
       <div><div class="lv">High</div><div class="sn">Torrey Pines High</div><div class="sd">Canyon Crest Academy and San Dieguito Academy by lottery</div></div>
     </div>
-    <p class="note">Confirm middle and high school with <a href="https://www.sduhsd.net/about/boundary-maps" target="_blank" rel="noopener">San Dieguito Union HSD</a>.</p>
+    <p class="note">Confirm middle and high school with <a href="https://www.sduhsd.net/Our-District/About-Us-History/Boundaries-Map-/" target="_blank" rel="noopener">San Dieguito Union HSD</a>.</p>
   </div>
 </section>
 
@@ -1057,10 +1062,12 @@ var HUB={"c":[{"n":"Sea Country","a":"th","h":53,"u":null,"g":false,"m":"$2.5M&n
   if(HUB.z){map.createPane('zone');map.getPane('zone').style.zIndex=390;map.getPane('zone').style.pointerEvents='none';
     L.polygon([[[85,-180],[85,180],[-85,180],[-85,-180]]].concat(HUB.z),{pane:'zone',stroke:false,fillColor:'#0e1a24',fillOpacity:.5,interactive:false}).addTo(map);
     zone=L.polygon(HUB.z,{pane:'zone',fill:false,weight:3,dashArray:'8 6',interactive:false}).addTo(map);}
-  var layers=C.map(function(o,i){var l=L.polygon(o.p,{weight:1.5}).addTo(map);
+  // school levels: only one level's zones are on the map at a time
+  var lv=HUB.lv?HUB.lv[0][0]:null;function inLv(i){return !lv||C[i].v===lv;}
+  var layers=C.map(function(o,i){var l=L.polygon(o.p,{weight:1.5});if(inLv(i))l.addTo(map);
     l.on('click',function(e){L.DomEvent.stopPropagation(e);pick(i,false);});
     l.bindTooltip(o.n,{sticky:true,direction:'top'});return l;});
-  var all=L.latLngBounds([]);if(zone)all.extend(zone.getBounds());else layers.forEach(function(l){all.extend(l.getBounds());});
+  var all=L.latLngBounds([]);if(HUB.fb)all=L.latLngBounds(HUB.fb);else if(zone)all.extend(zone.getBounds());else layers.forEach(function(l){all.extend(l.getBounds());});
   // phones: fill the screen width with the neighborhoods (fine zoom steps, slim side margins)
   function fitAll(){map.invalidateSize();map.fitBounds(all,pad(wide.matches?16:6));}
   var touched=false;map.getContainer().addEventListener('pointerdown',function(){touched=true;});
@@ -1076,7 +1083,7 @@ var HUB={"c":[{"n":"Sea Country","a":"th","h":53,"u":null,"g":false,"m":"$2.5M&n
     layers.forEach(function(l,i){var o=C[i],c=o.c||A[o.a][1],dim=area&&o.a!==area,on=i===sel;
     l.setStyle({color:on?'#101418':(sat?'#fff':c),weight:on?3:1.5,fillColor:c,fillOpacity:dim?0.06:(on?0.75:(sat?0.45:0.38)),opacity:dim?0.3:1});});}
   function labels(){lbl.clearLayers();if(map.getZoom()<(HUB.lz||15))return;var b=map.getBounds();
-    C.forEach(function(o,i){if(area&&o.a!==area)return;var c=o.lp?L.latLng(o.lp):layers[i].getBounds().getCenter();if(!b.contains(c))return;
+    C.forEach(function(o,i){if(area&&o.a!==area||!inLv(i))return;var c=o.lp?L.latLng(o.lp):layers[i].getBounds().getCenter();if(!b.contains(c))return;
       lbl.addLayer(L.tooltip({permanent:true,direction:'center',className:'lbl',interactive:false}).setLatLng(c).setContent(esc(o.l||o.n)));});}
   map.on('zoomend moveend',labels);
   var card=window.card=document.getElementById('mcard');
@@ -1177,6 +1184,15 @@ var HUB={"c":[{"n":"Sea Country","a":"th","h":53,"u":null,"g":false,"m":"$2.5M&n
       if(area)setArea(area,true);};
     window.addEventListener('load',function(){settle();setTimeout(function(){settle();boot=false;
       if(window.__area)history.replaceState(null,'',location.pathname+location.search+window.__area);},400);});}
+  // level switch: swap the zones and the list groups shown
+  var LT=document.querySelector('.lv-tabs');
+  function setLv(v){lv=v;card.classList.remove('show');sel=-1;area=null;mark(-1);
+    layers.forEach(function(l,i){if(inLv(i))l.addTo(map);else map.removeLayer(l);});
+    AX.forEach(function(d){var on=d.dataset.lv===v;if(!on&&d.open){d._code=true;d.open=false;}d.hidden=!on;});
+    if(LT)LT.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lv===v?'true':'false');});
+    style();labels();}
+  if(LT){LT.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();setLv(b.dataset.lv);});});
+    L.DomEvent.disableClickPropagation(LT);setLv(lv);}
   style();
 })();
 </script>

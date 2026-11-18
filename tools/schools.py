@@ -30,7 +30,7 @@ ELEMENTARY = {
 }
 DMUSD = "Del Mar Union School District"
 DMUSD_URL = "https://www.dmusd.org/Page/191"
-SDUHSD_URL = "https://www.sduhsd.net/about/boundary-maps"
+SDUHSD_URL = "https://www.sduhsd.net/Our-District/About-Us-History/Boundaries-Map-/"
 
 
 def _placemarks(path):
@@ -116,3 +116,17 @@ def share_in(rings, bnd, n=14):
                 inside += 1
                 hit += any(_inside(lo, la, b) for b in bnd)
     return hit / inside if inside else 0
+
+
+def sduhsd_zones(level):
+    """[(school, [ring of (lng, lat)])] from the 2015-16 San Dieguito Union HSD map.
+    level: "Middle School" or "High School". Middle-school areas overlap in this map."""
+    s = open(os.path.join(KML, "sduhsd-middle-high-2015-16.kml"), encoding="utf-8").read()
+    a = s.index(f"<name>{level}</name>")
+    seg = s[a:s.find("</Folder>", a)]
+    out = []
+    for pm in re.findall(r"<Placemark.*?</Placemark>", seg, re.S):
+        name = re.search(r"<name>([^<]*)</name>", pm).group(1).strip()
+        out.append((name, [[tuple(map(float, x.split(",")[:2])) for x in cd.split()]
+                           for cd in re.findall(r"<outerBoundaryIs>.*?<coordinates>(.*?)</coordinates>", pm, re.S)]))
+    return out

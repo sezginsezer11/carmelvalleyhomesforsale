@@ -36,7 +36,7 @@ Lexington is in [Carmel Country Highlands](https://carmelvalleyhomesforsale.com/
 - Middle School — Confirm with the district — San Dieguito Union High School District
 - High School — Torrey Pines High — San Dieguito Union High School District (Canyon Crest Academy and San Dieguito Academy by lottery)
 
-School assignments can change. Verify current boundaries directly with [Del Mar Union SD](https://www.dmusd.org/Page/191) and [San Dieguito Union HSD](https://www.sduhsd.net/about/boundary-maps) before relying on them for a purchase decision.
+School assignments can change. Verify current boundaries directly with [Del Mar Union SD](https://www.dmusd.org/Page/191) and [San Dieguito Union HSD](https://www.sduhsd.net/Our-District/About-Us-History/Boundaries-Map-/) before relying on them for a purchase decision.
 
 *Getting Around*
 

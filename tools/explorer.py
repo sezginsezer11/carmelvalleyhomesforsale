@@ -76,6 +76,11 @@ CSS = """
   .nr-go{flex:none;font-size:13px;font-weight:700;color:var(--lake);padding:6px 6px;white-space:nowrap}
   .xp .map-box{max-width:none}
   .sh-grab,.sh-btn{display:none}
+  /* level switch (schools map): Elementary / Middle / High */
+  .lv-tabs{position:absolute;top:10px;left:10px;z-index:500;display:flex;background:#fff;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.18);overflow:hidden}
+  .lv-tabs button{border:0;background:#fff;font:600 12.5px var(--sans);padding:7px 10px;cursor:pointer;color:#37404a}
+  .lv-tabs button[aria-pressed="true"]{background:var(--lake);color:#fff}
+  .ax[hidden]{display:none}
   @media(max-width:979px){
     .map-sec{padding:6px 0 0}
     .xp{position:relative;display:block;height:calc(100svh - 64px);min-height:440px;padding:0}
@@ -117,12 +122,12 @@ HEAD_JS = """<script>
 </script>"""
 
 
-def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_aria, map_note, zone=None, label_zoom=15, frame=None):
+def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_aria, map_note, zone=None, label_zoom=15, frame=None, levels=None):
     def link(c):
         return pages.get(c["n"])
 
     sec = []
-    for k, label, cs in groups:
+    for k, label, cs, *lv in groups:
         homes = sum(c.get("homes") or 0 for c in cs)
         rows = []
         for c in cs:
@@ -137,7 +142,7 @@ def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_
             rows.append(f'<li class="nr"><button type="button" class="nr-pick" data-n="{e(c["n"])}">'
                         f'<span class="nr-name">{dot}{e(c["n"])}</span><span class="nr-meta">{meta}</span></button>{go}</li>')
         guide = f'\n    <a class="ax-guide" href="{area_pages[k]}">{e(label)} area guide &rarr;</a>' if k in area_pages else ""
-        sec.append(f'''<details class="ax" id="area-{slug(label)}" data-a="{k}" style="--ac:{colors.get(k, "#64748b")}">
+        sec.append(f'''<details class="ax" id="area-{slug(label)}" data-a="{k}"{f' data-lv="{lv[0]}"' if lv else ""} style="--ac:{colors.get(k, "#64748b")}">
   <summary><span class="dot"></span><span class="ax-name">{e(label)}</span><span class="ax-n">{len(cs)}</span><svg class="ax-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
   <div class="ax-body">
     <ul class="nr-list">{"".join(rows)}</ul>{guide}
@@ -146,14 +151,18 @@ def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_
 
     mdata = {"c": [{"n": c["n"], "a": c["sub"], "h": c.get("homes"), "u": link(c), "g": c["n"] in pages, "m": c.get("r5"), "p": c["p"],
                     "s": "n-" + slug(c["n"]),
-                    **{k: c[k] for k in ("c", "hu", "gu", "gl", "x", "l", "lp") if c.get(k) is not None}} for c in comms],
-             "areas": {k: [l, colors.get(k), area_pages.get(k)] for k, l, _ in groups}}
+                    **{k: c[k] for k in ("c", "hu", "gu", "gl", "x", "l", "lp", "v") if c.get(k) is not None}} for c in comms],
+             "areas": {g[0]: [g[1], colors.get(g[0]), area_pages.get(g[0])] for g in groups}}
+    if levels:
+        mdata["lv"] = levels
     if zone:
         mdata["z"] = zone
     mdata["lz"] = label_zoom
     if frame:
         mdata["fb"] = frame  # [[south, west], [north, east]]: what the map frames at first
 
+    tabs = ('<div class="lv-tabs" role="group" aria-label="School level">' + "".join(
+        f'<button type="button" data-lv="{k}" aria-pressed="{"true" if i == 0 else "false"}">{e(l)}</button>' for i, (k, l) in enumerate(levels)) + "</div>") if levels else ""
     body = f'''<section class="map-sec" id="map-section">
   <div class="wrap xp">
     <div class="xp-list" id="areas">
@@ -169,7 +178,7 @@ def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_
     <div class="xp-map">
       <div class="map-box">
         <div id="map" class="sat" role="region" aria-label="{e(map_aria)}"></div>
-        <div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="sat" aria-pressed="true">Satellite</button><button type="button" data-b="map" aria-pressed="false">Map</button></div>
+        <div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="sat" aria-pressed="true">Satellite</button><button type="button" data-b="map" aria-pressed="false">Map</button></div>{tabs}
         <div class="map-card" id="mcard" aria-live="polite"></div>
       </div>
       <p class="map-note">{map_note}</p>
@@ -200,7 +209,9 @@ var HUB=''' + json.dumps(mdata, separators=(",", ":")) + ''';
   if(HUB.z){map.createPane('zone');map.getPane('zone').style.zIndex=390;map.getPane('zone').style.pointerEvents='none';
     L.polygon([[[85,-180],[85,180],[-85,180],[-85,-180]]].concat(HUB.z),{pane:'zone',stroke:false,fillColor:'#0e1a24',fillOpacity:.5,interactive:false}).addTo(map);
     zone=L.polygon(HUB.z,{pane:'zone',fill:false,weight:3,dashArray:'8 6',interactive:false}).addTo(map);}
-  var layers=C.map(function(o,i){var l=L.polygon(o.p,{weight:1.5}).addTo(map);
+  // school levels: only one level's zones are on the map at a time
+  var lv=HUB.lv?HUB.lv[0][0]:null;function inLv(i){return !lv||C[i].v===lv;}
+  var layers=C.map(function(o,i){var l=L.polygon(o.p,{weight:1.5});if(inLv(i))l.addTo(map);
     l.on('click',function(e){L.DomEvent.stopPropagation(e);pick(i,false);});
     l.bindTooltip(o.n,{sticky:true,direction:'top'});return l;});
   var all=L.latLngBounds([]);if(HUB.fb)all=L.latLngBounds(HUB.fb);else if(zone)all.extend(zone.getBounds());else layers.forEach(function(l){all.extend(l.getBounds());});
@@ -219,7 +230,7 @@ var HUB=''' + json.dumps(mdata, separators=(",", ":")) + ''';
     layers.forEach(function(l,i){var o=C[i],c=o.c||A[o.a][1],dim=area&&o.a!==area,on=i===sel;
     l.setStyle({color:on?'#101418':(sat?'#fff':c),weight:on?3:1.5,fillColor:c,fillOpacity:dim?0.06:(on?0.75:(sat?0.45:0.38)),opacity:dim?0.3:1});});}
   function labels(){lbl.clearLayers();if(map.getZoom()<(HUB.lz||15))return;var b=map.getBounds();
-    C.forEach(function(o,i){if(area&&o.a!==area)return;var c=o.lp?L.latLng(o.lp):layers[i].getBounds().getCenter();if(!b.contains(c))return;
+    C.forEach(function(o,i){if(area&&o.a!==area||!inLv(i))return;var c=o.lp?L.latLng(o.lp):layers[i].getBounds().getCenter();if(!b.contains(c))return;
       lbl.addLayer(L.tooltip({permanent:true,direction:'center',className:'lbl',interactive:false}).setLatLng(c).setContent(esc(o.l||o.n)));});}
   map.on('zoomend moveend',labels);
   var card=window.card=document.getElementById('mcard');
@@ -320,6 +331,15 @@ var HUB=''' + json.dumps(mdata, separators=(",", ":")) + ''';
       if(area)setArea(area,true);};
     window.addEventListener('load',function(){settle();setTimeout(function(){settle();boot=false;
       if(window.__area)history.replaceState(null,'',location.pathname+location.search+window.__area);},400);});}
+  // level switch: swap the zones and the list groups shown
+  var LT=document.querySelector('.lv-tabs');
+  function setLv(v){lv=v;card.classList.remove('show');sel=-1;area=null;mark(-1);
+    layers.forEach(function(l,i){if(inLv(i))l.addTo(map);else map.removeLayer(l);});
+    AX.forEach(function(d){var on=d.dataset.lv===v;if(!on&&d.open){d._code=true;d.open=false;}d.hidden=!on;});
+    if(LT)LT.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lv===v?'true':'false');});
+    style();labels();}
+  if(LT){LT.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();setLv(b.dataset.lv);});});
+    L.DomEvent.disableClickPropagation(LT);setLv(lv);}
   style();
 })();
 </script>'''

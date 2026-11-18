@@ -95,7 +95,7 @@ Torrey Pines High
 
 Canyon Crest Academy and San Dieguito Academy by lottery
 
-Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.net/about/boundary-maps).
+Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.net/Our-District/About-Us-History/Boundaries-Map-/).
 
 ## Torrey Hills Elementary Area Homes: Common Questions
 
