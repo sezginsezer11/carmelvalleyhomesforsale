@@ -124,10 +124,12 @@ def main():
 
     # frame Carmel Valley (its neighborhoods), not the whole of every district
     LV = {"dmusd": "el", "sbsd": "el", "mid": "mi", "high": "hi"}
-    groups = [(k, DISTRICTS[k][0], [z for z in zones if z["sub"] == k], LV[k]) for k in ("dmusd", "sbsd", "mid", "high")]
+    # the list's Elementary / Middle / High switch names the level, so each group is named by its district
+    LIST_NAME = {"mid": "San Dieguito Union High School District", "high": "San Dieguito Union High School District"}
+    groups = [(k, LIST_NAME.get(k, DISTRICTS[k][0]), [z for z in zones if z["sub"] == k], LV[k]) for k in ("dmusd", "sbsd", "mid", "high")]
     groups = [g for g in groups if g[2]]
     x = explorer(zones, groups, {"dmusd": "#0b5c8c", "sbsd": "#0891b2", "mid": "#e0691c", "high": "#7a4ce0"}, SCHOOL_PAGES, {}, list_title="Carmel Valley Schools",
-                 hint="Carmel Valley school attendance areas. Pick Elementary, Middle or High on the map, open a district, then tap a school to see its area.",
+                 hint="Carmel Valley school attendance areas. Pick Elementary, Middle or High, open a district, then tap a school to see its area.",
                  map_aria="Map of Carmel Valley elementary school attendance areas",
                  map_note=f"Elementary areas from the {DMUSD} map and the Solana Beach School District school locator; middle and high school areas "
                           f"from the {SDUHSD_YEAR} San Dieguito Union HSD map (middle-school areas overlap in it). "

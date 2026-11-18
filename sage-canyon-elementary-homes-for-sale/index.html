@@ -722,9 +722,11 @@
   .xp .map-box{max-width:none}
   .sh-grab,.sh-btn{display:none}
   /* level switch (schools map): Elementary / Middle / High */
-  .lv-tabs{position:absolute;top:10px;left:10px;z-index:500;display:flex;background:#fff;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.18);overflow:hidden}
-  .lv-tabs button{border:0;background:#fff;font:600 12.5px var(--sans);padding:7px 10px;cursor:pointer;color:#37404a}
-  .lv-tabs button[aria-pressed="true"]{background:var(--lake);color:#fff}
+  .lv-tabs{display:flex;gap:4px;background:var(--paper);border-radius:10px;padding:4px;margin:0 0 12px}
+  .lv-tabs button{flex:1;border:0;background:none;border-radius:7px;font:600 14px var(--sans);padding:9px 4px;cursor:pointer;color:#37404a;display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.2}
+  .lv-tabs button small{font-size:11.5px;font-weight:500;color:var(--label)}
+  .lv-tabs button[aria-selected="true"]{background:var(--lake);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+  .lv-tabs button[aria-selected="true"] small{color:#dbeaf4}
   .ax[hidden]{display:none}
   @media(max-width:979px){
     .map-sec{padding:6px 0 0}
@@ -742,6 +744,9 @@
     .sh-grab{display:block;position:absolute;top:6px;left:50%;width:38px;height:5px;margin-left:-19px;border-radius:3px;background:#c9cfd6}
     .sh-head h2{font-size:17px}
     .sh-btn{display:block;border:1px solid var(--line);background:var(--white);border-radius:100px;font:600 13px var(--sans);color:var(--lake);padding:6px 12px;cursor:pointer}
+    .xp-list .lv-tabs{flex:none;margin:0 12px 8px}
+    .xp-lv .xp-list{height:206px}
+    .xp-lv .map-card{bottom:216px}
     .sh-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 12px 12px}
     .xp-list .xp-hint{display:none}
     .xp .leaflet-control-zoom{display:none}
@@ -802,13 +807,6 @@
 (function(){var h=location.hash;if(h.indexOf('#area-')===0&&window.innerWidth<980&&history.replaceState){
   window.__area=h;history.replaceState(null,'',location.pathname+location.search);}})();
 </script>
-<style id="bn-style">
-  @media(max-width:760px){
-    .bottom-nav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-      gap:2px;padding:5px 1px;color:#8b909a;font:600 9.5px/1.1 var(--sans,system-ui);text-align:center;white-space:nowrap}
-    .bottom-nav .is-here{color:var(--lake,#0b5c8c)}
-  }
-</style>
 </head>
 <body>
 
@@ -1038,11 +1036,11 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://carmelvalleyhomesforsale.com/"}, {"@type": "ListItem", "position": 2, "name": "Sage Canyon Elementary Area Homes", "item": "https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a house in the Sage Canyon Elementary area cost?", "acceptedAnswer": {"@type": "Answer", "text": "In the last 12 months, 36 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,171,948 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 174 sold for between $1,371,900 and $6,750,000."}}, {"@type": "Question", "name": "Which neighborhoods are in the Sage Canyon Elementary area?", "acceptedAnswer": {"@type": "Answer", "text": "Based on where homes have sold, the area includes Palacio Del Mar, Belmont, Lexington, Meadows Del Mar, Steeplechase, Alta Del Mar, Derby Hill, Breakers, and more. Palacio Del Mar has had the most sales. Boundaries can split a neighborhood, so check the exact address."}}, {"@type": "Question", "name": "What middle and high school go with Sage Canyon Elementary?", "acceptedAnswer": {"@type": "Answer", "text": "High school is Torrey Pines High (San Dieguito Union HSD); Canyon Crest Academy and San Dieguito Academy are available by lottery. Middle school depends on the address, so confirm it with San Dieguito Union HSD."}}, {"@type": "Question", "name": "How do I confirm a home is in the Sage Canyon Elementary boundary?", "acceptedAnswer": {"@type": "Answer", "text": "Use the Del Mar Union School District school locator with the exact address before you make an offer. Boundaries change, and this map is for research only."}}, {"@type": "Question", "name": "How fast do homes sell in the Sage Canyon Elementary area?", "acceptedAnswer": {"@type": "Answer", "text": "Over the last 12 months, the median home sold in 10 days on market. Homes in sought-after school areas often go under contract in the first week."}}]}</script>
 
-<nav class="bottom-nav" aria-label="Site menu">
-  <a href="#expand-map"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h5"/><circle cx="16" cy="16" r="3.2"/><path d="m18.4 18.4 2.6 2.6"/></svg>Homes for sale</a>
-  <a href="/carmel-valley-neighborhoods/"><svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Neighborhoods</a>
-  <a href="/carmel-valley-schools/" class="is-here" aria-current="page"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>Schools</a>
-  <a href="tel:+18584366585"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+<nav class="bottom-nav" aria-label="Jump to section">
+  <a href="#map-section"><svg viewBox="0 0 24 24"><path d="M12 21s7-7.1 7-12a7 7 0 0 0-14 0c0 4.9 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Map</a>
+  <a href="#neighborhoods"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Areas</a>
+  <a href="#sold"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Sold</a>
+  <a href="#contact"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Contact</a>
   <a href="#" class="bn-menu" onclick="event.preventDefault();window.__showMasthead&&window.__showMasthead();document.getElementById('pnav').classList.toggle('open')"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Menu</a>
 </nav>
 
@@ -1134,7 +1132,7 @@ var HUB={"c":[{"n":"Valencia","a":"dmm","h":7,"u":null,"g":false,"m":"$4.15M&nda
   function place(h){card.style.bottom=(off()+h+10)+'px';card.style.visibility=h>XP.clientHeight*.7?'hidden':'';}
   var head=document.getElementById('shHead'), btn=document.getElementById('shBtn'), state='peek';
   function off(){return wide.matches?0:Math.max(0,Math.round(XP.getBoundingClientRect().top));}
-  function hts(){var H=XP.clientHeight-off();return {peek:150,half:Math.round(H*.55),full:H-8};}
+  function hts(){var H=XP.clientHeight-off();return {peek:HUB.lv?206:150,half:Math.round(H*.55),full:H-8};}
   function snap(st){if(wide.matches){SH.style.height='';card.style.bottom='';return;}state=st;SH.style.height=hts()[st]+'px';place(hts()[st]);
     btn.textContent=st==='full'?'Show map':'Show list';btn.setAttribute('aria-expanded',st==='peek'?'false':'true');}
   btn.addEventListener('click',function(e){e.stopPropagation();snap(state==='full'?'peek':'full');});
@@ -1191,15 +1189,20 @@ var HUB={"c":[{"n":"Valencia","a":"dmm","h":7,"u":null,"g":false,"m":"$4.15M&nda
       if(area)setArea(area,true);};
     window.addEventListener('load',function(){settle();setTimeout(function(){settle();boot=false;
       if(window.__area)history.replaceState(null,'',location.pathname+location.search+window.__area);},400);});}
-  // level switch: swap the zones and the list groups shown
+  // level switch (in the list): swap the zones and the district groups shown.
+  // A tap shows that level's zones; a level with one district opens it so its schools show at once.
   var LT=document.querySelector('.lv-tabs');
-  function setLv(v){lv=v;card.classList.remove('show');sel=-1;area=null;mark(-1);
+  function setLv(v,tap){lv=v;card.classList.remove('show');sel=-1;area=null;mark(-1);
     layers.forEach(function(l,i){if(inLv(i))l.addTo(map);else map.removeLayer(l);});
-    AX.forEach(function(d){var on=d.dataset.lv===v;if(!on&&d.open){d._code=true;d.open=false;}d.hidden=!on;});
-    if(LT)LT.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lv===v?'true':'false');});
-    style();labels();}
-  if(LT){LT.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();setLv(b.dataset.lv);});});
-    L.DomEvent.disableClickPropagation(LT);setLv(lv);}
+    var shown=[];AX.forEach(function(d){var on=d.dataset.lv===v;if(d.open&&(tap||!on)){d._code=true;d.open=false;}d.hidden=!on;if(on)shown.push(d);});
+    if(LT)LT.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.lv===v?'true':'false');});
+    style();labels();if(!tap)return;
+    body.scrollTop=0;
+    if(shown.length===1)setTimeout(function(){shown[0]._code=false;shown[0].open=true;},0);
+    else{if(!wide.matches&&state==='peek')snap('half');var b=L.latLngBounds([]);layers.forEach(function(l,i){if(inLv(i))b.extend(l.getBounds());});
+      map.flyToBounds(b,Object.assign({duration:.6},pad(20)));}}
+  if(LT){LT.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();setLv(b.dataset.lv,true);});});
+    setLv(lv);}
   style();
 })();
 </script>
