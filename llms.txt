@@ -1,0 +1,56 @@
+# Carmel Valley Homes for Sale
+
+> Carmel Valley single-family homes for sale in San Diego, CA 92130. Area, school-area and neighborhood guides with sold data, by Sez Sezer, Keller Williams Realty (DRE #01988197) - 858-436-6585, sez@carmelvalley.com, 12750 High Bluff Drive, San Diego, CA 92130.
+
+Every page listed below has a clean Markdown version at the same path (index.md). The full text of every page is in [llms-full.txt](https://carmelvalleyhomesforsale.com/llms-full.txt). Median prices on these pages use the last 12 months of closed MLS sales; 5-year figures are shown as sale history (price ranges and recent sales). Condos and townhomes are covered at https://carmelvalleycondos.com, and every property type at https://carmelvalley.com.
+
+## Overview
+
+- [Carmel Valley Homes for Sale](https://carmelvalleyhomesforsale.com/index.md): Home page: Carmel Valley (San Diego, CA 92130) single-family homes for sale, 12-month market figures, areas, and how to work with Sez Sezer.
+- [Carmel Valley Neighborhoods Map: Single-Family Homes by Area](https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/index.md): Map of every single-family neighborhood in Carmel Valley, grouped by area, with home counts and what homes sold for.
+
+## Areas
+
+- [Pacific Highlands Ranch Homes for Sale](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/index.md): Pacific Highlands Ranch: Carmel Valley's newest homes, east of the SR-56 - 12-month prices, neighborhoods, prices by bedroom, schools, Mello-Roos, FAQs.
+- [North of Del Mar Heights Road Homes for Sale](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/index.md): North of Del Mar Heights Road - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
+- [South of Del Mar Heights Road Homes for Sale](https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/index.md): South of Del Mar Heights Road - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
+- [Carmel Country Highlands Homes for Sale](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/index.md): Carmel Country Highlands: larger homes on bigger lots - 12-month prices, neighborhoods, prices by bedroom, schools, FAQs.
+- [Torrey Highlands Homes for Sale](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/index.md): Torrey Highlands - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
+- [Torrey Hills Homes for Sale](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/index.md): Torrey Hills - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
+- [Del Mar Mesa Homes for Sale](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): Del Mar Mesa - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
+
+## Schools
+
+- [Homes for Sale in the Sage Canyon Elementary Area](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/index.md): Houses in the Sage Canyon Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs.
+
+## Neighborhoods
+
+- [Lexington Homes for Sale](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/index.md): Lexington: single-family neighborhood in Carmel Country Highlands, in the Sage Canyon Elementary area - prices by bedroom, sold data, schools, map, FAQs.
+
+## FAQs
+
+- [Carmel Valley Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/).
+- [Carmel Valley Neighborhoods Map: Single-Family Homes by Area - FAQs](https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/).
+- [Pacific Highlands Ranch Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/index.md): 6 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/).
+- [North of Del Mar Heights Road Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/).
+- [South of Del Mar Heights Road Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/).
+- [Carmel Country Highlands Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/).
+- [Torrey Highlands Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/).
+- [Torrey Hills Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/).
+- [Del Mar Mesa Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/).
+- [Homes for Sale in the Sage Canyon Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/).
+- [Lexington Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/).
+
+## Contact
+
+- Sez Sezer, Keller Williams Realty, California DRE #01988197
+- Phone: [858-436-6585](tel:+18584366585)
+- Email: [sez@carmelvalley.com](mailto:sez@carmelvalley.com)
+- Office: 12750 High Bluff Drive, San Diego, CA 92130
+
+## Optional
+
+- [Carmel Valley condos and townhomes](https://carmelvalleycondos.com): sister site for condo and townhome research.
+- [All Carmel Valley listings](https://carmelvalley.com): every property type in one search.
+- [Full site text](https://carmelvalleyhomesforsale.com/llms-full.txt): all pages above combined into one Markdown file.
+- [Sitemap](https://carmelvalleyhomesforsale.com/sitemap.xml)

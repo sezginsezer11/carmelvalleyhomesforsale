@@ -11,7 +11,46 @@
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
 
-/data/communities.json
-  Content-Type: application/json; charset=utf-8
-  Access-Control-Allow-Origin: *
+/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/>; rel="canonical"
 
+/carmel-valley-neighborhoods/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/>; rel="canonical"
+
+/pacific-highlands-ranch-homes-for-sale/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/>; rel="canonical"
+
+/north-of-del-mar-heights-road-homes-for-sale/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/>; rel="canonical"
+
+/south-of-del-mar-heights-road-homes-for-sale/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/>; rel="canonical"
+
+/carmel-country-highlands-homes-for-sale/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/>; rel="canonical"
+
+/torrey-highlands-homes-for-sale/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/>; rel="canonical"
+
+/torrey-hills-homes-for-sale/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/>; rel="canonical"
+
+/del-mar-mesa-homes-for-sale/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/>; rel="canonical"
+
+/sage-canyon-elementary-homes-for-sale/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/>; rel="canonical"
+
+/lexington-carmel-valley-homes-for-sale/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/>; rel="canonical"

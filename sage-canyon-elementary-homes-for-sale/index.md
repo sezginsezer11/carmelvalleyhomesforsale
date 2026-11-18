@@ -1,0 +1,159 @@
+# Homes for Sale in the Sage Canyon Elementary Area | Carmel Valley 92130
+
+> Carmel Valley houses in the Sage Canyon Elementary attendance area: 12-month median $3.17M, neighborhoods in the boundary, sold prices and a map.
+
+Source page: https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/
+
+*Del Mar Union School District · Carmel Valley*
+
+## Homes for Sale in the Sage Canyon Elementary Area
+
+Single-family homes inside the Sage Canyon Elementary attendance boundary: which neighborhoods are in it, what houses sell for, and how to confirm an address.
+
+- **Median sale, last 12 mo:** $3.17M
+- **Sold, last 12 mo:** 36
+- **Per sq ft, last 12 mo:** $866
+- **On market, last 12 mo:** 10 days
+
+## The Sage Canyon attendance boundary
+
+Boundary from the Del Mar Union School District attendance map. Boundaries change: confirm any address with [Del Mar Union School District](https://www.dmusd.org/Page/191) before you buy.
+
+## Carmel Valley houses for sale now
+
+This search shows all of 92130. Ask me which listings are inside the Sage Canyon boundary.
+
+[Carmel Valley Single-Family Homes for Sale](https://sezsezer.realscout.com/homesearch/map?ptype=SFR&geo_type=zipcode&geo_id=92130&for_sale=1&for_rent=0)
+
+## Neighborhoods in the Sage Canyon area
+
+| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+|---|---|---|
+| Palacio Del Mar | 36 | $1.37M–$5.93M |
+| Belmont | 28 | $1.93M–$3.4M |
+| [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) | 26 | $2.6M–$3.88M |
+| Meadows Del Mar | 18 | $3.63M–$5.93M |
+| Steeplechase | 13 | $2.03M–$2.73M |
+| Alta Del Mar | 11 | $3.9M–$5.1M |
+| Derby Hill | 9 | $2.35M–$4.1M |
+| Breakers | 7 | $2.29M–$3.23M |
+| Carriage Run | 6 | $1.95M–$2.3M |
+| Saratoga | 6 | $2.15M–$3.05M |
+| Whitehorse | 4 | $4.35M–$5.2M |
+| Ridge | 3 | $4.14M–$6.75M |
+| Valencia | 2 | $4.25M–$5.8M |
+| Ridge Estates | 1 | $5.42M |
+| Bridle Ridge | 1 | $2.03M |
+
+From where homes sold in the last 5 years. 3 more sales had no neighborhood name.
+
+## Prices by bedroom
+
+### 3 bedrooms
+
+**$1.93M–$3.63M**
+
+4 sales · last sold $1.98M, May 2026
+
+### 4 bedrooms
+
+**$1.37M–$5.1M**
+
+48 sales · last sold $2.33M, Sep 2026
+
+### 5 bedrooms
+
+**$1.69M–$5.93M**
+
+91 sales · last sold $3.1M, Oct 2026
+
+### 6 bedrooms
+
+**$2.26M–$6.75M**
+
+27 sales · last sold $3.5M, Oct 2026
+
+### 7 bedrooms
+
+**$3.35M–$3.45M**
+
+3 sales · last sold $3.35M, Mar 2026
+
+What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+
+## Recently sold in the Sage Canyon area
+
+| Address | Bd / Ba | Sq ft | Price | Closed |
+|---|---|---|---|---|
+| 5439 Harvest Run Dr — Lexington | 6 / 6 | 4,454 | $3,500,000 | Oct 30, 2026 |
+| 5722 Brittany Forrest — Lexington | 5 / 5 | 3,827 | $3,100,825 | Oct 23, 2026 |
+| 10785 Cherry Hill Drive — Derby Hill | 5 / 5 | 4,598 | $4,100,000 | Oct 15, 2026 |
+| 5355 Caminito Exquisito — Palacio Del Mar | 5 / 4 | 2,935 | $2,340,151 | Oct 13, 2026 |
+| 5529 Caminito Mundano — Palacio Del Mar | 4 / 3 | 2,478 | $2,325,000 | Sep 18, 2026 |
+| 12436 Caminito Valioso — Palacio Del Mar | 4 / 3 | 1,912 | $2,110,000 | Sep 8, 2026 |
+| 5259 Meadows Del Mar — Meadows Del Mar | 5 / 6 | 4,941 | $4,275,000 | Aug 28, 2026 |
+| 10902 Cloverhurst Way — Belmont | 5 / 3 | 2,763 | $2,500,000 | Aug 18, 2026 |
+| 5171 Del Mar Mesa Road | 8 / 9 | 8,186 | $5,250,000 | Aug 17, 2026 |
+| 5034 Greenwillow Ln — Lexington | 5 / 3 | 2,945 | $3,250,000 | Aug 7, 2026 |
+
+## School path
+
+Elementary
+
+Sage Canyon Elementary
+
+Del Mar Union School District
+
+Middle
+
+Confirm by address
+
+San Dieguito Union HSD
+
+High
+
+Torrey Pines High
+
+Canyon Crest Academy and San Dieguito Academy by lottery
+
+Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.net/about/boundary-maps).
+
+## Sage Canyon Elementary Area Homes: Common Questions
+
+### How much does a house in the Sage Canyon Elementary area cost?
+
+In the last 12 months, 36 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,171,948 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 174 sold for between $1,371,900 and $6,750,000.
+
+### Which neighborhoods are in the Sage Canyon Elementary area?
+
+Based on where homes have sold, the area includes Palacio Del Mar, Belmont, Lexington, Meadows Del Mar, Steeplechase, Alta Del Mar, Derby Hill, Breakers, and more. Palacio Del Mar has had the most sales. Boundaries can split a neighborhood, so check the exact address.
+
+### What middle and high school go with Sage Canyon Elementary?
+
+High school is Torrey Pines High (San Dieguito Union HSD); Canyon Crest Academy and San Dieguito Academy are available by lottery. Middle school depends on the address, so confirm it with San Dieguito Union HSD.
+
+### How do I confirm a home is in the Sage Canyon Elementary boundary?
+
+Use the Del Mar Union School District school locator with the exact address before you make an offer. Boundaries change, and this map is for research only.
+
+### How fast do homes sell in the Sage Canyon Elementary area?
+
+Over the last 12 months, the median home sold in 10 days on market. Homes in sought-after school areas often go under contract in the first week.
+
+## Looking in the Sage Canyon Area?
+
+Tell me your budget and must-haves and I’ll send you every home that comes up inside the Sage Canyon Elementary boundary, including ones that haven’t hit the market yet.
+
+![Sez Sezer, Carmel Valley real estate agent with Keller Williams Realty](https://carmelvalleyhomesforsale.com/images/sez-sezer-carmel-valley-realtor.jpg)
+
+Sez Sezer
+
+Keller Williams Realty · DRE #01988197
+
+[(858) 436-6585](tel:+18584366585)
+
+[Call Now](tel:+18584366585) [Email Sez](mailto:sez@carmelvalley.com) [Search All Listings](https://carmelvalley.com)
+
+---
+
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.

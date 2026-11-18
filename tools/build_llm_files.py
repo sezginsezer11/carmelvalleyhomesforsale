@@ -27,27 +27,27 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # (path, llms.txt section, one-line description)
 PAGES = [
     ("/", "Overview",
-     "Home page: Carmel Valley (San Diego, CA 92130) condos and townhomes for sale, communities, and how to work with Sez Sezer."),
-    ("/carmel-valley-condos-for-sale/", "Communities",
-     "Guide to Carmel Valley condo communities, prices, HOA fees, and live 92130 condo listings."),
-    ("/carmel-valley-townhomes-for-sale/", "Communities",
-     "Guide to Carmel Valley townhome communities, prices, HOA fees, and live 92130 townhome listings."),
-    ("/carmel-valley-communities/", "Communities",
-     "Map of all Carmel Valley condo and townhome communities, grouped by area, with home counts and links to each community guide."),
-    ("/arborlake-condos-for-sale/", "Communities",
-     "Arborlake: 190-unit lake-and-waterfall condo community (built 1986-1989) - prices by bedroom count, HOA, sold data, schools, FAQs."),
-    ("/carmel-pointe-condos-for-sale/", "Communities",
-     "Carmel Pointe: 200-unit condo community (built 2001-2002) with underground garage parking and a utility-inclusive HOA - prices by bedroom count, HOA, sold data, schools, FAQs."),
-    ("/the-lakes-condos-for-sale/", "Communities",
-     "The Lakes: 192-unit condo community (built 1984-1985) set around five small lakes and koi ponds, no Mello-Roos - prices by bedroom count, HOA, sold data, schools, FAQs."),
-    ("/camino-villas-condos-for-sale/", "Communities",
-     "Camino Villas: established central Carmel Valley condo community with a community pool - overview, listings, FAQs."),
-    ("/the-heights-townhomes-for-sale/", "Communities",
-     "The Heights: Carmel Valley townhome community - overview, listings, FAQs."),
-    ("/carmel-valley-condo-market-report/", "Guides",
-     "Carmel Valley condo and townhome market report: 92130 prices, trends, and what they mean for buyers and sellers."),
-    ("/home-value/", "Guides",
-     "Free home value estimate for Carmel Valley condos and townhomes, and how valuations are prepared."),
+     "Home page: Carmel Valley (San Diego, CA 92130) single-family homes for sale, 12-month market figures, areas, and how to work with Sez Sezer."),
+    ("/carmel-valley-neighborhoods/", "Overview",
+     "Map of every single-family neighborhood in Carmel Valley, grouped by area, with home counts and what homes sold for."),
+    ("/pacific-highlands-ranch-homes-for-sale/", "Areas",
+     "Pacific Highlands Ranch: Carmel Valley's newest homes, east of the SR-56 - 12-month prices, neighborhoods, prices by bedroom, schools, Mello-Roos, FAQs."),
+    ("/north-of-del-mar-heights-road-homes-for-sale/", "Areas",
+     "North of Del Mar Heights Road - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs."),
+    ("/south-of-del-mar-heights-road-homes-for-sale/", "Areas",
+     "South of Del Mar Heights Road - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs."),
+    ("/carmel-country-highlands-homes-for-sale/", "Areas",
+     "Carmel Country Highlands: larger homes on bigger lots - 12-month prices, neighborhoods, prices by bedroom, schools, FAQs."),
+    ("/torrey-highlands-homes-for-sale/", "Areas",
+     "Torrey Highlands - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs."),
+    ("/torrey-hills-homes-for-sale/", "Areas",
+     "Torrey Hills - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs."),
+    ("/del-mar-mesa-homes-for-sale/", "Areas",
+     "Del Mar Mesa - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs."),
+    ("/sage-canyon-elementary-homes-for-sale/", "Schools",
+     "Houses in the Sage Canyon Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs."),
+    ("/lexington-carmel-valley-homes-for-sale/", "Neighborhoods",
+     "Lexington: single-family neighborhood in Carmel Country Highlands, in the Sage Canyon Elementary area - prices by bedroom, sold data, schools, map, FAQs."),
 ]
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
@@ -370,11 +370,24 @@ class MdRenderer:
             return f"- **{parts[0]}:** {parts[1]}"
         return "- " + " · ".join(parts)
 
+    def cell(self, td):
+        """Cell text; a <span> sub-line (e.g. "189 homes · built 1996") gets its own separator."""
+        parts = []
+        for c in td.children:
+            t = norm(self.inline(c))
+            if not t:
+                continue
+            if parts and isinstance(c, Node) and c.tag == "span":
+                parts.append(" — " + t)
+            else:
+                parts.append((" " if parts else "") + t)
+        return norm("".join(parts))
+
     def table(self, node):
         rows = []
         for tr in iter_nodes(node):
             if tr.tag == "tr":
-                cells = [norm(self.inline(c)).replace("|", "\\|")
+                cells = [self.cell(c).replace("|", "\\|")
                          for c in tr.children if isinstance(c, Node) and c.tag in ("th", "td")]
                 if cells:
                     rows.append(cells)
@@ -491,11 +504,11 @@ def write_sitemap():
     entries = []
     for path, section, _ in PAGES:
         rel = "index.html" if path == "/" else path.strip("/") + "/index.html"
-        entries.append((SITE + path, lastmod(rel), "weekly", prio.get(path, "0.8" if section != "Communities" or path.startswith("/carmel-valley") else "0.7")))
+        entries.append((SITE + path, lastmod(rel), "weekly", prio.get(path, "0.9" if section == "Overview" else "0.8")))
     for path, _, _ in PAGES:
         rel = "index.html" if path == "/" else path.strip("/") + "/index.html"
         entries.append((SITE + md_path(path), lastmod(rel), "weekly", "0.3"))
-    for f in ("llms.txt", "llms-full.txt", "data/communities.json"):
+    for f in ("llms.txt", "llms-full.txt"):
         entries.append((f"{SITE}/{f}", lastmod(f), "weekly", "0.3"))
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -514,9 +527,7 @@ def write_headers():
            "/images/*", "  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400", "",
            "/assets/*", "  Cache-Control: public, max-age=86400, stale-while-revalidate=604800", "",
            "/llms.txt", "  Content-Type: text/plain; charset=utf-8", "",
-           "/llms-full.txt", "  Content-Type: text/plain; charset=utf-8", "",
-           "/data/communities.json", "  Content-Type: application/json; charset=utf-8",
-           "  Access-Control-Allow-Origin: *", ""]
+           "/llms-full.txt", "  Content-Type: text/plain; charset=utf-8", ""]
     for path, _, _ in PAGES:
         out += [md_path(path),
                 "  Content-Type: text/markdown; charset=utf-8",
@@ -538,16 +549,18 @@ def main():
         print(f"wrote {md_path(path)}  ({len(md):,} chars)")
 
     # ---------- llms.txt ----------
-    L = ["# Carmel Valley Condos", "",
-         "> Carmel Valley condos and townhomes for sale in San Diego, CA 92130. "
-         "Community guides, sold data, HOA details, and market reports by Sez Sezer, "
+    L = ["# Carmel Valley Homes for Sale", "",
+         "> Carmel Valley single-family homes for sale in San Diego, CA 92130. "
+         "Area, school-area and neighborhood guides with sold data, by Sez Sezer, "
          "Keller Williams Realty (DRE #01988197) - 858-436-6585, sez@carmelvalley.com, "
          "12750 High Bluff Drive, San Diego, CA 92130.", "",
          "Every page listed below has a clean Markdown version at the same path "
-         "(index.md). Structured community facts are in "
-         f"[communities.json]({SITE}/data/communities.json); the full text of every page is in "
-         f"[llms-full.txt]({SITE}/llms-full.txt).", ""]
-    for section in ("Overview", "Communities", "Guides"):
+         "(index.md). The full text of every page is in "
+         f"[llms-full.txt]({SITE}/llms-full.txt). Median prices on these pages use the last 12 months of "
+         "closed MLS sales; 5-year figures are shown as sale history (price ranges and recent sales). "
+         "Condos and townhomes are covered at https://carmelvalleycondos.com, and every property type "
+         "at https://carmelvalley.com.", ""]
+    for section in ("Overview", "Areas", "Schools", "Neighborhoods"):
         L += [f"## {section}", ""]
         for path, sec, blurb, title, _ in results:
             if sec == section:
@@ -566,9 +579,9 @@ def main():
           "- Phone: [858-436-6585](tel:+18584366585)",
           "- Email: [sez@carmelvalley.com](mailto:sez@carmelvalley.com)",
           "- Office: 12750 High Bluff Drive, San Diego, CA 92130",
-          f"- [Free home value estimate]({SITE}/home-value/): request a valuation for a Carmel Valley condo or townhome.",
           "", "## Optional", "",
-          f"- [Community data (JSON)]({SITE}/data/communities.json): structured facts per community, with unverified fields flagged.",
+          "- [Carmel Valley condos and townhomes](https://carmelvalleycondos.com): sister site for condo and townhome research.",
+          "- [All Carmel Valley listings](https://carmelvalley.com): every property type in one search.",
           f"- [Full site text]({SITE}/llms-full.txt): all pages above combined into one Markdown file.",
           f"- [Sitemap]({SITE}/sitemap.xml)", ""]
     with open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8") as f:
@@ -576,7 +589,7 @@ def main():
     print("wrote /llms.txt")
 
     # ---------- llms-full.txt ----------
-    F = ["# Carmel Valley Condos - Full Site Text", "",
+    F = ["# Carmel Valley Homes for Sale - Full Site Text", "",
          "> Full text of every key page on carmelvalleyhomesforsale.com, combined. "
          "Sez Sezer, Keller Williams Realty, DRE #01988197, 858-436-6585, "
          "sez@carmelvalley.com, 12750 High Bluff Drive, San Diego, CA 92130.", ""]
