@@ -14,53 +14,35 @@ Every single-family neighborhood in Carmel Valley, grouped by area. Open an area
 
 ### North of Del Mar Heights Road19
 
-Established 1980s and 1990s neighborhoods north of Del Mar Heights Road, close to the beach, Torrey Pines and the I-5 / SR-56 interchange. [North of Del Mar Heights Road guide →](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/)
-
-19 neighborhoods · 1,932 homes
+[North of Del Mar Heights Road area guide →](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/)
 
 ### South of Del Mar Heights Road25
 
-The original heart of Carmel Valley: mature trees, parks and walking paths, with homes from the late 1980s and 1990s close to Del Mar Highlands Town Center. [South of Del Mar Heights Road guide →](https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/)
-
-25 neighborhoods · 3,468 homes
+[South of Del Mar Heights Road area guide →](https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/)
 
 ### Carmel Country Highlands8
 
-Larger 1990s and early-2000s homes on bigger lots in the hills of Carmel Country Highlands, many with five or more bedrooms. [Carmel Country Highlands guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/)
-
-8 neighborhoods · 1,354 homes
-
 - [Guide to Lexington →](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/)
+
+[Carmel Country Highlands area guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/)
 
 ### Pacific Highlands Ranch36
 
-Carmel Valley's newest homes, built from the 2000s onward, east of the SR-56. Many neighborhoods pay Mello-Roos on top of property tax. [Pacific Highlands Ranch guide →](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/)
-
-36 neighborhoods · 1,358 homes
+[Pacific Highlands Ranch area guide →](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/)
 
 ### Torrey Highlands7
 
-Newer homes in Torrey Highlands, at the eastern edge of Carmel Valley near the SR-56 and Del Sur. [Torrey Highlands guide →](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/)
-
-7 neighborhoods · 419 homes
+[Torrey Highlands area guide →](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/)
 
 ### Torrey Hills17
 
-A self-contained valley south of the SR-56 with its own parks and shopping, and homes from the late 1990s and 2000s. [Torrey Hills guide →](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/)
-
-17 neighborhoods · 1,586 homes
+[Torrey Hills area guide →](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/)
 
 ### Del Mar Mesa14
 
-Estate homes on large lots next to the Del Mar Mesa preserve, with horse trails and a rural feel. [Del Mar Mesa guide →](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/)
-
-14 neighborhoods · 1,039 homes
+[Del Mar Mesa area guide →](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/)
 
 ### Rancho Pacifica1
-
-A gated community of large custom and semi-custom estates in the hills.
-
-1 neighborhood · 148 homes
 
 Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for over the last 5 years.
 

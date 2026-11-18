@@ -125,13 +125,11 @@ def main():
             rows.append(f'<li class="nr"><button type="button" class="nr-pick" data-n="{e(c["n"])}">'
                         f'<span class="nr-name">{e(c["n"])}</span><span class="nr-meta">{meta}</span></button>{go}</li>')
         stats = f'{len(cs)} neighborhood{"" if len(cs) == 1 else "s"}' + (f" &middot; {homes:,} homes" if homes else "")
-        guide = f' <a href="{AREA_PAGES[k]}">{e(label)} guide &rarr;</a>' if k in AREA_PAGES else ""
+        guide = f'\n    <a class="ax-guide" href="{AREA_PAGES[k]}">{e(label)} area guide &rarr;</a>' if k in AREA_PAGES else ""
         sec.append(f'''<details class="ax" id="area-{slug(label)}" data-a="{k}" style="--ac:{COLORS.get(k, "#64748b")}">
   <summary><span class="dot"></span><span class="ax-name">{e(label)}</span><span class="ax-n">{len(cs)}</span><svg class="ax-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
   <div class="ax-body">
-    <p class="ax-text">{e(atext.get(k, ""))}{guide}</p>
-    <p class="ax-stats">{stats}</p>
-    <ul class="nr-list">{"".join(rows)}</ul>
+    <ul class="nr-list">{"".join(rows)}</ul>{guide}
   </div>
 </details>''')
 
@@ -260,9 +258,9 @@ def main():
   .ax-chev{{width:18px;height:18px;fill:none;stroke:var(--label);stroke-width:2;transition:transform .2s}}
   .ax[open] .ax-chev{{transform:rotate(180deg)}}
   .ax[open] summary{{border-bottom:1px solid var(--line)}}
-  .ax-body{{padding:12px 14px 6px}}
-  .ax-text{{font-size:14.5px;color:#333a42;line-height:1.5}}
-  .ax-stats{{font-size:13px;font-weight:600;color:var(--label);margin:8px 0 6px}}
+  .ax-body{{padding:4px 14px 6px}}
+  .nr:first-child{{border-top:0}}
+  .ax-guide{{display:block;border-top:1px solid var(--line);padding:11px 4px 8px;font-size:14px;font-weight:600;color:var(--lake)}}
   .nr-list{{list-style:none}}
   .nr{{display:flex;align-items:center;gap:8px;border-top:1px solid var(--line)}}
   .nr-pick{{flex:1;min-width:0;text-align:left;border:0;background:none;padding:10px 4px;cursor:pointer;font:inherit;color:var(--ink);display:flex;flex-direction:column;gap:1px;border-radius:6px}}
@@ -280,7 +278,8 @@ def main():
     .xp .map-box{{height:100%;border-radius:0}}
     .xp #map{{height:100%}}
     .xp .map-note{{display:none}}
-    .xp .map-card{{top:46px;bottom:auto;left:10px;right:10px;max-width:none}}
+    .xp .map-card{{top:auto;bottom:160px;left:10px;right:10px;max-width:none;transition:bottom .25s ease}}
+    .xp-list.dragging~.xp-map .map-card{{transition:none}}
     .xp-list{{position:absolute;left:0;right:0;bottom:0;z-index:600;height:150px;display:flex;flex-direction:column;
       background:var(--white);border-radius:16px 16px 12px 12px;box-shadow:0 -4px 18px rgba(0,0,0,.18);transition:height .25s ease}}
     .xp-list.dragging{{transition:none}}
@@ -404,7 +403,10 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
   var wide=window.matchMedia('(min-width:980px)');
   var XP=document.querySelector('.xp'), SH=document.getElementById('areas');
   // keep the area being shown clear of the pull-up panel on phones
-  function pad(p){{return wide.matches?{{padding:[p,p]}}:{{paddingTopLeft:[p,p+30],paddingBottomRight:[p,SH.offsetHeight+p]}};}}
+  // phones: leave room for the Satellite/Map switch above, and the list panel plus the neighborhood card below
+  function pad(p){{if(wide.matches)return {{padding:[p,p]}};
+    var c=window.card&&card.classList.contains('show')?card.offsetHeight+10:0;
+    return {{paddingTopLeft:[p,p+44],paddingBottomRight:[p,off()+hts()[state||'peek']+c+p]}};}}
   function esc(s){{return String(s).replace(/[&<>"]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]}});}}
   var map=L.map('map',{{scrollWheelZoom:false,zoomSnap:0.5}}).setView([32.94,-117.22],13);
   var cur='sat', BM=CVBase(map);
@@ -425,7 +427,7 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
     C.forEach(function(o,i){{if(area&&o.a!==area)return;var c=layers[i].getBounds().getCenter();if(!b.contains(c))return;
       lbl.addLayer(L.tooltip({{permanent:true,direction:'center',className:'lbl',interactive:false}}).setLatLng(c).setContent(esc(o.n)));}});}}
   map.on('zoomend moveend',labels);
-  var card=document.getElementById('mcard');
+  var card=window.card=document.getElementById('mcard');
   function pick(i,zoom){{touched=true;sel=i;var o=C[i];style();
     var go=o.u?'<a class="mc-go" href="'+o.u+'">'+(o.g?'Community guide &rarr;':'See homes &rarr;')+'</a>':'<a class="mc-go" href="#contact">Ask about '+esc(o.n)+'</a>';
     card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+A[o.a][1]+'"></span>'+esc(A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'sold <b>'+o.m+'</b> (5 yrs)':'')+'</div>':'')+go;
@@ -457,17 +459,18 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
     b.addEventListener('mouseleave',function(){{if(sel<0)style();}});}});
   map.on('click',function(){{mark(-1);}});
   // ---- phone pull-up panel: peek / half / full ----
+  function place(h){{card.style.bottom=(off()+h+10)+'px';card.style.visibility=h>XP.clientHeight*.7?'hidden':'';}}
   var head=document.getElementById('shHead'), btn=document.getElementById('shBtn'), state='peek';
   function off(){{return wide.matches?0:Math.max(0,Math.round(XP.getBoundingClientRect().top));}}
   function hts(){{var H=XP.clientHeight-off();return {{peek:150,half:Math.round(H*.55),full:H-8}};}}
-  function snap(st){{if(wide.matches){{SH.style.height='';return;}}state=st;SH.style.height=hts()[st]+'px';
+  function snap(st){{if(wide.matches){{SH.style.height='';card.style.bottom='';return;}}state=st;SH.style.height=hts()[st]+'px';place(hts()[st]);
     btn.textContent=st==='full'?'Show map':'Show list';btn.setAttribute('aria-expanded',st==='peek'?'false':'true');}}
   btn.addEventListener('click',function(e){{e.stopPropagation();snap(state==='full'?'peek':'full');}});
   var y0=null,h0=0,moved=false,dragDown=0;
   head.addEventListener('pointerdown',function(e){{if(wide.matches||e.target===btn)return;y0=e.clientY;h0=SH.offsetHeight;moved=false;
     SH.classList.add('dragging');head.setPointerCapture(e.pointerId);}});
   head.addEventListener('pointermove',function(e){{if(y0===null)return;var dy=y0-e.clientY;if(Math.abs(dy)>4)moved=true;dragDown=-dy;
-    var t=hts();SH.style.height=Math.max(t.peek,Math.min(t.full,h0+dy))+'px';}});
+    var t=hts(),nh=Math.max(t.peek,Math.min(t.full,h0+dy));SH.style.height=nh+'px';place(nh);}});
   function end(){{if(y0===null)return;y0=null;SH.classList.remove('dragging');var t=hts(),h=SH.offsetHeight;
     if(!moved){{snap(state==='peek'?'half':state==='half'?'full':'peek');return;}}
     if(state==='peek'&&h0-h<=0&&dragDown>50){{snap('peek');toTitle();return;}}
@@ -492,7 +495,7 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
   head.addEventListener('pointerdown',function(){{if(state!=='peek')toMap();}});
   AX.forEach(function(d){{d.addEventListener('toggle',function(){{if(d.open)toMap();}});}});
   // until the page settles on the map, keep the panel in view above the bottom menu
-  function lift(){{SH.style.bottom=off()+'px';if(state==='full')SH.style.height=hts().full+'px';}}
+  function lift(){{if(wide.matches)return;SH.style.bottom=off()+'px';if(state==='full')SH.style.height=hts().full+'px';place(SH.offsetHeight);}}
   lift();
   var lastY=window.scrollY,down=true,se;
   window.addEventListener('scroll',function(){{lift();var y=window.scrollY;if(y!==lastY)down=y>lastY;lastY=y;
