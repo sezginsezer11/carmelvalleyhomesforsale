@@ -694,6 +694,8 @@
   .map-card .mc-area{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--label);margin-top:4px}
   .map-card .mc-homes{font-size:14px;margin-top:6px}
   .map-card a.mc-go{display:inline-block;margin-top:10px;background:var(--lake);color:#fff;font-weight:600;font-size:13.5px;padding:8px 14px;border-radius:7px}
+  .map-card .mc-acts{display:flex;flex-wrap:wrap;gap:8px}
+  .map-card a.mc-alt{background:#fff;color:var(--lake);box-shadow:inset 0 0 0 1.5px var(--lake)}
   .map-card .mc-x{position:absolute;top:8px;right:10px;border:0;background:none;font-size:20px;line-height:1;color:var(--label);cursor:pointer}
   .map-note{text-align:center;font-size:13px;color:var(--label);margin-top:10px}
   .leaflet-container{font-family:var(--sans)}
@@ -791,6 +793,11 @@
     .area{padding:22px 0}
   }
 </style>
+<script>
+// phones: take over links to an area (#area-...) so the browser doesn't jump into the list panel
+(function(){var h=location.hash;if(h.indexOf('#area-')===0&&window.innerWidth<980&&history.replaceState){
+  window.__area=h;history.replaceState(null,'',location.pathname+location.search);}})();
+</script>
 </head>
 <body>
 
@@ -1039,7 +1046,8 @@ var HUB={"c":[{"n":"Paso Fino","a":"dmm","h":12,"u":null,"g":false,"m":"$3.79M",
   var all=L.latLngBounds([]);layers.forEach(function(l){all.extend(l.getBounds());});
   function fitAll(){map.invalidateSize();map.fitBounds(all,pad(16));}
   var touched=false;map.getContainer().addEventListener('pointerdown',function(){touched=true;});
-  fitAll();window.addEventListener('load',fitAll);
+  var boot=false;
+  fitAll();window.addEventListener('load',function(){if(!area&&sel<0)fitAll();});
   var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(!touched&&!area&&sel<0)fitAll();else map.invalidateSize();},150);});
   var lbl=L.layerGroup().addTo(map);
   function style(){var sat=cur==='sat';layers.forEach(function(l,i){var o=C[i],c=A[o.a][1],dim=area&&o.a!==area,on=i===sel;
@@ -1050,7 +1058,9 @@ var HUB={"c":[{"n":"Paso Fino","a":"dmm","h":12,"u":null,"g":false,"m":"$3.79M",
   map.on('zoomend moveend',labels);
   var card=window.card=document.getElementById('mcard');
   function pick(i,zoom){touched=true;sel=i;var o=C[i];style();
-    var go=o.u?'<a class="mc-go" href="'+o.u+'">'+(o.g?'Community guide &rarr;':'See homes &rarr;')+'</a>':'<a class="mc-go" href="#contact">Ask about '+esc(o.n)+'</a>';
+    // neighborhoods with a page: one button per section of it (live listings first, then the guide)
+    var go=o.u?'<div class="mc-acts"><a class="mc-go" href="'+o.u+'#listings">See homes &rarr;</a>'+(o.g?'<a class="mc-go mc-alt" href="'+o.u+'#location">Community guide</a>':'')+'</div>'
+      :'<a class="mc-go" href="#contact">Ask about '+esc(o.n)+'</a>';
     card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+A[o.a][1]+'"></span>'+esc(A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'sold <b>'+o.m+'</b> (5 yrs)':'')+'</div>':'')+go;
     card.classList.add('show');card.querySelector('.mc-x').onclick=function(){card.classList.remove('show');sel=-1;style();};
     if(zoom)map.flyToBounds(layers[i].getBounds(),Object.assign({maxZoom:16,duration:.6},pad(40)));}
@@ -1062,7 +1072,7 @@ var HUB={"c":[{"n":"Paso Fino","a":"dmm","h":12,"u":null,"g":false,"m":"$3.79M",
     var b=i>=0&&rowFor(i);if(b)b.parentNode.classList.add('on');return b;}
   function setArea(k,fly){touched=true;area=k;card.classList.remove('show');sel=-1;mark(-1);style();labels();
     if(fly){var b=L.latLngBounds([]);layers.forEach(function(l,i){if(!area||C[i].a===area)b.extend(l.getBounds());});
-      map.flyToBounds(b,Object.assign({duration:.6},pad(20)));}}
+      if(boot)map.fitBounds(b,pad(20));else map.flyToBounds(b,Object.assign({duration:.6},pad(20)));}}
   AX.forEach(function(d){d.addEventListener('toggle',function(){
     if(quiet)return;
     if(d.open){quiet=true;AX.forEach(function(o){if(o!==d)o.open=false;});quiet=false;setArea(d.dataset.a,true);}
@@ -1110,7 +1120,7 @@ var HUB={"c":[{"n":"Paso Fino","a":"dmm","h":12,"u":null,"g":false,"m":"$3.79M",
   // phones: the title scrolls away and the map takes the whole screen.
   // Touching the map or the list, or a scroll that stops part-way, settles the page on the map.
   function xpTop(){return XP.getBoundingClientRect().top+window.scrollY;}
-  function toMap(){if(wide.matches)return;var t=xpTop();if(window.scrollY<t-2)window.scrollTo({top:t,behavior:'smooth'});}
+  function toMap(){if(wide.matches)return;var t=xpTop();if(window.scrollY<t-2)window.scrollTo({top:t,behavior:boot?'auto':'smooth'});}
   function toTitle(){if(wide.matches)return;if(window.__showMasthead)window.__showMasthead();window.scrollTo({top:0,behavior:'smooth'});}
   map.getContainer().addEventListener('pointerdown',toMap);
   head.addEventListener('pointerdown',function(){if(state!=='peek')toMap();});
@@ -1120,13 +1130,19 @@ var HUB={"c":[{"n":"Paso Fino","a":"dmm","h":12,"u":null,"g":false,"m":"$3.79M",
   lift();
   var lastY=window.scrollY,down=true,se;
   window.addEventListener('scroll',function(){lift();var y=window.scrollY;if(y!==lastY)down=y>lastY;lastY=y;
-    clearTimeout(se);se=setTimeout(function(){if(wide.matches)return;var t=xpTop(),y=window.scrollY;
+    clearTimeout(se);se=setTimeout(function(){if(wide.matches||boot)return;var t=xpTop(),y=window.scrollY;
       if(y>4&&y<t-2)(down?toMap:toTitle)();},140);},{passive:true});
   fit();window.addEventListener('resize',function(){fit();snap(state);});
   snap('peek');
   // open the area named in the URL (#area-...)
-  var h=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));
-  if(h&&h.classList.contains('ax'))h.open=true;
+  var hh=window.__area||location.hash, h=hh&&document.getElementById(decodeURIComponent(hh.slice(1)));
+  // an area named in the link opens straight away, without animation;
+  // on phones the page settles on the full map (not on the area inside the panel)
+  if(h&&h.classList.contains('ax')){boot=true;h.open=true;
+    var settle=function(){if(!wide.matches){window.scrollTo(0,xpTop());lift();}
+      if(area)setArea(area,true);};
+    window.addEventListener('load',function(){settle();setTimeout(function(){settle();boot=false;
+      if(window.__area)history.replaceState(null,'',location.pathname+location.search+window.__area);},400);});}
   style();
 })();
 </script>
