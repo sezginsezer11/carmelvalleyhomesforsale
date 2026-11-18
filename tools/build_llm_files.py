@@ -44,6 +44,8 @@ PAGES = [
      "Torrey Hills - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs."),
     ("/del-mar-mesa-homes-for-sale/", "Areas",
      "Del Mar Mesa - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs."),
+    ("/carmel-valley-schools/", "Overview",
+     "Map of Carmel Valley elementary school attendance areas (Del Mar Union SD), the neighborhoods in each, prices, middle and high schools, Solana Beach SD areas."),
     ("/sage-canyon-elementary-homes-for-sale/", "Schools",
      "Houses in the Sage Canyon Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs."),
     ("/pacific-sky-elementary-homes-for-sale/", "Schools",

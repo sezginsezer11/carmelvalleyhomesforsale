@@ -100,7 +100,11 @@ def school_boundary(page_name):
 def share_inside(rings, page_name, n=14):
     """Share (0-1) of a community's area inside a school's boundary. rings: [[lat, lng], ...] lists."""
     kml = {v: k for k, v in ELEMENTARY.items()}[page_name]
-    bnd = BOUNDARIES[kml]
+    return share_in(rings, BOUNDARIES[kml], n)
+
+
+def share_in(rings, bnd, n=14):
+    """Share (0-1) of a community's area inside boundary rings bnd ([(lng, lat), ...] lists)."""
     pts = [p for r in rings for p in r]
     la0, la1 = min(p[0] for p in pts), max(p[0] for p in pts)
     lo0, lo1 = min(p[1] for p in pts), max(p[1] for p in pts)

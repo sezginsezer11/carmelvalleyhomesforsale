@@ -8,6 +8,7 @@ Every page listed below has a clean Markdown version at the same path (index.md)
 
 - [Carmel Valley Homes for Sale](https://carmelvalleyhomesforsale.com/index.md): Home page: Carmel Valley (San Diego, CA 92130) single-family homes for sale, 12-month market figures, areas, and how to work with Sez Sezer.
 - [Carmel Valley Neighborhoods Map: Single-Family Homes by Area](https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/index.md): Map of every single-family neighborhood in Carmel Valley, grouped by area, with home counts and what homes sold for.
+- [Carmel Valley Schools Map: Homes by Elementary School Area](https://carmelvalleyhomesforsale.com/carmel-valley-schools/index.md): Map of Carmel Valley elementary school attendance areas (Del Mar Union SD), the neighborhoods in each, prices, middle and high schools, Solana Beach SD areas.
 
 ## Areas
 
@@ -43,6 +44,7 @@ Every page listed below has a clean Markdown version at the same path (index.md)
 - [Torrey Highlands Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/).
 - [Torrey Hills Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/).
 - [Del Mar Mesa Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/).
+- [Carmel Valley Schools Map: Homes by Elementary School Area - FAQs](https://carmelvalleyhomesforsale.com/carmel-valley-schools/index.md): 4 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/carmel-valley-schools/).
 - [Homes for Sale in the Sage Canyon Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/).
 - [Homes for Sale in the Pacific Sky Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/).
 - [Homes for Sale in the Ocean Air Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/ocean-air-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/ocean-air-elementary-homes-for-sale/).

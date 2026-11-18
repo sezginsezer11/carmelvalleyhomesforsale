@@ -729,21 +729,9 @@
 </style>
 <style id="bn-style">
   @media(max-width:760px){
-    .bottom-nav a,.bottom-nav button.bn-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-      gap:2px;padding:5px 1px;color:#8b909a;font:600 9.5px/1.1 var(--sans,system-ui);text-align:center;white-space:nowrap;
-      background:none;border:0;cursor:pointer}
-    .bottom-nav button.bn-btn svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8}
-    .bottom-nav .is-here,.bottom-nav button.bn-btn[aria-expanded="true"]{color:var(--lake,#0b5c8c)}
-    .bn-sheet{position:fixed;top:0;left:0;right:0;bottom:calc(55px + env(safe-area-inset-bottom));z-index:69;background:rgba(16,20,24,.35)}
-    .bn-sheet[hidden]{display:none}
-    .bn-panel{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:16px 16px 0 0;
-      padding:16px 16px 14px;box-shadow:0 -4px 18px rgba(0,0,0,.18);max-height:80vh;overflow-y:auto}
-    .bn-panel h2{font-size:17px;font-weight:800;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center}
-    .bn-panel h2 button{border:0;background:none;font-size:22px;line-height:1;color:#8b909a;cursor:pointer;padding:2px 6px}
-    .bn-panel .bn-lbl{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8b909a;margin:14px 0 4px}
-    .bottom-nav .bn-panel a{display:block;flex:none;text-align:left;white-space:normal;padding:11px 2px;border-top:1px solid #e6e8eb;
-      font:600 15px/1.3 var(--sans,system-ui);color:#101418}
-    .bottom-nav .bn-panel a span{display:block;font-size:12.5px;font-weight:500;color:#6b7280;margin-top:1px}
+    .bottom-nav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      gap:2px;padding:5px 1px;color:#8b909a;font:600 9.5px/1.1 var(--sans,system-ui);text-align:center;white-space:nowrap}
+    .bottom-nav .is-here{color:var(--lake,#0b5c8c)}
   }
 </style>
 </head>
@@ -952,18 +940,9 @@
 <nav class="bottom-nav" aria-label="Site menu">
   <a href="#expand-map"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h5"/><circle cx="16" cy="16" r="3.2"/><path d="m18.4 18.4 2.6 2.6"/></svg>Homes for sale</a>
   <a href="/carmel-valley-neighborhoods/"><svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Neighborhoods</a>
-  <button type="button" class="bn-btn" id="bnSchoolsBtn" aria-controls="bnSchools" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>Schools</button>
+  <a href="/carmel-valley-schools/"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>Schools</a>
   <a href="tel:+18584366585"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
   <a href="#" class="bn-menu" onclick="event.preventDefault();window.__showMasthead&&window.__showMasthead();document.getElementById('pnav').classList.toggle('open')"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Menu</a>
-  <div class="bn-sheet" id="bnSchools" hidden>
-    <div class="bn-panel" role="dialog" aria-label="Carmel Valley schools">
-      <h2>Carmel Valley Schools <button type="button" data-x aria-label="Close">&times;</button></h2>
-      <div class="bn-lbl">School pages</div>
-      <a href="/sage-canyon-elementary-homes-for-sale/">Sage Canyon Elementary<span>Homes in its attendance area</span></a><a href="/pacific-sky-elementary-homes-for-sale/">Pacific Sky Elementary<span>Homes in its attendance area</span></a><a href="/ocean-air-elementary-homes-for-sale/">Ocean Air Elementary<span>Homes in its attendance area</span></a><a href="/ashley-falls-elementary-homes-for-sale/">Ashley Falls Elementary<span>Homes in its attendance area</span></a><a href="/sycamore-ridge-elementary-homes-for-sale/">Sycamore Ridge Elementary<span>Homes in its attendance area</span></a><a href="/torrey-hills-elementary-homes-for-sale/">Torrey Hills Elementary<span>Homes in its attendance area</span></a>
-      <div class="bn-lbl">Assigned schools by area</div>
-      <a href="/north-of-del-mar-heights-road-homes-for-sale/#schools">North of Del Mar Heights Road</a><a href="/south-of-del-mar-heights-road-homes-for-sale/#schools">South of Del Mar Heights Road</a><a href="/torrey-hills-homes-for-sale/#schools">Torrey Hills</a><a href="/carmel-country-highlands-homes-for-sale/#schools">Carmel Country Highlands</a><a href="/del-mar-mesa-homes-for-sale/#schools">Del Mar Mesa</a><a href="/torrey-highlands-homes-for-sale/#schools">Torrey Highlands</a><a href="/pacific-highlands-ranch-homes-for-sale/#schools">Pacific Highlands Ranch</a>
-    </div>
-  </div>
 </nav>
 <script>
 (function(){
@@ -1004,17 +983,6 @@
     if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
   }, {passive:true});
   window.__showMasthead = function(){ setHidden(false); };
-})();
-</script>
-<script id="bn-script">
-(function(){
-  var b=document.getElementById('bnSchoolsBtn'),s=document.getElementById('bnSchools');if(!b||!s)return;
-  var n=b.closest('.bottom-nav');
-  // while the list is open, lift the menu above page maps and panels
-  function set(o){s.hidden=!o;b.setAttribute('aria-expanded',o?'true':'false');n.style.zIndex=o?'1200':'';}
-  b.addEventListener('click',function(){set(s.hidden);});
-  s.addEventListener('click',function(e){if(e.target===s||e.target.closest('[data-x]')||e.target.closest('a'))set(false);});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
 })();
 </script>
 </body>

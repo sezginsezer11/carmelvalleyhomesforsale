@@ -44,6 +44,7 @@ CSS = """
   .map-card .mc-x{position:absolute;top:8px;right:10px;border:0;background:none;font-size:20px;line-height:1;color:var(--label);cursor:pointer}
   .map-note{text-align:center;font-size:13px;color:var(--label);margin-top:10px}
   .leaflet-container{font-family:var(--sans)}
+  .leaflet-interactive:focus{outline:none}
   .leaflet-control-attribution{font-size:9.5px!important}
   .leaflet-tooltip.lbl{background:none;border:0;box-shadow:none;padding:0;color:#101418;font-weight:700;font-size:11.5px;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 2px #fff;white-space:nowrap}
   .leaflet-tooltip.lbl::before{display:none}
@@ -116,7 +117,7 @@ HEAD_JS = """<script>
 </script>"""
 
 
-def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_aria, map_note, zone=None):
+def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_aria, map_note, zone=None, label_zoom=15, frame=None):
     def link(c):
         return pages.get(c["n"])
 
@@ -132,8 +133,9 @@ def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_
             go = ""
             if c["n"] in pages:
                 go = f'<a class="nr-go" href="{u}">Guide<span class="sr"> to {e(c["n"])}</span> &rarr;</a>'
+            dot = f'<span class="dot" style="--ac:{c["c"]};margin-right:7px"></span>' if c.get("c") else ""
             rows.append(f'<li class="nr"><button type="button" class="nr-pick" data-n="{e(c["n"])}">'
-                        f'<span class="nr-name">{e(c["n"])}</span><span class="nr-meta">{meta}</span></button>{go}</li>')
+                        f'<span class="nr-name">{dot}{e(c["n"])}</span><span class="nr-meta">{meta}</span></button>{go}</li>')
         guide = f'\n    <a class="ax-guide" href="{area_pages[k]}">{e(label)} area guide &rarr;</a>' if k in area_pages else ""
         sec.append(f'''<details class="ax" id="area-{slug(label)}" data-a="{k}" style="--ac:{colors.get(k, "#64748b")}">
   <summary><span class="dot"></span><span class="ax-name">{e(label)}</span><span class="ax-n">{len(cs)}</span><svg class="ax-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
@@ -143,10 +145,14 @@ def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_
 </details>''')
 
     mdata = {"c": [{"n": c["n"], "a": c["sub"], "h": c.get("homes"), "u": link(c), "g": c["n"] in pages, "m": c.get("r5"), "p": c["p"],
-                    "s": "n-" + slug(c["n"])} for c in comms],
+                    "s": "n-" + slug(c["n"]),
+                    **{k: c[k] for k in ("c", "hu", "gu", "gl", "x", "l", "lp") if c.get(k) is not None}} for c in comms],
              "areas": {k: [l, colors.get(k), area_pages.get(k)] for k, l, _ in groups}}
     if zone:
         mdata["z"] = zone
+    mdata["lz"] = label_zoom
+    if frame:
+        mdata["fb"] = frame  # [[south, west], [north, east]]: what the map frames at first
 
     body = f'''<section class="map-sec" id="map-section">
   <div class="wrap xp">
@@ -197,7 +203,7 @@ var HUB=''' + json.dumps(mdata, separators=(",", ":")) + ''';
   var layers=C.map(function(o,i){var l=L.polygon(o.p,{weight:1.5}).addTo(map);
     l.on('click',function(e){L.DomEvent.stopPropagation(e);pick(i,false);});
     l.bindTooltip(o.n,{sticky:true,direction:'top'});return l;});
-  var all=L.latLngBounds([]);if(zone)all.extend(zone.getBounds());else layers.forEach(function(l){all.extend(l.getBounds());});
+  var all=L.latLngBounds([]);if(HUB.fb)all=L.latLngBounds(HUB.fb);else if(zone)all.extend(zone.getBounds());else layers.forEach(function(l){all.extend(l.getBounds());});
   // phones: fill the screen width with the neighborhoods (fine zoom steps, slim side margins)
   function fitAll(){map.invalidateSize();map.fitBounds(all,pad(wide.matches?16:6));}
   var touched=false;map.getContainer().addEventListener('pointerdown',function(){touched=true;});
@@ -210,22 +216,22 @@ var HUB=''' + json.dumps(mdata, separators=(",", ":")) + ''';
   var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(!touched&&!area&&sel<0)fitAll();else map.invalidateSize();},150);});
   var lbl=L.layerGroup().addTo(map);
   function style(){var sat=cur==='sat';if(zone)zone.setStyle({color:sat?'#fff':'#0b5c8c'});
-    layers.forEach(function(l,i){var o=C[i],c=A[o.a][1],dim=area&&o.a!==area,on=i===sel;
+    layers.forEach(function(l,i){var o=C[i],c=o.c||A[o.a][1],dim=area&&o.a!==area,on=i===sel;
     l.setStyle({color:on?'#101418':(sat?'#fff':c),weight:on?3:1.5,fillColor:c,fillOpacity:dim?0.06:(on?0.75:(sat?0.45:0.38)),opacity:dim?0.3:1});});}
-  function labels(){lbl.clearLayers();if(map.getZoom()<15)return;var b=map.getBounds();
-    C.forEach(function(o,i){if(area&&o.a!==area)return;var c=layers[i].getBounds().getCenter();if(!b.contains(c))return;
-      lbl.addLayer(L.tooltip({permanent:true,direction:'center',className:'lbl',interactive:false}).setLatLng(c).setContent(esc(o.n)));});}
+  function labels(){lbl.clearLayers();if(map.getZoom()<(HUB.lz||15))return;var b=map.getBounds();
+    C.forEach(function(o,i){if(area&&o.a!==area)return;var c=o.lp?L.latLng(o.lp):layers[i].getBounds().getCenter();if(!b.contains(c))return;
+      lbl.addLayer(L.tooltip({permanent:true,direction:'center',className:'lbl',interactive:false}).setLatLng(c).setContent(esc(o.l||o.n)));});}
   map.on('zoomend moveend',labels);
   var card=window.card=document.getElementById('mcard');
   function pick(i,zoom){touched=true;sel=i;var o=C[i];style();
     // neighborhoods with a page: one button per section of it (live listings first, then the guide)
     // no page of its own yet: both buttons go to its area's page (listings, and the neighborhood's row there)
     var ap=A[o.a][2],
-      home=o.u?o.u+'#listings':ap?ap+'#listings':'',
-      guide=o.g?o.u+'#location':ap?ap+'#'+o.s:'';
-    var go=home?'<div class="mc-acts"><a class="mc-go" href="'+home+'">See homes &rarr;</a>'+(guide?'<a class="mc-go mc-alt" href="'+guide+'">Community guide</a>':'')+'</div>'
+      home=o.hu!==undefined?o.hu:o.u?o.u+'#listings':ap?ap+'#listings':'',
+      guide=o.gu!==undefined?o.gu:o.g?o.u+'#location':ap?ap+'#'+o.s:'';
+    var go=home?'<div class="mc-acts"><a class="mc-go" href="'+home+'">See homes &rarr;</a>'+(guide?'<a class="mc-go mc-alt" href="'+guide+'">'+(o.gl||'Community guide')+'</a>':'')+'</div>'
       :'<a class="mc-go" href="#contact">Ask about '+esc(o.n)+'</a>';
-    card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+A[o.a][1]+'"></span>'+esc(A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'sold <b>'+o.m+'</b> (5 yrs)':'')+'</div>':'')+go;
+    card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+(o.c||A[o.a][1])+'"></span>'+esc(o.x||A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'sold <b>'+o.m+'</b> (5 yrs)':'')+'</div>':'')+go;
     card.classList.add('show');card.querySelector('.mc-x').onclick=function(){card.classList.remove('show');sel=-1;style();};
     if(zoom)map.flyToBounds(layers[i].getBounds(),Object.assign({maxZoom:16,duration:.6},pad(40)));}
   map.on('click',function(){card.classList.remove('show');sel=-1;style();});
@@ -238,13 +244,13 @@ var HUB=''' + json.dumps(mdata, separators=(",", ":")) + ''';
     if(fly){var b=L.latLngBounds([]);layers.forEach(function(l,i){if(!area||C[i].a===area)b.extend(l.getBounds());});
       if(boot)map.fitBounds(b,pad(20));else map.flyToBounds(b,Object.assign({duration:.6},pad(20)));}}
   AX.forEach(function(d){d.addEventListener('toggle',function(){
-    if(quiet)return;
+    if(quiet||d._code)return;
     if(d.open){quiet=true;AX.forEach(function(o){if(o!==d)o.open=false;});quiet=false;setArea(d.dataset.a,true);}
     else if(area===d.dataset.a){setArea(null,false);fitAll();}});});
   // map click on a neighborhood: open its area in the list and highlight the row
   var pick0=pick;pick=function(i,zoom){
     var d=document.querySelector('.ax[data-a="'+C[i].a+'"]');
-    if(d&&!d.open){quiet=true;AX.forEach(function(o){o.open=o===d;});quiet=false;area=C[i].a;labels();}
+    if(d&&!d.open){AX.forEach(function(o){if(o.open!==(o===d)){o._code=true;o.open=o===d;}});area=C[i].a;labels();}
     pick0(i,zoom);var b=mark(i);
     if(b&&!zoom&&wide.matches)b.scrollIntoView({block:'nearest',behavior:'smooth'});};
   document.querySelectorAll('.nr-pick').forEach(function(b){
@@ -274,7 +280,7 @@ var HUB=''' + json.dumps(mdata, separators=(",", ":")) + ''';
   // opening an area raises the panel halfway so its neighborhoods show with the map above
   var body=SH.querySelector('.sh-body');
   function toTop(el){body.scrollTo({top:Math.max(0,el.offsetTop-body.offsetTop-4),behavior:'smooth'});}
-  AX.forEach(function(d){d.addEventListener('toggle',function(){if(!d.open||wide.matches)return;
+  AX.forEach(function(d){d.addEventListener('toggle',function(){if(!d.open||wide.matches||d._code)return;
     if(state==='peek'&&!quiet)snap('half');setTimeout(function(){toTop(d);},30);});});
   wide.addEventListener&&wide.addEventListener('change',function(){snap(wide.matches?state:'peek');map.invalidateSize();});
   // phones: the map fills the screen between the title and the bottom menu
@@ -288,7 +294,9 @@ var HUB=''' + json.dumps(mdata, separators=(",", ":")) + ''';
   function toTitle(){if(wide.matches)return;if(window.__showMasthead)window.__showMasthead();window.scrollTo({top:0,behavior:'smooth'});}
   map.getContainer().addEventListener('pointerdown',toMap);
   head.addEventListener('pointerdown',function(){if(state!=='peek')toMap();});
-  AX.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)toMap();});});
+  AX.forEach(function(d){d.addEventListener('toggle',function(){if(d.open&&!d._code)toMap();});});
+  // registered last: clear the "changed in code" mark once every toggle listener has seen it
+  AX.forEach(function(d){d.addEventListener('toggle',function(){d._code=false;});});
   // until the page settles on the map, keep the panel in view above the bottom menu
   function lift(){if(wide.matches)return;SH.style.bottom=off()+'px';if(state==='full')SH.style.height=hts().full+'px';place(SH.offsetHeight);}
   lift();

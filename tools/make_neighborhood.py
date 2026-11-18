@@ -29,6 +29,7 @@ SCHOOL_PAGES = {n: "/" + re.sub(r"[^a-z0-9]+", "-", n.lower()).strip("-") + "-ho
     "Sage Canyon Elementary", "Pacific Sky Elementary", "Ocean Air Elementary", "Ashley Falls Elementary",
     "Sycamore Ridge Elementary", "Torrey Hills Elementary"]}
 HUB = "/carmel-valley-neighborhoods/"
+SCHOOLS_HUB = "/carmel-valley-schools/"
 # Area pages (tools/build_area.py) for every area with a boundary in tools/kml/carmel-valley-areas.kml.
 AREA_PAGES = {k: f"/{re.sub(r'[^a-z0-9]+', '-', AREA_LABELS[k].lower()).strip('-')}-homes-for-sale/"
               for k in ["n", "s", "cch", "phr", "tdm", "th", "dmm"]}
