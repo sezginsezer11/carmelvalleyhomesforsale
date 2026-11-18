@@ -184,6 +184,10 @@ def build(school):
   .sa-hero p{{font-size:16px;color:#3f4852;margin-top:12px;max-width:720px}}
   .sa-map{{position:relative;z-index:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}}
   #saMap{{height:min(56vh,480px);background:#e8ecef}}
+  .sa-map{{position:relative}}
+  .map-views{{position:absolute;top:10px;right:10px;z-index:500;display:flex;background:#fff;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.18);overflow:hidden}}
+  .map-views button{{border:0;background:#fff;font:600 12.5px var(--sans);padding:7px 11px;cursor:pointer;color:#37404a}}
+  .map-views button[aria-pressed="true"]{{background:var(--lake);color:#fff}}
   .note{{font-size:13px;color:var(--label);margin-top:10px}}
   .two{{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}}
   .tbl{{width:100%;border-collapse:collapse;font-size:15px}}
@@ -245,7 +249,7 @@ def build(school):
 <section id="map-section" style="padding-top:28px;padding-bottom:20px">
   <div class="wrap">
     <h2 class="h3">The {e(short_name)} attendance boundary</h2>
-    <div class="sa-map"><div id="saMap" role="img" aria-label="Map of the {e(school)} attendance boundary in Carmel Valley"></div></div>
+    <div class="sa-map"><div id="saMap" role="img" aria-label="Map of the {e(school)} attendance boundary in Carmel Valley"></div><div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="sat" aria-pressed="true">Satellite</button><button type="button" data-b="map" aria-pressed="false">Map</button></div></div>
     <p class="note">Boundary from the {DMUSD} attendance map. Boundaries change: confirm any address with <a href="{DMUSD_URL}" target="_blank" rel="noopener">{DMUSD}</a> before you buy.</p>
   </div>
 </section>
@@ -318,11 +322,12 @@ def build(school):
 </nav>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="/assets/basemap.js"></script>
 <script>
 (function(){{
   var D={mapdata};
   var map=L.map('saMap',{{scrollWheelZoom:false}});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:19,attribution:'Map &copy; Esri, HERE, Garmin, OpenStreetMap contributors'}}).addTo(map);
+  CVBase.bind(CVBase(map),document.querySelector('.sa-map .map-views'));
   var poly=L.polygon(D.rings,{{stroke:false,fillColor:'#0b5c8c',fillOpacity:.32}}).addTo(map);
   function fit(){{map.invalidateSize();map.fitBounds(poly.getBounds(),{{padding:[14,14]}});}}
   fit();window.addEventListener('load',fit);

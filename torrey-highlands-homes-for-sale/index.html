@@ -677,6 +677,9 @@
   .ar-hero p{font-size:16px;color:#3f4852;margin-top:12px;max-width:720px}
   .ar-map{position:relative;z-index:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
   #arMap{height:min(60vh,520px);background:#e8ecef}
+  .map-views{position:absolute;top:10px;right:10px;z-index:500;display:flex;background:#fff;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.18);overflow:hidden}
+  .map-views button{border:0;background:#fff;font:600 12.5px var(--sans);padding:7px 11px;cursor:pointer;color:#37404a}
+  .map-views button[aria-pressed="true"]{background:var(--lake);color:#fff}
   .map-card{position:absolute;left:10px;bottom:10px;right:10px;max-width:300px;z-index:500;background:#fff;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.18);padding:12px 14px;display:none}
   .map-card.show{display:block}
   .map-card h3{font-size:16px;font-weight:800;margin-right:22px}
@@ -777,7 +780,7 @@
 <section id="map-section" style="padding-top:28px;padding-bottom:20px">
   <div class="wrap">
     <h2 class="h3">Torrey Highlands neighborhoods on the map</h2>
-    <div class="ar-map"><div id="arMap" role="region" aria-label="Map of Torrey Highlands and its neighborhoods"></div><div class="map-card" id="mcard" aria-live="polite"></div></div>
+    <div class="ar-map"><div id="arMap" role="region" aria-label="Map of Torrey Highlands and its neighborhoods"></div><div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="sat" aria-pressed="true">Satellite</button><button type="button" data-b="map" aria-pressed="false">Map</button></div><div class="map-card" id="mcard" aria-live="polite"></div></div>
     <p class="note">Tap a neighborhood for what its homes sold for. Boundaries are approximate.</p>
   </div>
 </section>
@@ -922,26 +925,30 @@
 </nav>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="/assets/basemap.js"></script>
 <script>
 (function(){
   var D={"area":[[[32.97749,-117.16457],[32.97399,-117.16471],[32.9739,-117.16566],[32.97396,-117.16758],[32.97025,-117.16769],[32.96817,-117.16814],[32.9665,-117.16758],[32.96413,-117.16331],[32.96711,-117.15957],[32.96866,-117.15652],[32.96952,-117.1543],[32.97116,-117.15359],[32.9741,-117.15309],[32.9763,-117.1527],[32.97815,-117.15399],[32.97769,-117.16043],[32.97771,-117.16222],[32.97749,-117.16457]]],"nb":[{"n":"Fairbanks Highlands","m":"$4.2M","k":1,"r":"$3.01M&ndash;$4.8M","s":13,"u":null,"p":[[[32.9708,-117.16033],[32.97093,-117.15802],[32.97101,-117.15606],[32.97112,-117.15446],[32.97127,-117.1542],[32.97211,-117.15382],[32.97286,-117.1537],[32.97322,-117.1536],[32.97364,-117.15358],[32.97433,-117.15426],[32.97455,-117.15382],[32.97483,-117.15349],[32.97533,-117.15328],[32.97622,-117.1537],[32.97705,-117.15406],[32.97729,-117.15406],[32.97751,-117.15406],[32.97794,-117.15408],[32.97763,-117.16184],[32.97768,-117.16245],[32.97772,-117.16319],[32.97751,-117.16354],[32.97726,-117.16366],[32.97695,-117.1636],[32.97667,-117.1635],[32.97393,-117.16552],[32.97205,-117.1655],[32.97044,-117.16551],[32.97046,-117.1648],[32.97045,-117.16435],[32.9705,-117.16367],[32.9706,-117.16282],[32.97074,-117.16181],[32.97076,-117.16129],[32.97078,-117.16085],[32.9708,-117.16033]]]},{"n":"Villamontes","m":"$1.85M","k":2,"r":"$1.55M&ndash;$2.76M","s":12,"u":null,"p":[[[32.96833,-117.16177],[32.96837,-117.16063],[32.96784,-117.16054],[32.96785,-117.15962],[32.96842,-117.15972],[32.96861,-117.15952],[32.96864,-117.15943],[32.96866,-117.15891],[32.96886,-117.15859],[32.96914,-117.15838],[32.96937,-117.15832],[32.96972,-117.15839],[32.96958,-117.16065],[32.96979,-117.16067],[32.96977,-117.16209],[32.97035,-117.16217],[32.97037,-117.16228],[32.96979,-117.16443],[32.9697,-117.165],[32.96969,-117.16439],[32.96948,-117.16439],[32.96947,-117.16515],[32.96941,-117.16563],[32.96931,-117.16604],[32.96929,-117.16606],[32.96901,-117.16598],[32.96898,-117.16594],[32.96913,-117.16524],[32.96916,-117.16501],[32.96913,-117.16451],[32.969,-117.16385],[32.96901,-117.16369],[32.969,-117.1635],[32.96875,-117.16354],[32.96866,-117.16316],[32.9687,-117.16314],[32.96876,-117.16197],[32.96876,-117.16181],[32.96833,-117.16177]]]},{"n":"Palma Real","m":"$2.15M","k":1,"r":"$1.51M&ndash;$2.3M","s":6,"u":null,"p":[[[32.96596,-117.16592],[32.96517,-117.16429],[32.9651,-117.16412],[32.96557,-117.16369],[32.96572,-117.16337],[32.96583,-117.1629],[32.96653,-117.16216],[32.96662,-117.16213],[32.96672,-117.16208],[32.96682,-117.16212],[32.96696,-117.16221],[32.96719,-117.16236],[32.96738,-117.1625],[32.96772,-117.16193],[32.96801,-117.16193],[32.96875,-117.16199],[32.96868,-117.16313],[32.96857,-117.16318],[32.9684,-117.1633],[32.96811,-117.16372],[32.96793,-117.164],[32.96768,-117.16427],[32.9664,-117.16561],[32.9663,-117.16575],[32.96628,-117.16578],[32.96602,-117.16603],[32.96596,-117.16592]]]},{"n":"Collins Ranch","m":null,"k":0,"r":"$2.64M&ndash;$3.2M","s":4,"u":null,"p":[[[32.97389,-117.1676],[32.9737,-117.16763],[32.97175,-117.16759],[32.97019,-117.16764],[32.97006,-117.16697],[32.96998,-117.16588],[32.97051,-117.16566],[32.97136,-117.1656],[32.97191,-117.16557],[32.97242,-117.16556],[32.97394,-117.16559],[32.97399,-117.16745],[32.97389,-117.1676]]]},{"n":"Maricel","m":null,"k":0,"r":"$1.73M&ndash;$2.2M","s":3,"u":null,"p":[[[32.97057,-117.15815],[32.96936,-117.15816],[32.96938,-117.15773],[32.9694,-117.15697],[32.96942,-117.1564],[32.96973,-117.15639],[32.96981,-117.1554],[32.96983,-117.15517],[32.97014,-117.15516],[32.97021,-117.1546],[32.97022,-117.15455],[32.97074,-117.15458],[32.9707,-117.15517],[32.97068,-117.15617],[32.97062,-117.15716],[32.97057,-117.15815]]]},{"n":"Terrazzo","m":null,"k":0,"r":"$2.03M&ndash;$2.32M","s":3,"u":null,"p":[[[32.96865,-117.16319],[32.96874,-117.16354],[32.9688,-117.1637],[32.96897,-117.16368],[32.96898,-117.1637],[32.9689,-117.164],[32.96862,-117.16445],[32.96832,-117.16484],[32.96739,-117.1658],[32.9666,-117.16684],[32.96653,-117.16695],[32.96603,-117.16604],[32.96621,-117.16587],[32.9663,-117.1658],[32.96643,-117.16559],[32.96713,-117.16486],[32.96763,-117.16434],[32.96794,-117.16401],[32.96815,-117.16367],[32.96841,-117.16331],[32.96864,-117.16316],[32.96865,-117.16319]]]},{"n":"Valencia Collection","m":null,"k":0,"r":"$1.67M&ndash;$2.95M","s":3,"u":null,"p":[[[32.96984,-117.1676],[32.96939,-117.16765],[32.96899,-117.16766],[32.9684,-117.16747],[32.96826,-117.16721],[32.96823,-117.1669],[32.96841,-117.16647],[32.96862,-117.1662],[32.96881,-117.1661],[32.96891,-117.166],[32.96905,-117.16601],[32.96928,-117.16606],[32.9694,-117.16608],[32.96963,-117.16593],[32.96966,-117.16647],[32.96971,-117.16697],[32.96984,-117.1676]]]}]}, C='#3f9a2a', sel=null;
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]});}
   var map=L.map('arMap',{scrollWheelZoom:false,zoomSnap:0.5});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Map &copy; Esri, HERE, Garmin, OpenStreetMap contributors'}).addTo(map);
-  var area=L.polygon(D.area,{color:C,weight:2.5,dashArray:'6 5',fill:false,interactive:false}).addTo(map);
+  // outlines are white over satellite and the area color over the street map
+  var LN='#ffffff', BM=CVBase(map);
+  var area=L.polygon(D.area,{color:LN,weight:2.5,dashArray:'6 5',fill:false,interactive:false}).addTo(map);
   var card=document.getElementById('mcard');
   var layers=D.nb.map(function(o){
-    var l=L.polygon(o.p,{color:C,weight:1.2,fillColor:C,fillOpacity:.32}).addTo(map);
+    var l=L.polygon(o.p,{color:LN,weight:1.2,fillColor:C,fillOpacity:.32}).addTo(map);
     l.bindTooltip(o.n,{sticky:true,direction:'top'});
     l.on('click',function(ev){L.DomEvent.stopPropagation(ev);pick(o,l);});
     return l;});
   function pick(o,l){
-    if(sel)sel.setStyle({weight:1.2,color:C,fillOpacity:.32});sel=l;l.setStyle({weight:3,color:'#101418',fillOpacity:.6});
+    if(sel)sel.setStyle({weight:1.2,color:LN,fillOpacity:.32});sel=l;l.setStyle({weight:3,color:'#101418',fillOpacity:.6});
     card.innerHTML='<button type="button" class="x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-m">'+(o.s?(o.m?'12-mo median '+o.m+' ('+o.k+' sold)':'No sales in the last 12 months')+'<br>'+o.s+' sold in 5 yrs: '+o.r:'No recent single-family sales')+'</div>'
       +(o.u?'<a href="'+o.u+'">Neighborhood guide &rarr;</a>':'<a href="#contact">Ask about '+esc(o.n)+'</a>');
-    card.classList.add('show');card.querySelector('.x').onclick=function(){card.classList.remove('show');l.setStyle({weight:1.2,color:C,fillOpacity:.32});sel=null;};
+    card.classList.add('show');card.querySelector('.x').onclick=function(){card.classList.remove('show');l.setStyle({weight:1.2,color:LN,fillOpacity:.32});sel=null;};
   }
-  map.on('click',function(){card.classList.remove('show');if(sel){sel.setStyle({weight:1.2,color:C,fillOpacity:.32});sel=null;}});
+  map.on('click',function(){card.classList.remove('show');if(sel){sel.setStyle({weight:1.2,color:LN,fillOpacity:.32});sel=null;}});
+  CVBase.bind(BM,document.querySelector('.ar-map .map-views'),function(k){LN=k==='sat'?'#ffffff':C;area.setStyle({color:LN});
+    layers.forEach(function(l){if(l!==sel)l.setStyle({color:LN});});});
   function fit(){map.invalidateSize();map.fitBounds(area.getBounds(),{padding:[12,12]});}
   fit();window.addEventListener('load',fit);
 })();

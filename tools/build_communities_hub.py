@@ -396,6 +396,7 @@ def main():
 </nav>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="/assets/basemap.js"></script>
 <script>
 var HUB={json.dumps(mdata, separators=(",", ":"))};
 (function(){{
@@ -406,16 +407,9 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
   function pad(p){{return wide.matches?{{padding:[p,p]}}:{{paddingTopLeft:[p,p+30],paddingBottomRight:[p,SH.offsetHeight+p]}};}}
   function esc(s){{return String(s).replace(/[&<>"]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]}});}}
   var map=L.map('map',{{scrollWheelZoom:false,zoomSnap:0.5}}).setView([32.94,-117.22],13);
-  var ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/';
-  var base={{map:L.tileLayer(ESRI+'World_Street_Map/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:19,attribution:'Map &copy; Esri, HERE, Garmin, OpenStreetMap contributors'}}),
-    sat:L.layerGroup([L.tileLayer(ESRI+'World_Imagery/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:19,attribution:'Imagery &copy; Esri, Maxar, Earthstar Geographics'}}),
-      L.tileLayer(ESRI+'Reference/World_Transportation/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:19}})])}};
-  var cur='sat'; base.sat.addTo(map);
-  document.querySelectorAll('.map-views button').forEach(function(b){{b.addEventListener('click',function(){{
-    map.removeLayer(base[cur]); cur=b.dataset.b; base[cur].addTo(map);
-    document.getElementById('map').classList.toggle('sat',cur==='sat');
-    document.querySelectorAll('.map-views button').forEach(function(x){{x.setAttribute('aria-pressed',x===b?'true':'false');}});
-    style();}});}});
+  var cur='sat', BM=CVBase(map);
+  CVBase.bind(BM,document.querySelector('.map-views'),function(k){{cur=k;
+    document.getElementById('map').classList.toggle('sat',k==='sat');style();}});
   var layers=C.map(function(o,i){{var l=L.polygon(o.p,{{weight:1.5}}).addTo(map);
     l.on('click',function(e){{L.DomEvent.stopPropagation(e);pick(i,false);}});
     l.bindTooltip(o.n,{{sticky:true,direction:'top'}});return l;}});

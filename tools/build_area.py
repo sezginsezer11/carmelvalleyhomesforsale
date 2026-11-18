@@ -244,6 +244,9 @@ def build(key, shapes, hub_comms, all_rows):
   .ar-hero p{{font-size:16px;color:#3f4852;margin-top:12px;max-width:720px}}
   .ar-map{{position:relative;z-index:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}}
   #arMap{{height:min(60vh,520px);background:#e8ecef}}
+  .map-views{{position:absolute;top:10px;right:10px;z-index:500;display:flex;background:#fff;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.18);overflow:hidden}}
+  .map-views button{{border:0;background:#fff;font:600 12.5px var(--sans);padding:7px 11px;cursor:pointer;color:#37404a}}
+  .map-views button[aria-pressed="true"]{{background:var(--lake);color:#fff}}
   .map-card{{position:absolute;left:10px;bottom:10px;right:10px;max-width:300px;z-index:500;background:#fff;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.18);padding:12px 14px;display:none}}
   .map-card.show{{display:block}}
   .map-card h3{{font-size:16px;font-weight:800;margin-right:22px}}
@@ -312,7 +315,7 @@ def build(key, shapes, hub_comms, all_rows):
 <section id="map-section" style="padding-top:28px;padding-bottom:20px">
   <div class="wrap">
     <h2 class="h3">{e(label)} neighborhoods on the map</h2>
-    <div class="ar-map"><div id="arMap" role="region" aria-label="Map of {e(label)} and its neighborhoods"></div><div class="map-card" id="mcard" aria-live="polite"></div></div>
+    <div class="ar-map"><div id="arMap" role="region" aria-label="Map of {e(label)} and its neighborhoods"></div><div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="sat" aria-pressed="true">Satellite</button><button type="button" data-b="map" aria-pressed="false">Map</button></div><div class="map-card" id="mcard" aria-live="polite"></div></div>
     <p class="note">Tap a neighborhood for what its homes sold for. Boundaries are approximate.</p>
   </div>
 </section>
@@ -380,26 +383,30 @@ def build(key, shapes, hub_comms, all_rows):
 </nav>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="/assets/basemap.js"></script>
 <script>
 (function(){{
   var D={mapdata}, C='{color}', sel=null;
   function esc(s){{return String(s).replace(/[&<>"]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]}});}}
   var map=L.map('arMap',{{scrollWheelZoom:false,zoomSnap:0.5}});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:19,attribution:'Map &copy; Esri, HERE, Garmin, OpenStreetMap contributors'}}).addTo(map);
-  var area=L.polygon(D.area,{{color:C,weight:2.5,dashArray:'6 5',fill:false,interactive:false}}).addTo(map);
+  // outlines are white over satellite and the area color over the street map
+  var LN='#ffffff', BM=CVBase(map);
+  var area=L.polygon(D.area,{{color:LN,weight:2.5,dashArray:'6 5',fill:false,interactive:false}}).addTo(map);
   var card=document.getElementById('mcard');
   var layers=D.nb.map(function(o){{
-    var l=L.polygon(o.p,{{color:C,weight:1.2,fillColor:C,fillOpacity:.32}}).addTo(map);
+    var l=L.polygon(o.p,{{color:LN,weight:1.2,fillColor:C,fillOpacity:.32}}).addTo(map);
     l.bindTooltip(o.n,{{sticky:true,direction:'top'}});
     l.on('click',function(ev){{L.DomEvent.stopPropagation(ev);pick(o,l);}});
     return l;}});
   function pick(o,l){{
-    if(sel)sel.setStyle({{weight:1.2,color:C,fillOpacity:.32}});sel=l;l.setStyle({{weight:3,color:'#101418',fillOpacity:.6}});
+    if(sel)sel.setStyle({{weight:1.2,color:LN,fillOpacity:.32}});sel=l;l.setStyle({{weight:3,color:'#101418',fillOpacity:.6}});
     card.innerHTML='<button type="button" class="x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-m">'+(o.s?(o.m?'12-mo median '+o.m+' ('+o.k+' sold)':'No sales in the last 12 months')+'<br>'+o.s+' sold in 5 yrs: '+o.r:'No recent single-family sales')+'</div>'
       +(o.u?'<a href="'+o.u+'">Neighborhood guide &rarr;</a>':'<a href="#contact">Ask about '+esc(o.n)+'</a>');
-    card.classList.add('show');card.querySelector('.x').onclick=function(){{card.classList.remove('show');l.setStyle({{weight:1.2,color:C,fillOpacity:.32}});sel=null;}};
+    card.classList.add('show');card.querySelector('.x').onclick=function(){{card.classList.remove('show');l.setStyle({{weight:1.2,color:LN,fillOpacity:.32}});sel=null;}};
   }}
-  map.on('click',function(){{card.classList.remove('show');if(sel){{sel.setStyle({{weight:1.2,color:C,fillOpacity:.32}});sel=null;}}}});
+  map.on('click',function(){{card.classList.remove('show');if(sel){{sel.setStyle({{weight:1.2,color:LN,fillOpacity:.32}});sel=null;}}}});
+  CVBase.bind(BM,document.querySelector('.ar-map .map-views'),function(k){{LN=k==='sat'?'#ffffff':C;area.setStyle({{color:LN}});
+    layers.forEach(function(l){{if(l!==sel)l.setStyle({{color:LN}});}});}});
   function fit(){{map.invalidateSize();map.fitBounds(area.getBounds(),{{padding:[12,12]}});}}
   fit();window.addEventListener('load',fit);
 }})();
