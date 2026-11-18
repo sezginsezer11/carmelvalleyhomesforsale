@@ -275,16 +275,16 @@ def main():
   .sh-grab,.sh-btn{{display:none}}
   @media(max-width:979px){{
     .map-sec{{padding:6px 0 0}}
-    .xp{{position:relative;display:block;height:calc(100svh - 250px);min-height:440px}}
+    .xp{{position:relative;display:block;height:calc(100svh - 64px);min-height:440px;padding:0}}
     .xp-map{{position:absolute;inset:0}}
-    .xp .map-box{{height:100%;border-radius:12px}}
+    .xp .map-box{{height:100%;border-radius:0}}
     .xp #map{{height:100%}}
     .xp .map-note{{display:none}}
     .xp .map-card{{top:46px;bottom:auto;left:10px;right:10px;max-width:none}}
     .xp-list{{position:absolute;left:0;right:0;bottom:0;z-index:600;height:150px;display:flex;flex-direction:column;
       background:var(--white);border-radius:16px 16px 12px 12px;box-shadow:0 -4px 18px rgba(0,0,0,.18);transition:height .25s ease}}
     .xp-list.dragging{{transition:none}}
-    .sh-head{{position:relative;flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 14px 10px;touch-action:none;cursor:grab}}
+    .sh-head{{position:relative;flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 14px 10px;touch-action:none;cursor:grab;-webkit-user-select:none;user-select:none}}
     .sh-grab{{display:block;position:absolute;top:6px;left:50%;width:38px;height:5px;margin-left:-19px;border-radius:3px;background:#c9cfd6}}
     .sh-head h2{{font-size:17px}}
     .sh-btn{{display:block;border:1px solid var(--line);background:var(--white);border-radius:100px;font:600 13px var(--sans);color:var(--lake);padding:6px 12px;cursor:pointer}}
@@ -458,17 +458,19 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
   map.on('click',function(){{mark(-1);}});
   // ---- phone pull-up panel: peek / half / full ----
   var head=document.getElementById('shHead'), btn=document.getElementById('shBtn'), state='peek';
-  function hts(){{var H=XP.clientHeight;return {{peek:150,half:Math.round(H*.55),full:H-8}};}}
+  function off(){{return wide.matches?0:Math.max(0,Math.round(XP.getBoundingClientRect().top));}}
+  function hts(){{var H=XP.clientHeight-off();return {{peek:150,half:Math.round(H*.55),full:H-8}};}}
   function snap(st){{if(wide.matches){{SH.style.height='';return;}}state=st;SH.style.height=hts()[st]+'px';
     btn.textContent=st==='full'?'Show map':'Show list';btn.setAttribute('aria-expanded',st==='peek'?'false':'true');}}
   btn.addEventListener('click',function(e){{e.stopPropagation();snap(state==='full'?'peek':'full');}});
-  var y0=null,h0=0,moved=false;
+  var y0=null,h0=0,moved=false,dragDown=0;
   head.addEventListener('pointerdown',function(e){{if(wide.matches||e.target===btn)return;y0=e.clientY;h0=SH.offsetHeight;moved=false;
     SH.classList.add('dragging');head.setPointerCapture(e.pointerId);}});
-  head.addEventListener('pointermove',function(e){{if(y0===null)return;var dy=y0-e.clientY;if(Math.abs(dy)>4)moved=true;
+  head.addEventListener('pointermove',function(e){{if(y0===null)return;var dy=y0-e.clientY;if(Math.abs(dy)>4)moved=true;dragDown=-dy;
     var t=hts();SH.style.height=Math.max(t.peek,Math.min(t.full,h0+dy))+'px';}});
   function end(){{if(y0===null)return;y0=null;SH.classList.remove('dragging');var t=hts(),h=SH.offsetHeight;
     if(!moved){{snap(state==='peek'?'half':state==='half'?'full':'peek');return;}}
+    if(state==='peek'&&h0-h<=0&&dragDown>50){{snap('peek');toTitle();return;}}
     var best='peek';['peek','half','full'].forEach(function(k){{if(Math.abs(t[k]-h)<Math.abs(t[best]-h))best=k;}});snap(best);}}
   head.addEventListener('pointerup',end);head.addEventListener('pointercancel',end);
   // opening an area raises the panel halfway so its neighborhoods show with the map above
@@ -480,7 +482,22 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
   // phones: the map fills the screen between the title and the bottom menu
   function fit(){{if(wide.matches){{XP.style.height='';return;}}var nav=document.querySelector('.bottom-nav');
     var top=XP.getBoundingClientRect().top+window.scrollY,nh=nav?nav.offsetHeight:0;
-    XP.style.height=Math.max(440,window.innerHeight-top-nh-10)+'px';map.invalidateSize();}}
+    XP.style.height=Math.max(440,window.innerHeight-nh)+'px';map.invalidateSize();}}
+  // phones: the title scrolls away and the map takes the whole screen.
+  // Touching the map or the list, or a scroll that stops part-way, settles the page on the map.
+  function xpTop(){{return XP.getBoundingClientRect().top+window.scrollY;}}
+  function toMap(){{if(wide.matches)return;var t=xpTop();if(window.scrollY<t-2)window.scrollTo({{top:t,behavior:'smooth'}});}}
+  function toTitle(){{if(wide.matches)return;if(window.__showMasthead)window.__showMasthead();window.scrollTo({{top:0,behavior:'smooth'}});}}
+  map.getContainer().addEventListener('pointerdown',toMap);
+  head.addEventListener('pointerdown',function(){{if(state!=='peek')toMap();}});
+  AX.forEach(function(d){{d.addEventListener('toggle',function(){{if(d.open)toMap();}});}});
+  // until the page settles on the map, keep the panel in view above the bottom menu
+  function lift(){{SH.style.bottom=off()+'px';if(state==='full')SH.style.height=hts().full+'px';}}
+  lift();
+  var lastY=window.scrollY,down=true,se;
+  window.addEventListener('scroll',function(){{lift();var y=window.scrollY;if(y!==lastY)down=y>lastY;lastY=y;
+    clearTimeout(se);se=setTimeout(function(){{if(wide.matches)return;var t=xpTop(),y=window.scrollY;
+      if(y>4&&y<t-2)(down?toMap:toTitle)();}},140);}},{{passive:true}});
   fit();window.addEventListener('resize',function(){{fit();snap(state);}});
   snap('peek');
   // open the area named in the URL (#area-...)
