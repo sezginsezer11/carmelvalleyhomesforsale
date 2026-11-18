@@ -416,7 +416,7 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
     var c=window.card&&card.classList.contains('show')?card.offsetHeight+10:0;
     return {{paddingTopLeft:[p,p+44],paddingBottomRight:[p,off()+hts()[state||'peek']+c+p]}};}}
   function esc(s){{return String(s).replace(/[&<>"]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]}});}}
-  var map=L.map('map',{{scrollWheelZoom:false,zoomSnap:0.5}}).setView([32.94,-117.22],13);
+  var map=L.map('map',{{scrollWheelZoom:false,zoomSnap:wide.matches?0.5:0.1}}).setView([32.94,-117.22],13);
   var cur='sat', BM=CVBase(map);
   CVBase.bind(BM,document.querySelector('.map-views'),function(k){{cur=k;
     document.getElementById('map').classList.toggle('sat',k==='sat');style();}});
@@ -424,8 +424,13 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
     l.on('click',function(e){{L.DomEvent.stopPropagation(e);pick(i,false);}});
     l.bindTooltip(o.n,{{sticky:true,direction:'top'}});return l;}});
   var all=L.latLngBounds([]);layers.forEach(function(l){{all.extend(l.getBounds());}});
-  function fitAll(){{map.invalidateSize();map.fitBounds(all,pad(16));}}
+  // phones: fill the screen width with the neighborhoods (fine zoom steps, slim side margins)
+  function fitAll(){{map.invalidateSize();map.fitBounds(all,pad(wide.matches?16:6));}}
   var touched=false;map.getContainer().addEventListener('pointerdown',function(){{touched=true;}});
+  // has the visitor panned or zoomed the map themselves? then leave their view alone
+  var userMoved=false;map.on('dragstart',function(){{userMoved=true;}});
+  map.getContainer().addEventListener('touchstart',function(e){{if(e.touches.length>1)userMoved=true;}},{{passive:true}});
+  map.on('dblclick',function(){{userMoved=true;}});
   var boot=false;
   fitAll();window.addEventListener('load',function(){{if(!area&&sel<0)fitAll();}});
   var rt;window.addEventListener('resize',function(){{clearTimeout(rt);rt=setTimeout(function(){{if(!touched&&!area&&sel<0)fitAll();else map.invalidateSize();}},150);}});
@@ -515,9 +520,14 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
   var lastY=window.scrollY,down=true,se;
   window.addEventListener('scroll',function(){{lift();var y=window.scrollY;if(y!==lastY)down=y>lastY;lastY=y;
     clearTimeout(se);se=setTimeout(function(){{if(wide.matches||boot)return;var t=xpTop(),y=window.scrollY;
-      if(y>4&&y<t-2)(down?toMap:toTitle)();}},140);}},{{passive:true}});
+      if(y>4&&y<t-2){{(down?toMap:toTitle)();return;}}
+      // settled: the map changed size on screen, so center all the neighborhoods again
+      if(!userMoved&&!area&&sel<0)fitAll();}},140);}},{{passive:true}});
   fit();window.addEventListener('resize',function(){{fit();snap(state);}});
   snap('peek');
+  // frame the neighborhoods again now that the map and panel have their final sizes
+  function refit(){{if(!userMoved&&!area&&sel<0)fitAll();}}
+  refit();setTimeout(refit,400);window.addEventListener('load',function(){{setTimeout(refit,100);}});
   // open the area named in the URL (#area-...)
   var hh=window.__area||location.hash, h=hh&&document.getElementById(decodeURIComponent(hh.slice(1)));
   // an area named in the link opens straight away, without animation;
