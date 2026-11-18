@@ -175,8 +175,9 @@ def main():
     jsonld = "\n".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
 
     # ---------- map data ----------
-    mdata = {"c": [{"n": c["n"], "a": c["sub"], "h": c.get("homes"), "u": link(c), "g": c["n"] in pages, "m": c.get("r5"), "p": c["p"]} for c in comms],
-             "areas": {k: [l, COLORS.get(k)] for k, l, _ in groups}}
+    mdata = {"c": [{"n": c["n"], "a": c["sub"], "h": c.get("homes"), "u": link(c), "g": c["n"] in pages, "m": c.get("r5"), "p": c["p"],
+                    "s": "n-" + slug(c["n"])} for c in comms],
+             "areas": {k: [l, COLORS.get(k), AREA_PAGES.get(k)] for k, l, _ in groups}}
 
     # ---------- shell from the community template ----------
     css = re.search(r"<style>(.*?)</style>", tpl, re.S).group(1)
@@ -438,7 +439,11 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
   var card=window.card=document.getElementById('mcard');
   function pick(i,zoom){{touched=true;sel=i;var o=C[i];style();
     // neighborhoods with a page: one button per section of it (live listings first, then the guide)
-    var go=o.u?'<div class="mc-acts"><a class="mc-go" href="'+o.u+'#listings">See homes &rarr;</a>'+(o.g?'<a class="mc-go mc-alt" href="'+o.u+'#location">Community guide</a>':'')+'</div>'
+    // no page of its own yet: both buttons go to its area's page (listings, and the neighborhood's row there)
+    var ap=A[o.a][2],
+      home=o.u?o.u+'#listings':ap?ap+'#listings':'',
+      guide=o.g?o.u+'#location':ap?ap+'#'+o.s:'';
+    var go=home?'<div class="mc-acts"><a class="mc-go" href="'+home+'">See homes &rarr;</a>'+(guide?'<a class="mc-go mc-alt" href="'+guide+'">Community guide</a>':'')+'</div>'
       :'<a class="mc-go" href="#contact">Ask about '+esc(o.n)+'</a>';
     card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+A[o.a][1]+'"></span>'+esc(A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'sold <b>'+o.m+'</b> (5 yrs)':'')+'</div>':'')+go;
     card.classList.add('show');card.querySelector('.mc-x').onclick=function(){{card.classList.remove('show');sel=-1;style();}};

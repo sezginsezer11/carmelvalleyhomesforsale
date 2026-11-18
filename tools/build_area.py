@@ -128,8 +128,8 @@ def build(key, shapes, hub_comms, all_rows):
         name_html = '<a href="%s">%s</a>' % (x["url"], e(x["n"])) if x["url"] else e(x["n"])
         meta = " &middot; ".join(s for s in ["%s homes" % x["homes"] if x["homes"] else "",
                                              "built " + x["built"] if x["built"] else ""] if s)
-        nb_rows += ('<tr><td class="nm">%s<span>%s</span></td><td class="num">%s</td><td class="num">%s</td></tr>'
-                    % (name_html, meta, x["sales"] or "&mdash;", span(x["prices"]) if x["prices"] else "&mdash;"))
+        nb_rows += ('<tr id="n-%s"><td class="nm">%s<span>%s</span></td><td class="num">%s</td><td class="num">%s</td></tr>'
+                    % (slug(x["n"]), name_html, meta, x["sales"] or "&mdash;", span(x["prices"]) if x["prices"] else "&mdash;"))
     priced = [x for x in nb if x["n12"] >= 3]
     lo = min(priced, key=lambda x: x["med"]) if priced else None
     hi = max(priced, key=lambda x: x["med"]) if priced else None
@@ -260,6 +260,8 @@ def build(key, shapes, hub_comms, all_rows):
   .tbl{{width:100%;border-collapse:collapse;font-size:15px}}
   .tbl th{{text-align:left;font-size:12.5px;color:var(--label);font-weight:600;padding:0 8px 8px;border-bottom:1px solid var(--line)}}
   .tbl td{{padding:11px 8px;border-bottom:1px solid var(--mist);vertical-align:top}}
+  .tbl tr[id]{{scroll-margin-top:90px}}
+  .tbl tr:target td{{background:#eef5fa}}
   .tbl .num,.tbl th.num{{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}}
   .tbl .nm{{font-weight:700}}
   .tbl .nm span,.tbl .addr span{{display:block;font-weight:400;font-size:12.5px;color:var(--label)}}

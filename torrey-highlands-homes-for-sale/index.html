@@ -693,6 +693,8 @@
   .tbl{width:100%;border-collapse:collapse;font-size:15px}
   .tbl th{text-align:left;font-size:12.5px;color:var(--label);font-weight:600;padding:0 8px 8px;border-bottom:1px solid var(--line)}
   .tbl td{padding:11px 8px;border-bottom:1px solid var(--mist);vertical-align:top}
+  .tbl tr[id]{scroll-margin-top:90px}
+  .tbl tr:target td{background:#eef5fa}
   .tbl .num,.tbl th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
   .tbl .nm{font-weight:700}
   .tbl .nm span,.tbl .addr span{display:block;font-weight:400;font-size:12.5px;color:var(--label)}
@@ -800,7 +802,7 @@
     <div>
       <h2 class="h3">Neighborhoods in Torrey Highlands</h2>
       <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 5 yrs</th><th class="num">Sold for, 5 yrs</th></tr></thead>
-      <tbody><tr><td class="nm">Fairbanks Highlands<span>93 homes &middot; built 2000&ndash;2002</span></td><td class="num">13</td><td class="num">$3.01M&ndash;$4.8M</td></tr><tr><td class="nm">Villamontes<span>124 homes &middot; built 2002&ndash;2003</span></td><td class="num">12</td><td class="num">$1.55M&ndash;$2.76M</td></tr><tr><td class="nm">Palma Real<span>82 homes &middot; built 2002&ndash;2003</span></td><td class="num">6</td><td class="num">$1.51M&ndash;$2.3M</td></tr><tr><td class="nm">Collins Ranch<span>53 homes &middot; built 2002&ndash;2003</span></td><td class="num">4</td><td class="num">$2.64M&ndash;$3.2M</td></tr><tr><td class="nm">Maricel<span>built 2012&ndash;2013</span></td><td class="num">3</td><td class="num">$1.73M&ndash;$2.2M</td></tr><tr><td class="nm">Terrazzo<span>59 homes &middot; built 2001&ndash;2003</span></td><td class="num">3</td><td class="num">$2.03M&ndash;$2.32M</td></tr><tr><td class="nm">Valencia Collection<span>8 homes &middot; built 2002</span></td><td class="num">3</td><td class="num">$1.67M&ndash;$2.95M</td></tr></tbody></table>
+      <tbody><tr id="n-fairbanks-highlands"><td class="nm">Fairbanks Highlands<span>93 homes &middot; built 2000&ndash;2002</span></td><td class="num">13</td><td class="num">$3.01M&ndash;$4.8M</td></tr><tr id="n-villamontes"><td class="nm">Villamontes<span>124 homes &middot; built 2002&ndash;2003</span></td><td class="num">12</td><td class="num">$1.55M&ndash;$2.76M</td></tr><tr id="n-palma-real"><td class="nm">Palma Real<span>82 homes &middot; built 2002&ndash;2003</span></td><td class="num">6</td><td class="num">$1.51M&ndash;$2.3M</td></tr><tr id="n-collins-ranch"><td class="nm">Collins Ranch<span>53 homes &middot; built 2002&ndash;2003</span></td><td class="num">4</td><td class="num">$2.64M&ndash;$3.2M</td></tr><tr id="n-maricel"><td class="nm">Maricel<span>built 2012&ndash;2013</span></td><td class="num">3</td><td class="num">$1.73M&ndash;$2.2M</td></tr><tr id="n-terrazzo"><td class="nm">Terrazzo<span>59 homes &middot; built 2001&ndash;2003</span></td><td class="num">3</td><td class="num">$2.03M&ndash;$2.32M</td></tr><tr id="n-valencia-collection"><td class="nm">Valencia Collection<span>8 homes &middot; built 2002</span></td><td class="num">3</td><td class="num">$1.67M&ndash;$2.95M</td></tr></tbody></table>
     </div>
     <div id="prices">
       <h2 class="h3">Prices by bedroom</h2>
