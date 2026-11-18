@@ -73,3 +73,42 @@ def school_polygons(page_name):
     """Leaflet-ready [[ [lat, lng], ... ], ...] rings for one elementary school."""
     kml = {v: k for k, v in ELEMENTARY.items()}[page_name]
     return [[[round(y, 5), round(x, 5)] for x, y in p] for n, polys in DMUSD_SHAPES if n == kml for p in polys]
+
+
+def _boundary_shapes():
+    """Each school's overall attendance boundary (the KML "<school> - BNDRY" placemark)."""
+    s = open(os.path.join(KML, "dmusd-elementary.kml"), encoding="utf-8").read()
+    out = {}
+    for pm in re.findall(r"<Placemark.*?</Placemark>", s, re.S):
+        m = re.search(r"<name>([^<]*)</name>", pm)
+        if m and m.group(1).strip().endswith("- BNDRY"):
+            out[m.group(1).split(" - ")[0].strip()] = [
+                [tuple(map(float, x.split(",")[:2])) for x in cd.split()]
+                for cd in re.findall(r"<outerBoundaryIs>.*?<coordinates>(.*?)</coordinates>", pm, re.S)]
+    return out
+
+
+BOUNDARIES = _boundary_shapes()  # {kml school name: [ring of (lng, lat)]}
+
+
+def school_boundary(page_name):
+    """Leaflet-ready outline rings of one elementary school's whole attendance area."""
+    kml = {v: k for k, v in ELEMENTARY.items()}[page_name]
+    return [[[round(y, 5), round(x, 5)] for x, y in p] for p in BOUNDARIES[kml]]
+
+
+def share_inside(rings, page_name, n=14):
+    """Share (0-1) of a community's area inside a school's boundary. rings: [[lat, lng], ...] lists."""
+    kml = {v: k for k, v in ELEMENTARY.items()}[page_name]
+    bnd = BOUNDARIES[kml]
+    pts = [p for r in rings for p in r]
+    la0, la1 = min(p[0] for p in pts), max(p[0] for p in pts)
+    lo0, lo1 = min(p[1] for p in pts), max(p[1] for p in pts)
+    inside = hit = 0
+    for i in range(n):
+        for j in range(n):
+            la, lo = la0 + (i + .5) * (la1 - la0) / n, lo0 + (j + .5) * (lo1 - lo0) / n
+            if any(_inside(lo, la, [(q[1], q[0]) for q in r]) for r in rings):
+                inside += 1
+                hit += any(_inside(lo, la, b) for b in bnd)
+    return hit / inside if inside else 0

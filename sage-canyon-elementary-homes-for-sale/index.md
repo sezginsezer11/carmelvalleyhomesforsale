@@ -4,20 +4,30 @@
 
 Source page: https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/
 
-*Del Mar Union School District · Carmel Valley*
+## Sage Canyon Elementary Homes for Sale Del Mar Union School District
 
-## Homes for Sale in the Sage Canyon Elementary Area
+16 neighborhoods · 2,264+ homes · median $3.17M
 
-Single-family homes inside the Sage Canyon Elementary attendance boundary: which neighborhoods are in it, what houses sell for, and how to confirm an address.
+## Sage Canyon neighborhoods
+
+The single-family neighborhoods inside the Sage Canyon Elementary attendance boundary, grouped by area. Tap one to find it on the map.
+
+### Carmel Country Highlands8
+
+- [Guide to Lexington →](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/)
+
+[Carmel Country Highlands area guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/)
+
+### Del Mar Mesa8
+
+[Del Mar Mesa area guide →](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/)
+
+Dashed line: the Sage Canyon Elementary attendance boundary from the Del Mar Union School District map. Neighborhood outlines are approximate. Boundaries change, so confirm any address with [the district](https://www.dmusd.org/Page/191).
 
 - **Median sale, last 12 mo:** $3.17M
 - **Sold, last 12 mo:** 36
 - **Per sq ft, last 12 mo:** $866
 - **On market, last 12 mo:** 10 days
-
-## The Sage Canyon attendance boundary
-
-Boundary from the Del Mar Union School District attendance map. Boundaries change: confirm any address with [Del Mar Union School District](https://www.dmusd.org/Page/191) before you buy.
 
 ## Carmel Valley houses for sale now
 
@@ -25,7 +35,7 @@ This search shows all of 92130. Ask me which listings are inside the Sage Canyon
 
 [Carmel Valley Single-Family Homes for Sale](https://sezsezer.realscout.com/homesearch/map?ptype=SFR&geo_type=zipcode&geo_id=92130&for_sale=1&for_rent=0)
 
-## Neighborhoods in the Sage Canyon area
+## Where homes sold in the Sage Canyon area
 
 | Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
 |---|---|---|

@@ -85,9 +85,9 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 
 ## Elementary schools
 
-- Ashley Falls Elementary — 41% of sales
+- [Ashley Falls Elementary](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/) — 41% of sales
 - Carmel Del Mar Elementary — 19% of sales
-- Sycamore Ridge Elementary — 6% of sales
+- [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) — 6% of sales
 - Other schools, mostly Solana Beach School District — 34% of sales
 
 Share of the last 5 years of sales inside each attendance area. High school is Torrey Pines High; Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with [Del Mar Union](https://www.dmusd.org/Page/191), Solana Beach SD or [San Dieguito Union HSD](https://www.sduhsd.net/about/boundary-maps).

@@ -668,20 +668,9 @@
   }
 
   /* ============ COMMUNITIES HUB ============ */
+
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .hub-intro{padding:18px 0 4px}
-  .hub-bar{display:flex;align-items:baseline;justify-content:space-between;gap:6px 16px;flex-wrap:wrap}
-  .hub-bar h1{font-size:clamp(21px,2.4vw,27px);font-weight:800;letter-spacing:-.015em;line-height:1.2}
-  .hub-bar h1 span{font-weight:500;color:var(--label);font-size:.62em;letter-spacing:0;margin-left:6px;white-space:nowrap}
-  .hub-stats{font-size:13.5px;font-weight:600;color:var(--label)}
   .map-sec{padding:12px 0 8px}
-  .chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
-  .chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--ink);font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:100px;cursor:pointer}
-  .chip:hover{border-color:var(--ac);color:var(--ink)}
-  .chip b{color:var(--label);font-weight:600}
-  .chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
-  .chip.on b{color:rgba(255,255,255,.85)}
-  .chip.on .dot{background:#fff}
   .dot{width:10px;height:10px;border-radius:50%;background:var(--ac);flex:none;display:inline-block}
   .map-box{position:relative;z-index:0;isolation:isolate;max-width:1100px;margin:0 auto;border:1px solid var(--line);border-radius:14px;overflow:hidden}
   #map{height:min(64vh,560px);background:#e8ecef}
@@ -755,6 +744,26 @@
     .xp-map{order:0;position:sticky;top:76px}
     .xp #map{height:calc(100vh - 150px);min-height:460px;max-height:820px}
   }
+  @media(max-width:760px){
+    .map-card{padding:12px 14px}
+    .map-card a.mc-go{margin-top:8px;padding:7px 12px}
+    #map{height:58vh}
+    .map-box{border-radius:10px}
+    .map-card{right:10px;max-width:none}
+  }
+
+  .hub-intro{padding:18px 0 4px}
+  .hub-bar{display:flex;align-items:baseline;justify-content:space-between;gap:6px 16px;flex-wrap:wrap}
+  .hub-bar h1{font-size:clamp(21px,2.4vw,27px);font-weight:800;letter-spacing:-.015em;line-height:1.2}
+  .hub-bar h1 span{font-weight:500;color:var(--label);font-size:.62em;letter-spacing:0;margin-left:6px;white-space:nowrap}
+  .hub-stats{font-size:13.5px;font-weight:600;color:var(--label)}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
+  .chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--ink);font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:100px;cursor:pointer}
+  .chip:hover{border-color:var(--ac);color:var(--ink)}
+  .chip b{color:var(--label);font-weight:600}
+  .chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
+  .chip.on b{color:rgba(255,255,255,.85)}
+  .chip.on .dot{background:#fff}
   .areas-wrap{padding:32px 0 8px}
   .area{padding:28px 0}
   .area + .area{border-top:1px solid var(--line)}
@@ -779,14 +788,9 @@
   @media(max-width:760px){
     .hub-intro{padding:12px 0 2px}
     .hub-bar h1 span{display:block;margin:2px 0 0}
-    .map-card{padding:12px 14px}
-    .map-card a.mc-go{margin-top:8px;padding:7px 12px}
-    #map{height:58vh}
     .chips{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding:0 2px 4px;scrollbar-width:none}
     .chips::-webkit-scrollbar{display:none}
     .chip{white-space:nowrap}
-    .map-box{border-radius:10px}
-    .map-card{right:10px;max-width:none}
     .cc-grid{grid-template-columns:1fr 1fr;gap:10px}
     .cc h4{font-size:14.5px}
     .cc-body{padding:10px 10px 12px}
@@ -794,7 +798,6 @@
   }
 </style>
 <script>
-// phones: take over links to an area (#area-...) so the browser doesn't jump into the list panel
 (function(){var h=location.hash;if(h.indexOf('#area-')===0&&window.innerWidth<980&&history.replaceState){
   window.__area=h;history.replaceState(null,'',location.pathname+location.search);}})();
 </script>
@@ -1043,7 +1046,7 @@
     <div class="bn-panel" role="dialog" aria-label="Carmel Valley schools">
       <h2>Carmel Valley Schools <button type="button" data-x aria-label="Close">&times;</button></h2>
       <div class="bn-lbl">School pages</div>
-      <a href="/sage-canyon-elementary-homes-for-sale/">Sage Canyon Elementary<span>Homes in its attendance area</span></a>
+      <a href="/sage-canyon-elementary-homes-for-sale/">Sage Canyon Elementary<span>Homes in its attendance area</span></a><a href="/pacific-sky-elementary-homes-for-sale/">Pacific Sky Elementary<span>Homes in its attendance area</span></a><a href="/ocean-air-elementary-homes-for-sale/">Ocean Air Elementary<span>Homes in its attendance area</span></a><a href="/ashley-falls-elementary-homes-for-sale/">Ashley Falls Elementary<span>Homes in its attendance area</span></a><a href="/sycamore-ridge-elementary-homes-for-sale/">Sycamore Ridge Elementary<span>Homes in its attendance area</span></a><a href="/torrey-hills-elementary-homes-for-sale/">Torrey Hills Elementary<span>Homes in its attendance area</span></a>
       <div class="bn-lbl">Assigned schools by area</div>
       <a href="/north-of-del-mar-heights-road-homes-for-sale/#schools">North of Del Mar Heights Road</a><a href="/south-of-del-mar-heights-road-homes-for-sale/#schools">South of Del Mar Heights Road</a><a href="/torrey-hills-homes-for-sale/#schools">Torrey Hills</a><a href="/carmel-country-highlands-homes-for-sale/#schools">Carmel Country Highlands</a><a href="/del-mar-mesa-homes-for-sale/#schools">Del Mar Mesa</a><a href="/torrey-highlands-homes-for-sale/#schools">Torrey Highlands</a><a href="/pacific-highlands-ranch-homes-for-sale/#schools">Pacific Highlands Ranch</a>
     </div>
@@ -1068,10 +1071,15 @@ var HUB={"c":[{"n":"Paso Fino","a":"dmm","h":12,"u":null,"g":false,"m":"$3.79M",
   var cur='sat', BM=CVBase(map);
   CVBase.bind(BM,document.querySelector('.map-views'),function(k){cur=k;
     document.getElementById('map').classList.toggle('sat',k==='sat');style();});
+  // school pages: shade everything outside the attendance boundary and outline it
+  var zone=null;
+  if(HUB.z){map.createPane('zone');map.getPane('zone').style.zIndex=390;map.getPane('zone').style.pointerEvents='none';
+    L.polygon([[[85,-180],[85,180],[-85,180],[-85,-180]]].concat(HUB.z),{pane:'zone',stroke:false,fillColor:'#0e1a24',fillOpacity:.38,interactive:false}).addTo(map);
+    zone=L.polygon(HUB.z,{pane:'zone',fill:false,weight:3,dashArray:'8 6',interactive:false}).addTo(map);}
   var layers=C.map(function(o,i){var l=L.polygon(o.p,{weight:1.5}).addTo(map);
     l.on('click',function(e){L.DomEvent.stopPropagation(e);pick(i,false);});
     l.bindTooltip(o.n,{sticky:true,direction:'top'});return l;});
-  var all=L.latLngBounds([]);layers.forEach(function(l){all.extend(l.getBounds());});
+  var all=L.latLngBounds([]);if(zone)all.extend(zone.getBounds());else layers.forEach(function(l){all.extend(l.getBounds());});
   // phones: fill the screen width with the neighborhoods (fine zoom steps, slim side margins)
   function fitAll(){map.invalidateSize();map.fitBounds(all,pad(wide.matches?16:6));}
   var touched=false;map.getContainer().addEventListener('pointerdown',function(){touched=true;});
@@ -1083,7 +1091,8 @@ var HUB={"c":[{"n":"Paso Fino","a":"dmm","h":12,"u":null,"g":false,"m":"$3.79M",
   fitAll();window.addEventListener('load',function(){if(!area&&sel<0)fitAll();});
   var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(!touched&&!area&&sel<0)fitAll();else map.invalidateSize();},150);});
   var lbl=L.layerGroup().addTo(map);
-  function style(){var sat=cur==='sat';layers.forEach(function(l,i){var o=C[i],c=A[o.a][1],dim=area&&o.a!==area,on=i===sel;
+  function style(){var sat=cur==='sat';if(zone)zone.setStyle({color:sat?'#fff':'#0b5c8c'});
+    layers.forEach(function(l,i){var o=C[i],c=A[o.a][1],dim=area&&o.a!==area,on=i===sel;
     l.setStyle({color:on?'#101418':(sat?'#fff':c),weight:on?3:1.5,fillColor:c,fillOpacity:dim?0.06:(on?0.75:(sat?0.45:0.38)),opacity:dim?0.3:1});});}
   function labels(){lbl.clearLayers();if(map.getZoom()<15)return;var b=map.getBounds();
     C.forEach(function(o,i){if(area&&o.a!==area)return;var c=layers[i].getBounds().getCenter();if(!b.contains(c))return;

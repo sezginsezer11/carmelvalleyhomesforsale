@@ -25,7 +25,9 @@ from schools import elementary_for, DMUSD  # noqa: E402
 
 # Neighborhood and school pages that exist on the site (name -> path).
 NEIGHBORHOOD_PAGES = {"Lexington": "/lexington-carmel-valley-homes-for-sale/"}
-SCHOOL_PAGES = {"Sage Canyon Elementary": "/sage-canyon-elementary-homes-for-sale/"}
+SCHOOL_PAGES = {n: "/" + re.sub(r"[^a-z0-9]+", "-", n.lower()).strip("-") + "-homes-for-sale/" for n in [
+    "Sage Canyon Elementary", "Pacific Sky Elementary", "Ocean Air Elementary", "Ashley Falls Elementary",
+    "Sycamore Ridge Elementary", "Torrey Hills Elementary"]}
 HUB = "/carmel-valley-neighborhoods/"
 # Area pages (tools/build_area.py) for every area with a boundary in tools/kml/carmel-valley-areas.kml.
 AREA_PAGES = {k: f"/{re.sub(r'[^a-z0-9]+', '-', AREA_LABELS[k].lower()).strip('-')}-homes-for-sale/"

@@ -69,7 +69,7 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 ## Elementary schools
 
 - [Sage Canyon Elementary](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/) — 91% of sales
-- Ocean Air Elementary — 9% of sales
+- [Ocean Air Elementary](https://carmelvalleyhomesforsale.com/ocean-air-elementary-homes-for-sale/) — 9% of sales
 
 Share of the last 5 years of sales inside each attendance area. High school is Torrey Pines High; Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with [Del Mar Union](https://www.dmusd.org/Page/191), Solana Beach SD or [San Dieguito Union HSD](https://www.sduhsd.net/about/boundary-maps).
 

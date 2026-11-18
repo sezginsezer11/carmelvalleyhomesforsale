@@ -96,8 +96,8 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 ## Elementary schools
 
-- Pacific Sky Elementary — 32% of sales
-- Sycamore Ridge Elementary — 8% of sales
+- [Pacific Sky Elementary](https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/) — 32% of sales
+- [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) — 8% of sales
 - Other schools, mostly Solana Beach School District — 59% of sales
 
 Share of the last 5 years of sales inside each attendance area. High school is Torrey Pines High; Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with [Del Mar Union](https://www.dmusd.org/Page/191), Solana Beach SD or [San Dieguito Union HSD](https://www.sduhsd.net/about/boundary-maps).

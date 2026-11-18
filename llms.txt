@@ -22,6 +22,11 @@ Every page listed below has a clean Markdown version at the same path (index.md)
 ## Schools
 
 - [Homes for Sale in the Sage Canyon Elementary Area](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/index.md): Houses in the Sage Canyon Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs.
+- [Homes for Sale in the Pacific Sky Elementary Area](https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/index.md): Houses in the Pacific Sky Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs.
+- [Homes for Sale in the Ocean Air Elementary Area](https://carmelvalleyhomesforsale.com/ocean-air-elementary-homes-for-sale/index.md): Houses in the Ocean Air Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs.
+- [Homes for Sale in the Ashley Falls Elementary Area](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/index.md): Houses in the Ashley Falls Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs.
+- [Homes for Sale in the Sycamore Ridge Elementary Area](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/index.md): Houses in the Sycamore Ridge Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs.
+- [Homes for Sale in the Torrey Hills Elementary Area](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/index.md): Houses in the Torrey Hills Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs.
 
 ## Neighborhoods
 
@@ -39,6 +44,11 @@ Every page listed below has a clean Markdown version at the same path (index.md)
 - [Torrey Hills Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/).
 - [Del Mar Mesa Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/).
 - [Homes for Sale in the Sage Canyon Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/).
+- [Homes for Sale in the Pacific Sky Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/).
+- [Homes for Sale in the Ocean Air Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/ocean-air-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/ocean-air-elementary-homes-for-sale/).
+- [Homes for Sale in the Ashley Falls Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/).
+- [Homes for Sale in the Sycamore Ridge Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/).
+- [Homes for Sale in the Torrey Hills Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/).
 - [Lexington Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/).
 
 ## Contact
