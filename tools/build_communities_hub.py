@@ -108,45 +108,32 @@ def main():
     def link(c):
         return pages.get(c["n"]) or ext.get(c["n"])
 
-    # ---------- area sections (static, crawlable) ----------
+    # ---------- area accordion (left column; static, crawlable) ----------
     sec = []
     for k, label, cs in groups:
         homes = sum(c.get("homes") or 0 for c in cs)
-        cards = []
+        rows = []
         for c in cs:
             u = link(c)
-            ph = photos.get(c["n"])
-            img = (f'<img src="{ph}" alt="{e(c["n"])} in Carmel Valley" loading="lazy" width="320" height="200">'
-                   if ph else '')
             meta = " &middot; ".join(x for x in [f'{c["homes"]} homes' if c.get("homes") else "",
                                                   f'sold {c["r5"]}' if c.get("r5") else ""] if x) or "Single-family homes"
-            cta = ""
+            go = ""
             if c["n"] in pages:
-                cta = '<span class="cc-cta">Community guide &rarr;</span>'
+                go = f'<a class="nr-go" href="{u}">Guide<span class="sr"> to {e(c["n"])}</span> &rarr;</a>'
             elif u:
-                cta = '<span class="cc-cta">See homes &rarr;</span>'
-            inner = (f'{img}<div class="cc-body"><h4>{e(c["n"])}</h4><div class="cc-meta">{meta}</div>'
-                     f'<button type="button" class="cc-map" data-n="{e(c["n"])}">Show on map</button>{cta}</div>')
-            if u:
-                cards.append(f'<li class="cc"><a class="cc-link" href="{u}"><span class="sr">{e(c["n"])}</span></a>{inner}</li>')
-            else:
-                cards.append(f'<li class="cc">{inner}</li>')
-        sec.append(f'''<section class="area" id="area-{slug(label)}" style="--ac:{COLORS.get(k, "#64748b")}">
-  <div class="wrap">
-    <div class="area-head">
-      <h3><span class="dot"></span>{e(label)}</h3>
-      <div class="area-stats">{len(cs)} neighborhood{"" if len(cs) == 1 else "s"}{f" &middot; {homes:,} homes" if homes else ""}</div>
-    </div>
-    <p class="area-text">{e(atext.get(k, ""))}{f' <a href="{AREA_PAGES[k]}">{e(label)} guide &rarr;</a>' if k in AREA_PAGES else ""}</p>
-    <ul class="cc-grid">
-      {"".join(cards)}
-    </ul>
+                go = f'<a class="nr-go" href="{u}">Homes<span class="sr"> in {e(c["n"])}</span> &rarr;</a>'
+            rows.append(f'<li class="nr"><button type="button" class="nr-pick" data-n="{e(c["n"])}">'
+                        f'<span class="nr-name">{e(c["n"])}</span><span class="nr-meta">{meta}</span></button>{go}</li>')
+        stats = f'{len(cs)} neighborhood{"" if len(cs) == 1 else "s"}' + (f" &middot; {homes:,} homes" if homes else "")
+        guide = f' <a href="{AREA_PAGES[k]}">{e(label)} guide &rarr;</a>' if k in AREA_PAGES else ""
+        sec.append(f'''<details class="ax" id="area-{slug(label)}" data-a="{k}" style="--ac:{COLORS.get(k, "#64748b")}">
+  <summary><span class="dot"></span><span class="ax-name">{e(label)}</span><span class="ax-n">{len(cs)}</span><svg class="ax-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+  <div class="ax-body">
+    <p class="ax-text">{e(atext.get(k, ""))}{guide}</p>
+    <p class="ax-stats">{stats}</p>
+    <ul class="nr-list">{"".join(rows)}</ul>
   </div>
-</section>''')
-
-    chips = "".join(
-        f'<a class="chip" href="#area-{slug(l)}" data-a="{k}" style="--ac:{COLORS.get(k)}"><span class="dot"></span>{e(SHORT.get(k, l))} <b>{len(cs)}</b></a>'
-        for k, l, cs in groups)
+</details>''')
 
     # ---------- FAQ ----------
     biggest = max(groups, key=lambda g: len(g[2]))
@@ -261,6 +248,37 @@ def main():
   .leaflet-tooltip.lbl{{background:none;border:0;box-shadow:none;padding:0;color:#101418;font-weight:700;font-size:11.5px;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 2px #fff;white-space:nowrap}}
   .leaflet-tooltip.lbl::before{{display:none}}
   .sat .leaflet-tooltip.lbl{{color:#fff;text-shadow:0 0 3px #000,0 0 3px #000,0 0 2px #000}}
+  /* explorer: area list left, sticky map right (stacked on phones) */
+  .xp{{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}}
+  .xp-map{{order:-1}}
+  .xp-list h2{{font-size:20px;font-weight:800;letter-spacing:-.01em}}
+  .xp-list .xp-hint{{font-size:14px;color:var(--label);margin:4px 0 12px}}
+  .ax{{border:1px solid var(--line);border-left:4px solid var(--ac);border-radius:10px;background:var(--white);margin-bottom:8px;overflow:hidden}}
+  .ax summary{{list-style:none;display:flex;align-items:center;gap:10px;padding:13px 14px;cursor:pointer;font-weight:700;font-size:16px}}
+  .ax summary::-webkit-details-marker{{display:none}}
+  .ax summary:hover{{background:var(--paper)}}
+  .ax-name{{flex:1;min-width:0}}
+  .ax-n{{font-size:13px;font-weight:600;color:var(--label);background:var(--paper);border-radius:100px;padding:2px 9px}}
+  .ax-chev{{width:18px;height:18px;fill:none;stroke:var(--label);stroke-width:2;transition:transform .2s}}
+  .ax[open] .ax-chev{{transform:rotate(180deg)}}
+  .ax[open] summary{{border-bottom:1px solid var(--line)}}
+  .ax-body{{padding:12px 14px 6px}}
+  .ax-text{{font-size:14.5px;color:#333a42;line-height:1.5}}
+  .ax-stats{{font-size:13px;font-weight:600;color:var(--label);margin:8px 0 6px}}
+  .nr-list{{list-style:none}}
+  .nr{{display:flex;align-items:center;gap:8px;border-top:1px solid var(--line)}}
+  .nr-pick{{flex:1;min-width:0;text-align:left;border:0;background:none;padding:10px 4px;cursor:pointer;font:inherit;color:var(--ink);display:flex;flex-direction:column;gap:1px;border-radius:6px}}
+  .nr-name{{font-weight:700;font-size:15px}}
+  .nr-meta{{font-size:13px;color:var(--label)}}
+  .nr-pick:hover .nr-name,.nr.on .nr-name{{color:var(--lake)}}
+  .nr.on{{background:#eef5fa}}
+  .nr-go{{flex:none;font-size:13px;font-weight:700;color:var(--lake);padding:6px 6px;white-space:nowrap}}
+  .xp .map-box{{max-width:none}}
+  @media(min-width:980px){{
+    .xp{{grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:24px;align-items:start}}
+    .xp-map{{order:0;position:sticky;top:76px}}
+    .xp #map{{height:calc(100vh - 150px);min-height:460px;max-height:820px}}
+  }}
   .areas-wrap{{padding:32px 0 8px}}
   .area{{padding:28px 0}}
   .area + .area{{border-top:1px solid var(--line)}}
@@ -321,21 +339,22 @@ def main():
 </section>
 
 <section class="map-sec" id="map-section">
-  <div class="wrap">
-    <div class="chips" id="chips">{chips}</div>
-    <div class="map-box">
-      <div id="map" role="region" aria-label="Map of Carmel Valley single-family neighborhoods"></div>
-      <div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="map" aria-pressed="true">Map</button><button type="button" data-b="sat" aria-pressed="false">Satellite</button></div>
-      <div class="map-card" id="mcard" aria-live="polite"></div>
+  <div class="wrap xp">
+    <div class="xp-list" id="areas">
+      <h2>Neighborhoods by Area</h2>
+      <p class="xp-hint">Open an area to see its neighborhoods. Tap a neighborhood to find it on the map.</p>
+{chr(10).join(sec)}
     </div>
-    <p class="map-note">Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for over the last 5 years.</p>
+    <div class="xp-map">
+      <div class="map-box">
+        <div id="map" role="region" aria-label="Map of Carmel Valley single-family neighborhoods"></div>
+        <div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="map" aria-pressed="true">Map</button><button type="button" data-b="sat" aria-pressed="false">Satellite</button></div>
+        <div class="map-card" id="mcard" aria-live="polite"></div>
+      </div>
+      <p class="map-note">Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for over the last 5 years.</p>
+    </div>
   </div>
 </section>
-
-<div class="areas-wrap" id="areas">
-<div class="wrap"><div class="sec-head" style="margin-bottom:8px"><h2>Neighborhoods by Area</h2><p>Each area has its own age of homes, lot sizes and prices. Start with the area, then compare the neighborhoods in it.</p></div></div>
-{chr(10).join(sec)}
-</div>
 
 <section class="faq" id="faq">
   <div class="wrap">
@@ -397,15 +416,34 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
     card.classList.add('show');card.querySelector('.mc-x').onclick=function(){{card.classList.remove('show');sel=-1;style();}};
     if(zoom)map.flyToBounds(layers[i].getBounds(),{{maxZoom:16,duration:.6,padding:[40,40]}});}}
   map.on('click',function(){{card.classList.remove('show');sel=-1;style();}});
-  function setArea(k){{touched=true;area=(area===k)?null:k;
-    document.querySelectorAll('#chips .chip').forEach(function(c){{c.classList.toggle('on',c.dataset.a===area);}});
-    var b=L.latLngBounds([]);layers.forEach(function(l,i){{if(!area||C[i].a===area)b.extend(l.getBounds());}});
-    map.flyToBounds(b,{{padding:[20,20],duration:.6}});card.classList.remove('show');sel=-1;style();labels();}}
-  document.querySelectorAll('#chips .chip').forEach(function(c){{c.addEventListener('click',function(e){{e.preventDefault();setArea(c.dataset.a);}});}});
-  document.querySelectorAll('.cc-map').forEach(function(b){{b.addEventListener('click',function(){{
+  var AX=Array.prototype.slice.call(document.querySelectorAll('.ax')), quiet=false;
+  var wide=window.matchMedia('(min-width:980px)');
+  var PICKS=Array.prototype.slice.call(document.querySelectorAll('.nr-pick'));
+  function rowFor(i){{for(var k=0;k<PICKS.length;k++)if(PICKS[k].dataset.n===C[i].n)return PICKS[k];return null;}}
+  function mark(i){{document.querySelectorAll('.nr.on').forEach(function(r){{r.classList.remove('on');}});
+    var b=i>=0&&rowFor(i);if(b)b.parentNode.classList.add('on');return b;}}
+  function setArea(k,fly){{touched=true;area=k;card.classList.remove('show');sel=-1;mark(-1);style();labels();
+    if(fly){{var b=L.latLngBounds([]);layers.forEach(function(l,i){{if(!area||C[i].a===area)b.extend(l.getBounds());}});
+      map.flyToBounds(b,{{padding:[20,20],duration:.6}});}}}}
+  AX.forEach(function(d){{d.addEventListener('toggle',function(){{
+    if(quiet)return;
+    if(d.open){{quiet=true;AX.forEach(function(o){{if(o!==d)o.open=false;}});quiet=false;setArea(d.dataset.a,true);}}
+    else if(area===d.dataset.a){{setArea(null,false);fitAll();}}}});}});
+  // map click on a neighborhood: open its area in the list and highlight the row
+  var pick0=pick;pick=function(i,zoom){{
+    var d=document.querySelector('.ax[data-a="'+C[i].a+'"]');
+    if(d&&!d.open){{quiet=true;AX.forEach(function(o){{o.open=o===d;}});quiet=false;area=C[i].a;labels();}}
+    pick0(i,zoom);var b=mark(i);
+    if(b&&!zoom&&wide.matches)b.scrollIntoView({{block:'nearest',behavior:'smooth'}});}};
+  document.querySelectorAll('.nr-pick').forEach(function(b){{
     var i=C.findIndex(function(o){{return o.n===b.dataset.n;}});if(i<0)return;
-    if(area&&C[i].a!==area){{area=null;document.querySelectorAll('#chips .chip').forEach(function(c){{c.classList.remove('on');}});}}
-    document.getElementById('map-section').scrollIntoView({{behavior:'smooth',block:'start'}});pick(i,true);}});}});
+    b.addEventListener('click',function(){{if(!wide.matches)document.getElementById('map').scrollIntoView({{behavior:'smooth',block:'center'}});pick(i,true);}});
+    b.addEventListener('mouseenter',function(){{if(sel<0){{layers[i].setStyle({{color:'#101418',weight:3,fillOpacity:.7}});}}}});
+    b.addEventListener('mouseleave',function(){{if(sel<0)style();}});}});
+  map.on('click',function(){{mark(-1);}});
+  // open the area named in the URL (#area-...)
+  var h=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if(h&&h.classList.contains('ax'))h.open=true;
   style();
 }})();
 </script>
