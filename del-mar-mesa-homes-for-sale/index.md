@@ -44,25 +44,19 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 | Palacio Del Mar — 422 homes | — | — |
 | Silver Oaks Estates / Anderson Estates — 8 homes | — | — |
 
-## Prices by bedroom
+## Prices by home size
 
-### 4 bedrooms
+### 4,000–5,000 sq ft
 
-**$2.8M–$5.1M**
+**$3.87M–$5.1M**
 
-8 sales · last sold $3.79M, Sep 2026
+11 sales · about $927/sq ft · last sold $4.28M, Aug 2026
 
-### 5 bedrooms
+### 5,000+ sq ft
 
-**$3.87M–$6.15M**
+**$3.63M–$10.9M**
 
-31 sales · last sold $4.28M, Aug 2026
-
-### 6 bedrooms
-
-**$3.77M–$10.9M**
-
-13 sales · last sold $4.75M, Mar 2026
+42 sales · about $762/sq ft · last sold $5.25M, Aug 2026
 
 56 single-family sales inside Del Mar Mesa, last 5 years, as of November 18, 2026.
 

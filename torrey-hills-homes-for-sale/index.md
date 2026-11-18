@@ -47,37 +47,31 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 | Vantage Point — 24 homes · built 2001–2003 | 3 | $2.2M–$2.56M |
 | Sea Country — 53 homes · built 2000–2001 | 2 | $2.5M–$2.9M |
 
-## Prices by bedroom
+## Prices by home size
 
-### 2 bedrooms
+### Under 2,000 sq ft
 
-**$1.3M–$1.6M**
+**$1.3M–$2.17M**
 
-6 sales · last sold $1.6M, Apr 2026
+20 sales · about $937/sq ft · last sold $1.6M, Apr 2026
 
-### 3 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.32M–$2.45M**
+**$1.58M–$3.54M**
 
-20 sales · last sold $1.84M, Aug 2026
+52 sales · about $864/sq ft · last sold $3.54M, Nov 2026
 
-### 4 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.68M–$4.8M**
+**$1.95M–$4.8M**
 
-59 sales · last sold $3.54M, Nov 2026
+34 sales · about $788/sq ft · last sold $2.97M, Oct 2026
 
-### 5 bedrooms
+### 4,000–5,000 sq ft
 
-**$1.9M–$3.7M**
+**$2.53M–$4.4M**
 
-27 sales · last sold $2.75M, Sep 2026
-
-### 6 bedrooms
-
-**$3.1M–$4.4M**
-
-3 sales · last sold $4.4M, Jan 2024
+9 sales · about $670/sq ft · last sold $2.84M, Feb 2026
 
 115 single-family sales inside Torrey Hills, last 5 years, as of November 18, 2026.
 

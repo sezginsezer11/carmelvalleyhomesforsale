@@ -807,6 +807,13 @@
 (function(){var h=location.hash;if(h.indexOf('#area-')===0&&window.innerWidth<980&&history.replaceState){
   window.__area=h;history.replaceState(null,'',location.pathname+location.search);}})();
 </script>
+<style id="bn-style">
+  @media(max-width:760px){
+    .bottom-nav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      gap:2px;padding:5px 1px;color:#8b909a;font:600 9.5px/1.1 var(--sans,system-ui);text-align:center;white-space:nowrap}
+    .bottom-nav .is-here{color:var(--lake,#0b5c8c)}
+  }
+</style>
 </head>
 <body>
 
@@ -912,8 +919,8 @@
       <p class="note">From where homes sold in the last 5 years.</p>
     </div>
     <div id="prices">
-      <h2 class="h3">Prices by bedroom</h2>
-      <div class="bcs"><div class="bc"><div class="bc-h"><h3>4 bedrooms</h3><b>$1.89M&ndash;$3.1M</b></div><div class="bc-bar"><i style="width:100%"></i></div><div class="bc-m">28 sales &middot; last sold $2.5M, Aug 2026</div></div><div class="bc"><div class="bc-h"><h3>5 bedrooms</h3><b>$1.9M&ndash;$3.22M</b></div><div class="bc-bar"><i style="width:43%"></i></div><div class="bc-m">12 sales &middot; last sold $2.56M, Sep 2025</div></div></div>
+      <h2 class="h3">Prices by home size</h2>
+      <div class="bcs"><div class="bc"><div class="bc-h"><h3>2,000&ndash;3,000 sq ft</h3><b>$1.89M&ndash;$2.65M</b></div><div class="bc-bar"><i style="width:100%"></i></div><div class="bc-m">29 sales &middot; about $826/sq ft &middot; last sold $2.5M, Aug 2026</div></div><div class="bc"><div class="bc-h"><h3>3,000&ndash;4,000 sq ft</h3><b>$1.95M&ndash;$3.22M</b></div><div class="bc-bar"><i style="width:45%"></i></div><div class="bc-m">13 sales &middot; about $768/sq ft &middot; last sold $3.1M, Feb 2026</div></div></div>
       <p class="note">What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.</p>
     </div>
   </div>
@@ -1029,11 +1036,11 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://carmelvalleyhomesforsale.com/"}, {"@type": "ListItem", "position": 2, "name": "Torrey Hills Elementary Area Homes", "item": "https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a house in the Torrey Hills Elementary area cost?", "acceptedAnswer": {"@type": "Answer", "text": "In the last 12 months, 8 single-family homes in the Torrey Hills Elementary attendance area sold at a median of $2,445,000 (about $829 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 42 sold for between $1,890,000 and $3,224,000."}}, {"@type": "Question", "name": "Which neighborhoods are in the Torrey Hills Elementary area?", "acceptedAnswer": {"@type": "Answer", "text": "Based on where homes have sold, the area includes Torrey View, Shores, Searidge, St. Augustine, Torrey Point, La Strada, Vantage Point, Sea Country. Torrey View has had the most sales. Boundaries can split a neighborhood, so check the exact address."}}, {"@type": "Question", "name": "What middle and high school go with Torrey Hills Elementary?", "acceptedAnswer": {"@type": "Answer", "text": "High school is Torrey Pines High (San Dieguito Union HSD); Canyon Crest Academy and San Dieguito Academy are available by lottery. Middle school depends on the address, so confirm it with San Dieguito Union HSD."}}, {"@type": "Question", "name": "How do I confirm a home is in the Torrey Hills Elementary boundary?", "acceptedAnswer": {"@type": "Answer", "text": "Use the Del Mar Union School District school locator with the exact address before you make an offer. Boundaries change, and this map is for research only."}}, {"@type": "Question", "name": "How fast do homes sell in the Torrey Hills Elementary area?", "acceptedAnswer": {"@type": "Answer", "text": "Over the last 12 months, the median home sold in 23 days on market. Homes in sought-after school areas often go under contract in the first week."}}]}</script>
 
-<nav class="bottom-nav" aria-label="Jump to section">
-  <a href="#map-section"><svg viewBox="0 0 24 24"><path d="M12 21s7-7.1 7-12a7 7 0 0 0-14 0c0 4.9 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Map</a>
-  <a href="#neighborhoods"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Areas</a>
-  <a href="#sold"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Sold</a>
-  <a href="#contact"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Contact</a>
+<nav class="bottom-nav" aria-label="Site menu">
+  <a href="#expand-map"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h5"/><circle cx="16" cy="16" r="3.2"/><path d="m18.4 18.4 2.6 2.6"/></svg>Homes for sale</a>
+  <a href="/carmel-valley-neighborhoods/"><svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Neighborhoods</a>
+  <a href="/carmel-valley-schools/" class="is-here" aria-current="page"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>Schools</a>
+  <a href="#prices"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Home prices</a>
   <a href="#" class="bn-menu" onclick="event.preventDefault();window.__showMasthead&&window.__showMasthead();document.getElementById('pnav').classList.toggle('open')"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Menu</a>
 </nav>
 
@@ -1239,6 +1246,13 @@ var HUB={"c":[{"n":"Sea Country","a":"th","h":53,"u":null,"g":false,"m":"$2.5M&n
   }, {passive:true});
   window.__showMasthead = function(){ setHidden(false); };
 })();
+</script>
+<script id="bn-script">
+(function(){var n=document.getElementById('pnav');if(!n)return;
+  function shut(){n.classList.remove('open');}
+  document.addEventListener('click',function(e){if(!n.classList.contains('open'))return;
+    if(e.target.closest('.bn-menu'))return;if(n.contains(e.target)&&!e.target.closest('a'))return;shut();},true);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')shut();});})();
 </script>
 </body>
 </html>

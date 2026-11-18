@@ -10,7 +10,7 @@ Source page: https://carmelvalleyhomesforsale.com/carmel-valley-schools/
 
 ## Carmel Valley Schools
 
-Carmel Valley school attendance areas. Pick Elementary, Middle or High on the map, open a district, then tap a school to see its area.
+Carmel Valley school attendance areas. Pick Elementary, Middle or High, open a district, then tap a school to see its area.
 
 ### Del Mar Union School District7
 
@@ -23,9 +23,9 @@ Carmel Valley school attendance areas. Pick Elementary, Middle or High on the ma
 
 ### Solana Beach School District4
 
-### Middle schools3
+### San Dieguito Union High School District3
 
-### High school1
+### San Dieguito Union High School District1
 
 Elementary areas from the Del Mar Union School District map and the Solana Beach School District school locator; middle and high school areas from the 2015–16 San Dieguito Union HSD map (middle-school areas overlap in it). Boundaries change, so confirm any address with the district.
 

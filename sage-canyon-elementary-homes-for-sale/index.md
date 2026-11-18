@@ -57,37 +57,37 @@ This search shows all of 92130. Ask me which listings are inside the Sage Canyon
 
 From where homes sold in the last 5 years. 3 more sales had no neighborhood name.
 
-## Prices by bedroom
+## Prices by home size
 
-### 3 bedrooms
+### Under 2,000 sq ft
 
-**$1.93M–$3.63M**
+**$1.37M–$2.18M**
 
-4 sales · last sold $1.98M, May 2026
+7 sales · about $994/sq ft · last sold $2.11M, Sep 2026
 
-### 4 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.37M–$5.1M**
+**$1.69M–$3.48M**
 
-48 sales · last sold $2.33M, Sep 2026
+56 sales · about $870/sq ft · last sold $2.34M, Oct 2026
 
-### 5 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.69M–$5.93M**
+**$2.2M–$3.7M**
 
-91 sales · last sold $3.1M, Oct 2026
+47 sales · about $787/sq ft · last sold $3.1M, Oct 2026
 
-### 6 bedrooms
+### 4,000–5,000 sq ft
 
-**$2.26M–$6.75M**
+**$2.6M–$5.93M**
 
-27 sales · last sold $3.5M, Oct 2026
+30 sales · about $755/sq ft · last sold $3.5M, Oct 2026
 
-### 7 bedrooms
+### 5,000+ sq ft
 
-**$3.35M–$3.45M**
+**$3.63M–$6.75M**
 
-3 sales · last sold $3.35M, Mar 2026
+34 sales · about $757/sq ft · last sold $5.25M, Aug 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 

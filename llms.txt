@@ -12,13 +12,13 @@ Every page listed below has a clean Markdown version at the same path (index.md)
 
 ## Areas
 
-- [Pacific Highlands Ranch Homes for Sale](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/index.md): Pacific Highlands Ranch: Carmel Valley's newest homes, east of the SR-56 - 12-month prices, neighborhoods, prices by bedroom, schools, Mello-Roos, FAQs.
-- [North of Del Mar Heights Road Homes for Sale](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/index.md): North of Del Mar Heights Road - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
-- [South of Del Mar Heights Road Homes for Sale](https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/index.md): South of Del Mar Heights Road - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
-- [Carmel Country Highlands Homes for Sale](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/index.md): Carmel Country Highlands: larger homes on bigger lots - 12-month prices, neighborhoods, prices by bedroom, schools, FAQs.
-- [Torrey Highlands Homes for Sale](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/index.md): Torrey Highlands - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
-- [Torrey Hills Homes for Sale](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/index.md): Torrey Hills - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
-- [Del Mar Mesa Homes for Sale](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): Del Mar Mesa - 12-month prices, neighborhoods, prices by bedroom, schools, recent sales, FAQs.
+- [Pacific Highlands Ranch Homes for Sale](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/index.md): Pacific Highlands Ranch: Carmel Valley's newest homes, east of the SR-56 - 12-month prices, neighborhoods, prices by home size, schools, Mello-Roos, FAQs.
+- [North of Del Mar Heights Road Homes for Sale](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/index.md): North of Del Mar Heights Road - 12-month prices, neighborhoods, prices by home size, schools, recent sales, FAQs.
+- [South of Del Mar Heights Road Homes for Sale](https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/index.md): South of Del Mar Heights Road - 12-month prices, neighborhoods, prices by home size, schools, recent sales, FAQs.
+- [Carmel Country Highlands Homes for Sale](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/index.md): Carmel Country Highlands: larger homes on bigger lots - 12-month prices, neighborhoods, prices by home size, schools, FAQs.
+- [Torrey Highlands Homes for Sale](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/index.md): Torrey Highlands - 12-month prices, neighborhoods, prices by home size, schools, recent sales, FAQs.
+- [Torrey Hills Homes for Sale](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/index.md): Torrey Hills - 12-month prices, neighborhoods, prices by home size, schools, recent sales, FAQs.
+- [Del Mar Mesa Homes for Sale](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): Del Mar Mesa - 12-month prices, neighborhoods, prices by home size, schools, recent sales, FAQs.
 
 ## Schools
 

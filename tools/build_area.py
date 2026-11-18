@@ -24,7 +24,7 @@ import sys
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(TOOLS)
 sys.path.insert(0, TOOLS)
-from sold_data import load_sales, AREA_LABELS  # noqa: E402
+from sold_data import size_cards, load_sales, AREA_LABELS  # noqa: E402
 from schools import _placemarks, _inside, elementary_for, DMUSD_URL, SDUHSD_URL  # noqa: E402
 from make_neighborhood import NEIGHBORHOOD_PAGES, SCHOOL_PAGES, slug  # noqa: E402
 from build_communities_hub import load as load_hub, AREA_TEXT, COLORS  # noqa: E402
@@ -134,17 +134,8 @@ def build(key, shapes, hub_comms, all_rows):
     lo = min(priced, key=lambda x: x["med"]) if priced else None
     hi = max(priced, key=lambda x: x["med"]) if priced else None
 
-    # price by bedroom
-    beds = collections.defaultdict(list)
-    for r in five:
-        if r.get("beds_total"):
-            beds[r["beds_total"]].append(r)  # newest first
-    top = max(len(v) for v in beds.values())
-    bed_cards = "".join(
-        f'<div class="bc"><div class="bc-h"><h3>{b} bedrooms</h3><b>{span([r["close_price"] for r in g])}</b></div>'
-        f'<div class="bc-bar"><i style="width:{round(100 * len(g) / top)}%"></i></div>'
-        f'<div class="bc-m">{len(g)} sales &middot; last sold {short(g[0]["close_price"])}, {g[0]["_d"].strftime("%b")} {g[0]["_d"].year}</div></div>'
-        for b, g in sorted(beds.items()) if len(g) >= 3)
+    # price by home size
+    bed_cards = size_cards(five, span, short)
 
     # schools
     elem = collections.Counter(elementary_for(r.get("lat"), r.get("lng")) for r in five)
@@ -340,7 +331,7 @@ def build(key, shapes, hub_comms, all_rows):
       <tbody>{nb_rows}</tbody></table>
     </div>
     <div id="prices">
-      <h2 class="h3">Prices by bedroom</h2>
+      <h2 class="h3">Prices by home size</h2>
       <div class="bcs">{bed_cards}</div>
       <p class="note">{len(five)} single-family sales inside {e(label)}, last 5 years, as of {stamp}.</p>
     </div>

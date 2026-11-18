@@ -37,25 +37,31 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 | Terrazzo — 59 homes · built 2001–2003 | 3 | $2.03M–$2.32M |
 | Valencia Collection — 8 homes · built 2002 | 3 | $1.67M–$2.95M |
 
-## Prices by bedroom
+## Prices by home size
 
-### 3 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.55M–$3.01M**
+**$1.51M–$2.2M**
 
-8 sales · last sold $1.95M, Sep 2026
+14 sales · about $743/sq ft · last sold $1.95M, Sep 2026
 
-### 4 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.51M–$3.45M**
+**$1.97M–$3.45M**
 
-15 sales · last sold $1.76M, Jun 2026
+13 sales · about $620/sq ft · last sold $2.15M, Nov 2025
 
-### 5 bedrooms
+### 4,000–5,000 sq ft
 
-**$2.03M–$4.8M**
+**$2.8M–$4.4M**
 
-21 sales · last sold $4.2M, Jun 2026
+9 sales · about $745/sq ft · last sold $4.2M, Jun 2026
+
+### 5,000+ sq ft
+
+**$2.37M–$4.8M**
+
+8 sales · about $714/sq ft · last sold $4.75M, Sep 2025
 
 44 single-family sales inside Torrey Highlands, last 5 years, as of November 18, 2026.
 

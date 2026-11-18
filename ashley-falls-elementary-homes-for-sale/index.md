@@ -47,25 +47,25 @@ This search shows all of 92130. Ask me which listings are inside the Ashley Fall
 
 From where homes sold in the last 5 years.
 
-## Prices by bedroom
+## Prices by home size
 
-### 4 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.4M–$3.8M**
+**$1.4M–$2.6M**
 
-35 sales · last sold $3.44M, Sep 2026
+24 sales · about $858/sq ft · last sold $2.57M, Sep 2026
 
-### 5 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.87M–$4M**
+**$1.98M–$3.4M**
 
-42 sales · last sold $2.65M, Sep 2026
+49 sales · about $773/sq ft · last sold $2.65M, Sep 2026
 
-### 6 bedrooms
+### 4,000–5,000 sq ft
 
-**$2.23M–$3.33M**
+**$2.43M–$4M**
 
-7 sales · last sold $3.33M, Feb 2026
+13 sales · about $770/sq ft · last sold $3.44M, Sep 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 

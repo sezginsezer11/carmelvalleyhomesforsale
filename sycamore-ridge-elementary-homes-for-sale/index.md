@@ -57,25 +57,31 @@ This search shows all of 92130. Ask me which listings are inside the Sycamore Ri
 
 From where homes sold in the last 5 years.
 
-## Prices by bedroom
+## Prices by home size
 
-### 4 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.8M–$4.3M**
+**$1.8M–$2.6M**
 
-22 sales · last sold $3.79M, Sep 2026
+23 sales · about $867/sq ft · last sold $2.49M, Jul 2026
 
-### 5 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.85M–$6.15M**
+**$2.32M–$3.79M**
 
-21 sales · last sold $2.49M, Jul 2026
+10 sales · about $719/sq ft · last sold $3.79M, Sep 2026
 
-### 6 bedrooms
+### 4,000–5,000 sq ft
 
-**$2.4M–$10.9M**
+**$2.55M–$4.35M**
 
-5 sales · last sold $5.9M, Jul 2024
+9 sales · about $793/sq ft · last sold $3.04M, Jun 2026
+
+### 5,000+ sq ft
+
+**$4.15M–$10.9M**
+
+8 sales · about $851/sq ft · last sold $6.15M, Nov 2025
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 

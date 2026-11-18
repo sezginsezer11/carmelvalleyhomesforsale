@@ -55,31 +55,31 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 | Promontory — 190 homes · built 1998 | 1 | $2.85M |
 | Verona — 8 homes | — | — |
 
-## Prices by bedroom
+## Prices by home size
 
-### 3 bedrooms
+### Under 2,000 sq ft
 
-**$1.34M–$2.6M**
+**$1.34M–$2.25M**
 
-34 sales · last sold $2.1M, Nov 2026
+22 sales · about $1,050/sq ft · last sold $1.9M, Sep 2026
 
-### 4 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.4M–$3.8M**
+**$1.4M–$2.82M**
 
-91 sales · last sold $3.44M, Sep 2026
+94 sales · about $871/sq ft · last sold $2.1M, Nov 2026
 
-### 5 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.85M–$4M**
+**$1.98M–$3.4M**
 
-73 sales · last sold $3.13M, Oct 2026
+78 sales · about $756/sq ft · last sold $3.13M, Oct 2026
 
-### 6 bedrooms
+### 4,000–5,000 sq ft
 
-**$2.2M–$3.33M**
+**$2.43M–$4M**
 
-11 sales · last sold $3.33M, Feb 2026
+17 sales · about $708/sq ft · last sold $3.44M, Sep 2026
 
 211 single-family sales inside South of Del Mar Heights Road, last 5 years, as of November 18, 2026.
 

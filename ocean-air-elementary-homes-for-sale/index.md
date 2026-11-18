@@ -50,37 +50,31 @@ This search shows all of 92130. Ask me which listings are inside the Ocean Air b
 
 From where homes sold in the last 5 years. 6 more sales had no neighborhood name.
 
-## Prices by bedroom
+## Prices by home size
 
-### 2 bedrooms
+### Under 2,000 sq ft
 
-**$1.3M–$1.6M**
+**$1.3M–$2.17M**
 
-6 sales · last sold $1.6M, Apr 2026
+21 sales · about $926/sq ft · last sold $1.6M, Apr 2026
 
-### 3 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.32M–$2.22M**
+**$1.58M–$3.54M**
 
-19 sales · last sold $1.84M, Aug 2026
+25 sales · about $902/sq ft · last sold $3.54M, Nov 2026
 
-### 4 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.68M–$4.8M**
+**$2.2M–$4.8M**
 
-35 sales · last sold $3.54M, Nov 2026
+27 sales · about $802/sq ft · last sold $2.97M, Oct 2026
 
-### 5 bedrooms
+### 4,000–5,000 sq ft
 
-**$2.2M–$3.7M**
+**$2.53M–$4.4M**
 
-20 sales · last sold $2.75M, Sep 2026
-
-### 6 bedrooms
-
-**$3.1M–$4.4M**
-
-3 sales · last sold $4.4M, Jan 2024
+10 sales · about $670/sq ft · last sold $2.84M, Feb 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 

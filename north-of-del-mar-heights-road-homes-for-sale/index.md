@@ -49,31 +49,31 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 | Stratford | — | — |
 | Windmill Estates — 6 homes | — | — |
 
-## Prices by bedroom
+## Prices by home size
 
-### 3 bedrooms
+### Under 2,000 sq ft
 
-**$1.38M–$2.65M**
+**$1.38M–$2.28M**
 
-20 sales · last sold $2.61M, Sep 2026
+14 sales · about $1,097/sq ft · last sold $2.1M, Jul 2026
 
-### 4 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.58M–$3.5M**
+**$1.58M–$2.96M**
 
-54 sales · last sold $2.85M, Oct 2026
+38 sales · about $940/sq ft · last sold $2.61M, Sep 2026
 
-### 5 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.72M–$4.03M**
+**$2.05M–$3.7M**
 
-43 sales · last sold $2.78M, Oct 2026
+55 sales · about $850/sq ft · last sold $2.78M, Oct 2026
 
-### 6 bedrooms
+### 4,000–5,000 sq ft
 
-**$2.88M–$3.43M**
+**$2.87M–$4.03M**
 
-4 sales · last sold $3.43M, Feb 2026
+12 sales · about $798/sq ft · last sold $2.87M, Oct 2026
 
 121 single-family sales inside North of Del Mar Heights Road, last 5 years, as of November 18, 2026.
 

@@ -38,31 +38,25 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 | Saratoga — 114 homes · built 2006–2007 | 6 | $2.15M–$3.05M |
 | Bridle Ridge — 53 homes · built 2008 | 1 | $2.03M |
 
-## Prices by bedroom
+## Prices by home size
 
-### 4 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.95M–$3.5M**
+**$1.93M–$3.25M**
 
-27 sales · last sold $2.13M, Jul 2026
+34 sales · about $905/sq ft · last sold $2.5M, Aug 2026
 
-### 5 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.93M–$4.1M**
+**$2.29M–$3.7M**
 
-62 sales · last sold $3.1M, Oct 2026
+47 sales · about $807/sq ft · last sold $3.1M, Oct 2026
 
-### 6 bedrooms
+### 4,000–5,000 sq ft
 
-**$2.55M–$3.53M**
+**$2.6M–$4.1M**
 
-13 sales · last sold $3.5M, Oct 2026
-
-### 7 bedrooms
-
-**$3.35M–$3.45M**
-
-3 sales · last sold $3.35M, Mar 2026
+24 sales · about $735/sq ft · last sold $3.5M, Oct 2026
 
 106 single-family sales inside Carmel Country Highlands, last 5 years, as of November 18, 2026.
 

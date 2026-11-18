@@ -66,31 +66,37 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 | Alta Del Mar-Coastal | — | — |
 | Sandy Lane | — | — |
 
-## Prices by bedroom
+## Prices by home size
 
-### 3 bedrooms
+### Under 2,000 sq ft
 
-**$1.27M–$3.25M**
+**$1.27M–$1.8M**
 
-18 sales · last sold $1.95M, Sep 2026
+7 sales · about $905/sq ft · last sold $1.55M, Jul 2026
 
-### 4 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.45M–$5.03M**
+**$1.45M–$2.78M**
 
-163 sales · last sold $1.76M, Nov 2026
+131 sales · about $834/sq ft · last sold $1.76M, Nov 2026
 
-### 5 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.63M–$6.19M**
+**$1.8M–$3.87M**
 
-94 sales · last sold $2.39M, Nov 2026
+90 sales · about $814/sq ft · last sold $2.39M, Nov 2026
 
-### 6 bedrooms
+### 4,000–5,000 sq ft
 
-**$3.9M–$5.3M**
+**$3M–$5.38M**
 
-3 sales · last sold $4.49M, Sep 2026
+41 sales · about $841/sq ft · last sold $4.49M, Sep 2026
+
+### 5,000+ sq ft
+
+**$3.83M–$6.19M**
+
+9 sales · about $779/sq ft · last sold $4.15M, Oct 2026
 
 278 single-family sales inside Pacific Highlands Ranch, last 5 years, as of November 18, 2026.
 

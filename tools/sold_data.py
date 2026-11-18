@@ -110,3 +110,25 @@ if __name__ == "__main__":
     rows = load_sales()
     print(f"fetched {len(raw)} rows, {len({r['group_key'] for r in raw})} unique; {len(rows)} single-family sales "
           f"{rows[-1]['_d']} to {rows[0]['_d']}")
+
+
+# home size ranges for the "Prices by home size" cards on school and area pages
+SIZE_BANDS = [(0, 2000, "Under 2,000 sq ft"), (2000, 3000, "2,000&ndash;3,000 sq ft"), (3000, 4000, "3,000&ndash;4,000 sq ft"),
+              (4000, 5000, "4,000&ndash;5,000 sq ft"), (5000, 10 ** 9, "5,000+ sq ft")]
+
+
+def size_cards(rows, span, short, min_sales=3):
+    """HTML cards: what homes in each size range sold for. rows: sales, newest first."""
+    groups = [(lbl, [r for r in rows if r.get("living_area") and lo <= r["living_area"] < hi]) for lo, hi, lbl in SIZE_BANDS]
+    groups = [(lbl, g) for lbl, g in groups if len(g) >= min_sales]
+    if not groups:
+        return ""
+    top = max(len(g) for _, g in groups)
+    out = []
+    for lbl, g in groups:
+        psf = sorted(r["close_price"] / r["living_area"] for r in g)[len(g) // 2]
+        out.append(f'<div class="bc"><div class="bc-h"><h3>{lbl}</h3><b>{span([r["close_price"] for r in g])}</b></div>'
+                   f'<div class="bc-bar"><i style="width:{round(100 * len(g) / top)}%"></i></div>'
+                   f'<div class="bc-m">{len(g)} sales &middot; about ${psf:,.0f}/sq ft &middot; last sold {short(g[0]["close_price"])}, '
+                   f'{g[0]["_d"].strftime("%b")} {g[0]["_d"].year}</div></div>')
+    return "".join(out)

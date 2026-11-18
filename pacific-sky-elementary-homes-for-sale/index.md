@@ -48,25 +48,25 @@ This search shows all of 92130. Ask me which listings are inside the Pacific Sky
 
 From where homes sold in the last 5 years. 1 more sales had no neighborhood name.
 
-## Prices by bedroom
+## Prices by home size
 
-### 3 bedrooms
+### Under 2,000 sq ft
 
-**$1.27M–$3.25M**
+**$1.27M–$1.8M**
 
-11 sales · last sold $3.25M, Jul 2026
+7 sales · about $905/sq ft · last sold $1.55M, Jul 2026
 
-### 4 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.45M–$4.15M**
+**$1.45M–$2.53M**
 
-48 sales · last sold $1.76M, Nov 2026
+52 sales · about $819/sq ft · last sold $1.76M, Nov 2026
 
-### 5 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.63M–$3.2M**
+**$1.8M–$3.25M**
 
-31 sales · last sold $2.39M, Nov 2026
+27 sales · about $759/sq ft · last sold $2.39M, Nov 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 

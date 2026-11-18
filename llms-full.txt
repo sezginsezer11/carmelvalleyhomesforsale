@@ -306,31 +306,37 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 | Alta Del Mar-Coastal | — | — |
 | Sandy Lane | — | — |
 
-### Prices by bedroom
+### Prices by home size
 
-#### 3 bedrooms
+#### Under 2,000 sq ft
 
-**$1.27M–$3.25M**
+**$1.27M–$1.8M**
 
-18 sales · last sold $1.95M, Sep 2026
+7 sales · about $905/sq ft · last sold $1.55M, Jul 2026
 
-#### 4 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.45M–$5.03M**
+**$1.45M–$2.78M**
 
-163 sales · last sold $1.76M, Nov 2026
+131 sales · about $834/sq ft · last sold $1.76M, Nov 2026
 
-#### 5 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.63M–$6.19M**
+**$1.8M–$3.87M**
 
-94 sales · last sold $2.39M, Nov 2026
+90 sales · about $814/sq ft · last sold $2.39M, Nov 2026
 
-#### 6 bedrooms
+#### 4,000–5,000 sq ft
 
-**$3.9M–$5.3M**
+**$3M–$5.38M**
 
-3 sales · last sold $4.49M, Sep 2026
+41 sales · about $841/sq ft · last sold $4.49M, Sep 2026
+
+#### 5,000+ sq ft
+
+**$3.83M–$6.19M**
+
+9 sales · about $779/sq ft · last sold $4.15M, Oct 2026
 
 278 single-family sales inside Pacific Highlands Ranch, last 5 years, as of November 18, 2026.
 
@@ -457,31 +463,31 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 | Stratford | — | — |
 | Windmill Estates — 6 homes | — | — |
 
-### Prices by bedroom
+### Prices by home size
 
-#### 3 bedrooms
+#### Under 2,000 sq ft
 
-**$1.38M–$2.65M**
+**$1.38M–$2.28M**
 
-20 sales · last sold $2.61M, Sep 2026
+14 sales · about $1,097/sq ft · last sold $2.1M, Jul 2026
 
-#### 4 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.58M–$3.5M**
+**$1.58M–$2.96M**
 
-54 sales · last sold $2.85M, Oct 2026
+38 sales · about $940/sq ft · last sold $2.61M, Sep 2026
 
-#### 5 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.72M–$4.03M**
+**$2.05M–$3.7M**
 
-43 sales · last sold $2.78M, Oct 2026
+55 sales · about $850/sq ft · last sold $2.78M, Oct 2026
 
-#### 6 bedrooms
+#### 4,000–5,000 sq ft
 
-**$2.88M–$3.43M**
+**$2.87M–$4.03M**
 
-4 sales · last sold $3.43M, Feb 2026
+12 sales · about $798/sq ft · last sold $2.87M, Oct 2026
 
 121 single-family sales inside North of Del Mar Heights Road, last 5 years, as of November 18, 2026.
 
@@ -606,31 +612,31 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 | Promontory — 190 homes · built 1998 | 1 | $2.85M |
 | Verona — 8 homes | — | — |
 
-### Prices by bedroom
+### Prices by home size
 
-#### 3 bedrooms
+#### Under 2,000 sq ft
 
-**$1.34M–$2.6M**
+**$1.34M–$2.25M**
 
-34 sales · last sold $2.1M, Nov 2026
+22 sales · about $1,050/sq ft · last sold $1.9M, Sep 2026
 
-#### 4 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.4M–$3.8M**
+**$1.4M–$2.82M**
 
-91 sales · last sold $3.44M, Sep 2026
+94 sales · about $871/sq ft · last sold $2.1M, Nov 2026
 
-#### 5 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.85M–$4M**
+**$1.98M–$3.4M**
 
-73 sales · last sold $3.13M, Oct 2026
+78 sales · about $756/sq ft · last sold $3.13M, Oct 2026
 
-#### 6 bedrooms
+#### 4,000–5,000 sq ft
 
-**$2.2M–$3.33M**
+**$2.43M–$4M**
 
-11 sales · last sold $3.33M, Feb 2026
+17 sales · about $708/sq ft · last sold $3.44M, Sep 2026
 
 211 single-family sales inside South of Del Mar Heights Road, last 5 years, as of November 18, 2026.
 
@@ -741,31 +747,25 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 | Saratoga — 114 homes · built 2006–2007 | 6 | $2.15M–$3.05M |
 | Bridle Ridge — 53 homes · built 2008 | 1 | $2.03M |
 
-### Prices by bedroom
+### Prices by home size
 
-#### 4 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.95M–$3.5M**
+**$1.93M–$3.25M**
 
-27 sales · last sold $2.13M, Jul 2026
+34 sales · about $905/sq ft · last sold $2.5M, Aug 2026
 
-#### 5 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.93M–$4.1M**
+**$2.29M–$3.7M**
 
-62 sales · last sold $3.1M, Oct 2026
+47 sales · about $807/sq ft · last sold $3.1M, Oct 2026
 
-#### 6 bedrooms
+#### 4,000–5,000 sq ft
 
-**$2.55M–$3.53M**
+**$2.6M–$4.1M**
 
-13 sales · last sold $3.5M, Oct 2026
-
-#### 7 bedrooms
-
-**$3.35M–$3.45M**
-
-3 sales · last sold $3.35M, Mar 2026
+24 sales · about $735/sq ft · last sold $3.5M, Oct 2026
 
 106 single-family sales inside Carmel Country Highlands, last 5 years, as of November 18, 2026.
 
@@ -873,25 +873,31 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 | Terrazzo — 59 homes · built 2001–2003 | 3 | $2.03M–$2.32M |
 | Valencia Collection — 8 homes · built 2002 | 3 | $1.67M–$2.95M |
 
-### Prices by bedroom
+### Prices by home size
 
-#### 3 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.55M–$3.01M**
+**$1.51M–$2.2M**
 
-8 sales · last sold $1.95M, Sep 2026
+14 sales · about $743/sq ft · last sold $1.95M, Sep 2026
 
-#### 4 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.51M–$3.45M**
+**$1.97M–$3.45M**
 
-15 sales · last sold $1.76M, Jun 2026
+13 sales · about $620/sq ft · last sold $2.15M, Nov 2025
 
-#### 5 bedrooms
+#### 4,000–5,000 sq ft
 
-**$2.03M–$4.8M**
+**$2.8M–$4.4M**
 
-21 sales · last sold $4.2M, Jun 2026
+9 sales · about $745/sq ft · last sold $4.2M, Jun 2026
+
+#### 5,000+ sq ft
+
+**$2.37M–$4.8M**
+
+8 sales · about $714/sq ft · last sold $4.75M, Sep 2025
 
 44 single-family sales inside Torrey Highlands, last 5 years, as of November 18, 2026.
 
@@ -1008,37 +1014,31 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 | Vantage Point — 24 homes · built 2001–2003 | 3 | $2.2M–$2.56M |
 | Sea Country — 53 homes · built 2000–2001 | 2 | $2.5M–$2.9M |
 
-### Prices by bedroom
+### Prices by home size
 
-#### 2 bedrooms
+#### Under 2,000 sq ft
 
-**$1.3M–$1.6M**
+**$1.3M–$2.17M**
 
-6 sales · last sold $1.6M, Apr 2026
+20 sales · about $937/sq ft · last sold $1.6M, Apr 2026
 
-#### 3 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.32M–$2.45M**
+**$1.58M–$3.54M**
 
-20 sales · last sold $1.84M, Aug 2026
+52 sales · about $864/sq ft · last sold $3.54M, Nov 2026
 
-#### 4 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.68M–$4.8M**
+**$1.95M–$4.8M**
 
-59 sales · last sold $3.54M, Nov 2026
+34 sales · about $788/sq ft · last sold $2.97M, Oct 2026
 
-#### 5 bedrooms
+#### 4,000–5,000 sq ft
 
-**$1.9M–$3.7M**
+**$2.53M–$4.4M**
 
-27 sales · last sold $2.75M, Sep 2026
-
-#### 6 bedrooms
-
-**$3.1M–$4.4M**
-
-3 sales · last sold $4.4M, Jan 2024
+9 sales · about $670/sq ft · last sold $2.84M, Feb 2026
 
 115 single-family sales inside Torrey Hills, last 5 years, as of November 18, 2026.
 
@@ -1153,25 +1153,19 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 | Palacio Del Mar — 422 homes | — | — |
 | Silver Oaks Estates / Anderson Estates — 8 homes | — | — |
 
-### Prices by bedroom
+### Prices by home size
 
-#### 4 bedrooms
+#### 4,000–5,000 sq ft
 
-**$2.8M–$5.1M**
+**$3.87M–$5.1M**
 
-8 sales · last sold $3.79M, Sep 2026
+11 sales · about $927/sq ft · last sold $4.28M, Aug 2026
 
-#### 5 bedrooms
+#### 5,000+ sq ft
 
-**$3.87M–$6.15M**
+**$3.63M–$10.9M**
 
-31 sales · last sold $4.28M, Aug 2026
-
-#### 6 bedrooms
-
-**$3.77M–$10.9M**
-
-13 sales · last sold $4.75M, Mar 2026
+42 sales · about $762/sq ft · last sold $5.25M, Aug 2026
 
 56 single-family sales inside Del Mar Mesa, last 5 years, as of November 18, 2026.
 
@@ -1252,7 +1246,7 @@ Source page: https://carmelvalleyhomesforsale.com/carmel-valley-schools/
 
 ### Carmel Valley Schools
 
-Carmel Valley school attendance areas. Pick Elementary, Middle or High on the map, open a district, then tap a school to see its area.
+Carmel Valley school attendance areas. Pick Elementary, Middle or High, open a district, then tap a school to see its area.
 
 #### Del Mar Union School District7
 
@@ -1265,9 +1259,9 @@ Carmel Valley school attendance areas. Pick Elementary, Middle or High on the ma
 
 #### Solana Beach School District4
 
-#### Middle schools3
+#### San Dieguito Union High School District3
 
-#### High school1
+#### San Dieguito Union High School District1
 
 Elementary areas from the Del Mar Union School District map and the Solana Beach School District school locator; middle and high school areas from the 2015–16 San Dieguito Union HSD map (middle-school areas overlap in it). Boundaries change, so confirm any address with the district.
 
@@ -1436,37 +1430,37 @@ This search shows all of 92130. Ask me which listings are inside the Sage Canyon
 
 From where homes sold in the last 5 years. 3 more sales had no neighborhood name.
 
-### Prices by bedroom
+### Prices by home size
 
-#### 3 bedrooms
+#### Under 2,000 sq ft
 
-**$1.93M–$3.63M**
+**$1.37M–$2.18M**
 
-4 sales · last sold $1.98M, May 2026
+7 sales · about $994/sq ft · last sold $2.11M, Sep 2026
 
-#### 4 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.37M–$5.1M**
+**$1.69M–$3.48M**
 
-48 sales · last sold $2.33M, Sep 2026
+56 sales · about $870/sq ft · last sold $2.34M, Oct 2026
 
-#### 5 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.69M–$5.93M**
+**$2.2M–$3.7M**
 
-91 sales · last sold $3.1M, Oct 2026
+47 sales · about $787/sq ft · last sold $3.1M, Oct 2026
 
-#### 6 bedrooms
+#### 4,000–5,000 sq ft
 
-**$2.26M–$6.75M**
+**$2.6M–$5.93M**
 
-27 sales · last sold $3.5M, Oct 2026
+30 sales · about $755/sq ft · last sold $3.5M, Oct 2026
 
-#### 7 bedrooms
+#### 5,000+ sq ft
 
-**$3.35M–$3.45M**
+**$3.63M–$6.75M**
 
-3 sales · last sold $3.35M, Mar 2026
+34 sales · about $757/sq ft · last sold $5.25M, Aug 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 
@@ -1600,25 +1594,25 @@ This search shows all of 92130. Ask me which listings are inside the Pacific Sky
 
 From where homes sold in the last 5 years. 1 more sales had no neighborhood name.
 
-### Prices by bedroom
+### Prices by home size
 
-#### 3 bedrooms
+#### Under 2,000 sq ft
 
-**$1.27M–$3.25M**
+**$1.27M–$1.8M**
 
-11 sales · last sold $3.25M, Jul 2026
+7 sales · about $905/sq ft · last sold $1.55M, Jul 2026
 
-#### 4 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.45M–$4.15M**
+**$1.45M–$2.53M**
 
-48 sales · last sold $1.76M, Nov 2026
+52 sales · about $819/sq ft · last sold $1.76M, Nov 2026
 
-#### 5 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.63M–$3.2M**
+**$1.8M–$3.25M**
 
-31 sales · last sold $2.39M, Nov 2026
+27 sales · about $759/sq ft · last sold $2.39M, Nov 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 
@@ -1754,37 +1748,31 @@ This search shows all of 92130. Ask me which listings are inside the Ocean Air b
 
 From where homes sold in the last 5 years. 6 more sales had no neighborhood name.
 
-### Prices by bedroom
+### Prices by home size
 
-#### 2 bedrooms
+#### Under 2,000 sq ft
 
-**$1.3M–$1.6M**
+**$1.3M–$2.17M**
 
-6 sales · last sold $1.6M, Apr 2026
+21 sales · about $926/sq ft · last sold $1.6M, Apr 2026
 
-#### 3 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.32M–$2.22M**
+**$1.58M–$3.54M**
 
-19 sales · last sold $1.84M, Aug 2026
+25 sales · about $902/sq ft · last sold $3.54M, Nov 2026
 
-#### 4 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.68M–$4.8M**
+**$2.2M–$4.8M**
 
-35 sales · last sold $3.54M, Nov 2026
+27 sales · about $802/sq ft · last sold $2.97M, Oct 2026
 
-#### 5 bedrooms
+#### 4,000–5,000 sq ft
 
-**$2.2M–$3.7M**
+**$2.53M–$4.4M**
 
-20 sales · last sold $2.75M, Sep 2026
-
-#### 6 bedrooms
-
-**$3.1M–$4.4M**
-
-3 sales · last sold $4.4M, Jan 2024
+10 sales · about $670/sq ft · last sold $2.84M, Feb 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 
@@ -1917,25 +1905,25 @@ This search shows all of 92130. Ask me which listings are inside the Ashley Fall
 
 From where homes sold in the last 5 years.
 
-### Prices by bedroom
+### Prices by home size
 
-#### 4 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.4M–$3.8M**
+**$1.4M–$2.6M**
 
-35 sales · last sold $3.44M, Sep 2026
+24 sales · about $858/sq ft · last sold $2.57M, Sep 2026
 
-#### 5 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.87M–$4M**
+**$1.98M–$3.4M**
 
-42 sales · last sold $2.65M, Sep 2026
+49 sales · about $773/sq ft · last sold $2.65M, Sep 2026
 
-#### 6 bedrooms
+#### 4,000–5,000 sq ft
 
-**$2.23M–$3.33M**
+**$2.43M–$4M**
 
-7 sales · last sold $3.33M, Feb 2026
+13 sales · about $770/sq ft · last sold $3.44M, Sep 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 
@@ -2078,25 +2066,31 @@ This search shows all of 92130. Ask me which listings are inside the Sycamore Ri
 
 From where homes sold in the last 5 years.
 
-### Prices by bedroom
+### Prices by home size
 
-#### 4 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.8M–$4.3M**
+**$1.8M–$2.6M**
 
-22 sales · last sold $3.79M, Sep 2026
+23 sales · about $867/sq ft · last sold $2.49M, Jul 2026
 
-#### 5 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.85M–$6.15M**
+**$2.32M–$3.79M**
 
-21 sales · last sold $2.49M, Jul 2026
+10 sales · about $719/sq ft · last sold $3.79M, Sep 2026
 
-#### 6 bedrooms
+#### 4,000–5,000 sq ft
 
-**$2.4M–$10.9M**
+**$2.55M–$4.35M**
 
-5 sales · last sold $5.9M, Jul 2024
+9 sales · about $793/sq ft · last sold $3.04M, Jun 2026
+
+#### 5,000+ sq ft
+
+**$4.15M–$10.9M**
+
+8 sales · about $851/sq ft · last sold $6.15M, Nov 2025
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 
@@ -2226,19 +2220,19 @@ This search shows all of 92130. Ask me which listings are inside the Torrey Hill
 
 From where homes sold in the last 5 years.
 
-### Prices by bedroom
+### Prices by home size
 
-#### 4 bedrooms
+#### 2,000–3,000 sq ft
 
-**$1.89M–$3.1M**
+**$1.89M–$2.65M**
 
-28 sales · last sold $2.5M, Aug 2026
+29 sales · about $826/sq ft · last sold $2.5M, Aug 2026
 
-#### 5 bedrooms
+#### 3,000–4,000 sq ft
 
-**$1.9M–$3.22M**
+**$1.95M–$3.22M**
 
-12 sales · last sold $2.56M, Sep 2025
+13 sales · about $768/sq ft · last sold $3.1M, Feb 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 

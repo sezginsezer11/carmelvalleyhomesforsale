@@ -44,19 +44,19 @@ This search shows all of 92130. Ask me which listings are inside the Torrey Hill
 
 From where homes sold in the last 5 years.
 
-## Prices by bedroom
+## Prices by home size
 
-### 4 bedrooms
+### 2,000–3,000 sq ft
 
-**$1.89M–$3.1M**
+**$1.89M–$2.65M**
 
-28 sales · last sold $2.5M, Aug 2026
+29 sales · about $826/sq ft · last sold $2.5M, Aug 2026
 
-### 5 bedrooms
+### 3,000–4,000 sq ft
 
-**$1.9M–$3.22M**
+**$1.95M–$3.22M**
 
-12 sales · last sold $2.56M, Sep 2025
+13 sales · about $768/sq ft · last sold $3.1M, Feb 2026
 
 What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
 

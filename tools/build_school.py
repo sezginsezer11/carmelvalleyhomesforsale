@@ -19,7 +19,7 @@ import sys
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(TOOLS)
 sys.path.insert(0, TOOLS)
-from sold_data import load_sales  # noqa: E402
+from sold_data import size_cards, load_sales  # noqa: E402
 from schools import elementary_for, school_boundary, share_inside, DMUSD, DMUSD_URL, SDUHSD_URL  # noqa: E402
 from make_neighborhood import NEIGHBORHOOD_PAGES, SCHOOL_PAGES, AREA_PAGES, slug  # noqa: E402
 from build_communities_hub import load as load_communities, COLORS  # noqa: E402
@@ -108,21 +108,8 @@ def build(school):
         nb_rows.append(f'<tr><td class="nm">{name_html}</td><td class="num">{len(g)}</td>'
                        f'<td class="num">{span([r["close_price"] for r in g])}</td></tr>')
 
-    # price by bedroom
-    beds = collections.defaultdict(list)
-    for r in five:
-        if r.get("beds_total"):
-            beds[r["beds_total"]].append(r)
-    bed_cards = []
-    top = max(len(g) for g in beds.values())
-    for b in sorted(beds):
-        g = beds[b]
-        if len(g) < 3:
-            continue
-        p = [r["close_price"] for r in g]
-        bed_cards.append(f'<div class="bc"><div class="bc-h"><h3>{b} bedrooms</h3><b>{span(p)}</b></div>'
-                         f'<div class="bc-bar"><i style="width:{round(100 * len(g) / top)}%"></i></div>'
-                         f'<div class="bc-m">{len(g)} sales &middot; last sold {short(g[0]["close_price"])}, {g[0]["_d"].strftime("%b")} {g[0]["_d"].year}</div></div>')
+    # price by home size
+    bed_cards = size_cards(five, span, short)
 
     recent = "".join(
         f'<tr><td class="addr">{e(r.get("address") or "")}<span>{e(r.get("community_name") or "")}</span></td>'
@@ -279,8 +266,8 @@ def build(school):
       <p class="note">From where homes sold in the last 5 years.{f" {unnamed} more sales had no neighborhood name." if unnamed else ""}</p>
     </div>
     <div id="prices">
-      <h2 class="h3">Prices by bedroom</h2>
-      <div class="bcs">{"".join(bed_cards)}</div>
+      <h2 class="h3">Prices by home size</h2>
+      <div class="bcs">{bed_cards}</div>
       <p class="note">What single-family homes inside the boundary sold for over the last 5 years. As of {stamp}.</p>
     </div>
   </div>
