@@ -340,8 +340,8 @@ def main():
     </div>
     <div class="xp-map">
       <div class="map-box">
-        <div id="map" role="region" aria-label="Map of Carmel Valley single-family neighborhoods"></div>
-        <div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="map" aria-pressed="true">Map</button><button type="button" data-b="sat" aria-pressed="false">Satellite</button></div>
+        <div id="map" class="sat" role="region" aria-label="Map of Carmel Valley single-family neighborhoods"></div>
+        <div class="map-views" role="group" aria-label="Map view"><button type="button" data-b="sat" aria-pressed="true">Satellite</button><button type="button" data-b="map" aria-pressed="false">Map</button></div>
         <div class="map-card" id="mcard" aria-live="polite"></div>
       </div>
       <p class="map-note">Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for over the last 5 years.</p>
@@ -381,7 +381,7 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
   var base={{map:L.tileLayer(ESRI+'World_Street_Map/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:19,attribution:'Map &copy; Esri, HERE, Garmin, OpenStreetMap contributors'}}),
     sat:L.layerGroup([L.tileLayer(ESRI+'World_Imagery/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:19,attribution:'Imagery &copy; Esri, Maxar, Earthstar Geographics'}}),
       L.tileLayer(ESRI+'Reference/World_Transportation/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:19}})])}};
-  var cur='map'; base.map.addTo(map);
+  var cur='sat'; base.sat.addTo(map);
   document.querySelectorAll('.map-views button').forEach(function(b){{b.addEventListener('click',function(){{
     map.removeLayer(base[cur]); cur=b.dataset.b; base[cur].addTo(map);
     document.getElementById('map').classList.toggle('sat',cur==='sat');
