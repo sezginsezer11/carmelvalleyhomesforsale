@@ -4,5 +4,10 @@
   "assets": {
     "directory": "./",
     "not_found_handling": "404-page"
-  }
+  },
+  // Attach the site to its own domain; Cloudflare creates the DNS records and certificate on deploy.
+  "routes": [
+    { "pattern": "carmelvalleyhomesforsale.com", "custom_domain": true },
+    { "pattern": "www.carmelvalleyhomesforsale.com", "custom_domain": true }
+  ]
 }
