@@ -7,7 +7,7 @@ Phones: full-screen map with a pull-up list (peek / half / full); the page title
     from explorer import explorer
     x = explorer(comms, groups, colors, ...)   # -> {"css", "html", "js", "head_js"}
 
-comms:  communities from atlas_data.json with n, sub, homes, p, r5 (sold range, 5 yrs)
+comms:  communities from atlas_data.json with n, sub, homes, p, r12 (sold range, last 12 months)
 groups: [(area key, area label, [communities])]
 zone:   optional Leaflet rings ([[lat, lng], ...]) of a school attendance boundary, drawn as a
         dashed outline with everything outside it shaded; the map frames the zone.
@@ -140,7 +140,7 @@ def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_
         for c in cs:
             u = link(c)
             meta = " &middot; ".join(x for x in [f'{c["homes"]} homes' if c.get("homes") else "",
-                                                  f'sold {c["r5"]}' if c.get("r5") else "",
+                                                  f'sold {c["r12"]} (12 mo)' if c.get("r12") else "",
                                                   c.get("note") or ""] if x) or "Single-family homes"
             go = ""
             if c["n"] in pages:
@@ -156,7 +156,7 @@ def explorer(comms, groups, colors, pages, area_pages, *, list_title, hint, map_
   </div>
 </details>''')
 
-    mdata = {"c": [{"n": c["n"], "a": c["sub"], "h": c.get("homes"), "u": link(c), "g": c["n"] in pages, "m": c.get("r5"), "p": c["p"],
+    mdata = {"c": [{"n": c["n"], "a": c["sub"], "h": c.get("homes"), "u": link(c), "g": c["n"] in pages, "m": c.get("r12"), "p": c["p"],
                     "s": "n-" + slug(c["n"]),
                     **{k: c[k] for k in ("c", "hu", "gu", "gl", "x", "l", "lp", "v") if c.get(k) is not None}} for c in comms],
              "areas": {g[0]: [g[1], colors.get(g[0]), area_pages.get(g[0])] for g in groups}}
@@ -252,7 +252,7 @@ var HUB=''' + json.dumps(mdata, separators=(",", ":")) + ''';
       guide=o.gu!==undefined?o.gu:o.g?o.u+'#location':ap?ap+'#'+o.s:'';
     var go=home?'<div class="mc-acts"><a class="mc-go" href="'+home+'">See homes &rarr;</a>'+(guide?'<a class="mc-go mc-alt" href="'+guide+'">'+(o.gl||'Community guide')+'</a>':'')+'</div>'
       :'<a class="mc-go" href="#contact">Ask about '+esc(o.n)+'</a>';
-    card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+(o.c||A[o.a][1])+'"></span>'+esc(o.x||A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'sold <b>'+o.m+'</b> (5 yrs)':'')+'</div>':'')+go;
+    card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+(o.c||A[o.a][1])+'"></span>'+esc(o.x||A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'sold <b>'+o.m+'</b> (12 mo)':'')+'</div>':'')+go;
     card.classList.add('show');card.querySelector('.mc-x').onclick=function(){card.classList.remove('show');sel=-1;style();};
     if(zoom)map.flyToBounds(layers[i].getBounds(),Object.assign({maxZoom:16,duration:.6},pad(40)));}
   map.on('click',function(){card.classList.remove('show');sel=-1;style();});

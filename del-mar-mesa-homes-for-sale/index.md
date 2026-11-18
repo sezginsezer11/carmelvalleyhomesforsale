@@ -27,20 +27,20 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 
 ## Neighborhoods in Del Mar Mesa
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Meadows Del Mar — 200 homes · built 2000–2007 | 18 | $3.63M–$5.93M |
-| Alta Del Mar — 216 homes · built 2013–2016 | 11 | $3.9M–$5.1M |
-| Bougainvillea — 76 homes · built 2003 | 5 | $3.95M–$4.35M |
-| Whitehorse — 19 homes · built 2003–2004 | 4 | $4.35M–$5.2M |
-| Ridge — 19 homes · built 2003–2020 | 3 | $4.14M–$6.75M |
-| The Preserve — 14 homes · built 2015–2020 | 3 | $6.15M–$6.5M |
-| Valencia — 7 homes · built 2003–2006 | 3 | $4.15M–$5.8M |
-| Duck Pond Ranch — 15 homes · built 2006–2008 | 2 | $5.9M–$10.9M |
-| Del Mar Mesa Estates — built 2024 | 1 | $5.2M |
+| Meadows Del Mar — 200 homes · built 2000–2007 | 3 | $3.63M–$4.75M |
+| Alta Del Mar — 216 homes · built 2013–2016 | 3 | $4.21M–$5.1M |
+| Bougainvillea — 76 homes · built 2003 | 1 | $3.95M |
+| Whitehorse — 19 homes · built 2003–2004 | 1 | $4.6M |
 | Paso Fino — 12 homes · built 2005 | 1 | $3.79M |
-| Ridge Estates — 19 homes · built 2015 | 1 | $5.42M |
-| Three Canyons — 12 homes · built 2007 | 1 | $4.3M |
+| Ridge — 19 homes · built 2003–2020 | — | — |
+| The Preserve — 14 homes · built 2015–2020 | — | — |
+| Valencia — 7 homes · built 2003–2006 | — | — |
+| Duck Pond Ranch — 15 homes · built 2006–2008 | — | — |
+| Del Mar Mesa Estates — built 2024 | — | — |
+| Ridge Estates — 19 homes · built 2015 | — | — |
+| Three Canyons — 12 homes · built 2007 | — | — |
 | Palacio Del Mar — 422 homes | — | — |
 | Silver Oaks Estates / Anderson Estates — 8 homes | — | — |
 
@@ -48,17 +48,17 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 
 ### 4,000–5,000 sq ft
 
-**$3.87M–$5.1M**
+**$3.95M–$5.1M**
 
-11 sales · about $927/sq ft · last sold $4.28M, Aug 2026
+3 sales · about $865/sq ft · last sold $4.28M, Aug 2026
 
 ### 5,000+ sq ft
 
-**$3.63M–$10.9M**
+**$3.63M–$5.25M**
 
-42 sales · about $762/sq ft · last sold $5.25M, Aug 2026
+6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-56 single-family sales inside Del Mar Mesa, last 5 years, as of November 18, 2026.
+10 single-family sales inside Del Mar Mesa, last 12 months, as of November 18, 2026.
 
 ## Elementary schools
 
@@ -86,11 +86,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in Del Mar Mesa cost?
 
-In the last 12 months, 10 single-family homes in Del Mar Mesa sold at a median of $4,387,500 (about $838 per sq ft), above the Carmel Valley median of $2,625,000. Over the last 5 years, 56 sold for between $2,800,000 and $10,895,000.
+In the last 12 months, 10 single-family homes in Del Mar Mesa sold at a median of $4,387,500 (about $838 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $3,625,000 and $5,250,000.
 
 ### Which neighborhoods are in Del Mar Mesa?
 
-Del Mar Mesa has 14 single-family neighborhoods, including Meadows Del Mar, Alta Del Mar, Bougainvillea, Whitehorse, Ridge, The Preserve. Among those with at least three sales in the last 12 months, Meadows Del Mar had the lowest median ($4.28M) and Alta Del Mar the highest ($4.5M).
+Del Mar Mesa has 14 single-family neighborhoods, including Meadows Del Mar, Alta Del Mar, Bougainvillea, Whitehorse, Paso Fino, Ridge. Among those with at least three sales in the last 12 months, Meadows Del Mar had the lowest median ($4.28M) and Alta Del Mar the highest ($4.5M).
 
 ### How old are the homes in Del Mar Mesa?
 

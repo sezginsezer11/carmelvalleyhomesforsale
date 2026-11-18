@@ -27,61 +27,61 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 
 ## Neighborhoods in South of Del Mar Heights Road
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Sonoma — 219 homes · built 1990–1997 | 22 | $2.25M–$3.33M |
-| Cantamar — 227 homes · built 1989–1994 | 20 | $1.77M–$3.28M |
-| Del Mar Place — 241 homes · built 1987–2002 | 17 | $1.85M–$3.13M |
-| San Remo — 289 homes · built 1987–1991 | 14 | $1.59M–$2.29M |
-| Creek Park — 155 homes · built 1984–1985 | 11 | $1.46M–$2.25M |
-| Palisades — 164 homes · built 1995–1997 | 11 | $1.87M–$2.6M |
-| Seabridge — 171 homes · built 1986–1996 | 11 | $1.47M–$2.75M |
-| Huntington Heights — 132 homes · built 1996–1998 | 10 | $2.23M–$3.02M |
-| Pines — 176 homes · built 1985 | 10 | $1.35M–$2.17M |
-| Granada — 73 homes · built 1991–1994 | 9 | $1.34M–$2.45M |
-| Estates — 99 homes · built 1994–1995 | 8 | $2.07M–$2.8M |
-| Wild Horse — 55 homes · built 2000–2002 | 8 | $2.32M–$2.95M |
-| Del Mar Bluffs — 120 homes · built 1989–1995 | 7 | $1.53M–$2.27M |
-| Heights — 566 homes · built 1988–1989 | 7 | $1.98M–$2.4M |
-| Palma Del Mar — 78 homes · built 1998–1999 | 7 | $1.98M–$2.63M |
-| Bayshore — 149 homes · built 1986–1987 | 6 | $1.66M–$1.98M |
-| Private Collection — 40 homes · built 1995–1998 | 6 | $2.97M–$4M |
-| Watercolors — 79 homes · built 1995–1997 | 6 | $1.4M–$2.4M |
-| Amador — 38 homes · built 1999 | 5 | $2.67M–$3.8M |
-| Carmel Village — 51 homes · built 2000 | 5 | $1.67M–$2.2M |
-| Provence — 57 homes · built 1998–1999 | 5 | $2.7M–$3.17M |
-| Hunt Club — 50 homes · built 2002 | 3 | $2.55M–$3.04M |
-| Triple Crown — 41 homes · built 2002 | 2 | $2.71M–$3.08M |
-| Promontory — 190 homes · built 1998 | 1 | $2.85M |
+| Cantamar — 227 homes · built 1989–1994 | 8 | $2.13M–$3.28M |
+| Sonoma — 219 homes · built 1990–1997 | 6 | $2.65M–$3.33M |
+| San Remo — 289 homes · built 1987–1991 | 5 | $1.9M–$2.29M |
+| Del Mar Place — 241 homes · built 1987–2002 | 3 | $2.1M–$3.13M |
+| Palisades — 164 homes · built 1995–1997 | 3 | $2.25M–$2.6M |
+| Seabridge — 171 homes · built 1986–1996 | 3 | $1.9M–$2.25M |
+| Provence — 57 homes · built 1998–1999 | 3 | $2.7M–$2.98M |
+| Creek Park — 155 homes · built 1984–1985 | 2 | $2.03M–$2.1M |
+| Pines — 176 homes · built 1985 | 2 | $1.49M–$1.83M |
+| Estates — 99 homes · built 1994–1995 | 2 | $2.57M–$2.8M |
+| Del Mar Bluffs — 120 homes · built 1989–1995 | 2 | $2.15M–$2.27M |
+| Private Collection — 40 homes · built 1995–1998 | 1 | $3.84M |
+| Watercolors — 79 homes · built 1995–1997 | 1 | $2.18M |
+| Amador — 38 homes · built 1999 | 1 | $3.44M |
+| Hunt Club — 50 homes · built 2002 | 1 | $3.04M |
+| Triple Crown — 41 homes · built 2002 | 1 | $3.08M |
+| Huntington Heights — 132 homes · built 1996–1998 | — | — |
+| Granada — 73 homes · built 1991–1994 | — | — |
+| Wild Horse — 55 homes · built 2000–2002 | — | — |
+| Heights — 566 homes · built 1988–1989 | — | — |
+| Palma Del Mar — 78 homes · built 1998–1999 | — | — |
+| Bayshore — 149 homes · built 1986–1987 | — | — |
+| Carmel Village — 51 homes · built 2000 | — | — |
+| Promontory — 190 homes · built 1998 | — | — |
 | Verona — 8 homes | — | — |
 
 ## Prices by home size
 
 ### Under 2,000 sq ft
 
-**$1.34M–$2.25M**
+**$1.49M–$1.9M**
 
-22 sales · about $1,050/sq ft · last sold $1.9M, Sep 2026
+4 sales · about $1,053/sq ft · last sold $1.9M, Sep 2026
 
 ### 2,000–3,000 sq ft
 
-**$1.4M–$2.82M**
+**$1.9M–$2.6M**
 
-94 sales · about $871/sq ft · last sold $2.1M, Nov 2026
+23 sales · about $919/sq ft · last sold $2.1M, Nov 2026
 
 ### 3,000–4,000 sq ft
 
-**$1.98M–$3.4M**
+**$2.65M–$3.28M**
 
-78 sales · about $756/sq ft · last sold $3.13M, Oct 2026
+11 sales · about $846/sq ft · last sold $3.13M, Oct 2026
 
 ### 4,000–5,000 sq ft
 
-**$2.43M–$4M**
+**$3.04M–$3.84M**
 
-17 sales · about $708/sq ft · last sold $3.44M, Sep 2026
+6 sales · about $799/sq ft · last sold $3.44M, Sep 2026
 
-211 single-family sales inside South of Del Mar Heights Road, last 5 years, as of November 18, 2026.
+44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 18, 2026.
 
 ## Elementary schools
 
@@ -111,11 +111,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in South of Del Mar Heights Road cost?
 
-In the last 12 months, 44 single-family homes in South of Del Mar Heights Road sold at a median of $2,347,500 (about $892 per sq ft), below the Carmel Valley median of $2,625,000. Over the last 5 years, 211 sold for between $1,340,000 and $4,000,000.
+In the last 12 months, 44 single-family homes in South of Del Mar Heights Road sold at a median of $2,347,500 (about $892 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,490,000 and $3,835,000.
 
 ### Which neighborhoods are in South of Del Mar Heights Road?
 
-South of Del Mar Heights Road has 25 single-family neighborhoods, including Sonoma, Cantamar, Del Mar Place, San Remo, Creek Park, Palisades. Among those with at least three sales in the last 12 months, San Remo had the lowest median ($1.92M) and Sonoma the highest ($3M).
+South of Del Mar Heights Road has 25 single-family neighborhoods, including Cantamar, Sonoma, San Remo, Del Mar Place, Palisades, Seabridge. Among those with at least three sales in the last 12 months, San Remo had the lowest median ($1.92M) and Sonoma the highest ($3M).
 
 ### How old are the homes in South of Del Mar Heights Road?
 

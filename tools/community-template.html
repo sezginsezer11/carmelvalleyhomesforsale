@@ -868,7 +868,7 @@
 {{glance_cards_html}}
     </div>
     {{glance_after_html}}
-    <p class="data-stamp" id="g-stamp">Closed MLS sales, last 5 years.</p>
+    <p class="data-stamp" id="g-stamp">Closed MLS sales, last 12 months.</p>
   </div>
 </section>
 
@@ -1004,7 +1004,7 @@
   // bedroom cards: replace the typed-in fallback numbers with live ones
   function renderGlance(allRows){
     var now = new Date();
-    var start = new Date(now.getFullYear() - 5, now.getMonth(), now.getDate());
+    var start = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());  // what homes sell for: last 12 months only
     var rows = allRows.filter(function(r){ return r.close_price != null && r.close_date && new Date(r.close_date) >= start; });
     if (!rows.length) return;
     function set(id, html){ var el = document.getElementById(id); if (el) el.innerHTML = html; }
@@ -1016,7 +1016,7 @@
       if (!g.length) return;
       var prices = g.map(function(r){ return r.close_price; });
       var sizes = g.filter(function(r){ return r.living_area; }).map(function(r){ return r.living_area; });
-      set('g' + b + '-count', g.length + (g.length === 1 ? ' sale' : ' sales') + ' &middot; 5 yrs');
+      set('g' + b + '-count', g.length + (g.length === 1 ? ' sale' : ' sales') + ' &middot; 12 mo');
       if (sizes.length){ var lo = Math.min.apply(null, sizes), hi = Math.max.apply(null, sizes); set('g' + b + '-size', lo.toLocaleString('en-US') + (hi > lo ? '&ndash;' + hi.toLocaleString('en-US') : '') + ' sq ft'); }
       var last = g.slice().sort(function(x, y){ return x.close_date < y.close_date ? 1 : -1; })[0];
       var mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][parseInt(last.close_date.slice(5, 7), 10) - 1];
@@ -1029,7 +1029,7 @@
         var words = ratio >= 3.5 ? Math.round(ratio) + ' times' : ratio >= 2.5 ? 'about three times' : ratio >= 1.75 ? 'about twice' : 'about 1.5 times';
         set('g-ratio', 'Two-bedrooms have sold ' + words + ' as often as one-bedrooms &mdash; a narrower buyer pool for the smaller units usually means more negotiating room if a 1-bed is what you&rsquo;re after.');
       } else {
-        set('g-ratio', 'One- and two-bedrooms have sold at a similar pace over the last 5 years.');
+        set('g-ratio', 'One- and two-bedrooms have sold at a similar pace over the last 12 months.');
       }
     }
     // seller tiles (trailing 12 months)

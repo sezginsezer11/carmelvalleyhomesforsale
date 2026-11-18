@@ -280,7 +280,7 @@ def fmt_date(d):
 
 
 def glance_from_sales(c, rows):
-    five = [r for r in rows if r["_d"] >= years_ago(5)]
+    five = [r for r in rows if r["_d"] >= years_ago(1)]  # what homes sell for: last 12 months only
     cards = []
     for card in c["glance"]["cards"]:
         b = card["beds"]
@@ -293,7 +293,7 @@ def glance_from_sales(c, rows):
         lo, hi = (min(sizes), max(sizes)) if sizes else (0, 0)
         cards.append({
             "beds": b,
-            "count": f"{len(g)} sale{'s' if len(g) != 1 else ''} &middot; 5 yrs",
+            "count": f"{len(g)} sale{'s' if len(g) != 1 else ''} &middot; 12 mo",
             "size": (f"{lo:,}&ndash;{hi:,} sq ft" if hi > lo else f"{lo:,} sq ft") if sizes else card["size"],
             "latest": f'{money(g[0]["close_price"])} &middot; {MONTHS[g[0]["_d"].month - 1]} {g[0]["_d"].year}',
             "range": f"{k(min(prices))}&ndash;{k(max(prices))}" if max(prices) > min(prices) else k(min(prices)),
@@ -323,8 +323,9 @@ def render_sales_summary(c, st):
                      f'at a median of {money(st["t12_median"])}' + (f' ({money(st["t12_psf"])}/sq ft)' if st["t12_psf"] else '') + '.')
     else:
         parts.append(f'No {n} homes sold in the last 12 months.')
-    p5 = [r["close_price"] for r in st["five"]]
-    parts.append(f'Over the last 5 years, {len(p5)} sold for between {money(min(p5))} and {money(max(p5))}.')
+    p12 = [r["close_price"] for r in st["t12"]]
+    if p12:
+        parts.append(f'They sold for between {money(min(p12))} and {money(max(p12))}.')
     if st["latest"]:
         r = st["latest"]
         desc = f'{r.get("beds_total")}-bedroom' + (f', {r["living_area"]:,} sq ft' if r.get("living_area") else "")

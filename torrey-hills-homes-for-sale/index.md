@@ -27,53 +27,41 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 
 ## Neighborhoods in Torrey Hills
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Trilogy — 189 homes · built 1996–1999 | 16 | $1.3M–$1.67M |
-| Sands — 107 homes · built 1999–2000 | 11 | $1.58M–$2.25M |
-| Torrey View — 121 homes · built 1997–1999 | 11 | $1.9M–$2.65M |
-| Torrey Woods Estates — 93 homes · built 2001–2003 | 9 | $2.53M–$2.9M |
-| Greenbriar — 107 homes · built 2001–2003 | 7 | $1.78M–$2.35M |
-| Sansonnet — 183 homes · built 2000 | 7 | $2.19M–$2.99M |
-| Shores — 111 homes · built 1998–2000 | 7 | $2M–$3.22M |
-| Searidge — 57 homes · built 2001 | 6 | $1.9M–$2.61M |
-| Monte Claire — 50 homes · built 2000–2001 | 5 | $2.38M–$3.14M |
-| St. Augustine — 108 homes · built 2000–2001 | 5 | $1.89M–$2.5M |
-| Gables — 44 homes · built 2001–2003 | 4 | $2.7M–$3.05M |
-| La Strada — 69 homes · built 2002–2004 | 4 | $2.35M–$3.1M |
-| Montecito — 81 homes · built 2000 | 4 | $2.4M–$3.1M |
-| Torrey Point — 81 homes · built 1999–2000 | 4 | $2.38M–$2.5M |
-| Coves — 108 homes · built 2000 | 3 | $1.86M–$2.1M |
-| Vantage Point — 24 homes · built 2001–2003 | 3 | $2.2M–$2.56M |
-| Sea Country — 53 homes · built 2000–2001 | 2 | $2.5M–$2.9M |
+| Sands — 107 homes · built 1999–2000 | 4 | $1.84M–$2.22M |
+| Torrey View — 121 homes · built 1997–1999 | 3 | $1.95M–$2.6M |
+| Torrey Woods Estates — 93 homes · built 2001–2003 | 2 | $2.75M–$2.84M |
+| Sansonnet — 183 homes · built 2000 | 2 | $2.56M–$2.96M |
+| Monte Claire — 50 homes · built 2000–2001 | 2 | $2.97M–$3.14M |
+| Gables — 44 homes · built 2001–2003 | 2 | $2.7M–$2.83M |
+| Trilogy — 189 homes · built 1996–1999 | 1 | $1.6M |
+| Greenbriar — 107 homes · built 2001–2003 | 1 | $2.1M |
+| Searidge — 57 homes · built 2001 | 1 | $2.32M |
+| St. Augustine — 108 homes · built 2000–2001 | 1 | $2.5M |
+| La Strada — 69 homes · built 2002–2004 | 1 | $3.1M |
+| Montecito — 81 homes · built 2000 | 1 | $2.85M |
+| Torrey Point — 81 homes · built 1999–2000 | 1 | $2.45M |
+| Coves — 108 homes · built 2000 | 1 | $2.1M |
+| Vantage Point — 24 homes · built 2001–2003 | 1 | $2.3M |
+| Shores — 111 homes · built 1998–2000 | — | — |
+| Sea Country — 53 homes · built 2000–2001 | — | — |
 
 ## Prices by home size
 
-### Under 2,000 sq ft
-
-**$1.3M–$2.17M**
-
-20 sales · about $937/sq ft · last sold $1.6M, Apr 2026
-
 ### 2,000–3,000 sq ft
 
-**$1.58M–$3.54M**
+**$1.84M–$3.54M**
 
-52 sales · about $864/sq ft · last sold $3.54M, Nov 2026
+14 sales · about $917/sq ft · last sold $3.54M, Nov 2026
 
 ### 3,000–4,000 sq ft
 
-**$1.95M–$4.8M**
+**$2.3M–$4.8M**
 
-34 sales · about $788/sq ft · last sold $2.97M, Oct 2026
+10 sales · about $804/sq ft · last sold $2.97M, Oct 2026
 
-### 4,000–5,000 sq ft
-
-**$2.53M–$4.4M**
-
-9 sales · about $670/sq ft · last sold $2.84M, Feb 2026
-
-115 single-family sales inside Torrey Hills, last 5 years, as of November 18, 2026.
+26 single-family sales inside Torrey Hills, last 12 months, as of November 18, 2026.
 
 ## Elementary schools
 
@@ -101,11 +89,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in Torrey Hills cost?
 
-In the last 12 months, 26 single-family homes in Torrey Hills sold at a median of $2,527,500 (about $863 per sq ft), below the Carmel Valley median of $2,625,000. Over the last 5 years, 115 sold for between $1,300,000 and $4,800,000.
+In the last 12 months, 26 single-family homes in Torrey Hills sold at a median of $2,527,500 (about $863 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,600,667 and $4,800,000.
 
 ### Which neighborhoods are in Torrey Hills?
 
-Torrey Hills has 17 single-family neighborhoods, including Trilogy, Sands, Torrey View, Torrey Woods Estates, Greenbriar, Sansonnet. Among those with at least three sales in the last 12 months, Sands had the lowest median ($1.92M) and Torrey View the highest ($2.44M).
+Torrey Hills has 17 single-family neighborhoods, including Sands, Torrey View, Torrey Woods Estates, Sansonnet, Monte Claire, Gables. Among those with at least three sales in the last 12 months, Sands had the lowest median ($1.92M) and Torrey View the highest ($2.44M).
 
 ### How old are the homes in Torrey Hills?
 

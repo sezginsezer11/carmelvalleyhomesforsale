@@ -31,44 +31,36 @@ This search shows all of 92130. Ask me which listings are inside the Pacific Sky
 
 ## Where homes sold in the Pacific Sky area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Elms | 13 | $1.73M–$2.5M |
-| Cassavia | 12 | $1.8M–$2.52M |
-| Verana | 11 | $2.3M–$2.93M |
-| Casabella | 11 | $1.97M–$2.4M |
-| Canterra | 10 | $1.63M–$2.03M |
-| Costa Del Sol | 6 | $1.27M–$1.74M |
-| Sterling | 6 | $2.54M–$3.2M |
-| Ivy | 5 | $1.76M–$2M |
-| Costa Del Sol West | 5 | $1.52M–$1.71M |
-| Portofino | 5 | $2.1M–$2.75M |
-| Rancho Glens Estates | 3 | $3.25M–$4.15M |
-| Villa Andalucia | 2 | $1.45M–$1.55M |
+| Casabella | 3 | $2.15M–$2.27M |
+| Cassavia | 2 | $2.2M–$2.25M |
+| Ivy | 2 | $1.78M–$2M |
+| Rancho Glens Estates | 2 | $3.25M–$4.15M |
+| Verana | 2 | $2.43M–$2.45M |
+| Canterra | 1 | $1.76M |
+| Costa Del Sol | 1 | $1.69M |
+| Costa Del Sol West | 1 | $1.71M |
+| Elms | 1 | $2.39M |
+| Villa Andalucia | 1 | $1.55M |
 
-From where homes sold in the last 5 years. 1 more sales had no neighborhood name.
+From where homes sold in the last 12 months.
 
 ## Prices by home size
 
-### Under 2,000 sq ft
-
-**$1.27M–$1.8M**
-
-7 sales · about $905/sq ft · last sold $1.55M, Jul 2026
-
 ### 2,000–3,000 sq ft
 
-**$1.45M–$2.53M**
+**$1.69M–$2.45M**
 
-52 sales · about $819/sq ft · last sold $1.76M, Nov 2026
+11 sales · about $808/sq ft · last sold $1.76M, Nov 2026
 
 ### 3,000–4,000 sq ft
 
-**$1.8M–$3.25M**
+**$2.39M–$3.25M**
 
-27 sales · about $759/sq ft · last sold $2.39M, Nov 2026
+3 sales · about $773/sq ft · last sold $2.39M, Nov 2026
 
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ## Recently sold in the Pacific Sky area
 
@@ -111,7 +103,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 ### How much does a house in the Pacific Sky Elementary area cost?
 
-In the last 12 months, 16 single-family homes in the Pacific Sky Elementary attendance area sold at a median of $2,177,500 (about $805 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 90 sold for between $1,270,000 and $4,150,000.
+In the last 12 months, 16 single-family homes in the Pacific Sky Elementary attendance area sold at a median of $2,177,500 (about $805 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,550,000 and $4,150,000.
 
 ### Which neighborhoods are in the Pacific Sky Elementary area?
 

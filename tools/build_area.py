@@ -117,25 +117,25 @@ def build(key, shapes, hub_comms, all_rows):
     for c in comms:
         g = by_name.get(c["n"].lower(), [])
         ybs = [r["year_built"] for r in g if r.get("year_built")]
-        g12 = [r["close_price"] for r in g if r["_d"] >= years_ago(1)]
+        g12 = [r["close_price"] for r in g if r["_d"] >= years_ago(1)]  # prices shown: last 12 months only
         nb.append({"n": c["n"], "homes": c.get("homes"), "sales": len(g), "prices": [r["close_price"] for r in g],
-                   "med": med(g12), "n12": len(g12),
+                   "med": med(g12), "n12": len(g12), "p12": g12,
                    "built": (f"{min(ybs)}" if min(ybs) == max(ybs) else f"{min(ybs)}&ndash;{max(ybs)}") if ybs else "",
                    "url": NEIGHBORHOOD_PAGES.get(c["n"]), "p": c["p"]})
-    nb.sort(key=lambda x: (-x["sales"], x["n"]))
+    nb.sort(key=lambda x: (-x["n12"], -x["sales"], x["n"]))
     nb_rows = ""
     for x in nb:
         name_html = '<a href="%s">%s</a>' % (x["url"], e(x["n"])) if x["url"] else e(x["n"])
         meta = " &middot; ".join(s for s in ["%s homes" % x["homes"] if x["homes"] else "",
                                              "built " + x["built"] if x["built"] else ""] if s)
         nb_rows += ('<tr id="n-%s"><td class="nm">%s<span>%s</span></td><td class="num">%s</td><td class="num">%s</td></tr>'
-                    % (slug(x["n"]), name_html, meta, x["sales"] or "&mdash;", span(x["prices"]) if x["prices"] else "&mdash;"))
+                    % (slug(x["n"]), name_html, meta, x["n12"] or "&mdash;", span(x["p12"]) if x["p12"] else "&mdash;"))
     priced = [x for x in nb if x["n12"] >= 3]
     lo = min(priced, key=lambda x: x["med"]) if priced else None
     hi = max(priced, key=lambda x: x["med"]) if priced else None
 
     # price by home size
-    bed_cards = size_cards(five, span, short)
+    bed_cards = size_cards(t12, span, short, min_sales=2)
 
     # schools
     elem = collections.Counter(elementary_for(r.get("lat"), r.get("lng")) for r in five)
@@ -159,8 +159,8 @@ def build(key, shapes, hub_comms, all_rows):
     faqs = [
         (f"How much does a house in {label} cost?",
          f"In the last 12 months, {len(t12)} single-family homes in {label} sold at a median of {money(m12)} (about {money(psf)} per sq ft), "
-         f"{vs} the Carmel Valley median of {money(cv_m12)}. Over the last 5 years, {len(five)} sold for between "
-         f"{money(min(r['close_price'] for r in five))} and {money(max(r['close_price'] for r in five))}."),
+         f"{vs} the Carmel Valley median of {money(cv_m12)}. They sold for between "
+         f"{money(min(r['close_price'] for r in t12))} and {money(max(r['close_price'] for r in t12))}."),
         (f"Which neighborhoods are in {label}?",
          f"{label} has {len(comms)} single-family neighborhoods, including {', '.join(x['n'] for x in nb[:6])}."
          + (f" Among those with at least three sales in the last 12 months, {lo['n']} had the lowest median ({short(lo['med'])}) and {hi['n']} the highest ({short(hi['med'])})."
@@ -202,7 +202,7 @@ def build(key, shapes, hub_comms, all_rows):
         desc = f"{label} homes in Carmel Valley: 12-month median {short(m12)}, {len(comms)} neighborhoods, sold prices and a map."
     color = COLORS.get(key, "#0b5c8c")
     mapdata = json.dumps({"area": [[[round(y, 5), round(x, 5)] for x, y in p] for p in rings],
-                          "nb": [{"n": x["n"], "m": short(x["med"]) if x["med"] else None, "k": x["n12"], "r": span(x["prices"]) if x["prices"] else "", "s": x["sales"], "u": x["url"], "p": x["p"]} for x in nb]},
+                          "nb": [{"n": x["n"], "m": short(x["med"]) if x["med"] else None, "k": x["n12"], "r": span(x["p12"]) if x["p12"] else "", "s": x["sales"], "u": x["url"], "p": x["p"]} for x in nb]},
                          separators=(",", ":"))
 
     page = f'''<!doctype html>
@@ -327,13 +327,13 @@ def build(key, shapes, hub_comms, all_rows):
   <div class="wrap two">
     <div>
       <h2 class="h3">Neighborhoods in {e(label)}</h2>
-      <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 5 yrs</th><th class="num">Sold for, 5 yrs</th></tr></thead>
+      <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 12 mo</th><th class="num">Sold for, 12 mo</th></tr></thead>
       <tbody>{nb_rows}</tbody></table>
     </div>
     <div id="prices">
       <h2 class="h3">Prices by home size</h2>
       <div class="bcs">{bed_cards}</div>
-      <p class="note">{len(five)} single-family sales inside {e(label)}, last 5 years, as of {stamp}.</p>
+      <p class="note">{len(t12)} single-family sales inside {e(label)}, last 12 months, as of {stamp}.</p>
     </div>
   </div>
 </section>
@@ -393,7 +393,7 @@ def build(key, shapes, hub_comms, all_rows):
     return l;}});
   function pick(o,l){{
     if(sel)sel.setStyle({{weight:1.2,color:LN,fillOpacity:.32}});sel=l;l.setStyle({{weight:3,color:'#101418',fillOpacity:.6}});
-    card.innerHTML='<button type="button" class="x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-m">'+(o.s?(o.m?'12-mo median '+o.m+' ('+o.k+' sold)':'No sales in the last 12 months')+'<br>'+o.s+' sold in 5 yrs: '+o.r:'No recent single-family sales')+'</div>'
+    card.innerHTML='<button type="button" class="x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-m">'+(o.k?(o.m?'12-mo median '+o.m+' ('+o.k+' sold)<br>':'')+'Sold for '+o.r+' in the last 12 months':'No sales in the last 12 months')+'</div>'
       +(o.u?'<a href="'+o.u+'">Neighborhood guide &rarr;</a>':'<a href="#contact">Ask about '+esc(o.n)+'</a>');
     card.classList.add('show');card.querySelector('.x').onclick=function(){{card.classList.remove('show');l.setStyle({{weight:1.2,color:LN,fillOpacity:.32}});sel=null;}};
   }}

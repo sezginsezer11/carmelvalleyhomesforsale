@@ -27,38 +27,38 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 
 ## Neighborhoods in Carmel Country Highlands
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Belmont — 316 homes · built 1999–2011 | 28 | $1.93M–$3.4M |
-| [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) — 265 homes · built 1998–2003 | 26 | $2.6M–$3.88M |
-| Derby Hill — 172 homes · built 2005–2009 | 19 | $1.73M–$4.1M |
-| Steeplechase — 193 homes · built 1999–2001 | 13 | $2.03M–$2.73M |
-| Breakers — 72 homes · built 2000–2001 | 7 | $2.29M–$3.23M |
-| Carriage Run — 169 homes · built 2010–2011 | 6 | $1.95M–$2.3M |
-| Saratoga — 114 homes · built 2006–2007 | 6 | $2.15M–$3.05M |
-| Bridle Ridge — 53 homes · built 2008 | 1 | $2.03M |
+| [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) — 265 homes · built 1998–2003 | 10 | $3.1M–$3.7M |
+| Belmont — 316 homes · built 1999–2011 | 4 | $2.5M–$3.1M |
+| Derby Hill — 172 homes · built 2005–2009 | 2 | $3.23M–$4.1M |
+| Steeplechase — 193 homes · built 1999–2001 | 2 | $2.41M–$2.42M |
+| Carriage Run — 169 homes · built 2010–2011 | 1 | $2.13M |
+| Breakers — 72 homes · built 2000–2001 | — | — |
+| Saratoga — 114 homes · built 2006–2007 | — | — |
+| Bridle Ridge — 53 homes · built 2008 | — | — |
 
 ## Prices by home size
 
 ### 2,000–3,000 sq ft
 
-**$1.93M–$3.25M**
+**$2.13M–$3.25M**
 
-34 sales · about $905/sq ft · last sold $2.5M, Aug 2026
+5 sales · about $954/sq ft · last sold $2.5M, Aug 2026
 
 ### 3,000–4,000 sq ft
 
-**$2.29M–$3.7M**
+**$2.65M–$3.7M**
 
-47 sales · about $807/sq ft · last sold $3.1M, Oct 2026
+7 sales · about $862/sq ft · last sold $3.1M, Oct 2026
 
 ### 4,000–5,000 sq ft
 
-**$2.6M–$4.1M**
+**$3.12M–$4.1M**
 
-24 sales · about $735/sq ft · last sold $3.5M, Oct 2026
+7 sales · about $740/sq ft · last sold $3.5M, Oct 2026
 
-106 single-family sales inside Carmel Country Highlands, last 5 years, as of November 18, 2026.
+19 single-family sales inside Carmel Country Highlands, last 12 months, as of November 18, 2026.
 
 ## Elementary schools
 
@@ -86,11 +86,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in Carmel Country Highlands cost?
 
-In the last 12 months, 19 single-family homes in Carmel Country Highlands sold at a median of $3,225,000 (about $862 per sq ft), above the Carmel Valley median of $2,625,000. Over the last 5 years, 106 sold for between $1,725,000 and $4,100,000.
+In the last 12 months, 19 single-family homes in Carmel Country Highlands sold at a median of $3,225,000 (about $862 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $2,132,000 and $4,100,000.
 
 ### Which neighborhoods are in Carmel Country Highlands?
 
-Carmel Country Highlands has 8 single-family neighborhoods, including Belmont, Lexington, Derby Hill, Steeplechase, Breakers, Carriage Run. Among those with at least three sales in the last 12 months, Belmont had the lowest median ($2.66M) and Lexington the highest ($3.33M).
+Carmel Country Highlands has 8 single-family neighborhoods, including Lexington, Belmont, Derby Hill, Steeplechase, Carriage Run, Breakers. Among those with at least three sales in the last 12 months, Belmont had the lowest median ($2.66M) and Lexington the highest ($3.33M).
 
 ### How old are the homes in Carmel Country Highlands?
 

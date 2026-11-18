@@ -27,43 +27,25 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 
 ## Neighborhoods in Torrey Highlands
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Fairbanks Highlands — 93 homes · built 2000–2002 | 13 | $3.01M–$4.8M |
-| Villamontes — 124 homes · built 2002–2003 | 12 | $1.55M–$2.76M |
-| Palma Real — 82 homes · built 2002–2003 | 6 | $1.51M–$2.3M |
-| Collins Ranch — 53 homes · built 2002–2003 | 4 | $2.64M–$3.2M |
-| Maricel — built 2012–2013 | 3 | $1.73M–$2.2M |
-| Terrazzo — 59 homes · built 2001–2003 | 3 | $2.03M–$2.32M |
-| Valencia Collection — 8 homes · built 2002 | 3 | $1.67M–$2.95M |
+| Villamontes — 124 homes · built 2002–2003 | 2 | $1.76M–$1.95M |
+| Fairbanks Highlands — 93 homes · built 2000–2002 | 1 | $4.2M |
+| Palma Real — 82 homes · built 2002–2003 | 1 | $2.15M |
+| Collins Ranch — 53 homes · built 2002–2003 | — | — |
+| Maricel — built 2012–2013 | — | — |
+| Terrazzo — 59 homes · built 2001–2003 | — | — |
+| Valencia Collection — 8 homes · built 2002 | — | — |
 
 ## Prices by home size
 
 ### 2,000–3,000 sq ft
 
-**$1.51M–$2.2M**
+**$1.76M–$1.95M**
 
-14 sales · about $743/sq ft · last sold $1.95M, Sep 2026
+2 sales · about $745/sq ft · last sold $1.95M, Sep 2026
 
-### 3,000–4,000 sq ft
-
-**$1.97M–$3.45M**
-
-13 sales · about $620/sq ft · last sold $2.15M, Nov 2025
-
-### 4,000–5,000 sq ft
-
-**$2.8M–$4.4M**
-
-9 sales · about $745/sq ft · last sold $4.2M, Jun 2026
-
-### 5,000+ sq ft
-
-**$2.37M–$4.8M**
-
-8 sales · about $714/sq ft · last sold $4.75M, Sep 2025
-
-44 single-family sales inside Torrey Highlands, last 5 years, as of November 18, 2026.
+4 single-family sales inside Torrey Highlands, last 12 months, as of November 18, 2026.
 
 ## Elementary schools
 
@@ -90,11 +72,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in Torrey Highlands cost?
 
-In the last 12 months, 4 single-family homes in Torrey Highlands sold at a median of $2,050,000 (about $732 per sq ft), below the Carmel Valley median of $2,625,000. Over the last 5 years, 44 sold for between $1,512,000 and $4,800,000.
+In the last 12 months, 4 single-family homes in Torrey Highlands sold at a median of $2,050,000 (about $732 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,755,000 and $4,200,000.
 
 ### Which neighborhoods are in Torrey Highlands?
 
-Torrey Highlands has 7 single-family neighborhoods, including Fairbanks Highlands, Villamontes, Palma Real, Collins Ranch, Maricel, Terrazzo.
+Torrey Highlands has 7 single-family neighborhoods, including Villamontes, Fairbanks Highlands, Palma Real, Collins Ranch, Maricel, Terrazzo.
 
 ### How old are the homes in Torrey Highlands?
 

@@ -85,9 +85,11 @@ def draft(name):
     m12, cv_m12 = med([r["close_price"] for r in t12]), med([r["close_price"] for r in cv12])
     dom = med([r.get("days_on_market") for r in t12])
     cv_dom = med([r.get("days_on_market") for r in cv12])
-    beds = collections.Counter(r.get("beds_total") for r in five if r.get("beds_total"))
+    # what homes sell for: last 12 months only (5 years is for the price trend)
+    p12 = [r["close_price"] for r in t12]
+    beds = collections.Counter(r.get("beds_total") for r in t12 if r.get("beds_total"))
     common = [b for b, _ in beds.most_common()]
-    card_beds = sorted(b for b, n in beds.items() if n >= 2)[:3]
+    card_beds = sorted(b for b, _ in beds.most_common(3))
     per_year = len(five) / 5
     elem = collections.Counter(elementary_for(r.get("lat"), r.get("lng")) for r in rows if r.get("lat"))
     school, share = (elem.most_common(1)[0] if elem else (None, 0))
@@ -97,8 +99,7 @@ def draft(name):
     sq_txt = f"{min(sqft):,}&ndash;{max(sqft):,}" if sqft else None
     path = f"/{slug(name)}-carmel-valley-homes-for-sale/"
 
-    facts = [{"icon": "price", "value": f"{short(min(prices))}&ndash;{short(max(prices))}", "label": "Sold, 5 yrs"},
-             ]
+    facts = [{"icon": "price", "value": f"{short(min(p12))}&ndash;{short(max(p12))}", "label": "Sold, last 12 mo"}] if p12 else []
     if m12:
         facts.append({"icon": "price", "value": short(m12), "label": "Median, last 12 mo"})
     if homes:
@@ -171,8 +172,8 @@ def draft(name):
 
     faq = [
         {"q": f"How much do homes in {name} cost?",
-         "a": f"<p>Over the last 5 years, {len(five)} single-family homes in {name} sold between {short(min(prices))} and {short(max(prices))}. "
-              + (f"In the last 12 months, {len(t12)} sold at a median of {short(m12)}. " if t12 else "None sold in the last 12 months. ")
+         "a": (f"<p>In the last 12 months, {len(t12)} single-family homes in {name} sold between {short(min(p12))} and {short(max(p12))}, "
+               f"at a median of {short(m12)}. " if t12 else f"<p>No single-family homes in {name} sold in the last 12 months. ")
               + "See the price-by-bedroom cards and recent sales on this page for what each kind of home sold for.</p>"},
         {"q": f"What school area is {name} in?",
          "a": f"<p>{school_line} High school is Torrey Pines High (San Dieguito Union HSD), with Canyon Crest Academy and San Dieguito Academy "
@@ -206,9 +207,9 @@ def draft(name):
                           + f" Its closest neighbors are {', '.join(n for n, _ in nearby[:3])}.",
         "schools": schools, "nearby": nearby,
         "glance": {"h2": f"What a {name} Home Costs by Bedrooms",
-                   "lede": f"Closed single-family sales in {name} over the last 5 years, by bedroom count: what each size sold for and the most recent sale.",
+                   "lede": f"Closed single-family sales in {name} in the last 12 months, by bedroom count: what each size sold for and the most recent sale.",
                    "cards": [{"beds": b, "count": "", "size": "", "latest": "", "range": ""} for b in card_beds],
-                   "ratio": f"{common[0]}-bedroom homes made up {beds[common[0]]} of the {len(five)} sales."},
+                   "ratio": f"{common[0]}-bedroom homes made up {beds[common[0]]} of the {len(t12)} sales." if common else ""},
         "life": {"lead": f"{name} is a neighborhood of {homes or 'single-family'}{' ' if homes else ''}{'homes' if homes else 'homes'}"
                          f"{f' built {yb_txt}' if yb_txt else ''} in {area}. Homes run {sq_txt} sq ft"
                          f"{f' on lots around {med(lots):,.0f} sq ft' if lots else ''}, and about {per_year:.0f} sell each year.",

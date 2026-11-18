@@ -27,24 +27,24 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 ## Neighborhoods in North of Del Mar Heights Road
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Heights — 566 homes · built 1984–1989 | 28 | $2M–$3.44M |
-| Promontory — 190 homes · built 1995–2002 | 17 | $2.6M–$3.43M |
-| Santa Fe Summit — 187 homes · built 1991–1995 | 17 | $2.3M–$3.68M |
-| Alta Mar — 216 homes · built 1986–1989 | 15 | $1.77M–$2.68M |
-| Torrey Glen — 151 homes · built 1986–1987 | 10 | $1.6M–$2.06M |
-| San Remo — 289 homes · built 1989–1991 | 9 | $1.38M–$2.05M |
-| Vista Santa Barbara — 85 homes · built 2004–2005 | 6 | $2.69M–$3.7M |
-| Stallions Crossing — 48 homes · built 2003–2005 | 4 | $2.05M–$2.53M |
-| Lexington Summit — 14 homes · built 2003–2004 | 3 | $2.88M–$3.79M |
-| Venezia — 42 homes · built 1999 | 3 | $2.31M–$3.25M |
-| Torrey Del Mar West — 47 homes · built 1993–1999 | 2 | $2.63M–$4.03M |
-| 4x4 Construction — 4 homes · built 1996 | 1 | $3.5M |
-| Del Mar Summit — 5 homes · built 2021 | 1 | $2.28M |
-| Derby Point — 10 homes · built 1999 | 1 | $3.21M |
-| Mayfield — 66 homes · built 1998 | 1 | $2.13M |
+| Heights — 566 homes · built 1984–1989 | 11 | $2.5M–$3.44M |
+| Santa Fe Summit — 187 homes · built 1991–1995 | 5 | $2.58M–$3.68M |
+| Alta Mar — 216 homes · built 1986–1989 | 4 | $2.02M–$2.61M |
+| Promontory — 190 homes · built 1995–2002 | 2 | $3.2M–$3.43M |
+| Torrey Glen — 151 homes · built 1986–1987 | 2 | $1.7M–$2.04M |
+| Vista Santa Barbara — 85 homes · built 2004–2005 | 2 | $2.78M–$3.7M |
+| San Remo — 289 homes · built 1989–1991 | 1 | $1.6M |
+| Stallions Crossing — 48 homes · built 2003–2005 | 1 | $2.21M |
+| Torrey Del Mar West — 47 homes · built 1993–1999 | 1 | $2.63M |
 | Sundowner Estates — 6 homes · built 1996 | 1 | $2.87M |
+| Lexington Summit — 14 homes · built 2003–2004 | — | — |
+| Venezia — 42 homes · built 1999 | — | — |
+| 4x4 Construction — 4 homes · built 1996 | — | — |
+| Del Mar Summit — 5 homes · built 2021 | — | — |
+| Derby Point — 10 homes · built 1999 | — | — |
+| Mayfield — 66 homes · built 1998 | — | — |
 | Senterra | — | — |
 | Stratford | — | — |
 | Windmill Estates — 6 homes | — | — |
@@ -53,29 +53,29 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 ### Under 2,000 sq ft
 
-**$1.38M–$2.28M**
+**$1.6M–$2.1M**
 
-14 sales · about $1,097/sq ft · last sold $2.1M, Jul 2026
+4 sales · about $1,173/sq ft · last sold $2.1M, Jul 2026
 
 ### 2,000–3,000 sq ft
 
-**$1.58M–$2.96M**
+**$2.04M–$2.96M**
 
-38 sales · about $940/sq ft · last sold $2.61M, Sep 2026
+12 sales · about $996/sq ft · last sold $2.61M, Sep 2026
 
 ### 3,000–4,000 sq ft
 
-**$2.05M–$3.7M**
+**$2.21M–$3.7M**
 
-55 sales · about $850/sq ft · last sold $2.78M, Oct 2026
+12 sales · about $892/sq ft · last sold $2.78M, Oct 2026
 
 ### 4,000–5,000 sq ft
 
-**$2.87M–$4.03M**
+**$2.87M–$3.43M**
 
-12 sales · about $798/sq ft · last sold $2.87M, Oct 2026
+2 sales · about $855/sq ft · last sold $2.87M, Oct 2026
 
-121 single-family sales inside North of Del Mar Heights Road, last 5 years, as of November 18, 2026.
+30 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 18, 2026.
 
 ## Elementary schools
 
@@ -102,11 +102,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in North of Del Mar Heights Road cost?
 
-In the last 12 months, 30 single-family homes in North of Del Mar Heights Road sold at a median of $2,683,832 (about $947 per sq ft), above the Carmel Valley median of $2,625,000. Over the last 5 years, 121 sold for between $1,380,000 and $4,030,000.
+In the last 12 months, 30 single-family homes in North of Del Mar Heights Road sold at a median of $2,683,832 (about $947 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $1,595,000 and $3,700,000.
 
 ### Which neighborhoods are in North of Del Mar Heights Road?
 
-North of Del Mar Heights Road has 19 single-family neighborhoods, including Heights, Promontory, Santa Fe Summit, Alta Mar, Torrey Glen, San Remo. Among those with at least three sales in the last 12 months, Alta Mar had the lowest median ($2.2M) and Santa Fe Summit the highest ($3.13M).
+North of Del Mar Heights Road has 19 single-family neighborhoods, including Heights, Santa Fe Summit, Alta Mar, Promontory, Torrey Glen, Vista Santa Barbara. Among those with at least three sales in the last 12 months, Alta Mar had the lowest median ($2.2M) and Santa Fe Summit the highest ($3.13M).
 
 ### How old are the homes in North of Del Mar Heights Road?
 

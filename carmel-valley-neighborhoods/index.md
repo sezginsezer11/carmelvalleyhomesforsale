@@ -44,7 +44,7 @@ Every single-family neighborhood in Carmel Valley, grouped by area. Open an area
 
 ### Rancho Pacifica1
 
-Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for over the last 5 years.
+Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for in the last 12 months.
 
 ## Carmel Valley Neighborhoods: Common Questions
 

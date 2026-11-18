@@ -35,48 +35,35 @@ This search shows all of 92130. Ask me which listings are inside the Ocean Air b
 
 ## Where homes sold in the Ocean Air area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Trilogy | 16 | $1.3M–$1.67M |
-| Sands | 11 | $1.58M–$2.25M |
-| Derby Hill | 11 | $1.73M–$3.57M |
-| Torrey Woods Estates | 9 | $2.53M–$2.9M |
-| Sansonnet | 7 | $2.19M–$2.99M |
-| Greenbriar | 7 | $1.78M–$2.35M |
-| Monte Claire | 5 | $2.38M–$3.14M |
-| Montecito | 4 | $2.4M–$3.1M |
-| Gables | 4 | $2.7M–$3.05M |
-| Coves | 3 | $1.86M–$2.1M |
+| Sands | 4 | $1.84M–$2.22M |
+| Gables | 2 | $2.7M–$2.83M |
+| Monte Claire | 2 | $2.97M–$3.14M |
+| Sansonnet | 2 | $2.56M–$2.96M |
+| Torrey Woods Estates | 2 | $2.75M–$2.84M |
+| Coves | 1 | $2.1M |
+| Greenbriar | 1 | $2.1M |
+| Montecito | 1 | $2.85M |
+| Trilogy | 1 | $1.6M |
 
-From where homes sold in the last 5 years. 6 more sales had no neighborhood name.
+From where homes sold in the last 12 months. 2 more sales had no neighborhood name.
 
 ## Prices by home size
 
-### Under 2,000 sq ft
-
-**$1.3M–$2.17M**
-
-21 sales · about $926/sq ft · last sold $1.6M, Apr 2026
-
 ### 2,000–3,000 sq ft
 
-**$1.58M–$3.54M**
+**$1.84M–$3.54M**
 
-25 sales · about $902/sq ft · last sold $3.54M, Nov 2026
+9 sales · about $934/sq ft · last sold $3.54M, Nov 2026
 
 ### 3,000–4,000 sq ft
 
-**$2.2M–$4.8M**
+**$2.7M–$4.8M**
 
-27 sales · about $802/sq ft · last sold $2.97M, Oct 2026
+7 sales · about $855/sq ft · last sold $2.97M, Oct 2026
 
-### 4,000–5,000 sq ft
-
-**$2.53M–$4.4M**
-
-10 sales · about $670/sq ft · last sold $2.84M, Feb 2026
-
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ## Recently sold in the Ocean Air area
 
@@ -119,7 +106,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 ### How much does a house in the Ocean Air Elementary area cost?
 
-In the last 12 months, 18 single-family homes in the Ocean Air Elementary attendance area sold at a median of $2,723,000 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 83 sold for between $1,300,000 and $4,800,000.
+In the last 12 months, 18 single-family homes in the Ocean Air Elementary attendance area sold at a median of $2,723,000 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,600,667 and $4,800,000.
 
 ### Which neighborhoods are in the Ocean Air Elementary area?
 

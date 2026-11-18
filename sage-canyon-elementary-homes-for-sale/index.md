@@ -37,59 +37,53 @@ This search shows all of 92130. Ask me which listings are inside the Sage Canyon
 
 ## Where homes sold in the Sage Canyon area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Palacio Del Mar | 36 | $1.37M–$5.93M |
-| Belmont | 28 | $1.93M–$3.4M |
-| [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) | 26 | $2.6M–$3.88M |
-| Meadows Del Mar | 18 | $3.63M–$5.93M |
-| Steeplechase | 13 | $2.03M–$2.73M |
-| Alta Del Mar | 11 | $3.9M–$5.1M |
-| Derby Hill | 9 | $2.35M–$4.1M |
-| Breakers | 7 | $2.29M–$3.23M |
-| Carriage Run | 6 | $1.95M–$2.3M |
-| Saratoga | 6 | $2.15M–$3.05M |
-| Whitehorse | 4 | $4.35M–$5.2M |
-| Ridge | 3 | $4.14M–$6.75M |
-| Valencia | 2 | $4.25M–$5.8M |
-| Ridge Estates | 1 | $5.42M |
-| Bridle Ridge | 1 | $2.03M |
+| [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) | 10 | $3.1M–$3.7M |
+| Palacio Del Mar | 9 | $1.98M–$2.34M |
+| Belmont | 4 | $2.5M–$3.1M |
+| Alta Del Mar | 3 | $4.21M–$5.1M |
+| Meadows Del Mar | 3 | $3.63M–$4.75M |
+| Derby Hill | 2 | $3.23M–$4.1M |
+| Steeplechase | 2 | $2.41M–$2.42M |
+| Carriage Run | 1 | $2.13M |
+| Whitehorse | 1 | $4.6M |
 
-From where homes sold in the last 5 years. 3 more sales had no neighborhood name.
+From where homes sold in the last 12 months. 1 more sales had no neighborhood name.
 
 ## Prices by home size
 
 ### Under 2,000 sq ft
 
-**$1.37M–$2.18M**
+**$1.98M–$2.18M**
 
-7 sales · about $994/sq ft · last sold $2.11M, Sep 2026
+4 sales · about $1,104/sq ft · last sold $2.11M, Sep 2026
 
 ### 2,000–3,000 sq ft
 
-**$1.69M–$3.48M**
+**$2.1M–$3.25M**
 
-56 sales · about $870/sq ft · last sold $2.34M, Oct 2026
+10 sales · about $932/sq ft · last sold $2.34M, Oct 2026
 
 ### 3,000–4,000 sq ft
 
-**$2.2M–$3.7M**
+**$2.65M–$3.7M**
 
-47 sales · about $787/sq ft · last sold $3.1M, Oct 2026
+7 sales · about $862/sq ft · last sold $3.1M, Oct 2026
 
 ### 4,000–5,000 sq ft
 
-**$2.6M–$5.93M**
+**$3.12M–$5.1M**
 
-30 sales · about $755/sq ft · last sold $3.5M, Oct 2026
+9 sales · about $758/sq ft · last sold $3.5M, Oct 2026
 
 ### 5,000+ sq ft
 
-**$3.63M–$6.75M**
+**$3.63M–$5.25M**
 
-34 sales · about $757/sq ft · last sold $5.25M, Aug 2026
+6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ## Recently sold in the Sage Canyon area
 
@@ -132,7 +126,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 ### How much does a house in the Sage Canyon Elementary area cost?
 
-In the last 12 months, 36 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,171,948 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 174 sold for between $1,371,900 and $6,750,000.
+In the last 12 months, 36 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,171,948 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,980,000 and $5,250,000.
 
 ### Which neighborhoods are in the Sage Canyon Elementary area?
 

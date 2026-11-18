@@ -110,7 +110,7 @@ def main():
         page = SCHOOL_PAGES.get(name)
         meta = " &middot; ".join(x for x in [f"{len(hoods)} neighborhoods", f"median {short(med)}" if med else "", grades] if x)
         zones.append({"n": name, "sub": dk, "c": color, "p": rings, "note": meta,
-                      "r5": f"{short(min(five))}&ndash;{short(max(five))}" if five else None,
+                      "r12": (f"{short(min(t12))}&ndash;{short(max(t12))}" if max(t12) > min(t12) else short(t12[0])) if t12 else None,
                       "x": DISTRICTS[dk][1] + " \u00b7 " + (f"{SDUHSD_YEAR} map" if lvl != "el" else f"{len(hoods)} neighborhoods" if hoods else "Carmel Valley"),
                       "v": lvl,
                       "hu": page + "#listings" if page else "", "gu": page if page else "", "gl": "School guide",

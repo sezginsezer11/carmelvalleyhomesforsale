@@ -12,7 +12,7 @@ Source page: https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-
 
 265 single-family homes built 1998–2003 in Carmel Country Highlands, in the Sage Canyon Elementary area. Live listings, real sold prices and what to know before you buy.
 
-- **Sold, 5 yrs:** $2.6M–$3.88M
+- **Sold, last 12 mo:** $3.1M–$3.7M
 - **Median, last 12 mo:** $3.33M
 - **Homes:** 265
 - **Built:** 1998–2003
@@ -53,35 +53,35 @@ School assignments can change. Verify current boundaries directly with [Del Mar 
 
 ## What a Lexington Home Costs by Bedrooms
 
-Closed single-family sales in Lexington over the last 5 years, by bedroom count: what each size sold for and the most recent sale.
+Closed single-family sales in Lexington in the last 12 months, by bedroom count: what each size sold for and the most recent sale.
 
 ### 4 Bedroom
 
-2 sales · 5 yrs
+1 sale · 12 mo
 
-- **Size:** 4,226–4,620 sq ft
+- **Size:** 4,620 sq ft
 - **Sold for:** $3.5M
 - **Most recent sale:** $3,500,000 · May 2026
 
 ### 5 Bedroom
 
-12 sales · 5 yrs
+4 sales · 12 mo
 
-- **Size:** 2,945–4,658 sq ft
-- **Sold for:** $2.6M–$3.9M
+- **Size:** 2,945–3,827 sq ft
+- **Sold for:** $3.1M–$3.7M
 - **Most recent sale:** $3,100,825 · Oct 2026
 
 ### 6 Bedroom
 
-10 sales · 5 yrs
+4 sales · 12 mo
 
-- **Size:** 4,454–4,930 sq ft
-- **Sold for:** $2.7M–$3.5M
+- **Size:** 4,454–4,687 sq ft
+- **Sold for:** $3.1M–$3.5M
 - **Most recent sale:** $3,500,000 · Oct 2026
 
-5-bedroom homes made up 12 of the 26 sales. See the [price history](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/#sold-data).
+6-bedroom homes made up 4 of the 10 sales. See the [price history](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/#sold-data).
 
-Closed MLS sales, last 5 years.
+Closed MLS sales, last 12 months.
 
 ## Life at Lexington
 
@@ -128,7 +128,7 @@ Next door in Carmel Country Highlands.
 
 ## Lexington Prices & Sales
 
-In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). Over the last 5 years, 26 sold for between $2,600,000 and $3,883,083. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 18, 2026.
+In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 18, 2026.
 
 The stats reflect the trailing 12 months; the table breaks the same data out by calendar year.
 
@@ -239,7 +239,7 @@ Who it suits best, and the honest tradeoffs to weigh before you buy.
 
 ### How much do homes in Lexington cost?
 
-Over the last 5 years, 26 single-family homes in Lexington sold between $2.6M and $3.88M. In the last 12 months, 10 sold at a median of $3.33M. See the price-by-bedroom cards and recent sales on this page for what each kind of home sold for.
+In the last 12 months, 10 single-family homes in Lexington sold between $3.1M and $3.7M, at a median of $3.33M. See the price-by-bedroom cards and recent sales on this page for what each kind of home sold for.
 
 ### How many homes are in Lexington?
 

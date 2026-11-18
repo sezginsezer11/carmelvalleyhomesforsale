@@ -31,34 +31,32 @@ This search shows all of 92130. Ask me which listings are inside the Torrey Hill
 
 ## Where homes sold in the Torrey Hills area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Torrey View | 11 | $1.9M–$2.65M |
-| Shores | 7 | $2M–$3.22M |
-| Searidge | 6 | $1.9M–$2.61M |
-| St. Augustine | 5 | $1.89M–$2.5M |
-| Torrey Point | 4 | $2.38M–$2.5M |
-| La Strada | 4 | $2.35M–$3.1M |
-| Vantage Point | 3 | $2.2M–$2.56M |
-| Sea Country | 2 | $2.5M–$2.9M |
+| Torrey View | 3 | $1.95M–$2.6M |
+| La Strada | 1 | $3.1M |
+| Searidge | 1 | $2.32M |
+| St. Augustine | 1 | $2.5M |
+| Torrey Point | 1 | $2.45M |
+| Vantage Point | 1 | $2.3M |
 
-From where homes sold in the last 5 years.
+From where homes sold in the last 12 months.
 
 ## Prices by home size
 
 ### 2,000–3,000 sq ft
 
-**$1.89M–$2.65M**
+**$1.95M–$2.6M**
 
-29 sales · about $826/sq ft · last sold $2.5M, Aug 2026
+5 sales · about $876/sq ft · last sold $2.5M, Aug 2026
 
 ### 3,000–4,000 sq ft
 
-**$1.95M–$3.22M**
+**$2.3M–$3.1M**
 
-13 sales · about $768/sq ft · last sold $3.1M, Feb 2026
+3 sales · about $773/sq ft · last sold $3.1M, Feb 2026
 
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ## Recently sold in the Torrey Hills area
 
@@ -101,7 +99,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 ### How much does a house in the Torrey Hills Elementary area cost?
 
-In the last 12 months, 8 single-family homes in the Torrey Hills Elementary attendance area sold at a median of $2,445,000 (about $829 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 42 sold for between $1,890,000 and $3,224,000.
+In the last 12 months, 8 single-family homes in the Torrey Hills Elementary attendance area sold at a median of $2,445,000 (about $829 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,949,000 and $3,100,000.
 
 ### Which neighborhoods are in the Torrey Hills Elementary area?
 

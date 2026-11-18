@@ -27,78 +27,72 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 ## Neighborhoods in Pacific Highlands Ranch
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Sendero Collection — built 2021–2023 | 20 | $2.07M–$3.55M |
-| Portico — 186 homes · built 2005–2009 | 19 | $1.56M–$2.14M |
-| Arabella — 140 homes · built 2005–2008 | 14 | $1.7M–$2.33M |
-| Soleil at Bordeaux — 163 homes · built 2004–2006 | 14 | $1.8M–$2.6M |
-| Almeria — built 2017–2018 | 13 | $3.25M–$4.2M |
-| Elms — built 2015–2017 | 13 | $1.73M–$2.5M |
-| Cassavia — built 2017–2018 | 12 | $1.8M–$2.52M |
-| Santa Rosa — 124 homes · built 2005–2007 | 12 | $2.28M–$3.35M |
-| Carmel — built 2018–2023 | 11 | $2.98M–$4.4M |
-| Casabella — built 2015–2017 | 11 | $1.97M–$2.4M |
-| Verana — built 2015–2016 | 11 | $2.3M–$2.93M |
-| Canterra — built 2015–2016 | 10 | $1.63M–$2.03M |
-| Brightwater — 77 homes · built 2012–2015 | 9 | $2.53M–$3.3M |
-| Hampton Lane — 118 homes · built 2012–2013 | 9 | $1.65M–$2.2M |
-| Olvera — built 2015–2018 | 8 | $2.9M–$3.73M |
-| Bordeaux — 106 homes · built 2003–2004 | 7 | $1.87M–$2.49M |
-| Santa Barbara — 98 homes · built 2003 | 7 | $2.31M–$3.87M |
-| Costa Del Sol — 165 homes · built 2003–2004 | 6 | $1.27M–$1.74M |
-| Palomar — built 2019–2020 | 6 | $4.35M–$6.19M |
-| Sterling — built 2017 | 6 | $2.54M–$3.2M |
-| Terraza — built 2019–2020 | 6 | $2.76M–$3.17M |
-| Vista Del Mar — built 2019–2020 | 6 | $3.45M–$5.15M |
-| Vista Santa Fe — built 2019–2020 | 6 | $3M–$5.38M |
-| Costa Del Sol West — built 2003 | 5 | $1.52M–$1.71M |
-| Ivy — built 2016–2017 | 5 | $1.76M–$2M |
-| Manzanita Trail — 148 homes · built 2009–2011 | 5 | $1.58M–$2.2M |
-| Portofino — built 2017–2018 | 5 | $2.1M–$2.75M |
-| Sendero — built 2019–2020 | 5 | $2.17M–$3.2M |
-| Meadowood — built 2016–2018 | 4 | $2.15M–$2.95M |
-| Rancho Glens Estates — 33 homes · built 1996–2003 | 3 | $3.25M–$4.15M |
-| The Highlands — built 2020–2023 | 3 | $3.8M–$4.55M |
-| Artesana — built 2018 | 2 | $3.6M–$3.73M |
-| Casabella Collection — built 2017 | 2 | $1.94M–$2.44M |
-| Villa Andalucia — built 2003 | 2 | $1.45M–$1.55M |
+| Portico — 186 homes · built 2005–2009 | 4 | $1.9M–$2.14M |
+| Arabella — 140 homes · built 2005–2008 | 4 | $1.88M–$2.15M |
+| Vista Del Mar — built 2019–2020 | 4 | $3.9M–$4.49M |
+| Almeria — built 2017–2018 | 3 | $3.5M–$4.2M |
+| Carmel — built 2018–2023 | 3 | $3.5M–$3.8M |
+| Casabella — built 2015–2017 | 3 | $2.15M–$2.27M |
+| Hampton Lane — 118 homes · built 2012–2013 | 3 | $2.08M–$2.14M |
+| Santa Barbara — 98 homes · built 2003 | 3 | $2.89M–$3.1M |
+| Sendero Collection — built 2021–2023 | 2 | $2.95M–$3.39M |
+| Soleil at Bordeaux — 163 homes · built 2004–2006 | 2 | $2.12M–$2.34M |
+| Cassavia — built 2017–2018 | 2 | $2.2M–$2.25M |
+| Verana — built 2015–2016 | 2 | $2.43M–$2.45M |
+| Brightwater — 77 homes · built 2012–2015 | 2 | $2.63M–$2.9M |
+| Olvera — built 2015–2018 | 2 | $3.37M–$3.45M |
+| Bordeaux — 106 homes · built 2003–2004 | 2 | $2.18M–$2.49M |
+| Vista Santa Fe — built 2019–2020 | 2 | $5.3M–$5.38M |
+| Ivy — built 2016–2017 | 2 | $1.78M–$2M |
+| Rancho Glens Estates — 33 homes · built 1996–2003 | 2 | $3.25M–$4.15M |
+| The Highlands — built 2020–2023 | 2 | $4.4M–$4.55M |
+| Elms — built 2015–2017 | 1 | $2.39M |
+| Santa Rosa — 124 homes · built 2005–2007 | 1 | $2.66M |
+| Canterra — built 2015–2016 | 1 | $1.76M |
+| Costa Del Sol — 165 homes · built 2003–2004 | 1 | $1.69M |
+| Terraza — built 2019–2020 | 1 | $3.13M |
+| Costa Del Sol West — built 2003 | 1 | $1.71M |
+| Manzanita Trail — 148 homes · built 2009–2011 | 1 | $2.2M |
+| Artesana — built 2018 | 1 | $3.73M |
+| Villa Andalucia — built 2003 | 1 | $1.55M |
+| Palomar — built 2019–2020 | — | — |
+| Sterling — built 2017 | — | — |
+| Portofino — built 2017–2018 | — | — |
+| Sendero — built 2019–2020 | — | — |
+| Meadowood — built 2016–2018 | — | — |
+| Casabella Collection — built 2017 | — | — |
 | Alta Del Mar-Coastal | — | — |
 | Sandy Lane | — | — |
 
 ## Prices by home size
 
-### Under 2,000 sq ft
-
-**$1.27M–$1.8M**
-
-7 sales · about $905/sq ft · last sold $1.55M, Jul 2026
-
 ### 2,000–3,000 sq ft
 
-**$1.45M–$2.78M**
+**$1.69M–$2.63M**
 
-131 sales · about $834/sq ft · last sold $1.76M, Nov 2026
+28 sales · about $850/sq ft · last sold $1.76M, Nov 2026
 
 ### 3,000–4,000 sq ft
 
-**$1.8M–$3.87M**
+**$2.39M–$3.45M**
 
-90 sales · about $814/sq ft · last sold $2.39M, Nov 2026
+13 sales · about $846/sq ft · last sold $2.39M, Nov 2026
 
 ### 4,000–5,000 sq ft
 
-**$3M–$5.38M**
+**$3.5M–$5.38M**
 
-41 sales · about $841/sq ft · last sold $4.49M, Sep 2026
+14 sales · about $922/sq ft · last sold $4.49M, Sep 2026
 
 ### 5,000+ sq ft
 
-**$3.83M–$6.19M**
+**$4.15M–$5.3M**
 
-9 sales · about $779/sq ft · last sold $4.15M, Oct 2026
+2 sales · about $1,059/sq ft · last sold $4.15M, Oct 2026
 
-278 single-family sales inside Pacific Highlands Ranch, last 5 years, as of November 18, 2026.
+58 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 18, 2026.
 
 ## Elementary schools
 
@@ -129,11 +123,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in Pacific Highlands Ranch cost?
 
-In the last 12 months, 58 single-family homes in Pacific Highlands Ranch sold at a median of $2,470,000 (about $877 per sq ft), below the Carmel Valley median of $2,625,000. Over the last 5 years, 278 sold for between $1,270,000 and $6,190,000.
+In the last 12 months, 58 single-family homes in Pacific Highlands Ranch sold at a median of $2,470,000 (about $877 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,550,000 and $5,380,000.
 
 ### Which neighborhoods are in Pacific Highlands Ranch?
 
-Pacific Highlands Ranch has 36 single-family neighborhoods, including Sendero Collection, Portico, Arabella, Soleil at Bordeaux, Almeria, Elms. Among those with at least three sales in the last 12 months, Arabella had the lowest median ($1.95M) and Vista Del Mar the highest ($3.92M).
+Pacific Highlands Ranch has 36 single-family neighborhoods, including Portico, Arabella, Vista Del Mar, Almeria, Carmel, Casabella. Among those with at least three sales in the last 12 months, Arabella had the lowest median ($1.95M) and Vista Del Mar the highest ($3.92M).
 
 ### How old are the homes in Pacific Highlands Ranch?
 

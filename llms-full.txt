@@ -193,7 +193,7 @@ Every single-family neighborhood in Carmel Valley, grouped by area. Open an area
 
 #### Rancho Pacifica1
 
-Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for over the last 5 years.
+Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for in the last 12 months.
 
 ### Carmel Valley Neighborhoods: Common Questions
 
@@ -267,78 +267,72 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 ### Neighborhoods in Pacific Highlands Ranch
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Sendero Collection — built 2021–2023 | 20 | $2.07M–$3.55M |
-| Portico — 186 homes · built 2005–2009 | 19 | $1.56M–$2.14M |
-| Arabella — 140 homes · built 2005–2008 | 14 | $1.7M–$2.33M |
-| Soleil at Bordeaux — 163 homes · built 2004–2006 | 14 | $1.8M–$2.6M |
-| Almeria — built 2017–2018 | 13 | $3.25M–$4.2M |
-| Elms — built 2015–2017 | 13 | $1.73M–$2.5M |
-| Cassavia — built 2017–2018 | 12 | $1.8M–$2.52M |
-| Santa Rosa — 124 homes · built 2005–2007 | 12 | $2.28M–$3.35M |
-| Carmel — built 2018–2023 | 11 | $2.98M–$4.4M |
-| Casabella — built 2015–2017 | 11 | $1.97M–$2.4M |
-| Verana — built 2015–2016 | 11 | $2.3M–$2.93M |
-| Canterra — built 2015–2016 | 10 | $1.63M–$2.03M |
-| Brightwater — 77 homes · built 2012–2015 | 9 | $2.53M–$3.3M |
-| Hampton Lane — 118 homes · built 2012–2013 | 9 | $1.65M–$2.2M |
-| Olvera — built 2015–2018 | 8 | $2.9M–$3.73M |
-| Bordeaux — 106 homes · built 2003–2004 | 7 | $1.87M–$2.49M |
-| Santa Barbara — 98 homes · built 2003 | 7 | $2.31M–$3.87M |
-| Costa Del Sol — 165 homes · built 2003–2004 | 6 | $1.27M–$1.74M |
-| Palomar — built 2019–2020 | 6 | $4.35M–$6.19M |
-| Sterling — built 2017 | 6 | $2.54M–$3.2M |
-| Terraza — built 2019–2020 | 6 | $2.76M–$3.17M |
-| Vista Del Mar — built 2019–2020 | 6 | $3.45M–$5.15M |
-| Vista Santa Fe — built 2019–2020 | 6 | $3M–$5.38M |
-| Costa Del Sol West — built 2003 | 5 | $1.52M–$1.71M |
-| Ivy — built 2016–2017 | 5 | $1.76M–$2M |
-| Manzanita Trail — 148 homes · built 2009–2011 | 5 | $1.58M–$2.2M |
-| Portofino — built 2017–2018 | 5 | $2.1M–$2.75M |
-| Sendero — built 2019–2020 | 5 | $2.17M–$3.2M |
-| Meadowood — built 2016–2018 | 4 | $2.15M–$2.95M |
-| Rancho Glens Estates — 33 homes · built 1996–2003 | 3 | $3.25M–$4.15M |
-| The Highlands — built 2020–2023 | 3 | $3.8M–$4.55M |
-| Artesana — built 2018 | 2 | $3.6M–$3.73M |
-| Casabella Collection — built 2017 | 2 | $1.94M–$2.44M |
-| Villa Andalucia — built 2003 | 2 | $1.45M–$1.55M |
+| Portico — 186 homes · built 2005–2009 | 4 | $1.9M–$2.14M |
+| Arabella — 140 homes · built 2005–2008 | 4 | $1.88M–$2.15M |
+| Vista Del Mar — built 2019–2020 | 4 | $3.9M–$4.49M |
+| Almeria — built 2017–2018 | 3 | $3.5M–$4.2M |
+| Carmel — built 2018–2023 | 3 | $3.5M–$3.8M |
+| Casabella — built 2015–2017 | 3 | $2.15M–$2.27M |
+| Hampton Lane — 118 homes · built 2012–2013 | 3 | $2.08M–$2.14M |
+| Santa Barbara — 98 homes · built 2003 | 3 | $2.89M–$3.1M |
+| Sendero Collection — built 2021–2023 | 2 | $2.95M–$3.39M |
+| Soleil at Bordeaux — 163 homes · built 2004–2006 | 2 | $2.12M–$2.34M |
+| Cassavia — built 2017–2018 | 2 | $2.2M–$2.25M |
+| Verana — built 2015–2016 | 2 | $2.43M–$2.45M |
+| Brightwater — 77 homes · built 2012–2015 | 2 | $2.63M–$2.9M |
+| Olvera — built 2015–2018 | 2 | $3.37M–$3.45M |
+| Bordeaux — 106 homes · built 2003–2004 | 2 | $2.18M–$2.49M |
+| Vista Santa Fe — built 2019–2020 | 2 | $5.3M–$5.38M |
+| Ivy — built 2016–2017 | 2 | $1.78M–$2M |
+| Rancho Glens Estates — 33 homes · built 1996–2003 | 2 | $3.25M–$4.15M |
+| The Highlands — built 2020–2023 | 2 | $4.4M–$4.55M |
+| Elms — built 2015–2017 | 1 | $2.39M |
+| Santa Rosa — 124 homes · built 2005–2007 | 1 | $2.66M |
+| Canterra — built 2015–2016 | 1 | $1.76M |
+| Costa Del Sol — 165 homes · built 2003–2004 | 1 | $1.69M |
+| Terraza — built 2019–2020 | 1 | $3.13M |
+| Costa Del Sol West — built 2003 | 1 | $1.71M |
+| Manzanita Trail — 148 homes · built 2009–2011 | 1 | $2.2M |
+| Artesana — built 2018 | 1 | $3.73M |
+| Villa Andalucia — built 2003 | 1 | $1.55M |
+| Palomar — built 2019–2020 | — | — |
+| Sterling — built 2017 | — | — |
+| Portofino — built 2017–2018 | — | — |
+| Sendero — built 2019–2020 | — | — |
+| Meadowood — built 2016–2018 | — | — |
+| Casabella Collection — built 2017 | — | — |
 | Alta Del Mar-Coastal | — | — |
 | Sandy Lane | — | — |
 
 ### Prices by home size
 
-#### Under 2,000 sq ft
-
-**$1.27M–$1.8M**
-
-7 sales · about $905/sq ft · last sold $1.55M, Jul 2026
-
 #### 2,000–3,000 sq ft
 
-**$1.45M–$2.78M**
+**$1.69M–$2.63M**
 
-131 sales · about $834/sq ft · last sold $1.76M, Nov 2026
+28 sales · about $850/sq ft · last sold $1.76M, Nov 2026
 
 #### 3,000–4,000 sq ft
 
-**$1.8M–$3.87M**
+**$2.39M–$3.45M**
 
-90 sales · about $814/sq ft · last sold $2.39M, Nov 2026
+13 sales · about $846/sq ft · last sold $2.39M, Nov 2026
 
 #### 4,000–5,000 sq ft
 
-**$3M–$5.38M**
+**$3.5M–$5.38M**
 
-41 sales · about $841/sq ft · last sold $4.49M, Sep 2026
+14 sales · about $922/sq ft · last sold $4.49M, Sep 2026
 
 #### 5,000+ sq ft
 
-**$3.83M–$6.19M**
+**$4.15M–$5.3M**
 
-9 sales · about $779/sq ft · last sold $4.15M, Oct 2026
+2 sales · about $1,059/sq ft · last sold $4.15M, Oct 2026
 
-278 single-family sales inside Pacific Highlands Ranch, last 5 years, as of November 18, 2026.
+58 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 18, 2026.
 
 ### Elementary schools
 
@@ -369,11 +363,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in Pacific Highlands Ranch cost?
 
-In the last 12 months, 58 single-family homes in Pacific Highlands Ranch sold at a median of $2,470,000 (about $877 per sq ft), below the Carmel Valley median of $2,625,000. Over the last 5 years, 278 sold for between $1,270,000 and $6,190,000.
+In the last 12 months, 58 single-family homes in Pacific Highlands Ranch sold at a median of $2,470,000 (about $877 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,550,000 and $5,380,000.
 
 #### Which neighborhoods are in Pacific Highlands Ranch?
 
-Pacific Highlands Ranch has 36 single-family neighborhoods, including Sendero Collection, Portico, Arabella, Soleil at Bordeaux, Almeria, Elms. Among those with at least three sales in the last 12 months, Arabella had the lowest median ($1.95M) and Vista Del Mar the highest ($3.92M).
+Pacific Highlands Ranch has 36 single-family neighborhoods, including Portico, Arabella, Vista Del Mar, Almeria, Carmel, Casabella. Among those with at least three sales in the last 12 months, Arabella had the lowest median ($1.95M) and Vista Del Mar the highest ($3.92M).
 
 #### How old are the homes in Pacific Highlands Ranch?
 
@@ -441,24 +435,24 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 ### Neighborhoods in North of Del Mar Heights Road
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Heights — 566 homes · built 1984–1989 | 28 | $2M–$3.44M |
-| Promontory — 190 homes · built 1995–2002 | 17 | $2.6M–$3.43M |
-| Santa Fe Summit — 187 homes · built 1991–1995 | 17 | $2.3M–$3.68M |
-| Alta Mar — 216 homes · built 1986–1989 | 15 | $1.77M–$2.68M |
-| Torrey Glen — 151 homes · built 1986–1987 | 10 | $1.6M–$2.06M |
-| San Remo — 289 homes · built 1989–1991 | 9 | $1.38M–$2.05M |
-| Vista Santa Barbara — 85 homes · built 2004–2005 | 6 | $2.69M–$3.7M |
-| Stallions Crossing — 48 homes · built 2003–2005 | 4 | $2.05M–$2.53M |
-| Lexington Summit — 14 homes · built 2003–2004 | 3 | $2.88M–$3.79M |
-| Venezia — 42 homes · built 1999 | 3 | $2.31M–$3.25M |
-| Torrey Del Mar West — 47 homes · built 1993–1999 | 2 | $2.63M–$4.03M |
-| 4x4 Construction — 4 homes · built 1996 | 1 | $3.5M |
-| Del Mar Summit — 5 homes · built 2021 | 1 | $2.28M |
-| Derby Point — 10 homes · built 1999 | 1 | $3.21M |
-| Mayfield — 66 homes · built 1998 | 1 | $2.13M |
+| Heights — 566 homes · built 1984–1989 | 11 | $2.5M–$3.44M |
+| Santa Fe Summit — 187 homes · built 1991–1995 | 5 | $2.58M–$3.68M |
+| Alta Mar — 216 homes · built 1986–1989 | 4 | $2.02M–$2.61M |
+| Promontory — 190 homes · built 1995–2002 | 2 | $3.2M–$3.43M |
+| Torrey Glen — 151 homes · built 1986–1987 | 2 | $1.7M–$2.04M |
+| Vista Santa Barbara — 85 homes · built 2004–2005 | 2 | $2.78M–$3.7M |
+| San Remo — 289 homes · built 1989–1991 | 1 | $1.6M |
+| Stallions Crossing — 48 homes · built 2003–2005 | 1 | $2.21M |
+| Torrey Del Mar West — 47 homes · built 1993–1999 | 1 | $2.63M |
 | Sundowner Estates — 6 homes · built 1996 | 1 | $2.87M |
+| Lexington Summit — 14 homes · built 2003–2004 | — | — |
+| Venezia — 42 homes · built 1999 | — | — |
+| 4x4 Construction — 4 homes · built 1996 | — | — |
+| Del Mar Summit — 5 homes · built 2021 | — | — |
+| Derby Point — 10 homes · built 1999 | — | — |
+| Mayfield — 66 homes · built 1998 | — | — |
 | Senterra | — | — |
 | Stratford | — | — |
 | Windmill Estates — 6 homes | — | — |
@@ -467,29 +461,29 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 #### Under 2,000 sq ft
 
-**$1.38M–$2.28M**
+**$1.6M–$2.1M**
 
-14 sales · about $1,097/sq ft · last sold $2.1M, Jul 2026
+4 sales · about $1,173/sq ft · last sold $2.1M, Jul 2026
 
 #### 2,000–3,000 sq ft
 
-**$1.58M–$2.96M**
+**$2.04M–$2.96M**
 
-38 sales · about $940/sq ft · last sold $2.61M, Sep 2026
+12 sales · about $996/sq ft · last sold $2.61M, Sep 2026
 
 #### 3,000–4,000 sq ft
 
-**$2.05M–$3.7M**
+**$2.21M–$3.7M**
 
-55 sales · about $850/sq ft · last sold $2.78M, Oct 2026
+12 sales · about $892/sq ft · last sold $2.78M, Oct 2026
 
 #### 4,000–5,000 sq ft
 
-**$2.87M–$4.03M**
+**$2.87M–$3.43M**
 
-12 sales · about $798/sq ft · last sold $2.87M, Oct 2026
+2 sales · about $855/sq ft · last sold $2.87M, Oct 2026
 
-121 single-family sales inside North of Del Mar Heights Road, last 5 years, as of November 18, 2026.
+30 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 18, 2026.
 
 ### Elementary schools
 
@@ -516,11 +510,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in North of Del Mar Heights Road cost?
 
-In the last 12 months, 30 single-family homes in North of Del Mar Heights Road sold at a median of $2,683,832 (about $947 per sq ft), above the Carmel Valley median of $2,625,000. Over the last 5 years, 121 sold for between $1,380,000 and $4,030,000.
+In the last 12 months, 30 single-family homes in North of Del Mar Heights Road sold at a median of $2,683,832 (about $947 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $1,595,000 and $3,700,000.
 
 #### Which neighborhoods are in North of Del Mar Heights Road?
 
-North of Del Mar Heights Road has 19 single-family neighborhoods, including Heights, Promontory, Santa Fe Summit, Alta Mar, Torrey Glen, San Remo. Among those with at least three sales in the last 12 months, Alta Mar had the lowest median ($2.2M) and Santa Fe Summit the highest ($3.13M).
+North of Del Mar Heights Road has 19 single-family neighborhoods, including Heights, Santa Fe Summit, Alta Mar, Promontory, Torrey Glen, Vista Santa Barbara. Among those with at least three sales in the last 12 months, Alta Mar had the lowest median ($2.2M) and Santa Fe Summit the highest ($3.13M).
 
 #### How old are the homes in North of Del Mar Heights Road?
 
@@ -584,61 +578,61 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 
 ### Neighborhoods in South of Del Mar Heights Road
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Sonoma — 219 homes · built 1990–1997 | 22 | $2.25M–$3.33M |
-| Cantamar — 227 homes · built 1989–1994 | 20 | $1.77M–$3.28M |
-| Del Mar Place — 241 homes · built 1987–2002 | 17 | $1.85M–$3.13M |
-| San Remo — 289 homes · built 1987–1991 | 14 | $1.59M–$2.29M |
-| Creek Park — 155 homes · built 1984–1985 | 11 | $1.46M–$2.25M |
-| Palisades — 164 homes · built 1995–1997 | 11 | $1.87M–$2.6M |
-| Seabridge — 171 homes · built 1986–1996 | 11 | $1.47M–$2.75M |
-| Huntington Heights — 132 homes · built 1996–1998 | 10 | $2.23M–$3.02M |
-| Pines — 176 homes · built 1985 | 10 | $1.35M–$2.17M |
-| Granada — 73 homes · built 1991–1994 | 9 | $1.34M–$2.45M |
-| Estates — 99 homes · built 1994–1995 | 8 | $2.07M–$2.8M |
-| Wild Horse — 55 homes · built 2000–2002 | 8 | $2.32M–$2.95M |
-| Del Mar Bluffs — 120 homes · built 1989–1995 | 7 | $1.53M–$2.27M |
-| Heights — 566 homes · built 1988–1989 | 7 | $1.98M–$2.4M |
-| Palma Del Mar — 78 homes · built 1998–1999 | 7 | $1.98M–$2.63M |
-| Bayshore — 149 homes · built 1986–1987 | 6 | $1.66M–$1.98M |
-| Private Collection — 40 homes · built 1995–1998 | 6 | $2.97M–$4M |
-| Watercolors — 79 homes · built 1995–1997 | 6 | $1.4M–$2.4M |
-| Amador — 38 homes · built 1999 | 5 | $2.67M–$3.8M |
-| Carmel Village — 51 homes · built 2000 | 5 | $1.67M–$2.2M |
-| Provence — 57 homes · built 1998–1999 | 5 | $2.7M–$3.17M |
-| Hunt Club — 50 homes · built 2002 | 3 | $2.55M–$3.04M |
-| Triple Crown — 41 homes · built 2002 | 2 | $2.71M–$3.08M |
-| Promontory — 190 homes · built 1998 | 1 | $2.85M |
+| Cantamar — 227 homes · built 1989–1994 | 8 | $2.13M–$3.28M |
+| Sonoma — 219 homes · built 1990–1997 | 6 | $2.65M–$3.33M |
+| San Remo — 289 homes · built 1987–1991 | 5 | $1.9M–$2.29M |
+| Del Mar Place — 241 homes · built 1987–2002 | 3 | $2.1M–$3.13M |
+| Palisades — 164 homes · built 1995–1997 | 3 | $2.25M–$2.6M |
+| Seabridge — 171 homes · built 1986–1996 | 3 | $1.9M–$2.25M |
+| Provence — 57 homes · built 1998–1999 | 3 | $2.7M–$2.98M |
+| Creek Park — 155 homes · built 1984–1985 | 2 | $2.03M–$2.1M |
+| Pines — 176 homes · built 1985 | 2 | $1.49M–$1.83M |
+| Estates — 99 homes · built 1994–1995 | 2 | $2.57M–$2.8M |
+| Del Mar Bluffs — 120 homes · built 1989–1995 | 2 | $2.15M–$2.27M |
+| Private Collection — 40 homes · built 1995–1998 | 1 | $3.84M |
+| Watercolors — 79 homes · built 1995–1997 | 1 | $2.18M |
+| Amador — 38 homes · built 1999 | 1 | $3.44M |
+| Hunt Club — 50 homes · built 2002 | 1 | $3.04M |
+| Triple Crown — 41 homes · built 2002 | 1 | $3.08M |
+| Huntington Heights — 132 homes · built 1996–1998 | — | — |
+| Granada — 73 homes · built 1991–1994 | — | — |
+| Wild Horse — 55 homes · built 2000–2002 | — | — |
+| Heights — 566 homes · built 1988–1989 | — | — |
+| Palma Del Mar — 78 homes · built 1998–1999 | — | — |
+| Bayshore — 149 homes · built 1986–1987 | — | — |
+| Carmel Village — 51 homes · built 2000 | — | — |
+| Promontory — 190 homes · built 1998 | — | — |
 | Verona — 8 homes | — | — |
 
 ### Prices by home size
 
 #### Under 2,000 sq ft
 
-**$1.34M–$2.25M**
+**$1.49M–$1.9M**
 
-22 sales · about $1,050/sq ft · last sold $1.9M, Sep 2026
+4 sales · about $1,053/sq ft · last sold $1.9M, Sep 2026
 
 #### 2,000–3,000 sq ft
 
-**$1.4M–$2.82M**
+**$1.9M–$2.6M**
 
-94 sales · about $871/sq ft · last sold $2.1M, Nov 2026
+23 sales · about $919/sq ft · last sold $2.1M, Nov 2026
 
 #### 3,000–4,000 sq ft
 
-**$1.98M–$3.4M**
+**$2.65M–$3.28M**
 
-78 sales · about $756/sq ft · last sold $3.13M, Oct 2026
+11 sales · about $846/sq ft · last sold $3.13M, Oct 2026
 
 #### 4,000–5,000 sq ft
 
-**$2.43M–$4M**
+**$3.04M–$3.84M**
 
-17 sales · about $708/sq ft · last sold $3.44M, Sep 2026
+6 sales · about $799/sq ft · last sold $3.44M, Sep 2026
 
-211 single-family sales inside South of Del Mar Heights Road, last 5 years, as of November 18, 2026.
+44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 18, 2026.
 
 ### Elementary schools
 
@@ -668,11 +662,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in South of Del Mar Heights Road cost?
 
-In the last 12 months, 44 single-family homes in South of Del Mar Heights Road sold at a median of $2,347,500 (about $892 per sq ft), below the Carmel Valley median of $2,625,000. Over the last 5 years, 211 sold for between $1,340,000 and $4,000,000.
+In the last 12 months, 44 single-family homes in South of Del Mar Heights Road sold at a median of $2,347,500 (about $892 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,490,000 and $3,835,000.
 
 #### Which neighborhoods are in South of Del Mar Heights Road?
 
-South of Del Mar Heights Road has 25 single-family neighborhoods, including Sonoma, Cantamar, Del Mar Place, San Remo, Creek Park, Palisades. Among those with at least three sales in the last 12 months, San Remo had the lowest median ($1.92M) and Sonoma the highest ($3M).
+South of Del Mar Heights Road has 25 single-family neighborhoods, including Cantamar, Sonoma, San Remo, Del Mar Place, Palisades, Seabridge. Among those with at least three sales in the last 12 months, San Remo had the lowest median ($1.92M) and Sonoma the highest ($3M).
 
 #### How old are the homes in South of Del Mar Heights Road?
 
@@ -736,38 +730,38 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 
 ### Neighborhoods in Carmel Country Highlands
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Belmont — 316 homes · built 1999–2011 | 28 | $1.93M–$3.4M |
-| [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) — 265 homes · built 1998–2003 | 26 | $2.6M–$3.88M |
-| Derby Hill — 172 homes · built 2005–2009 | 19 | $1.73M–$4.1M |
-| Steeplechase — 193 homes · built 1999–2001 | 13 | $2.03M–$2.73M |
-| Breakers — 72 homes · built 2000–2001 | 7 | $2.29M–$3.23M |
-| Carriage Run — 169 homes · built 2010–2011 | 6 | $1.95M–$2.3M |
-| Saratoga — 114 homes · built 2006–2007 | 6 | $2.15M–$3.05M |
-| Bridle Ridge — 53 homes · built 2008 | 1 | $2.03M |
+| [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) — 265 homes · built 1998–2003 | 10 | $3.1M–$3.7M |
+| Belmont — 316 homes · built 1999–2011 | 4 | $2.5M–$3.1M |
+| Derby Hill — 172 homes · built 2005–2009 | 2 | $3.23M–$4.1M |
+| Steeplechase — 193 homes · built 1999–2001 | 2 | $2.41M–$2.42M |
+| Carriage Run — 169 homes · built 2010–2011 | 1 | $2.13M |
+| Breakers — 72 homes · built 2000–2001 | — | — |
+| Saratoga — 114 homes · built 2006–2007 | — | — |
+| Bridle Ridge — 53 homes · built 2008 | — | — |
 
 ### Prices by home size
 
 #### 2,000–3,000 sq ft
 
-**$1.93M–$3.25M**
+**$2.13M–$3.25M**
 
-34 sales · about $905/sq ft · last sold $2.5M, Aug 2026
+5 sales · about $954/sq ft · last sold $2.5M, Aug 2026
 
 #### 3,000–4,000 sq ft
 
-**$2.29M–$3.7M**
+**$2.65M–$3.7M**
 
-47 sales · about $807/sq ft · last sold $3.1M, Oct 2026
+7 sales · about $862/sq ft · last sold $3.1M, Oct 2026
 
 #### 4,000–5,000 sq ft
 
-**$2.6M–$4.1M**
+**$3.12M–$4.1M**
 
-24 sales · about $735/sq ft · last sold $3.5M, Oct 2026
+7 sales · about $740/sq ft · last sold $3.5M, Oct 2026
 
-106 single-family sales inside Carmel Country Highlands, last 5 years, as of November 18, 2026.
+19 single-family sales inside Carmel Country Highlands, last 12 months, as of November 18, 2026.
 
 ### Elementary schools
 
@@ -795,11 +789,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in Carmel Country Highlands cost?
 
-In the last 12 months, 19 single-family homes in Carmel Country Highlands sold at a median of $3,225,000 (about $862 per sq ft), above the Carmel Valley median of $2,625,000. Over the last 5 years, 106 sold for between $1,725,000 and $4,100,000.
+In the last 12 months, 19 single-family homes in Carmel Country Highlands sold at a median of $3,225,000 (about $862 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $2,132,000 and $4,100,000.
 
 #### Which neighborhoods are in Carmel Country Highlands?
 
-Carmel Country Highlands has 8 single-family neighborhoods, including Belmont, Lexington, Derby Hill, Steeplechase, Breakers, Carriage Run. Among those with at least three sales in the last 12 months, Belmont had the lowest median ($2.66M) and Lexington the highest ($3.33M).
+Carmel Country Highlands has 8 single-family neighborhoods, including Lexington, Belmont, Derby Hill, Steeplechase, Carriage Run, Breakers. Among those with at least three sales in the last 12 months, Belmont had the lowest median ($2.66M) and Lexington the highest ($3.33M).
 
 #### How old are the homes in Carmel Country Highlands?
 
@@ -863,43 +857,25 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 
 ### Neighborhoods in Torrey Highlands
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Fairbanks Highlands — 93 homes · built 2000–2002 | 13 | $3.01M–$4.8M |
-| Villamontes — 124 homes · built 2002–2003 | 12 | $1.55M–$2.76M |
-| Palma Real — 82 homes · built 2002–2003 | 6 | $1.51M–$2.3M |
-| Collins Ranch — 53 homes · built 2002–2003 | 4 | $2.64M–$3.2M |
-| Maricel — built 2012–2013 | 3 | $1.73M–$2.2M |
-| Terrazzo — 59 homes · built 2001–2003 | 3 | $2.03M–$2.32M |
-| Valencia Collection — 8 homes · built 2002 | 3 | $1.67M–$2.95M |
+| Villamontes — 124 homes · built 2002–2003 | 2 | $1.76M–$1.95M |
+| Fairbanks Highlands — 93 homes · built 2000–2002 | 1 | $4.2M |
+| Palma Real — 82 homes · built 2002–2003 | 1 | $2.15M |
+| Collins Ranch — 53 homes · built 2002–2003 | — | — |
+| Maricel — built 2012–2013 | — | — |
+| Terrazzo — 59 homes · built 2001–2003 | — | — |
+| Valencia Collection — 8 homes · built 2002 | — | — |
 
 ### Prices by home size
 
 #### 2,000–3,000 sq ft
 
-**$1.51M–$2.2M**
+**$1.76M–$1.95M**
 
-14 sales · about $743/sq ft · last sold $1.95M, Sep 2026
+2 sales · about $745/sq ft · last sold $1.95M, Sep 2026
 
-#### 3,000–4,000 sq ft
-
-**$1.97M–$3.45M**
-
-13 sales · about $620/sq ft · last sold $2.15M, Nov 2025
-
-#### 4,000–5,000 sq ft
-
-**$2.8M–$4.4M**
-
-9 sales · about $745/sq ft · last sold $4.2M, Jun 2026
-
-#### 5,000+ sq ft
-
-**$2.37M–$4.8M**
-
-8 sales · about $714/sq ft · last sold $4.75M, Sep 2025
-
-44 single-family sales inside Torrey Highlands, last 5 years, as of November 18, 2026.
+4 single-family sales inside Torrey Highlands, last 12 months, as of November 18, 2026.
 
 ### Elementary schools
 
@@ -926,11 +902,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in Torrey Highlands cost?
 
-In the last 12 months, 4 single-family homes in Torrey Highlands sold at a median of $2,050,000 (about $732 per sq ft), below the Carmel Valley median of $2,625,000. Over the last 5 years, 44 sold for between $1,512,000 and $4,800,000.
+In the last 12 months, 4 single-family homes in Torrey Highlands sold at a median of $2,050,000 (about $732 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,755,000 and $4,200,000.
 
 #### Which neighborhoods are in Torrey Highlands?
 
-Torrey Highlands has 7 single-family neighborhoods, including Fairbanks Highlands, Villamontes, Palma Real, Collins Ranch, Maricel, Terrazzo.
+Torrey Highlands has 7 single-family neighborhoods, including Villamontes, Fairbanks Highlands, Palma Real, Collins Ranch, Maricel, Terrazzo.
 
 #### How old are the homes in Torrey Highlands?
 
@@ -994,53 +970,41 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 
 ### Neighborhoods in Torrey Hills
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Trilogy — 189 homes · built 1996–1999 | 16 | $1.3M–$1.67M |
-| Sands — 107 homes · built 1999–2000 | 11 | $1.58M–$2.25M |
-| Torrey View — 121 homes · built 1997–1999 | 11 | $1.9M–$2.65M |
-| Torrey Woods Estates — 93 homes · built 2001–2003 | 9 | $2.53M–$2.9M |
-| Greenbriar — 107 homes · built 2001–2003 | 7 | $1.78M–$2.35M |
-| Sansonnet — 183 homes · built 2000 | 7 | $2.19M–$2.99M |
-| Shores — 111 homes · built 1998–2000 | 7 | $2M–$3.22M |
-| Searidge — 57 homes · built 2001 | 6 | $1.9M–$2.61M |
-| Monte Claire — 50 homes · built 2000–2001 | 5 | $2.38M–$3.14M |
-| St. Augustine — 108 homes · built 2000–2001 | 5 | $1.89M–$2.5M |
-| Gables — 44 homes · built 2001–2003 | 4 | $2.7M–$3.05M |
-| La Strada — 69 homes · built 2002–2004 | 4 | $2.35M–$3.1M |
-| Montecito — 81 homes · built 2000 | 4 | $2.4M–$3.1M |
-| Torrey Point — 81 homes · built 1999–2000 | 4 | $2.38M–$2.5M |
-| Coves — 108 homes · built 2000 | 3 | $1.86M–$2.1M |
-| Vantage Point — 24 homes · built 2001–2003 | 3 | $2.2M–$2.56M |
-| Sea Country — 53 homes · built 2000–2001 | 2 | $2.5M–$2.9M |
+| Sands — 107 homes · built 1999–2000 | 4 | $1.84M–$2.22M |
+| Torrey View — 121 homes · built 1997–1999 | 3 | $1.95M–$2.6M |
+| Torrey Woods Estates — 93 homes · built 2001–2003 | 2 | $2.75M–$2.84M |
+| Sansonnet — 183 homes · built 2000 | 2 | $2.56M–$2.96M |
+| Monte Claire — 50 homes · built 2000–2001 | 2 | $2.97M–$3.14M |
+| Gables — 44 homes · built 2001–2003 | 2 | $2.7M–$2.83M |
+| Trilogy — 189 homes · built 1996–1999 | 1 | $1.6M |
+| Greenbriar — 107 homes · built 2001–2003 | 1 | $2.1M |
+| Searidge — 57 homes · built 2001 | 1 | $2.32M |
+| St. Augustine — 108 homes · built 2000–2001 | 1 | $2.5M |
+| La Strada — 69 homes · built 2002–2004 | 1 | $3.1M |
+| Montecito — 81 homes · built 2000 | 1 | $2.85M |
+| Torrey Point — 81 homes · built 1999–2000 | 1 | $2.45M |
+| Coves — 108 homes · built 2000 | 1 | $2.1M |
+| Vantage Point — 24 homes · built 2001–2003 | 1 | $2.3M |
+| Shores — 111 homes · built 1998–2000 | — | — |
+| Sea Country — 53 homes · built 2000–2001 | — | — |
 
 ### Prices by home size
 
-#### Under 2,000 sq ft
-
-**$1.3M–$2.17M**
-
-20 sales · about $937/sq ft · last sold $1.6M, Apr 2026
-
 #### 2,000–3,000 sq ft
 
-**$1.58M–$3.54M**
+**$1.84M–$3.54M**
 
-52 sales · about $864/sq ft · last sold $3.54M, Nov 2026
+14 sales · about $917/sq ft · last sold $3.54M, Nov 2026
 
 #### 3,000–4,000 sq ft
 
-**$1.95M–$4.8M**
+**$2.3M–$4.8M**
 
-34 sales · about $788/sq ft · last sold $2.97M, Oct 2026
+10 sales · about $804/sq ft · last sold $2.97M, Oct 2026
 
-#### 4,000–5,000 sq ft
-
-**$2.53M–$4.4M**
-
-9 sales · about $670/sq ft · last sold $2.84M, Feb 2026
-
-115 single-family sales inside Torrey Hills, last 5 years, as of November 18, 2026.
+26 single-family sales inside Torrey Hills, last 12 months, as of November 18, 2026.
 
 ### Elementary schools
 
@@ -1068,11 +1032,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in Torrey Hills cost?
 
-In the last 12 months, 26 single-family homes in Torrey Hills sold at a median of $2,527,500 (about $863 per sq ft), below the Carmel Valley median of $2,625,000. Over the last 5 years, 115 sold for between $1,300,000 and $4,800,000.
+In the last 12 months, 26 single-family homes in Torrey Hills sold at a median of $2,527,500 (about $863 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,600,667 and $4,800,000.
 
 #### Which neighborhoods are in Torrey Hills?
 
-Torrey Hills has 17 single-family neighborhoods, including Trilogy, Sands, Torrey View, Torrey Woods Estates, Greenbriar, Sansonnet. Among those with at least three sales in the last 12 months, Sands had the lowest median ($1.92M) and Torrey View the highest ($2.44M).
+Torrey Hills has 17 single-family neighborhoods, including Sands, Torrey View, Torrey Woods Estates, Sansonnet, Monte Claire, Gables. Among those with at least three sales in the last 12 months, Sands had the lowest median ($1.92M) and Torrey View the highest ($2.44M).
 
 #### How old are the homes in Torrey Hills?
 
@@ -1136,20 +1100,20 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 
 ### Neighborhoods in Del Mar Mesa
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Meadows Del Mar — 200 homes · built 2000–2007 | 18 | $3.63M–$5.93M |
-| Alta Del Mar — 216 homes · built 2013–2016 | 11 | $3.9M–$5.1M |
-| Bougainvillea — 76 homes · built 2003 | 5 | $3.95M–$4.35M |
-| Whitehorse — 19 homes · built 2003–2004 | 4 | $4.35M–$5.2M |
-| Ridge — 19 homes · built 2003–2020 | 3 | $4.14M–$6.75M |
-| The Preserve — 14 homes · built 2015–2020 | 3 | $6.15M–$6.5M |
-| Valencia — 7 homes · built 2003–2006 | 3 | $4.15M–$5.8M |
-| Duck Pond Ranch — 15 homes · built 2006–2008 | 2 | $5.9M–$10.9M |
-| Del Mar Mesa Estates — built 2024 | 1 | $5.2M |
+| Meadows Del Mar — 200 homes · built 2000–2007 | 3 | $3.63M–$4.75M |
+| Alta Del Mar — 216 homes · built 2013–2016 | 3 | $4.21M–$5.1M |
+| Bougainvillea — 76 homes · built 2003 | 1 | $3.95M |
+| Whitehorse — 19 homes · built 2003–2004 | 1 | $4.6M |
 | Paso Fino — 12 homes · built 2005 | 1 | $3.79M |
-| Ridge Estates — 19 homes · built 2015 | 1 | $5.42M |
-| Three Canyons — 12 homes · built 2007 | 1 | $4.3M |
+| Ridge — 19 homes · built 2003–2020 | — | — |
+| The Preserve — 14 homes · built 2015–2020 | — | — |
+| Valencia — 7 homes · built 2003–2006 | — | — |
+| Duck Pond Ranch — 15 homes · built 2006–2008 | — | — |
+| Del Mar Mesa Estates — built 2024 | — | — |
+| Ridge Estates — 19 homes · built 2015 | — | — |
+| Three Canyons — 12 homes · built 2007 | — | — |
 | Palacio Del Mar — 422 homes | — | — |
 | Silver Oaks Estates / Anderson Estates — 8 homes | — | — |
 
@@ -1157,17 +1121,17 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 
 #### 4,000–5,000 sq ft
 
-**$3.87M–$5.1M**
+**$3.95M–$5.1M**
 
-11 sales · about $927/sq ft · last sold $4.28M, Aug 2026
+3 sales · about $865/sq ft · last sold $4.28M, Aug 2026
 
 #### 5,000+ sq ft
 
-**$3.63M–$10.9M**
+**$3.63M–$5.25M**
 
-42 sales · about $762/sq ft · last sold $5.25M, Aug 2026
+6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-56 single-family sales inside Del Mar Mesa, last 5 years, as of November 18, 2026.
+10 single-family sales inside Del Mar Mesa, last 12 months, as of November 18, 2026.
 
 ### Elementary schools
 
@@ -1195,11 +1159,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in Del Mar Mesa cost?
 
-In the last 12 months, 10 single-family homes in Del Mar Mesa sold at a median of $4,387,500 (about $838 per sq ft), above the Carmel Valley median of $2,625,000. Over the last 5 years, 56 sold for between $2,800,000 and $10,895,000.
+In the last 12 months, 10 single-family homes in Del Mar Mesa sold at a median of $4,387,500 (about $838 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $3,625,000 and $5,250,000.
 
 #### Which neighborhoods are in Del Mar Mesa?
 
-Del Mar Mesa has 14 single-family neighborhoods, including Meadows Del Mar, Alta Del Mar, Bougainvillea, Whitehorse, Ridge, The Preserve. Among those with at least three sales in the last 12 months, Meadows Del Mar had the lowest median ($4.28M) and Alta Del Mar the highest ($4.5M).
+Del Mar Mesa has 14 single-family neighborhoods, including Meadows Del Mar, Alta Del Mar, Bougainvillea, Whitehorse, Paso Fino, Ridge. Among those with at least three sales in the last 12 months, Meadows Del Mar had the lowest median ($4.28M) and Alta Del Mar the highest ($4.5M).
 
 #### How old are the homes in Del Mar Mesa?
 
@@ -1410,59 +1374,53 @@ This search shows all of 92130. Ask me which listings are inside the Sage Canyon
 
 ### Where homes sold in the Sage Canyon area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Palacio Del Mar | 36 | $1.37M–$5.93M |
-| Belmont | 28 | $1.93M–$3.4M |
-| [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) | 26 | $2.6M–$3.88M |
-| Meadows Del Mar | 18 | $3.63M–$5.93M |
-| Steeplechase | 13 | $2.03M–$2.73M |
-| Alta Del Mar | 11 | $3.9M–$5.1M |
-| Derby Hill | 9 | $2.35M–$4.1M |
-| Breakers | 7 | $2.29M–$3.23M |
-| Carriage Run | 6 | $1.95M–$2.3M |
-| Saratoga | 6 | $2.15M–$3.05M |
-| Whitehorse | 4 | $4.35M–$5.2M |
-| Ridge | 3 | $4.14M–$6.75M |
-| Valencia | 2 | $4.25M–$5.8M |
-| Ridge Estates | 1 | $5.42M |
-| Bridle Ridge | 1 | $2.03M |
+| [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) | 10 | $3.1M–$3.7M |
+| Palacio Del Mar | 9 | $1.98M–$2.34M |
+| Belmont | 4 | $2.5M–$3.1M |
+| Alta Del Mar | 3 | $4.21M–$5.1M |
+| Meadows Del Mar | 3 | $3.63M–$4.75M |
+| Derby Hill | 2 | $3.23M–$4.1M |
+| Steeplechase | 2 | $2.41M–$2.42M |
+| Carriage Run | 1 | $2.13M |
+| Whitehorse | 1 | $4.6M |
 
-From where homes sold in the last 5 years. 3 more sales had no neighborhood name.
+From where homes sold in the last 12 months. 1 more sales had no neighborhood name.
 
 ### Prices by home size
 
 #### Under 2,000 sq ft
 
-**$1.37M–$2.18M**
+**$1.98M–$2.18M**
 
-7 sales · about $994/sq ft · last sold $2.11M, Sep 2026
+4 sales · about $1,104/sq ft · last sold $2.11M, Sep 2026
 
 #### 2,000–3,000 sq ft
 
-**$1.69M–$3.48M**
+**$2.1M–$3.25M**
 
-56 sales · about $870/sq ft · last sold $2.34M, Oct 2026
+10 sales · about $932/sq ft · last sold $2.34M, Oct 2026
 
 #### 3,000–4,000 sq ft
 
-**$2.2M–$3.7M**
+**$2.65M–$3.7M**
 
-47 sales · about $787/sq ft · last sold $3.1M, Oct 2026
+7 sales · about $862/sq ft · last sold $3.1M, Oct 2026
 
 #### 4,000–5,000 sq ft
 
-**$2.6M–$5.93M**
+**$3.12M–$5.1M**
 
-30 sales · about $755/sq ft · last sold $3.5M, Oct 2026
+9 sales · about $758/sq ft · last sold $3.5M, Oct 2026
 
 #### 5,000+ sq ft
 
-**$3.63M–$6.75M**
+**$3.63M–$5.25M**
 
-34 sales · about $757/sq ft · last sold $5.25M, Aug 2026
+6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ### Recently sold in the Sage Canyon area
 
@@ -1505,7 +1463,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 #### How much does a house in the Sage Canyon Elementary area cost?
 
-In the last 12 months, 36 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,171,948 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 174 sold for between $1,371,900 and $6,750,000.
+In the last 12 months, 36 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,171,948 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,980,000 and $5,250,000.
 
 #### Which neighborhoods are in the Sage Canyon Elementary area?
 
@@ -1577,44 +1535,36 @@ This search shows all of 92130. Ask me which listings are inside the Pacific Sky
 
 ### Where homes sold in the Pacific Sky area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Elms | 13 | $1.73M–$2.5M |
-| Cassavia | 12 | $1.8M–$2.52M |
-| Verana | 11 | $2.3M–$2.93M |
-| Casabella | 11 | $1.97M–$2.4M |
-| Canterra | 10 | $1.63M–$2.03M |
-| Costa Del Sol | 6 | $1.27M–$1.74M |
-| Sterling | 6 | $2.54M–$3.2M |
-| Ivy | 5 | $1.76M–$2M |
-| Costa Del Sol West | 5 | $1.52M–$1.71M |
-| Portofino | 5 | $2.1M–$2.75M |
-| Rancho Glens Estates | 3 | $3.25M–$4.15M |
-| Villa Andalucia | 2 | $1.45M–$1.55M |
+| Casabella | 3 | $2.15M–$2.27M |
+| Cassavia | 2 | $2.2M–$2.25M |
+| Ivy | 2 | $1.78M–$2M |
+| Rancho Glens Estates | 2 | $3.25M–$4.15M |
+| Verana | 2 | $2.43M–$2.45M |
+| Canterra | 1 | $1.76M |
+| Costa Del Sol | 1 | $1.69M |
+| Costa Del Sol West | 1 | $1.71M |
+| Elms | 1 | $2.39M |
+| Villa Andalucia | 1 | $1.55M |
 
-From where homes sold in the last 5 years. 1 more sales had no neighborhood name.
+From where homes sold in the last 12 months.
 
 ### Prices by home size
 
-#### Under 2,000 sq ft
-
-**$1.27M–$1.8M**
-
-7 sales · about $905/sq ft · last sold $1.55M, Jul 2026
-
 #### 2,000–3,000 sq ft
 
-**$1.45M–$2.53M**
+**$1.69M–$2.45M**
 
-52 sales · about $819/sq ft · last sold $1.76M, Nov 2026
+11 sales · about $808/sq ft · last sold $1.76M, Nov 2026
 
 #### 3,000–4,000 sq ft
 
-**$1.8M–$3.25M**
+**$2.39M–$3.25M**
 
-27 sales · about $759/sq ft · last sold $2.39M, Nov 2026
+3 sales · about $773/sq ft · last sold $2.39M, Nov 2026
 
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ### Recently sold in the Pacific Sky area
 
@@ -1657,7 +1607,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 #### How much does a house in the Pacific Sky Elementary area cost?
 
-In the last 12 months, 16 single-family homes in the Pacific Sky Elementary attendance area sold at a median of $2,177,500 (about $805 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 90 sold for between $1,270,000 and $4,150,000.
+In the last 12 months, 16 single-family homes in the Pacific Sky Elementary attendance area sold at a median of $2,177,500 (about $805 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,550,000 and $4,150,000.
 
 #### Which neighborhoods are in the Pacific Sky Elementary area?
 
@@ -1733,48 +1683,35 @@ This search shows all of 92130. Ask me which listings are inside the Ocean Air b
 
 ### Where homes sold in the Ocean Air area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Trilogy | 16 | $1.3M–$1.67M |
-| Sands | 11 | $1.58M–$2.25M |
-| Derby Hill | 11 | $1.73M–$3.57M |
-| Torrey Woods Estates | 9 | $2.53M–$2.9M |
-| Sansonnet | 7 | $2.19M–$2.99M |
-| Greenbriar | 7 | $1.78M–$2.35M |
-| Monte Claire | 5 | $2.38M–$3.14M |
-| Montecito | 4 | $2.4M–$3.1M |
-| Gables | 4 | $2.7M–$3.05M |
-| Coves | 3 | $1.86M–$2.1M |
+| Sands | 4 | $1.84M–$2.22M |
+| Gables | 2 | $2.7M–$2.83M |
+| Monte Claire | 2 | $2.97M–$3.14M |
+| Sansonnet | 2 | $2.56M–$2.96M |
+| Torrey Woods Estates | 2 | $2.75M–$2.84M |
+| Coves | 1 | $2.1M |
+| Greenbriar | 1 | $2.1M |
+| Montecito | 1 | $2.85M |
+| Trilogy | 1 | $1.6M |
 
-From where homes sold in the last 5 years. 6 more sales had no neighborhood name.
+From where homes sold in the last 12 months. 2 more sales had no neighborhood name.
 
 ### Prices by home size
 
-#### Under 2,000 sq ft
-
-**$1.3M–$2.17M**
-
-21 sales · about $926/sq ft · last sold $1.6M, Apr 2026
-
 #### 2,000–3,000 sq ft
 
-**$1.58M–$3.54M**
+**$1.84M–$3.54M**
 
-25 sales · about $902/sq ft · last sold $3.54M, Nov 2026
+9 sales · about $934/sq ft · last sold $3.54M, Nov 2026
 
 #### 3,000–4,000 sq ft
 
-**$2.2M–$4.8M**
+**$2.7M–$4.8M**
 
-27 sales · about $802/sq ft · last sold $2.97M, Oct 2026
+7 sales · about $855/sq ft · last sold $2.97M, Oct 2026
 
-#### 4,000–5,000 sq ft
-
-**$2.53M–$4.4M**
-
-10 sales · about $670/sq ft · last sold $2.84M, Feb 2026
-
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ### Recently sold in the Ocean Air area
 
@@ -1817,7 +1754,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 #### How much does a house in the Ocean Air Elementary area cost?
 
-In the last 12 months, 18 single-family homes in the Ocean Air Elementary attendance area sold at a median of $2,723,000 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 83 sold for between $1,300,000 and $4,800,000.
+In the last 12 months, 18 single-family homes in the Ocean Air Elementary attendance area sold at a median of $2,723,000 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,600,667 and $4,800,000.
 
 #### Which neighborhoods are in the Ocean Air Elementary area?
 
@@ -1889,43 +1826,39 @@ This search shows all of 92130. Ask me which listings are inside the Ashley Fall
 
 ### Where homes sold in the Ashley Falls area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Sonoma | 22 | $2.25M–$3.33M |
-| Palisades | 11 | $1.87M–$2.6M |
-| Huntington Heights | 10 | $2.23M–$3.02M |
-| Estates | 8 | $2.07M–$2.8M |
-| Palma Del Mar | 7 | $1.98M–$2.63M |
-| Private Collection | 6 | $2.97M–$4M |
-| Watercolors | 6 | $1.4M–$2.4M |
-| Amador | 5 | $2.67M–$3.8M |
-| Provence | 5 | $2.7M–$3.17M |
-| Carmel Village | 5 | $1.67M–$2.2M |
-| Promontory | 1 | $2.85M |
+| Sonoma | 6 | $2.65M–$3.33M |
+| Palisades | 3 | $2.25M–$2.6M |
+| Provence | 3 | $2.7M–$2.98M |
+| Estates | 2 | $2.57M–$2.8M |
+| Amador | 1 | $3.44M |
+| Private Collection | 1 | $3.84M |
+| Watercolors | 1 | $2.18M |
 
-From where homes sold in the last 5 years.
+From where homes sold in the last 12 months.
 
 ### Prices by home size
 
 #### 2,000–3,000 sq ft
 
-**$1.4M–$2.6M**
+**$2.18M–$2.6M**
 
-24 sales · about $858/sq ft · last sold $2.57M, Sep 2026
+5 sales · about $914/sq ft · last sold $2.57M, Sep 2026
 
 #### 3,000–4,000 sq ft
 
-**$1.98M–$3.4M**
+**$2.65M–$3.01M**
 
-49 sales · about $773/sq ft · last sold $2.65M, Sep 2026
+8 sales · about $825/sq ft · last sold $2.65M, Sep 2026
 
 #### 4,000–5,000 sq ft
 
-**$2.43M–$4M**
+**$3.3M–$3.84M**
 
-13 sales · about $770/sq ft · last sold $3.44M, Sep 2026
+4 sales · about $805/sq ft · last sold $3.44M, Sep 2026
 
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ### Recently sold in the Ashley Falls area
 
@@ -1968,7 +1901,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 #### How much does a house in the Ashley Falls Elementary area cost?
 
-In the last 12 months, 17 single-family homes in the Ashley Falls Elementary attendance area sold at a median of $2,800,000 (about $821 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 86 sold for between $1,400,000 and $4,000,000.
+In the last 12 months, 17 single-family homes in the Ashley Falls Elementary attendance area sold at a median of $2,800,000 (about $821 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $2,175,000 and $3,835,000.
 
 #### Which neighborhoods are in the Ashley Falls Elementary area?
 
@@ -2048,51 +1981,33 @@ This search shows all of 92130. Ask me which listings are inside the Sycamore Ri
 
 ### Where homes sold in the Sycamore Ridge area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Soleil at Bordeaux | 14 | $1.8M–$2.6M |
-| Wild Horse | 8 | $2.32M–$2.95M |
-| Bordeaux | 7 | $1.87M–$2.49M |
-| Bougainvillea | 5 | $3.95M–$4.35M |
-| Hunt Club | 3 | $2.55M–$3.04M |
-| The Preserve | 3 | $6.15M–$6.5M |
-| Arabella | 2 | $1.88M–$2.33M |
-| Triple Crown | 2 | $2.71M–$3.08M |
-| Duck Pond Ranch | 2 | $5.9M–$10.9M |
+| Bordeaux | 2 | $2.18M–$2.49M |
+| Soleil at Bordeaux | 2 | $2.12M–$2.34M |
+| Arabella | 1 | $1.88M |
+| Bougainvillea | 1 | $3.95M |
+| Hunt Club | 1 | $3.04M |
 | Paso Fino | 1 | $3.79M |
-| Del Mar Mesa Estates | 1 | $5.2M |
-| Three Canyons | 1 | $4.3M |
-| Valencia | 1 | $4.15M |
+| Triple Crown | 1 | $3.08M |
 
-From where homes sold in the last 5 years.
+From where homes sold in the last 12 months.
 
 ### Prices by home size
 
 #### 2,000–3,000 sq ft
 
-**$1.8M–$2.6M**
+**$1.88M–$2.49M**
 
-23 sales · about $867/sq ft · last sold $2.49M, Jul 2026
-
-#### 3,000–4,000 sq ft
-
-**$2.32M–$3.79M**
-
-10 sales · about $719/sq ft · last sold $3.79M, Sep 2026
+5 sales · about $857/sq ft · last sold $2.49M, Jul 2026
 
 #### 4,000–5,000 sq ft
 
-**$2.55M–$4.35M**
+**$3.04M–$3.95M**
 
-9 sales · about $793/sq ft · last sold $3.04M, Jun 2026
+3 sales · about $702/sq ft · last sold $3.04M, Jun 2026
 
-#### 5,000+ sq ft
-
-**$4.15M–$10.9M**
-
-8 sales · about $851/sq ft · last sold $6.15M, Nov 2025
-
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ### Recently sold in the Sycamore Ridge area
 
@@ -2135,7 +2050,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 #### How much does a house in the Sycamore Ridge Elementary area cost?
 
-In the last 12 months, 9 single-family homes in the Sycamore Ridge Elementary attendance area sold at a median of $2,490,000 (about $830 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 50 sold for between $1,800,000 and $10,895,000.
+In the last 12 months, 9 single-family homes in the Sycamore Ridge Elementary attendance area sold at a median of $2,490,000 (about $830 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,880,000 and $3,950,000.
 
 #### Which neighborhoods are in the Sycamore Ridge Elementary area?
 
@@ -2207,34 +2122,32 @@ This search shows all of 92130. Ask me which listings are inside the Torrey Hill
 
 ### Where homes sold in the Torrey Hills area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Torrey View | 11 | $1.9M–$2.65M |
-| Shores | 7 | $2M–$3.22M |
-| Searidge | 6 | $1.9M–$2.61M |
-| St. Augustine | 5 | $1.89M–$2.5M |
-| Torrey Point | 4 | $2.38M–$2.5M |
-| La Strada | 4 | $2.35M–$3.1M |
-| Vantage Point | 3 | $2.2M–$2.56M |
-| Sea Country | 2 | $2.5M–$2.9M |
+| Torrey View | 3 | $1.95M–$2.6M |
+| La Strada | 1 | $3.1M |
+| Searidge | 1 | $2.32M |
+| St. Augustine | 1 | $2.5M |
+| Torrey Point | 1 | $2.45M |
+| Vantage Point | 1 | $2.3M |
 
-From where homes sold in the last 5 years.
+From where homes sold in the last 12 months.
 
 ### Prices by home size
 
 #### 2,000–3,000 sq ft
 
-**$1.89M–$2.65M**
+**$1.95M–$2.6M**
 
-29 sales · about $826/sq ft · last sold $2.5M, Aug 2026
+5 sales · about $876/sq ft · last sold $2.5M, Aug 2026
 
 #### 3,000–4,000 sq ft
 
-**$1.95M–$3.22M**
+**$2.3M–$3.1M**
 
-13 sales · about $768/sq ft · last sold $3.1M, Feb 2026
+3 sales · about $773/sq ft · last sold $3.1M, Feb 2026
 
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ### Recently sold in the Torrey Hills area
 
@@ -2277,7 +2190,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 #### How much does a house in the Torrey Hills Elementary area cost?
 
-In the last 12 months, 8 single-family homes in the Torrey Hills Elementary attendance area sold at a median of $2,445,000 (about $829 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 42 sold for between $1,890,000 and $3,224,000.
+In the last 12 months, 8 single-family homes in the Torrey Hills Elementary attendance area sold at a median of $2,445,000 (about $829 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,949,000 and $3,100,000.
 
 #### Which neighborhoods are in the Torrey Hills Elementary area?
 
@@ -2330,7 +2243,7 @@ Source page: https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-
 
 265 single-family homes built 1998–2003 in Carmel Country Highlands, in the Sage Canyon Elementary area. Live listings, real sold prices and what to know before you buy.
 
-- **Sold, 5 yrs:** $2.6M–$3.88M
+- **Sold, last 12 mo:** $3.1M–$3.7M
 - **Median, last 12 mo:** $3.33M
 - **Homes:** 265
 - **Built:** 1998–2003
@@ -2371,35 +2284,35 @@ School assignments can change. Verify current boundaries directly with [Del Mar 
 
 ### What a Lexington Home Costs by Bedrooms
 
-Closed single-family sales in Lexington over the last 5 years, by bedroom count: what each size sold for and the most recent sale.
+Closed single-family sales in Lexington in the last 12 months, by bedroom count: what each size sold for and the most recent sale.
 
 #### 4 Bedroom
 
-2 sales · 5 yrs
+1 sale · 12 mo
 
-- **Size:** 4,226–4,620 sq ft
+- **Size:** 4,620 sq ft
 - **Sold for:** $3.5M
 - **Most recent sale:** $3,500,000 · May 2026
 
 #### 5 Bedroom
 
-12 sales · 5 yrs
+4 sales · 12 mo
 
-- **Size:** 2,945–4,658 sq ft
-- **Sold for:** $2.6M–$3.9M
+- **Size:** 2,945–3,827 sq ft
+- **Sold for:** $3.1M–$3.7M
 - **Most recent sale:** $3,100,825 · Oct 2026
 
 #### 6 Bedroom
 
-10 sales · 5 yrs
+4 sales · 12 mo
 
-- **Size:** 4,454–4,930 sq ft
-- **Sold for:** $2.7M–$3.5M
+- **Size:** 4,454–4,687 sq ft
+- **Sold for:** $3.1M–$3.5M
 - **Most recent sale:** $3,500,000 · Oct 2026
 
-5-bedroom homes made up 12 of the 26 sales. See the [price history](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/#sold-data).
+6-bedroom homes made up 4 of the 10 sales. See the [price history](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/#sold-data).
 
-Closed MLS sales, last 5 years.
+Closed MLS sales, last 12 months.
 
 ### Life at Lexington
 
@@ -2446,7 +2359,7 @@ Next door in Carmel Country Highlands.
 
 ### Lexington Prices & Sales
 
-In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). Over the last 5 years, 26 sold for between $2,600,000 and $3,883,083. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 18, 2026.
+In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 18, 2026.
 
 The stats reflect the trailing 12 months; the table breaks the same data out by calendar year.
 
@@ -2557,7 +2470,7 @@ Who it suits best, and the honest tradeoffs to weigh before you buy.
 
 #### How much do homes in Lexington cost?
 
-Over the last 5 years, 26 single-family homes in Lexington sold between $2.6M and $3.88M. In the last 12 months, 10 sold at a median of $3.33M. See the price-by-bedroom cards and recent sales on this page for what each kind of home sold for.
+In the last 12 months, 10 single-family homes in Lexington sold between $3.1M and $3.7M, at a median of $3.33M. See the price-by-bedroom cards and recent sales on this page for what each kind of home sold for.
 
 #### How many homes are in Lexington?
 

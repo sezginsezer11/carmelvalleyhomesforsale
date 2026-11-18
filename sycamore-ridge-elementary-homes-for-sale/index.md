@@ -39,51 +39,33 @@ This search shows all of 92130. Ask me which listings are inside the Sycamore Ri
 
 ## Where homes sold in the Sycamore Ridge area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Soleil at Bordeaux | 14 | $1.8M–$2.6M |
-| Wild Horse | 8 | $2.32M–$2.95M |
-| Bordeaux | 7 | $1.87M–$2.49M |
-| Bougainvillea | 5 | $3.95M–$4.35M |
-| Hunt Club | 3 | $2.55M–$3.04M |
-| The Preserve | 3 | $6.15M–$6.5M |
-| Arabella | 2 | $1.88M–$2.33M |
-| Triple Crown | 2 | $2.71M–$3.08M |
-| Duck Pond Ranch | 2 | $5.9M–$10.9M |
+| Bordeaux | 2 | $2.18M–$2.49M |
+| Soleil at Bordeaux | 2 | $2.12M–$2.34M |
+| Arabella | 1 | $1.88M |
+| Bougainvillea | 1 | $3.95M |
+| Hunt Club | 1 | $3.04M |
 | Paso Fino | 1 | $3.79M |
-| Del Mar Mesa Estates | 1 | $5.2M |
-| Three Canyons | 1 | $4.3M |
-| Valencia | 1 | $4.15M |
+| Triple Crown | 1 | $3.08M |
 
-From where homes sold in the last 5 years.
+From where homes sold in the last 12 months.
 
 ## Prices by home size
 
 ### 2,000–3,000 sq ft
 
-**$1.8M–$2.6M**
+**$1.88M–$2.49M**
 
-23 sales · about $867/sq ft · last sold $2.49M, Jul 2026
-
-### 3,000–4,000 sq ft
-
-**$2.32M–$3.79M**
-
-10 sales · about $719/sq ft · last sold $3.79M, Sep 2026
+5 sales · about $857/sq ft · last sold $2.49M, Jul 2026
 
 ### 4,000–5,000 sq ft
 
-**$2.55M–$4.35M**
+**$3.04M–$3.95M**
 
-9 sales · about $793/sq ft · last sold $3.04M, Jun 2026
+3 sales · about $702/sq ft · last sold $3.04M, Jun 2026
 
-### 5,000+ sq ft
-
-**$4.15M–$10.9M**
-
-8 sales · about $851/sq ft · last sold $6.15M, Nov 2025
-
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ## Recently sold in the Sycamore Ridge area
 
@@ -126,7 +108,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 ### How much does a house in the Sycamore Ridge Elementary area cost?
 
-In the last 12 months, 9 single-family homes in the Sycamore Ridge Elementary attendance area sold at a median of $2,490,000 (about $830 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 50 sold for between $1,800,000 and $10,895,000.
+In the last 12 months, 9 single-family homes in the Sycamore Ridge Elementary attendance area sold at a median of $2,490,000 (about $830 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,880,000 and $3,950,000.
 
 ### Which neighborhoods are in the Sycamore Ridge Elementary area?
 

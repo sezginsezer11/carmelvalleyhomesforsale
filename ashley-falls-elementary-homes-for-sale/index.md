@@ -31,43 +31,39 @@ This search shows all of 92130. Ask me which listings are inside the Ashley Fall
 
 ## Where homes sold in the Ashley Falls area
 
-| Neighborhood | Sales, 5 yrs | Sold for, 5 yrs |
+| Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
-| Sonoma | 22 | $2.25M–$3.33M |
-| Palisades | 11 | $1.87M–$2.6M |
-| Huntington Heights | 10 | $2.23M–$3.02M |
-| Estates | 8 | $2.07M–$2.8M |
-| Palma Del Mar | 7 | $1.98M–$2.63M |
-| Private Collection | 6 | $2.97M–$4M |
-| Watercolors | 6 | $1.4M–$2.4M |
-| Amador | 5 | $2.67M–$3.8M |
-| Provence | 5 | $2.7M–$3.17M |
-| Carmel Village | 5 | $1.67M–$2.2M |
-| Promontory | 1 | $2.85M |
+| Sonoma | 6 | $2.65M–$3.33M |
+| Palisades | 3 | $2.25M–$2.6M |
+| Provence | 3 | $2.7M–$2.98M |
+| Estates | 2 | $2.57M–$2.8M |
+| Amador | 1 | $3.44M |
+| Private Collection | 1 | $3.84M |
+| Watercolors | 1 | $2.18M |
 
-From where homes sold in the last 5 years.
+From where homes sold in the last 12 months.
 
 ## Prices by home size
 
 ### 2,000–3,000 sq ft
 
-**$1.4M–$2.6M**
+**$2.18M–$2.6M**
 
-24 sales · about $858/sq ft · last sold $2.57M, Sep 2026
+5 sales · about $914/sq ft · last sold $2.57M, Sep 2026
 
 ### 3,000–4,000 sq ft
 
-**$1.98M–$3.4M**
+**$2.65M–$3.01M**
 
-49 sales · about $773/sq ft · last sold $2.65M, Sep 2026
+8 sales · about $825/sq ft · last sold $2.65M, Sep 2026
 
 ### 4,000–5,000 sq ft
 
-**$2.43M–$4M**
+**$3.3M–$3.84M**
 
-13 sales · about $770/sq ft · last sold $3.44M, Sep 2026
+4 sales · about $805/sq ft · last sold $3.44M, Sep 2026
 
-What single-family homes inside the boundary sold for over the last 5 years. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
 
 ## Recently sold in the Ashley Falls area
 
@@ -110,7 +106,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 ### How much does a house in the Ashley Falls Elementary area cost?
 
-In the last 12 months, 17 single-family homes in the Ashley Falls Elementary attendance area sold at a median of $2,800,000 (about $821 per sq ft), versus $2,625,000 for all Carmel Valley houses. Over the last 5 years, 86 sold for between $1,400,000 and $4,000,000.
+In the last 12 months, 17 single-family homes in the Ashley Falls Elementary attendance area sold at a median of $2,800,000 (about $821 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $2,175,000 and $3,835,000.
 
 ### Which neighborhoods are in the Ashley Falls Elementary area?
 

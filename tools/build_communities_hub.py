@@ -88,11 +88,11 @@ def load():
         if is_condo_community(c["n"]) or (s / tot < 0.5 if tot else c["cat"] != "sfr"):
             continue
         p = sales.get(c["n"].lower(), [])
-        # 5 years = what homes sold for (range); medians only from the last 12 months
-        pr = [r["close_price"] for r in p]
+        # what homes sell for (range, median): last 12 months only; 5 years is for price trends
         p12 = [r["close_price"] for r in p if r["_d"] >= years_ago(1)]
+        pr = p12
         c["n5"], c["n12"], c["med12"] = len(p), len(p12), (statistics.median(p12) if p12 else None)
-        c["r5"] = (f"{short(min(pr))}&ndash;{short(max(pr))}" if max(pr) > min(pr) else short(pr[0])) if pr else None
+        c["r12"] = (f"{short(min(pr))}&ndash;{short(max(pr))}" if max(pr) > min(pr) else short(pr[0])) if pr else None
         comms.append(c)
     return data, comms, tpl
 
@@ -109,7 +109,7 @@ def main():
     x = explorer(comms, groups, COLORS, pages, AREA_PAGES, list_title="Neighborhoods by Area",
                  hint="Every single-family neighborhood in Carmel Valley, grouped by area. Open an area to see its neighborhoods, how many homes each has and what houses there sold for, then tap one to find it on the map.",
                  map_aria="Map of Carmel Valley single-family neighborhoods",
-                 map_note="Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for over the last 5 years.")
+                 map_note="Boundaries are approximate. Home counts are from the California Title Company community chart. Price ranges are what single-family homes sold for in the last 12 months.")
 
     # ---------- FAQ ----------
     biggest = max(groups, key=lambda g: len(g[2]))

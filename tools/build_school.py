@@ -95,21 +95,27 @@ def build(school):
     today = datetime.date.today()
     stamp = f'{today.strftime("%B")} {today.day}, {today.year}'
 
-    # neighborhoods inside the area (by where their sales are)
+    # neighborhoods inside the area (by where their sales are): 5 years says which neighborhoods,
+    # the table's counts and prices use the last 12 months only (what homes sell for now)
     groups = collections.defaultdict(list)
     for r in five:
         groups[(r.get("community_name") or "").strip()].append(r)
-    unnamed = len(groups.pop("", []))
+    groups.pop("", None)
     nbh = sorted(groups.items(), key=lambda kv: -len(kv[1]))
+    g12 = collections.defaultdict(list)
+    for r in t12:
+        g12[(r.get("community_name") or "").strip()].append(r)
+    unnamed = len(g12.pop("", []))
+    nbh12 = sorted(g12.items(), key=lambda kv: (-len(kv[1]), kv[0]))
     nb_rows = []
-    for n, g in nbh:
+    for n, g in nbh12:
         link = NEIGHBORHOOD_PAGES.get(n)
         name_html = f'<a href="{link}">{e(n)}</a>' if link else e(n)
         nb_rows.append(f'<tr><td class="nm">{name_html}</td><td class="num">{len(g)}</td>'
                        f'<td class="num">{span([r["close_price"] for r in g])}</td></tr>')
 
     # price by home size
-    bed_cards = size_cards(five, span, short)
+    bed_cards = size_cards(t12, span, short, min_sales=2)
 
     recent = "".join(
         f'<tr><td class="addr">{e(r.get("address") or "")}<span>{e(r.get("community_name") or "")}</span></td>'
@@ -123,7 +129,7 @@ def build(school):
          (f"In the last 12 months, {len(t12)} single-family homes in the {school} attendance area sold at a median of {money(m12)} "
           f"(about {money(psf)} per sq ft), versus {money(cv_m12)} for all Carmel Valley houses. " if t12 else
           f"No single-family homes in the {school} attendance area sold in the last 12 months. ")
-         + f"Over the last 5 years, {len(five)} sold for between {money(min(r['close_price'] for r in five))} and {money(max(r['close_price'] for r in five))}."),
+         + f"They sold for between {money(min(r['close_price'] for r in t12))} and {money(max(r['close_price'] for r in t12))}."),
         (f"Which neighborhoods are in the {school} area?",
          f"Based on where homes have sold, the area includes {', '.join(n for n, _ in nbh[:8])}"
          + (", and more" if len(nbh) > 8 else "") + f". {biggest} has had the most sales. Boundaries can split a neighborhood, so check the exact address."),
@@ -261,14 +267,14 @@ def build(school):
   <div class="wrap two">
     <div>
       <h2 class="h3">Where homes sold in the {e(short_name)} area</h2>
-      <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 5 yrs</th><th class="num">Sold for, 5 yrs</th></tr></thead>
+      <table class="tbl"><thead><tr><th>Neighborhood</th><th class="num">Sales, 12 mo</th><th class="num">Sold for, 12 mo</th></tr></thead>
       <tbody>{"".join(nb_rows)}</tbody></table>
-      <p class="note">From where homes sold in the last 5 years.{f" {unnamed} more sales had no neighborhood name." if unnamed else ""}</p>
+      <p class="note">From where homes sold in the last 12 months.{f" {unnamed} more sales had no neighborhood name." if unnamed else ""}</p>
     </div>
     <div id="prices">
       <h2 class="h3">Prices by home size</h2>
       <div class="bcs">{bed_cards}</div>
-      <p class="note">What single-family homes inside the boundary sold for over the last 5 years. As of {stamp}.</p>
+      <p class="note">What single-family homes inside the boundary sold for in the last 12 months. As of {stamp}.</p>
     </div>
   </div>
 </section>

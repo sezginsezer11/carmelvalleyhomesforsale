@@ -371,8 +371,8 @@
  "facts": [
   {
    "icon": "price",
-   "value": "$2.6M&ndash;$3.88M",
-   "label": "Sold, 5 yrs"
+   "value": "$3.1M&ndash;$3.7M",
+   "label": "Sold, last 12 mo"
   },
   {
    "icon": "price",
@@ -451,7 +451,7 @@
  ],
  "glance": {
   "h2": "What a Lexington Home Costs by Bedrooms",
-  "lede": "Closed single-family sales in Lexington over the last 5 years, by bedroom count: what each size sold for and the most recent sale.",
+  "lede": "Closed single-family sales in Lexington in the last 12 months, by bedroom count: what each size sold for and the most recent sale.",
   "cards": [
    {
     "beds": 4,
@@ -475,7 +475,7 @@
     "range": ""
    }
   ],
-  "ratio": "5-bedroom homes made up 12 of the 26 sales."
+  "ratio": "6-bedroom homes made up 4 of the 10 sales."
  },
  "life": {
   "lead": "Lexington is a neighborhood of 265 homes built 1998&ndash;2003 in Carmel Country Highlands. Homes run 2,945&ndash;4,930 sq ft on lots around 8,448 sq ft, and about 5 sell each year.",
@@ -565,7 +565,7 @@
  "faq": [
   {
    "q": "How much do homes in Lexington cost?",
-   "a": "<p>Over the last 5 years, 26 single-family homes in Lexington sold between $2.6M and $3.88M. In the last 12 months, 10 sold at a median of $3.33M. See the price-by-bedroom cards and recent sales on this page for what each kind of home sold for.</p>"
+   "a": "<p>In the last 12 months, 10 single-family homes in Lexington sold between $3.1M and $3.7M, at a median of $3.33M. See the price-by-bedroom cards and recent sales on this page for what each kind of home sold for.</p>"
   },
   {
    "q": "How many homes are in Lexington?",
