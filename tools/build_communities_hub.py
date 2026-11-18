@@ -214,14 +214,12 @@ def main():
 <style>{css}
   /* ============ COMMUNITIES HUB ============ */
   .sr{{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
-  .hub-intro{{padding:40px 0 8px;text-align:center}}
-  .hub-intro .eyebrow{{display:inline-block;font-size:12.5px;color:var(--lake);background:#eaf0fe;padding:5px 14px;border-radius:100px;font-weight:700;margin-bottom:14px}}
-  .hub-intro h1{{font-size:clamp(28px,4.4vw,44px);font-weight:800;line-height:1.12;letter-spacing:-.02em;max-width:820px;margin:0 auto}}
-  .hub-intro p{{max-width:680px;margin:14px auto 0;color:var(--label);font-size:16px}}
-  .hub-stats{{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}}
-  .hub-stats div{{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-size:14px;color:var(--label)}}
-  .hub-stats b{{color:var(--ink);font-size:16px;margin-right:4px}}
-  .map-sec{{padding:24px 0 8px}}
+  .hub-intro{{padding:18px 0 4px}}
+  .hub-bar{{display:flex;align-items:baseline;justify-content:space-between;gap:6px 16px;flex-wrap:wrap}}
+  .hub-bar h1{{font-size:clamp(21px,2.4vw,27px);font-weight:800;letter-spacing:-.015em;line-height:1.2}}
+  .hub-bar h1 span{{font-weight:500;color:var(--label);font-size:.62em;letter-spacing:0;margin-left:6px;white-space:nowrap}}
+  .hub-stats{{font-size:13.5px;font-weight:600;color:var(--label)}}
+  .map-sec{{padding:12px 0 8px}}
   .chips{{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}}
   .chip{{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--ink);font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:100px;cursor:pointer}}
   .chip:hover{{border-color:var(--ac);color:var(--ink)}}
@@ -301,11 +299,8 @@ def main():
   .cc-map{{position:relative;z-index:2;align-self:flex-start;border:0;background:none;padding:0;font:600 12.5px var(--sans);color:var(--label);text-decoration:underline;cursor:pointer}}
   .cc-map:hover{{color:var(--lake)}}
   @media(max-width:760px){{
-    .hub-intro{{padding:26px 0 0}}
-    .hub-intro p{{font-size:15px}}
-    .hub-stats{{gap:6px;flex-wrap:nowrap}}
-    .hub-stats div{{padding:6px 9px;font-size:12.5px}}
-    .hub-stats b{{font-size:14px;margin-right:3px}}
+    .hub-intro{{padding:12px 0 2px}}
+    .hub-bar h1 span{{display:block;margin:2px 0 0}}
     .map-card{{padding:12px 14px}}
     .map-card a.mc-go{{margin-top:8px;padding:7px 12px}}
     #map{{height:58vh}}
@@ -330,11 +325,9 @@ def main():
 </nav>
 
 <section class="hub-intro">
-  <div class="wrap">
-    <span class="eyebrow">Carmel Valley &middot; San Diego 92130</span>
-    <h1>Carmel Valley Neighborhoods: Single-Family Homes by Area</h1>
-    <p>Every single-family neighborhood in Carmel Valley on one map, grouped by area. Tap a neighborhood to see where it sits, how many homes it has and what houses there sell for.</p>
-    <div class="hub-stats"><div><b>{len(comms)}</b>neighborhoods</div><div><b>{homes_floor}+</b>homes</div><div><b>{len(groups)}</b>areas</div></div>
+  <div class="wrap hub-bar">
+    <h1>Carmel Valley Neighborhoods <span>Single-family homes by area</span></h1>
+    <p class="hub-stats">{len(comms)} neighborhoods &middot; {homes_floor}+ homes &middot; {len(groups)} areas</p>
   </div>
 </section>
 
@@ -342,7 +335,7 @@ def main():
   <div class="wrap xp">
     <div class="xp-list" id="areas">
       <h2>Neighborhoods by Area</h2>
-      <p class="xp-hint">Open an area to see its neighborhoods. Tap a neighborhood to find it on the map.</p>
+      <p class="xp-hint">Every single-family neighborhood in Carmel Valley, grouped by area. Open an area to see its neighborhoods, how many homes each has and what houses there sold for, then tap one to find it on the map.</p>
 {chr(10).join(sec)}
     </div>
     <div class="xp-map">
