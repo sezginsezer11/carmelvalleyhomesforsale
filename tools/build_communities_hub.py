@@ -272,6 +272,26 @@ def main():
   .nr.on{{background:#eef5fa}}
   .nr-go{{flex:none;font-size:13px;font-weight:700;color:var(--lake);padding:6px 6px;white-space:nowrap}}
   .xp .map-box{{max-width:none}}
+  .sh-grab,.sh-btn{{display:none}}
+  @media(max-width:979px){{
+    .map-sec{{padding:6px 0 0}}
+    .xp{{position:relative;display:block;height:calc(100svh - 250px);min-height:440px}}
+    .xp-map{{position:absolute;inset:0}}
+    .xp .map-box{{height:100%;border-radius:12px}}
+    .xp #map{{height:100%}}
+    .xp .map-note{{display:none}}
+    .xp .map-card{{top:46px;bottom:auto;left:10px;right:10px;max-width:none}}
+    .xp-list{{position:absolute;left:0;right:0;bottom:0;z-index:600;height:150px;display:flex;flex-direction:column;
+      background:var(--white);border-radius:16px 16px 12px 12px;box-shadow:0 -4px 18px rgba(0,0,0,.18);transition:height .25s ease}}
+    .xp-list.dragging{{transition:none}}
+    .sh-head{{position:relative;flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 14px 10px;touch-action:none;cursor:grab}}
+    .sh-grab{{display:block;position:absolute;top:6px;left:50%;width:38px;height:5px;margin-left:-19px;border-radius:3px;background:#c9cfd6}}
+    .sh-head h2{{font-size:17px}}
+    .sh-btn{{display:block;border:1px solid var(--line);background:var(--white);border-radius:100px;font:600 13px var(--sans);color:var(--lake);padding:6px 12px;cursor:pointer}}
+    .sh-body{{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 12px 12px}}
+    .xp-list .xp-hint{{display:none}}
+    .xp .leaflet-control-zoom{{display:none}}
+  }}
   @media(min-width:980px){{
     .xp{{grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:24px;align-items:start}}
     .xp-map{{order:0;position:sticky;top:76px}}
@@ -334,9 +354,14 @@ def main():
 <section class="map-sec" id="map-section">
   <div class="wrap xp">
     <div class="xp-list" id="areas">
-      <h2>Neighborhoods by Area</h2>
+      <div class="sh-head" id="shHead"><span class="sh-grab" aria-hidden="true"></span>
+        <h2>Neighborhoods by Area</h2>
+        <button type="button" class="sh-btn" id="shBtn" aria-controls="areas" aria-expanded="false">Show list</button>
+      </div>
+      <div class="sh-body">
       <p class="xp-hint">Every single-family neighborhood in Carmel Valley, grouped by area. Open an area to see its neighborhoods, how many homes each has and what houses there sold for, then tap one to find it on the map.</p>
 {chr(10).join(sec)}
+      </div>
     </div>
     <div class="xp-map">
       <div class="map-box">
@@ -375,6 +400,10 @@ def main():
 var HUB={json.dumps(mdata, separators=(",", ":"))};
 (function(){{
   var C=HUB.c, A=HUB.areas, sel=-1, area=null;
+  var wide=window.matchMedia('(min-width:980px)');
+  var XP=document.querySelector('.xp'), SH=document.getElementById('areas');
+  // keep the area being shown clear of the pull-up panel on phones
+  function pad(p){{return wide.matches?{{padding:[p,p]}}:{{paddingTopLeft:[p,p+30],paddingBottomRight:[p,SH.offsetHeight+p]}};}}
   function esc(s){{return String(s).replace(/[&<>"]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]}});}}
   var map=L.map('map',{{scrollWheelZoom:false,zoomSnap:0.5}}).setView([32.94,-117.22],13);
   var ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/';
@@ -391,7 +420,7 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
     l.on('click',function(e){{L.DomEvent.stopPropagation(e);pick(i,false);}});
     l.bindTooltip(o.n,{{sticky:true,direction:'top'}});return l;}});
   var all=L.latLngBounds([]);layers.forEach(function(l){{all.extend(l.getBounds());}});
-  function fitAll(){{map.invalidateSize();map.fitBounds(all,{{padding:[16,16]}});}}
+  function fitAll(){{map.invalidateSize();map.fitBounds(all,pad(16));}}
   var touched=false;map.getContainer().addEventListener('pointerdown',function(){{touched=true;}});
   fitAll();window.addEventListener('load',fitAll);
   var rt;window.addEventListener('resize',function(){{clearTimeout(rt);rt=setTimeout(function(){{if(!touched&&!area&&sel<0)fitAll();else map.invalidateSize();}},150);}});
@@ -407,17 +436,16 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
     var go=o.u?'<a class="mc-go" href="'+o.u+'">'+(o.g?'Community guide &rarr;':'See homes &rarr;')+'</a>':'<a class="mc-go" href="#contact">Ask about '+esc(o.n)+'</a>';
     card.innerHTML='<button type="button" class="mc-x" aria-label="Close">&times;</button><h3>'+esc(o.n)+'</h3><div class="mc-area"><span class="dot" style="--ac:'+A[o.a][1]+'"></span>'+esc(A[o.a][0])+'</div>'+(o.h||o.m?'<div class="mc-homes">'+(o.h?'<b>'+o.h+'</b> homes':'')+(o.h&&o.m?' &middot; ':'')+(o.m?'sold <b>'+o.m+'</b> (5 yrs)':'')+'</div>':'')+go;
     card.classList.add('show');card.querySelector('.mc-x').onclick=function(){{card.classList.remove('show');sel=-1;style();}};
-    if(zoom)map.flyToBounds(layers[i].getBounds(),{{maxZoom:16,duration:.6,padding:[40,40]}});}}
+    if(zoom)map.flyToBounds(layers[i].getBounds(),Object.assign({{maxZoom:16,duration:.6}},pad(40)));}}
   map.on('click',function(){{card.classList.remove('show');sel=-1;style();}});
   var AX=Array.prototype.slice.call(document.querySelectorAll('.ax')), quiet=false;
-  var wide=window.matchMedia('(min-width:980px)');
   var PICKS=Array.prototype.slice.call(document.querySelectorAll('.nr-pick'));
   function rowFor(i){{for(var k=0;k<PICKS.length;k++)if(PICKS[k].dataset.n===C[i].n)return PICKS[k];return null;}}
   function mark(i){{document.querySelectorAll('.nr.on').forEach(function(r){{r.classList.remove('on');}});
     var b=i>=0&&rowFor(i);if(b)b.parentNode.classList.add('on');return b;}}
   function setArea(k,fly){{touched=true;area=k;card.classList.remove('show');sel=-1;mark(-1);style();labels();
     if(fly){{var b=L.latLngBounds([]);layers.forEach(function(l,i){{if(!area||C[i].a===area)b.extend(l.getBounds());}});
-      map.flyToBounds(b,{{padding:[20,20],duration:.6}});}}}}
+      map.flyToBounds(b,Object.assign({{duration:.6}},pad(20)));}}}}
   AX.forEach(function(d){{d.addEventListener('toggle',function(){{
     if(quiet)return;
     if(d.open){{quiet=true;AX.forEach(function(o){{if(o!==d)o.open=false;}});quiet=false;setArea(d.dataset.a,true);}}
@@ -430,10 +458,37 @@ var HUB={json.dumps(mdata, separators=(",", ":"))};
     if(b&&!zoom&&wide.matches)b.scrollIntoView({{block:'nearest',behavior:'smooth'}});}};
   document.querySelectorAll('.nr-pick').forEach(function(b){{
     var i=C.findIndex(function(o){{return o.n===b.dataset.n;}});if(i<0)return;
-    b.addEventListener('click',function(){{if(!wide.matches)document.getElementById('map').scrollIntoView({{behavior:'smooth',block:'center'}});pick(i,true);}});
+    b.addEventListener('click',function(){{if(!wide.matches)snap('peek');pick(i,true);}});
     b.addEventListener('mouseenter',function(){{if(sel<0){{layers[i].setStyle({{color:'#101418',weight:3,fillOpacity:.7}});}}}});
     b.addEventListener('mouseleave',function(){{if(sel<0)style();}});}});
   map.on('click',function(){{mark(-1);}});
+  // ---- phone pull-up panel: peek / half / full ----
+  var head=document.getElementById('shHead'), btn=document.getElementById('shBtn'), state='peek';
+  function hts(){{var H=XP.clientHeight;return {{peek:150,half:Math.round(H*.55),full:H-8}};}}
+  function snap(st){{if(wide.matches){{SH.style.height='';return;}}state=st;SH.style.height=hts()[st]+'px';
+    btn.textContent=st==='full'?'Show map':'Show list';btn.setAttribute('aria-expanded',st==='peek'?'false':'true');}}
+  btn.addEventListener('click',function(e){{e.stopPropagation();snap(state==='full'?'peek':'full');}});
+  var y0=null,h0=0,moved=false;
+  head.addEventListener('pointerdown',function(e){{if(wide.matches||e.target===btn)return;y0=e.clientY;h0=SH.offsetHeight;moved=false;
+    SH.classList.add('dragging');head.setPointerCapture(e.pointerId);}});
+  head.addEventListener('pointermove',function(e){{if(y0===null)return;var dy=y0-e.clientY;if(Math.abs(dy)>4)moved=true;
+    var t=hts();SH.style.height=Math.max(t.peek,Math.min(t.full,h0+dy))+'px';}});
+  function end(){{if(y0===null)return;y0=null;SH.classList.remove('dragging');var t=hts(),h=SH.offsetHeight;
+    if(!moved){{snap(state==='peek'?'half':state==='half'?'full':'peek');return;}}
+    var best='peek';['peek','half','full'].forEach(function(k){{if(Math.abs(t[k]-h)<Math.abs(t[best]-h))best=k;}});snap(best);}}
+  head.addEventListener('pointerup',end);head.addEventListener('pointercancel',end);
+  // opening an area raises the panel halfway so its neighborhoods show with the map above
+  var body=SH.querySelector('.sh-body');
+  function toTop(el){{body.scrollTo({{top:Math.max(0,el.offsetTop-body.offsetTop-4),behavior:'smooth'}});}}
+  AX.forEach(function(d){{d.addEventListener('toggle',function(){{if(!d.open||wide.matches)return;
+    if(state==='peek'&&!quiet)snap('half');setTimeout(function(){{toTop(d);}},30);}});}});
+  wide.addEventListener&&wide.addEventListener('change',function(){{snap(wide.matches?state:'peek');map.invalidateSize();}});
+  // phones: the map fills the screen between the title and the bottom menu
+  function fit(){{if(wide.matches){{XP.style.height='';return;}}var nav=document.querySelector('.bottom-nav');
+    var top=XP.getBoundingClientRect().top+window.scrollY,nh=nav?nav.offsetHeight:0;
+    XP.style.height=Math.max(440,window.innerHeight-top-nh-10)+'px';map.invalidateSize();}}
+  fit();window.addEventListener('resize',function(){{fit();snap(state);}});
+  snap('peek');
   // open the area named in the URL (#area-...)
   var h=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));
   if(h&&h.classList.contains('ax'))h.open=true;
