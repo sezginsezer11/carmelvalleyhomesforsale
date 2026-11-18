@@ -537,6 +537,8 @@ def write_headers():
 
 
 def main():
+    import bottom_nav  # shared phone bottom menu goes onto every page first
+    bottom_nav.main()
     results = []
     for path, section, blurb in PAGES:
         if add_alternate_link(path):
