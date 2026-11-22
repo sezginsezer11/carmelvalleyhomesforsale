@@ -16,11 +16,11 @@ $2.63M
 
 Median sale price
 
-212
+209
 
 Homes sold
 
-$877
+$879
 
 Median per sq ft
 
@@ -28,7 +28,7 @@ Median per sq ft
 
 Median on market
 
-Single-family closed sales, ZIP 92130, as of November 18, 2026.
+Single-family closed sales, ZIP 92130, as of November 22, 2026.
 
 ## Carmel Valley houses for sale now
 
@@ -48,9 +48,9 @@ How the last 12 months of single-family sales break down by price. Most homes se
 
 ### $2M to $3M
 
-115 sold
+112 sold
 
-54% of sales · median $2.4M
+54% of sales · median $2.41M
 
 ### $3M to $4M
 
@@ -64,6 +64,8 @@ How the last 12 months of single-family sales break down by price. Most homes se
 
 10% of sales · median $4.55M
 
+Shopping above $3 million? See [Carmel Valley luxury homes, $3M and up](https://carmelvalleyhomesforsale.com/carmel-valley-luxury-homes-for-sale/): where they sit and the top sales.
+
 *By Area*
 
 ## Carmel Valley Neighborhoods by Price
@@ -75,9 +77,9 @@ Each part of Carmel Valley has its own age of homes, lot sizes and price range. 
 | North of Del Mar Heights Road [Area guide →](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/) | 35 | $2.63M |
 | South of Del Mar Heights Road [Area guide →](https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/) | 48 | $2.33M |
 | Carmel Country Highlands [Area guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/) | 19 | $3.23M |
-| Pacific Highlands Ranch [Area guide →](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/) | 25 | $2.15M |
-| Torrey Highlands [Area guide →](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/) | 4 | $2.05M |
-| Torrey Hills [Area guide →](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/) | 24 | $2.47M |
+| Pacific Highlands Ranch [Area guide →](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/) | 24 | $2.17M |
+| Torrey Highlands [Area guide →](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/) | 3 | $1.95M |
+| Torrey Hills [Area guide →](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/) | 23 | $2.5M |
 | Del Mar Mesa [Area guide →](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/) | 9 | $4.28M |
 | Rancho Pacifica | 4 | $5.93M |
 
@@ -101,11 +103,11 @@ Every property type for sale in Carmel Valley in one search.
 
 ### What is the median price of a single-family home in Carmel Valley?
 
-$2,625,000, based on 212 single-family homes that closed in the last 12 months in ZIP 92130 (about $877 per square foot). Condos and townhomes are not included.
+$2,625,000, based on 209 single-family homes that closed in the last 12 months in ZIP 92130 (about $879 per square foot). Condos and townhomes are not included.
 
 ### Can you still buy a house in Carmel Valley for under $2 million?
 
-Yes, but there are few of them. 26 of 212 single-family sales in the last 12 months closed under $2M, mostly smaller or older homes and newer homes on compact lots. They tend to sell quickly, so set up alerts and be ready to act.
+Yes, but there are few of them. 26 of 209 single-family sales in the last 12 months closed under $2M, mostly smaller or older homes and newer homes on compact lots. They tend to sell quickly, so set up alerts and be ready to act.
 
 ### How fast do Carmel Valley houses sell?
 

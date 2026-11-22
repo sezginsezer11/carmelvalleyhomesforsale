@@ -58,6 +58,8 @@ PAGES = [
      "Houses in the Sycamore Ridge Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs."),
     ("/torrey-hills-elementary-homes-for-sale/", "Schools",
      "Houses in the Torrey Hills Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs."),
+    ("/carmel-valley-luxury-homes-for-sale/", "Overview",
+     "Carmel Valley luxury homes for sale ($3M and up): live listings, where luxury homes sit by area and neighborhood, the top sales of the last 12 months, market notes, FAQs."),
     ("/lexington-carmel-valley-homes-for-sale/", "Neighborhoods",
      "Lexington: single-family neighborhood in Carmel Country Highlands, in the Sage Canyon Elementary area - prices by bedroom, sold data, schools, map, FAQs."),
 ]

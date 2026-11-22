@@ -271,6 +271,7 @@ def main():
     <div class="bands">
       {"".join(bands)}
     </div>
+    <p class="tbl-note">Shopping above $3 million? See <a href="/carmel-valley-luxury-homes-for-sale/">Carmel Valley luxury homes, $3M and up</a>: where they sit and the top sales.</p>
   </div>
 </section>
 
