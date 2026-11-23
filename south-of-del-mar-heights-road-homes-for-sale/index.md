@@ -33,8 +33,8 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 | Sonoma — 219 homes · built 1990–1997 | 6 | $2.65M–$3.33M |
 | San Remo — 289 homes · built 1987–1991 | 5 | $1.9M–$2.29M |
 | Del Mar Place — 241 homes · built 1987–2002 | 3 | $2.1M–$3.13M |
-| Palisades — 164 homes · built 1995–1997 | 3 | $2.25M–$2.6M |
 | Seabridge — 171 homes · built 1986–1996 | 3 | $1.9M–$2.25M |
+| Palisades — 164 homes · built 1995–1997 | 3 | $2.25M–$2.6M |
 | Provence — 57 homes · built 1998–1999 | 3 | $2.7M–$2.98M |
 | Creek Park — 155 homes · built 1984–1985 | 2 | $2.03M–$2.1M |
 | Pines — 176 homes · built 1985 | 2 | $1.49M–$1.83M |
@@ -81,11 +81,11 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 
 6 sales · about $799/sq ft · last sold $3.44M, Sep 2026
 
-44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 18, 2026.
+44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 23, 2026.
 
 ## Elementary schools
 
-- [Ashley Falls Elementary](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/) — 41% of sales
+- [Ashley Falls Elementary](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/) — 40% of sales
 - Carmel Del Mar Elementary — 19% of sales
 - [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) — 6% of sales
 - Other schools, mostly Solana Beach School District — 34% of sales
@@ -115,7 +115,7 @@ In the last 12 months, 44 single-family homes in South of Del Mar Heights Road s
 
 ### Which neighborhoods are in South of Del Mar Heights Road?
 
-South of Del Mar Heights Road has 25 single-family neighborhoods, including Cantamar, Sonoma, San Remo, Del Mar Place, Palisades, Seabridge. Among those with at least three sales in the last 12 months, San Remo had the lowest median ($1.92M) and Sonoma the highest ($3M).
+South of Del Mar Heights Road has 25 single-family neighborhoods, including Cantamar, Sonoma, San Remo, Del Mar Place, Seabridge, Palisades. Among those with at least three sales in the last 12 months, San Remo had the lowest median ($1.92M) and Sonoma the highest ($3M).
 
 ### How old are the homes in South of Del Mar Heights Road?
 
@@ -123,7 +123,7 @@ Homes that sold in the last 5 years were built between 1984 and 2002, with a med
 
 ### What schools serve South of Del Mar Heights Road?
 
-Elementary school depends on the street: Ashley Falls Elementary (41% of recent sales), Carmel Del Mar Elementary (19% of recent sales), Sycamore Ridge Elementary (6% of recent sales), and Solana Beach School District schools for much of the rest. High school is Torrey Pines High, with Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with the district.
+Elementary school depends on the street: Ashley Falls Elementary (40% of recent sales), Carmel Del Mar Elementary (19% of recent sales), Sycamore Ridge Elementary (6% of recent sales), and Solana Beach School District schools for much of the rest. High school is Torrey Pines High, with Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with the district.
 
 ### How fast do homes sell in South of Del Mar Heights Road?
 

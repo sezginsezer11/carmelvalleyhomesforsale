@@ -19,9 +19,9 @@ The single-family neighborhoods inside the Torrey Hills Elementary attendance bo
 Dashed line: the Torrey Hills Elementary attendance boundary from the Del Mar Union School District map. Neighborhood outlines are approximate. Boundaries change, so confirm any address with [the district](https://www.dmusd.org/Page/191).
 
 - **Median sale, last 12 mo:** $2.45M
-- **Sold, last 12 mo:** 8
-- **Per sq ft, last 12 mo:** $829
-- **On market, last 12 mo:** 23 days
+- **Sold, last 12 mo:** 7
+- **Per sq ft, last 12 mo:** $868
+- **On market, last 12 mo:** 26 days
 
 ## Carmel Valley houses for sale now
 
@@ -35,7 +35,6 @@ This search shows all of 92130. Ask me which listings are inside the Torrey Hill
 |---|---|---|
 | Torrey View | 3 | $1.95M–$2.6M |
 | La Strada | 1 | $3.1M |
-| Searidge | 1 | $2.32M |
 | St. Augustine | 1 | $2.5M |
 | Torrey Point | 1 | $2.45M |
 | Vantage Point | 1 | $2.3M |
@@ -54,9 +53,9 @@ From where homes sold in the last 12 months.
 
 **$2.3M–$3.1M**
 
-3 sales · about $773/sq ft · last sold $3.1M, Feb 2026
+2 sales · about $790/sq ft · last sold $3.1M, Feb 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
 
 ## Recently sold in the Torrey Hills area
 
@@ -99,7 +98,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 ### How much does a house in the Torrey Hills Elementary area cost?
 
-In the last 12 months, 8 single-family homes in the Torrey Hills Elementary attendance area sold at a median of $2,445,000 (about $829 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,949,000 and $3,100,000.
+In the last 12 months, 7 single-family homes in the Torrey Hills Elementary attendance area sold at a median of $2,450,000 (about $868 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,949,000 and $3,100,000.
 
 ### Which neighborhoods are in the Torrey Hills Elementary area?
 
@@ -115,7 +114,7 @@ Use the Del Mar Union School District school locator with the exact address befo
 
 ### How fast do homes sell in the Torrey Hills Elementary area?
 
-Over the last 12 months, the median home sold in 23 days on market. Homes in sought-after school areas often go under contract in the first week.
+Over the last 12 months, the median home sold in 26 days on market. Homes in sought-after school areas often go under contract in the first week.
 
 ## Looking in the Torrey Hills Area?
 

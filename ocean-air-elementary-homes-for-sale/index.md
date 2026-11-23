@@ -63,7 +63,7 @@ From where homes sold in the last 12 months. 2 more sales had no neighborhood na
 
 7 sales · about $855/sq ft · last sold $2.97M, Oct 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
 
 ## Recently sold in the Ocean Air area
 

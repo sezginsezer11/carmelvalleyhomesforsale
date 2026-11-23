@@ -1,6 +1,6 @@
 # Pacific Highlands Ranch Homes for Sale | Carmel Valley, San Diego 92130
 
-> Pacific Highlands Ranch single-family homes in Carmel Valley: 12-month median $2.47M, 36 neighborhoods, sold prices, schools and a map.
+> Pacific Highlands Ranch single-family homes in Carmel Valley: 12-month median $2.49M, 36 neighborhoods, sold prices, schools and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/
 
@@ -10,8 +10,8 @@ Source page: https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-
 
 Carmel Valley's newest homes, built from the 2000s onward, east of the SR-56. Many neighborhoods pay Mello-Roos on top of property tax.
 
-- **Median sale, last 12 mo:** $2.47M
-- **Sold, last 12 mo:** 58
+- **Median sale, last 12 mo:** $2.49M
+- **Sold, last 12 mo:** 57
 - **Neighborhoods:** 36
 - **On market, last 12 mo:** 13 days
 
@@ -38,16 +38,16 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 | Hampton Lane — 118 homes · built 2012–2013 | 3 | $2.08M–$2.14M |
 | Santa Barbara — 98 homes · built 2003 | 3 | $2.89M–$3.1M |
 | Sendero Collection — built 2021–2023 | 2 | $2.95M–$3.39M |
-| Soleil at Bordeaux — 163 homes · built 2004–2006 | 2 | $2.12M–$2.34M |
 | Cassavia — built 2017–2018 | 2 | $2.2M–$2.25M |
 | Verana — built 2015–2016 | 2 | $2.43M–$2.45M |
 | Brightwater — 77 homes · built 2012–2015 | 2 | $2.63M–$2.9M |
 | Olvera — built 2015–2018 | 2 | $3.37M–$3.45M |
 | Bordeaux — 106 homes · built 2003–2004 | 2 | $2.18M–$2.49M |
-| Vista Santa Fe — built 2019–2020 | 2 | $5.3M–$5.38M |
 | Ivy — built 2016–2017 | 2 | $1.78M–$2M |
+| Vista Santa Fe — built 2019–2020 | 2 | $5.3M–$5.38M |
 | Rancho Glens Estates — 33 homes · built 1996–2003 | 2 | $3.25M–$4.15M |
 | The Highlands — built 2020–2023 | 2 | $4.4M–$4.55M |
+| Soleil at Bordeaux — 163 homes · built 2004–2006 | 1 | $2.34M |
 | Elms — built 2015–2017 | 1 | $2.39M |
 | Santa Rosa — 124 homes · built 2005–2007 | 1 | $2.66M |
 | Canterra — built 2015–2016 | 1 | $1.76M |
@@ -72,7 +72,7 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 **$1.69M–$2.63M**
 
-28 sales · about $850/sq ft · last sold $1.76M, Nov 2026
+27 sales · about $850/sq ft · last sold $1.76M, Nov 2026
 
 ### 3,000–4,000 sq ft
 
@@ -92,7 +92,7 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 2 sales · about $1,059/sq ft · last sold $4.15M, Oct 2026
 
-58 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 18, 2026.
+57 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 23, 2026.
 
 ## Elementary schools
 
@@ -123,7 +123,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in Pacific Highlands Ranch cost?
 
-In the last 12 months, 58 single-family homes in Pacific Highlands Ranch sold at a median of $2,470,000 (about $877 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,550,000 and $5,380,000.
+In the last 12 months, 57 single-family homes in Pacific Highlands Ranch sold at a median of $2,490,000 (about $878 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,550,000 and $5,380,000.
 
 ### Which neighborhoods are in Pacific Highlands Ranch?
 

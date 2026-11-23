@@ -35,7 +35,7 @@ Median per sq ft
 
 Median on market
 
-Single-family closed sales, ZIP 92130, as of November 22, 2026.
+Single-family closed sales, ZIP 92130, as of November 23, 2026.
 
 ### Carmel Valley houses for sale now
 
@@ -242,7 +242,7 @@ Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is inde
 
 ## Pacific Highlands Ranch Homes for Sale | Carmel Valley, San Diego 92130
 
-> Pacific Highlands Ranch single-family homes in Carmel Valley: 12-month median $2.47M, 36 neighborhoods, sold prices, schools and a map.
+> Pacific Highlands Ranch single-family homes in Carmel Valley: 12-month median $2.49M, 36 neighborhoods, sold prices, schools and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/
 
@@ -252,8 +252,8 @@ Source page: https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-
 
 Carmel Valley's newest homes, built from the 2000s onward, east of the SR-56. Many neighborhoods pay Mello-Roos on top of property tax.
 
-- **Median sale, last 12 mo:** $2.47M
-- **Sold, last 12 mo:** 58
+- **Median sale, last 12 mo:** $2.49M
+- **Sold, last 12 mo:** 57
 - **Neighborhoods:** 36
 - **On market, last 12 mo:** 13 days
 
@@ -280,16 +280,16 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 | Hampton Lane — 118 homes · built 2012–2013 | 3 | $2.08M–$2.14M |
 | Santa Barbara — 98 homes · built 2003 | 3 | $2.89M–$3.1M |
 | Sendero Collection — built 2021–2023 | 2 | $2.95M–$3.39M |
-| Soleil at Bordeaux — 163 homes · built 2004–2006 | 2 | $2.12M–$2.34M |
 | Cassavia — built 2017–2018 | 2 | $2.2M–$2.25M |
 | Verana — built 2015–2016 | 2 | $2.43M–$2.45M |
 | Brightwater — 77 homes · built 2012–2015 | 2 | $2.63M–$2.9M |
 | Olvera — built 2015–2018 | 2 | $3.37M–$3.45M |
 | Bordeaux — 106 homes · built 2003–2004 | 2 | $2.18M–$2.49M |
-| Vista Santa Fe — built 2019–2020 | 2 | $5.3M–$5.38M |
 | Ivy — built 2016–2017 | 2 | $1.78M–$2M |
+| Vista Santa Fe — built 2019–2020 | 2 | $5.3M–$5.38M |
 | Rancho Glens Estates — 33 homes · built 1996–2003 | 2 | $3.25M–$4.15M |
 | The Highlands — built 2020–2023 | 2 | $4.4M–$4.55M |
+| Soleil at Bordeaux — 163 homes · built 2004–2006 | 1 | $2.34M |
 | Elms — built 2015–2017 | 1 | $2.39M |
 | Santa Rosa — 124 homes · built 2005–2007 | 1 | $2.66M |
 | Canterra — built 2015–2016 | 1 | $1.76M |
@@ -314,7 +314,7 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 **$1.69M–$2.63M**
 
-28 sales · about $850/sq ft · last sold $1.76M, Nov 2026
+27 sales · about $850/sq ft · last sold $1.76M, Nov 2026
 
 #### 3,000–4,000 sq ft
 
@@ -334,7 +334,7 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 2 sales · about $1,059/sq ft · last sold $4.15M, Oct 2026
 
-58 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 18, 2026.
+57 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 23, 2026.
 
 ### Elementary schools
 
@@ -365,7 +365,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in Pacific Highlands Ranch cost?
 
-In the last 12 months, 58 single-family homes in Pacific Highlands Ranch sold at a median of $2,470,000 (about $877 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,550,000 and $5,380,000.
+In the last 12 months, 57 single-family homes in Pacific Highlands Ranch sold at a median of $2,490,000 (about $878 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,550,000 and $5,380,000.
 
 #### Which neighborhoods are in Pacific Highlands Ranch?
 
@@ -485,7 +485,7 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 2 sales · about $855/sq ft · last sold $2.87M, Oct 2026
 
-30 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 18, 2026.
+30 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 23, 2026.
 
 ### Elementary schools
 
@@ -586,8 +586,8 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 | Sonoma — 219 homes · built 1990–1997 | 6 | $2.65M–$3.33M |
 | San Remo — 289 homes · built 1987–1991 | 5 | $1.9M–$2.29M |
 | Del Mar Place — 241 homes · built 1987–2002 | 3 | $2.1M–$3.13M |
-| Palisades — 164 homes · built 1995–1997 | 3 | $2.25M–$2.6M |
 | Seabridge — 171 homes · built 1986–1996 | 3 | $1.9M–$2.25M |
+| Palisades — 164 homes · built 1995–1997 | 3 | $2.25M–$2.6M |
 | Provence — 57 homes · built 1998–1999 | 3 | $2.7M–$2.98M |
 | Creek Park — 155 homes · built 1984–1985 | 2 | $2.03M–$2.1M |
 | Pines — 176 homes · built 1985 | 2 | $1.49M–$1.83M |
@@ -634,11 +634,11 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 
 6 sales · about $799/sq ft · last sold $3.44M, Sep 2026
 
-44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 18, 2026.
+44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 23, 2026.
 
 ### Elementary schools
 
-- [Ashley Falls Elementary](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/) — 41% of sales
+- [Ashley Falls Elementary](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/) — 40% of sales
 - Carmel Del Mar Elementary — 19% of sales
 - [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) — 6% of sales
 - Other schools, mostly Solana Beach School District — 34% of sales
@@ -668,7 +668,7 @@ In the last 12 months, 44 single-family homes in South of Del Mar Heights Road s
 
 #### Which neighborhoods are in South of Del Mar Heights Road?
 
-South of Del Mar Heights Road has 25 single-family neighborhoods, including Cantamar, Sonoma, San Remo, Del Mar Place, Palisades, Seabridge. Among those with at least three sales in the last 12 months, San Remo had the lowest median ($1.92M) and Sonoma the highest ($3M).
+South of Del Mar Heights Road has 25 single-family neighborhoods, including Cantamar, Sonoma, San Remo, Del Mar Place, Seabridge, Palisades. Among those with at least three sales in the last 12 months, San Remo had the lowest median ($1.92M) and Sonoma the highest ($3M).
 
 #### How old are the homes in South of Del Mar Heights Road?
 
@@ -676,7 +676,7 @@ Homes that sold in the last 5 years were built between 1984 and 2002, with a med
 
 #### What schools serve South of Del Mar Heights Road?
 
-Elementary school depends on the street: Ashley Falls Elementary (41% of recent sales), Carmel Del Mar Elementary (19% of recent sales), Sycamore Ridge Elementary (6% of recent sales), and Solana Beach School District schools for much of the rest. High school is Torrey Pines High, with Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with the district.
+Elementary school depends on the street: Ashley Falls Elementary (40% of recent sales), Carmel Del Mar Elementary (19% of recent sales), Sycamore Ridge Elementary (6% of recent sales), and Solana Beach School District schools for much of the rest. High school is Torrey Pines High, with Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with the district.
 
 #### How fast do homes sell in South of Del Mar Heights Road?
 
@@ -763,7 +763,7 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 
 7 sales · about $740/sq ft · last sold $3.5M, Oct 2026
 
-19 single-family sales inside Carmel Country Highlands, last 12 months, as of November 18, 2026.
+19 single-family sales inside Carmel Country Highlands, last 12 months, as of November 23, 2026.
 
 ### Elementary schools
 
@@ -832,7 +832,7 @@ Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is inde
 
 ## Torrey Highlands Homes for Sale | Carmel Valley, San Diego 92130
 
-> Torrey Highlands single-family homes in Carmel Valley: 12-month median $2.05M, 7 neighborhoods, sold prices, schools and a map.
+> Torrey Highlands single-family homes in Carmel Valley: 12-month median $1.95M, 7 neighborhoods, sold prices, schools and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/
 
@@ -842,10 +842,10 @@ Source page: https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sal
 
 Newer homes in Torrey Highlands, at the eastern edge of Carmel Valley near the SR-56 and Del Sur.
 
-- **Median sale, last 12 mo:** $2.05M
-- **Sold, last 12 mo:** 4
+- **Median sale, last 12 mo:** $1.95M
+- **Sold, last 12 mo:** 3
 - **Neighborhoods:** 7
-- **On market, last 12 mo:** 8 days
+- **On market, last 12 mo:** 7 days
 
 ### Torrey Highlands neighborhoods on the map
 
@@ -863,7 +863,7 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 |---|---|---|
 | Villamontes — 124 homes · built 2002–2003 | 2 | $1.76M–$1.95M |
 | Fairbanks Highlands — 93 homes · built 2000–2002 | 1 | $4.2M |
-| Palma Real — 82 homes · built 2002–2003 | 1 | $2.15M |
+| Palma Real — 82 homes · built 2002–2003 | — | — |
 | Collins Ranch — 53 homes · built 2002–2003 | — | — |
 | Maricel — built 2012–2013 | — | — |
 | Terrazzo — 59 homes · built 2001–2003 | — | — |
@@ -877,7 +877,7 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 
 2 sales · about $745/sq ft · last sold $1.95M, Sep 2026
 
-4 single-family sales inside Torrey Highlands, last 12 months, as of November 18, 2026.
+3 single-family sales inside Torrey Highlands, last 12 months, as of November 23, 2026.
 
 ### Elementary schools
 
@@ -904,7 +904,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in Torrey Highlands cost?
 
-In the last 12 months, 4 single-family homes in Torrey Highlands sold at a median of $2,050,000 (about $732 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,755,000 and $4,200,000.
+In the last 12 months, 3 single-family homes in Torrey Highlands sold at a median of $1,950,000 (about $745 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,755,000 and $4,200,000.
 
 #### Which neighborhoods are in Torrey Highlands?
 
@@ -920,7 +920,7 @@ Most homes are served by Solana Beach School District elementary schools. High s
 
 #### How fast do homes sell in Torrey Highlands?
 
-Over the last 12 months, the median home sold in 8 days on market.
+Over the last 12 months, the median home sold in 7 days on market.
 
 ### Looking in Torrey Highlands?
 
@@ -945,7 +945,7 @@ Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is inde
 
 ## Torrey Hills Homes for Sale | Carmel Valley, San Diego 92130
 
-> Torrey Hills single-family homes in Carmel Valley: 12-month median $2.53M, 17 neighborhoods, sold prices, schools and a map.
+> Torrey Hills single-family homes in Carmel Valley: 12-month median $2.56M, 17 neighborhoods, sold prices, schools and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/
 
@@ -955,10 +955,10 @@ Source page: https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/
 
 A self-contained valley south of the SR-56 with its own parks and shopping, and homes from the late 1990s and 2000s.
 
-- **Median sale, last 12 mo:** $2.53M
-- **Sold, last 12 mo:** 26
+- **Median sale, last 12 mo:** $2.56M
+- **Sold, last 12 mo:** 25
 - **Neighborhoods:** 17
-- **On market, last 12 mo:** 9 days
+- **On market, last 12 mo:** 10 days
 
 ### Torrey Hills neighborhoods on the map
 
@@ -982,7 +982,6 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 | Gables — 44 homes · built 2001–2003 | 2 | $2.7M–$2.83M |
 | Trilogy — 189 homes · built 1996–1999 | 1 | $1.6M |
 | Greenbriar — 107 homes · built 2001–2003 | 1 | $2.1M |
-| Searidge — 57 homes · built 2001 | 1 | $2.32M |
 | St. Augustine — 108 homes · built 2000–2001 | 1 | $2.5M |
 | La Strada — 69 homes · built 2002–2004 | 1 | $3.1M |
 | Montecito — 81 homes · built 2000 | 1 | $2.85M |
@@ -990,6 +989,7 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 | Coves — 108 homes · built 2000 | 1 | $2.1M |
 | Vantage Point — 24 homes · built 2001–2003 | 1 | $2.3M |
 | Shores — 111 homes · built 1998–2000 | — | — |
+| Searidge — 57 homes · built 2001 | — | — |
 | Sea Country — 53 homes · built 2000–2001 | — | — |
 
 ### Prices by home size
@@ -1004,9 +1004,9 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 
 **$2.3M–$4.8M**
 
-10 sales · about $804/sq ft · last sold $2.97M, Oct 2026
+9 sales · about $804/sq ft · last sold $2.97M, Oct 2026
 
-26 single-family sales inside Torrey Hills, last 12 months, as of November 18, 2026.
+25 single-family sales inside Torrey Hills, last 12 months, as of November 23, 2026.
 
 ### Elementary schools
 
@@ -1034,7 +1034,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in Torrey Hills cost?
 
-In the last 12 months, 26 single-family homes in Torrey Hills sold at a median of $2,527,500 (about $863 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,600,667 and $4,800,000.
+In the last 12 months, 25 single-family homes in Torrey Hills sold at a median of $2,560,000 (about $868 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,600,667 and $4,800,000.
 
 #### Which neighborhoods are in Torrey Hills?
 
@@ -1050,7 +1050,7 @@ Elementary school depends on the street: Ocean Air Elementary (63% of recent sal
 
 #### How fast do homes sell in Torrey Hills?
 
-Over the last 12 months, the median home sold in 9 days on market.
+Over the last 12 months, the median home sold in 10 days on market.
 
 ### Looking in Torrey Hills?
 
@@ -1133,7 +1133,7 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 
 6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-10 single-family sales inside Del Mar Mesa, last 12 months, as of November 18, 2026.
+10 single-family sales inside Del Mar Mesa, last 12 months, as of November 23, 2026.
 
 ### Elementary schools
 
@@ -1244,9 +1244,9 @@ Elementary areas from the Del Mar Union School District map and the Solana Beach
 | Coves, Derby Hill, Gables, Greenbriar, Monte Claire, Montecito, Sands, Sansonnet, and more |  |  |  |
 | [Ashley Falls Elementary](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/) | 11 | $2.8M | 17 |
 | Amador, Carmel Village, Estates, Huntington Heights, Palisades, Palma Del Mar, Private Collection, Promontory, and more |  |  |  |
-| [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) | 13 | $2.49M | 9 |
+| [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) | 13 | $2.77M | 8 |
 | Arabella, Bordeaux, Bougainvillea, Del Mar Mesa Estates, Duck Pond Ranch, Hunt Club, Paso Fino, Soleil at Bordeaux, and more |  |  |  |
-| [Torrey Hills Elementary](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/) | 8 | $2.45M | 8 |
+| [Torrey Hills Elementary](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/) | 8 | $2.45M | 7 |
 | La Strada, Sea Country, Searidge, Shores, St. Augustine, Torrey Point, Torrey View, Vantage Point |  |  |  |
 | Carmel Del Mar Elementary | 6 | $2.13M | 11 |
 | Bayshore, Cantamar, Creek Park, Pines, Seabridge, Verona |  |  |  |
@@ -1260,14 +1260,14 @@ Elementary areas from the Del Mar Union School District map and the Solana Beach
 | Carmel Creek Elementary | 10 | $2.57M | 22 |
 | Bayshore, Cantamar, Carmel, Del Mar Bluffs, Del Mar Place, Granada, Heights, San Remo, and more |  |  |  |
 | Middle schools |  |  |  |
-| Carmel Valley Middle | 107 | $2.6M | 180 |
+| Carmel Valley Middle | 107 | $2.6M | 178 |
 | 4x4 Construction, Almeria, Alta Del Mar, Alta Mar, Amador, Arabella, Bayshore, Belmont, and more |  |  |  |
 | Earl Warren Middle | 13 | $3.5M | 25 |
 | Alta Del Mar-Coastal, Artesana, Brightwater, Carmel, Olvera, Palomar, Rancho Pacifica, Senterra, and more |  |  |  |
-| Pacific Trails Middle | 54 | $2.8M | 75 |
+| Pacific Trails Middle | 54 | $2.81M | 74 |
 | Almeria, Amador, Arabella, Artesana, Bordeaux, Bougainvillea, Brightwater, Canterra, and more |  |  |  |
 | High school |  |  |  |
-| Torrey Pines High | 118 | $2.65M | 205 |
+| Torrey Pines High | 118 | $2.65M | 203 |
 | 4x4 Construction, Almeria, Alta Del Mar, Alta Del Mar-Coastal, Alta Mar, Amador, Arabella, Artesana, and more |  |  |  |
 
 Single-family homes inside each attendance boundary. Confirm any address with [Del Mar Union School District](https://www.dmusd.org/Page/191) or the [Solana Beach SD locator](https://www.schoolsitelocator.com/apps/solanabeach/).
@@ -1422,7 +1422,7 @@ From where homes sold in the last 12 months. 1 more sales had no neighborhood na
 
 6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
 
 ### Recently sold in the Sage Canyon area
 
@@ -1566,7 +1566,7 @@ From where homes sold in the last 12 months.
 
 3 sales · about $773/sq ft · last sold $2.39M, Nov 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
 
 ### Recently sold in the Pacific Sky area
 
@@ -1613,7 +1613,7 @@ In the last 12 months, 16 single-family homes in the Pacific Sky Elementary atte
 
 #### Which neighborhoods are in the Pacific Sky Elementary area?
 
-Based on where homes have sold, the area includes Elms, Cassavia, Verana, Casabella, Canterra, Costa Del Sol, Sterling, Ivy, and more. Elms has had the most sales. Boundaries can split a neighborhood, so check the exact address.
+Based on where homes have sold, the area includes Elms, Verana, Casabella, Cassavia, Canterra, Costa Del Sol, Sterling, Ivy, and more. Elms has had the most sales. Boundaries can split a neighborhood, so check the exact address.
 
 #### What middle and high school go with Pacific Sky Elementary?
 
@@ -1713,7 +1713,7 @@ From where homes sold in the last 12 months. 2 more sales had no neighborhood na
 
 7 sales · about $855/sq ft · last sold $2.97M, Oct 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
 
 ### Recently sold in the Ocean Air area
 
@@ -1860,7 +1860,7 @@ From where homes sold in the last 12 months.
 
 4 sales · about $805/sq ft · last sold $3.44M, Sep 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
 
 ### Recently sold in the Ashley Falls area
 
@@ -1944,13 +1944,13 @@ Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is inde
 
 ## Homes for Sale in the Sycamore Ridge Elementary Area | Carmel Valley 92130
 
-> Carmel Valley houses in the Sycamore Ridge Elementary attendance area: 12-month median $2.49M, neighborhoods in the boundary, sold prices and a map.
+> Carmel Valley houses in the Sycamore Ridge Elementary attendance area: 12-month median $2.77M, neighborhoods in the boundary, sold prices and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/
 
 ### Sycamore Ridge Elementary Homes for Sale Del Mar Union School District
 
-13 neighborhoods · 691+ homes · median $2.49M
+13 neighborhoods · 691+ homes · median $2.77M
 
 ### Sycamore Ridge neighborhoods
 
@@ -1970,9 +1970,9 @@ The single-family neighborhoods inside the Sycamore Ridge Elementary attendance 
 
 Dashed line: the Sycamore Ridge Elementary attendance boundary from the Del Mar Union School District map. Neighborhood outlines are approximate. Boundaries change, so confirm any address with [the district](https://www.dmusd.org/Page/191).
 
-- **Median sale, last 12 mo:** $2.49M
-- **Sold, last 12 mo:** 9
-- **Per sq ft, last 12 mo:** $830
+- **Median sale, last 12 mo:** $2.77M
+- **Sold, last 12 mo:** 8
+- **Per sq ft, last 12 mo:** $843
 - **On market, last 12 mo:** 6 days
 
 ### Carmel Valley houses for sale now
@@ -1986,11 +1986,11 @@ This search shows all of 92130. Ask me which listings are inside the Sycamore Ri
 | Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
 | Bordeaux | 2 | $2.18M–$2.49M |
-| Soleil at Bordeaux | 2 | $2.12M–$2.34M |
 | Arabella | 1 | $1.88M |
 | Bougainvillea | 1 | $3.95M |
 | Hunt Club | 1 | $3.04M |
 | Paso Fino | 1 | $3.79M |
+| Soleil at Bordeaux | 1 | $2.34M |
 | Triple Crown | 1 | $3.08M |
 
 From where homes sold in the last 12 months.
@@ -2001,7 +2001,7 @@ From where homes sold in the last 12 months.
 
 **$1.88M–$2.49M**
 
-5 sales · about $857/sq ft · last sold $2.49M, Jul 2026
+4 sales · about $914/sq ft · last sold $2.49M, Jul 2026
 
 #### 4,000–5,000 sq ft
 
@@ -2009,7 +2009,7 @@ From where homes sold in the last 12 months.
 
 3 sales · about $702/sq ft · last sold $3.04M, Jun 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
 
 ### Recently sold in the Sycamore Ridge area
 
@@ -2052,7 +2052,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 #### How much does a house in the Sycamore Ridge Elementary area cost?
 
-In the last 12 months, 9 single-family homes in the Sycamore Ridge Elementary attendance area sold at a median of $2,490,000 (about $830 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,880,000 and $3,950,000.
+In the last 12 months, 8 single-family homes in the Sycamore Ridge Elementary attendance area sold at a median of $2,765,000 (about $843 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,880,000 and $3,950,000.
 
 #### Which neighborhoods are in the Sycamore Ridge Elementary area?
 
@@ -2112,9 +2112,9 @@ The single-family neighborhoods inside the Torrey Hills Elementary attendance bo
 Dashed line: the Torrey Hills Elementary attendance boundary from the Del Mar Union School District map. Neighborhood outlines are approximate. Boundaries change, so confirm any address with [the district](https://www.dmusd.org/Page/191).
 
 - **Median sale, last 12 mo:** $2.45M
-- **Sold, last 12 mo:** 8
-- **Per sq ft, last 12 mo:** $829
-- **On market, last 12 mo:** 23 days
+- **Sold, last 12 mo:** 7
+- **Per sq ft, last 12 mo:** $868
+- **On market, last 12 mo:** 26 days
 
 ### Carmel Valley houses for sale now
 
@@ -2128,7 +2128,6 @@ This search shows all of 92130. Ask me which listings are inside the Torrey Hill
 |---|---|---|
 | Torrey View | 3 | $1.95M–$2.6M |
 | La Strada | 1 | $3.1M |
-| Searidge | 1 | $2.32M |
 | St. Augustine | 1 | $2.5M |
 | Torrey Point | 1 | $2.45M |
 | Vantage Point | 1 | $2.3M |
@@ -2147,9 +2146,9 @@ From where homes sold in the last 12 months.
 
 **$2.3M–$3.1M**
 
-3 sales · about $773/sq ft · last sold $3.1M, Feb 2026
+2 sales · about $790/sq ft · last sold $3.1M, Feb 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
 
 ### Recently sold in the Torrey Hills area
 
@@ -2192,7 +2191,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 #### How much does a house in the Torrey Hills Elementary area cost?
 
-In the last 12 months, 8 single-family homes in the Torrey Hills Elementary attendance area sold at a median of $2,445,000 (about $829 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,949,000 and $3,100,000.
+In the last 12 months, 7 single-family homes in the Torrey Hills Elementary attendance area sold at a median of $2,450,000 (about $868 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,949,000 and $3,100,000.
 
 #### Which neighborhoods are in the Torrey Hills Elementary area?
 
@@ -2208,7 +2207,7 @@ Use the Del Mar Union School District school locator with the exact address befo
 
 #### How fast do homes sell in the Torrey Hills Elementary area?
 
-Over the last 12 months, the median home sold in 23 days on market. Homes in sought-after school areas often go under contract in the first week.
+Over the last 12 months, the median home sold in 26 days on market. Homes in sought-after school areas often go under contract in the first week.
 
 ### Looking in the Torrey Hills Area?
 
@@ -2266,7 +2265,7 @@ Live single-family listings in 92130. Set **Price Min** to $3,000,000 to see onl
 | [Torrey Hills](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/) — 16% of its sales | 4 | $3.1M–$4.8M |
 | [Torrey Highlands](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/) — 33% of its sales | 1 | $4.2M |
 
-Single-family sales of $3 million or more in the last 12 months, and their share of each area’s sales, as of November 22, 2026. 5 more were in parts of 92130 outside these areas.
+Single-family sales of $3 million or more in the last 12 months, and their share of each area’s sales, as of November 23, 2026. 5 more were in parts of 92130 outside these areas.
 
 ### Neighborhoods with the most $3M+ sales
 
@@ -2551,7 +2550,7 @@ Next door in Carmel Country Highlands.
 
 ### Lexington Prices & Sales
 
-In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 18, 2026.
+In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 23, 2026.
 
 The stats reflect the trailing 12 months; the table breaks the same data out by calendar year.
 

@@ -1,6 +1,6 @@
 # Torrey Hills Homes for Sale | Carmel Valley, San Diego 92130
 
-> Torrey Hills single-family homes in Carmel Valley: 12-month median $2.53M, 17 neighborhoods, sold prices, schools and a map.
+> Torrey Hills single-family homes in Carmel Valley: 12-month median $2.56M, 17 neighborhoods, sold prices, schools and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/
 
@@ -10,10 +10,10 @@ Source page: https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/
 
 A self-contained valley south of the SR-56 with its own parks and shopping, and homes from the late 1990s and 2000s.
 
-- **Median sale, last 12 mo:** $2.53M
-- **Sold, last 12 mo:** 26
+- **Median sale, last 12 mo:** $2.56M
+- **Sold, last 12 mo:** 25
 - **Neighborhoods:** 17
-- **On market, last 12 mo:** 9 days
+- **On market, last 12 mo:** 10 days
 
 ## Torrey Hills neighborhoods on the map
 
@@ -37,7 +37,6 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 | Gables — 44 homes · built 2001–2003 | 2 | $2.7M–$2.83M |
 | Trilogy — 189 homes · built 1996–1999 | 1 | $1.6M |
 | Greenbriar — 107 homes · built 2001–2003 | 1 | $2.1M |
-| Searidge — 57 homes · built 2001 | 1 | $2.32M |
 | St. Augustine — 108 homes · built 2000–2001 | 1 | $2.5M |
 | La Strada — 69 homes · built 2002–2004 | 1 | $3.1M |
 | Montecito — 81 homes · built 2000 | 1 | $2.85M |
@@ -45,6 +44,7 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 | Coves — 108 homes · built 2000 | 1 | $2.1M |
 | Vantage Point — 24 homes · built 2001–2003 | 1 | $2.3M |
 | Shores — 111 homes · built 1998–2000 | — | — |
+| Searidge — 57 homes · built 2001 | — | — |
 | Sea Country — 53 homes · built 2000–2001 | — | — |
 
 ## Prices by home size
@@ -59,9 +59,9 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 
 **$2.3M–$4.8M**
 
-10 sales · about $804/sq ft · last sold $2.97M, Oct 2026
+9 sales · about $804/sq ft · last sold $2.97M, Oct 2026
 
-26 single-family sales inside Torrey Hills, last 12 months, as of November 18, 2026.
+25 single-family sales inside Torrey Hills, last 12 months, as of November 23, 2026.
 
 ## Elementary schools
 
@@ -89,7 +89,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in Torrey Hills cost?
 
-In the last 12 months, 26 single-family homes in Torrey Hills sold at a median of $2,527,500 (about $863 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,600,667 and $4,800,000.
+In the last 12 months, 25 single-family homes in Torrey Hills sold at a median of $2,560,000 (about $868 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,600,667 and $4,800,000.
 
 ### Which neighborhoods are in Torrey Hills?
 
@@ -105,7 +105,7 @@ Elementary school depends on the street: Ocean Air Elementary (63% of recent sal
 
 ### How fast do homes sell in Torrey Hills?
 
-Over the last 12 months, the median home sold in 9 days on market.
+Over the last 12 months, the median home sold in 10 days on market.
 
 ## Looking in Torrey Hills?
 

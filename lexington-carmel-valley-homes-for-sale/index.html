@@ -683,7 +683,9 @@
   .dd-btn{background:none;border:0;margin-left:-10px;padding:9px 8px 9px 2px;color:#37404a;cursor:pointer;display:flex;align-items:center;border-radius:7px}
   .dd-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2;transition:transform .2s}
   .dd-panel{display:none;position:absolute;top:100%;left:0;min-width:270px;background:var(--white);border:1px solid var(--line);border-radius:10px;box-shadow:0 16px 32px rgba(16,20,24,.12);padding:6px;z-index:60}
-  .dd:hover .dd-panel,.dd:focus-within .dd-panel,.dd.open .dd-panel{display:block}
+  .dd:hover .dd-panel,.dd.open .dd-panel{display:block}
+  .primary-nav .dd a:focus-visible,.dd-btn:focus-visible{outline:2px solid var(--lake);outline-offset:-2px}
+  @media(forced-colors:active){.primary-nav .dd-panel a[aria-current]{outline:2px solid CanvasText;outline-offset:-2px}}
   .dd:hover .dd-btn svg,.dd.open .dd-btn svg{transform:rotate(180deg)}
   .primary-nav .dd-panel a{display:block;padding:9px 12px;white-space:nowrap}
   .primary-nav .dd-panel a.dd-all{color:var(--lake);font-weight:600;border-bottom:1px solid var(--mist);border-radius:7px 7px 0 0;margin-bottom:4px}
@@ -696,7 +698,7 @@
     .dd-btn svg{width:18px;height:18px}
     .dd:hover .dd-btn svg{transform:none}
     .dd.open .dd-btn svg{transform:rotate(180deg)}
-    .dd .dd-panel,.dd:hover .dd-panel,.dd:focus-within .dd-panel{display:none;position:static;min-width:0;border:0;border-radius:0;box-shadow:none;padding:0;background:var(--paper)}
+    .dd .dd-panel,.dd:hover .dd-panel{display:none;position:static;min-width:0;border:0;border-radius:0;box-shadow:none;padding:0;background:var(--paper)}
     .dd.open .dd-panel{display:block}
     .primary-nav .dd-panel a{padding:13px 28px 13px 44px;font-size:14px;white-space:normal;border-bottom:1px solid var(--mist);border-radius:0;margin:0}
   }
@@ -711,7 +713,7 @@
       <span class="b-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg></span>
       <span class="b-text"><span class="b-name">Carmel Valley Homes</span><span class="b-sub">Single-family &middot; San Diego 92130</span></span>
     </a>
-    <nav class="primary-nav" id="pnav">
+    <nav class="primary-nav" id="pnav" aria-label="Main menu">
       <div class="dd"><div class="dd-top"><a href="/">Homes for Sale</a><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd1" aria-label="Show homes for sale pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div><div class="dd-panel" id="dd1"><a href="/" class="dd-all">All single-family homes</a><a href="/carmel-country-highlands-homes-for-sale/">Carmel Country Highlands</a><a href="/del-mar-mesa-homes-for-sale/">Del Mar Mesa</a><a href="/north-of-del-mar-heights-road-homes-for-sale/">North of Del Mar Heights Road</a><a href="/pacific-highlands-ranch-homes-for-sale/">Pacific Highlands Ranch</a><a href="/south-of-del-mar-heights-road-homes-for-sale/">South of Del Mar Heights Road</a><a href="/torrey-highlands-homes-for-sale/">Torrey Highlands</a><a href="/torrey-hills-homes-for-sale/">Torrey Hills</a><a href="/carmel-valley-luxury-homes-for-sale/">Luxury homes $3M+</a></div></div>
       <div class="dd"><div class="dd-top"><a href="/carmel-valley-neighborhoods/">Neighborhoods</a><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd2" aria-label="Show neighborhoods pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div><div class="dd-panel" id="dd2"><a href="/carmel-valley-neighborhoods/" class="dd-all">Neighborhoods map</a><a href="/lexington-carmel-valley-homes-for-sale/" aria-current="page">Lexington</a></div></div>
       <div class="dd"><div class="dd-top"><a href="/carmel-valley-schools/">Homes by School</a><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd3" aria-label="Show homes by school pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div><div class="dd-panel" id="dd3"><a href="/carmel-valley-schools/" class="dd-all">Schools map</a><a href="/sage-canyon-elementary-homes-for-sale/">Sage Canyon Elementary area</a><a href="/pacific-sky-elementary-homes-for-sale/">Pacific Sky Elementary area</a><a href="/ocean-air-elementary-homes-for-sale/">Ocean Air Elementary area</a><a href="/ashley-falls-elementary-homes-for-sale/">Ashley Falls Elementary area</a><a href="/sycamore-ridge-elementary-homes-for-sale/">Sycamore Ridge Elementary area</a><a href="/torrey-hills-elementary-homes-for-sale/">Torrey Hills Elementary area</a></div></div>
@@ -807,9 +809,10 @@
       var el = document.getElementById('locMap');
       if (!el) return;
       var started = false;
-      function load(src, css){
+      function load(src, css, sri){
         return new Promise(function(res, rej){
           var n = document.createElement(css ? 'link' : 'script');
+          if (sri){ n.integrity = sri; n.crossOrigin = 'anonymous'; n.referrerPolicy = 'no-referrer'; }
           if (css){ n.rel = 'stylesheet'; n.href = src; } else { n.src = src; }
           n.onload = res; n.onerror = rej; document.head.appendChild(n);
         });
@@ -831,8 +834,8 @@
       function start(){
         if (started) return; started = true;
         Promise.all([
-          load('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css', true),
-          load('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js').then(function(){ return load('/assets/basemap.js'); })
+          load('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css', true, 'sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb'),
+          load('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js', false, 'sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO').then(function(){ return load('/assets/basemap.js'); })
         ]).then(draw).catch(function(){ el.classList.add('is-fallback'); });
       }
       if ('IntersectionObserver' in window){
@@ -1025,7 +1028,7 @@
       <h2>Lexington Prices &amp; Sales</h2>
       <p class="data-stamp" id="px-stamp"></p>
     </div>
-    <p class="px-summary">In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. <span class="data-stamp">MLS closed sales as of Nov 18, 2026.</span></p>
+    <p class="px-summary">In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. <span class="data-stamp">MLS closed sales as of Nov 23, 2026.</span></p>
     <div class="px-tabs btn-tabs px-wide" role="tablist" aria-label="Lexington price and sales views">
       <button type="button" role="tab" id="tab-overview" aria-controls="px-overview" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Overview</button>
       <button type="button" role="tab" id="tab-sold" aria-controls="px-sold" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg>Recent Sales</button>
@@ -1069,7 +1072,7 @@
   var API = 'https://www.sellmyhomesforcash.com/api/public/sold-listings?community=Lexington&zip=92130&limit=200';
 
   function median(arr){
-    var s = arr.slice().sort(function(a,b){ return a-b; });
+    var s = arr.toSorted(function(a,b){ return a-b; });
     var mid = Math.floor(s.length / 2);
     return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2;
   }
@@ -1124,7 +1127,7 @@
       var sizes = g.filter(function(r){ return r.living_area; }).map(function(r){ return r.living_area; });
       set('g' + b + '-count', g.length + (g.length === 1 ? ' sale' : ' sales') + ' &middot; 12 mo');
       if (sizes.length){ var lo = Math.min.apply(null, sizes), hi = Math.max.apply(null, sizes); set('g' + b + '-size', lo.toLocaleString('en-US') + (hi > lo ? '&ndash;' + hi.toLocaleString('en-US') : '') + ' sq ft'); }
-      var last = g.slice().sort(function(x, y){ return x.close_date < y.close_date ? 1 : -1; })[0];
+      var last = g.toSorted(function(x, y){ return x.close_date < y.close_date ? 1 : -1; })[0];
       var mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][parseInt(last.close_date.slice(5, 7), 10) - 1];
       set('g' + b + '-latest', '$' + Math.round(last.close_price).toLocaleString('en-US') + ' &middot; ' + mo + ' ' + last.close_date.slice(0, 4));
       var pl = Math.min.apply(null, prices), ph = Math.max.apply(null, prices); set('g' + b + '-range', ph > pl ? k(pl) + '&ndash;' + k(ph) : k(pl));
@@ -1292,7 +1295,7 @@
         state.textContent = 'Recently sold data isn’t available right now — call or email for current comps.';
         return;
       }
-      var rows = allRows.slice().sort(function(a,b){ return new Date(b.close_date) - new Date(a.close_date); });
+      var rows = allRows.toSorted(function(a,b){ return new Date(b.close_date) - new Date(a.close_date); });
 
       function tableFor(groupRows){
         var html = '<div class="sold-table-wrap"><table class="sold-table"><thead><tr>' +
@@ -1351,11 +1354,7 @@
       rows = rows.filter(function(r){ return new Date(r.close_date) >= start; });
       if (rows.length === 0){ fail(); return; }
 
-      var byYear = {};
-      rows.forEach(function(r){
-        var yr = new Date(r.close_date).getFullYear();
-        (byYear[yr] = byYear[yr] || []).push(r);
-      });
+      var byYear = Object.groupBy(rows, function(r){ return new Date(r.close_date).getFullYear(); });
       var years = Object.keys(byYear).map(Number).sort(function(a,b){ return b-a; });
       var currentYear = now.getFullYear();
 
@@ -1415,7 +1414,7 @@
         '<div class="hist-table-wrap"><table class="hist"><thead><tr>' +
         '<th>Year</th><th>Median</th><th>Sales</th><th>$/Sq Ft</th><th>Avg. DOM</th>' +
         '</tr></thead><tbody>';
-      years.slice().reverse().forEach(function(yr){
+      years.toReversed().forEach(function(yr){
         var yrRows = byYear[yr];
         var yrPrices = yrRows.map(function(r){ return r.close_price; });
         var yrMedian = median(yrPrices);
@@ -1726,7 +1725,11 @@
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if (!e.isIntersecting) return;
-      links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+      links.forEach(function(a){
+        var on = a.getAttribute('href') === '#' + e.target.id;
+        a.classList.toggle('active', on);
+        if (on) a.setAttribute('aria-current', 'true'); else if (!a.classList.contains('is-here')) a.removeAttribute('aria-current');
+      });
     });
   }, {rootMargin:'-45% 0px -50% 0px'});
   links.forEach(function(a){ io.observe(document.getElementById(a.getAttribute('href').slice(1))); });
@@ -1833,6 +1836,7 @@
   dds.forEach(function(d){var b=d.querySelector('.dd-btn');
     b.addEventListener('click',function(e){e.preventDefault();var o=!d.classList.contains('open');shut(d);
       d.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');});});
+  dds.forEach(function(d){d.addEventListener('focusout',function(e){if(e.relatedTarget&&!d.contains(e.relatedTarget)&&d.classList.contains('open'))shut(null);});});
   document.addEventListener('click',function(e){if(!e.target.closest('#pnav .dd'))shut(null);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')shut(null);});})();
 </script>

@@ -58,7 +58,7 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 
 7 sales · about $740/sq ft · last sold $3.5M, Oct 2026
 
-19 single-family sales inside Carmel Country Highlands, last 12 months, as of November 18, 2026.
+19 single-family sales inside Carmel Country Highlands, last 12 months, as of November 23, 2026.
 
 ## Elementary schools
 

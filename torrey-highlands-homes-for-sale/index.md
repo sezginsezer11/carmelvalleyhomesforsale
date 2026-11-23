@@ -1,6 +1,6 @@
 # Torrey Highlands Homes for Sale | Carmel Valley, San Diego 92130
 
-> Torrey Highlands single-family homes in Carmel Valley: 12-month median $2.05M, 7 neighborhoods, sold prices, schools and a map.
+> Torrey Highlands single-family homes in Carmel Valley: 12-month median $1.95M, 7 neighborhoods, sold prices, schools and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/
 
@@ -10,10 +10,10 @@ Source page: https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sal
 
 Newer homes in Torrey Highlands, at the eastern edge of Carmel Valley near the SR-56 and Del Sur.
 
-- **Median sale, last 12 mo:** $2.05M
-- **Sold, last 12 mo:** 4
+- **Median sale, last 12 mo:** $1.95M
+- **Sold, last 12 mo:** 3
 - **Neighborhoods:** 7
-- **On market, last 12 mo:** 8 days
+- **On market, last 12 mo:** 7 days
 
 ## Torrey Highlands neighborhoods on the map
 
@@ -31,7 +31,7 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 |---|---|---|
 | Villamontes — 124 homes · built 2002–2003 | 2 | $1.76M–$1.95M |
 | Fairbanks Highlands — 93 homes · built 2000–2002 | 1 | $4.2M |
-| Palma Real — 82 homes · built 2002–2003 | 1 | $2.15M |
+| Palma Real — 82 homes · built 2002–2003 | — | — |
 | Collins Ranch — 53 homes · built 2002–2003 | — | — |
 | Maricel — built 2012–2013 | — | — |
 | Terrazzo — 59 homes · built 2001–2003 | — | — |
@@ -45,7 +45,7 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 
 2 sales · about $745/sq ft · last sold $1.95M, Sep 2026
 
-4 single-family sales inside Torrey Highlands, last 12 months, as of November 18, 2026.
+3 single-family sales inside Torrey Highlands, last 12 months, as of November 23, 2026.
 
 ## Elementary schools
 
@@ -72,7 +72,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in Torrey Highlands cost?
 
-In the last 12 months, 4 single-family homes in Torrey Highlands sold at a median of $2,050,000 (about $732 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,755,000 and $4,200,000.
+In the last 12 months, 3 single-family homes in Torrey Highlands sold at a median of $1,950,000 (about $745 per sq ft), below the Carmel Valley median of $2,625,000. They sold for between $1,755,000 and $4,200,000.
 
 ### Which neighborhoods are in Torrey Highlands?
 
@@ -88,7 +88,7 @@ Most homes are served by Solana Beach School District elementary schools. High s
 
 ### How fast do homes sell in Torrey Highlands?
 
-Over the last 12 months, the median home sold in 8 days on market.
+Over the last 12 months, the median home sold in 7 days on market.
 
 ## Looking in Torrey Highlands?
 

@@ -42,9 +42,9 @@ Elementary areas from the Del Mar Union School District map and the Solana Beach
 | Coves, Derby Hill, Gables, Greenbriar, Monte Claire, Montecito, Sands, Sansonnet, and more |  |  |  |
 | [Ashley Falls Elementary](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/) | 11 | $2.8M | 17 |
 | Amador, Carmel Village, Estates, Huntington Heights, Palisades, Palma Del Mar, Private Collection, Promontory, and more |  |  |  |
-| [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) | 13 | $2.49M | 9 |
+| [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) | 13 | $2.77M | 8 |
 | Arabella, Bordeaux, Bougainvillea, Del Mar Mesa Estates, Duck Pond Ranch, Hunt Club, Paso Fino, Soleil at Bordeaux, and more |  |  |  |
-| [Torrey Hills Elementary](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/) | 8 | $2.45M | 8 |
+| [Torrey Hills Elementary](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/) | 8 | $2.45M | 7 |
 | La Strada, Sea Country, Searidge, Shores, St. Augustine, Torrey Point, Torrey View, Vantage Point |  |  |  |
 | Carmel Del Mar Elementary | 6 | $2.13M | 11 |
 | Bayshore, Cantamar, Creek Park, Pines, Seabridge, Verona |  |  |  |
@@ -58,14 +58,14 @@ Elementary areas from the Del Mar Union School District map and the Solana Beach
 | Carmel Creek Elementary | 10 | $2.57M | 22 |
 | Bayshore, Cantamar, Carmel, Del Mar Bluffs, Del Mar Place, Granada, Heights, San Remo, and more |  |  |  |
 | Middle schools |  |  |  |
-| Carmel Valley Middle | 107 | $2.6M | 180 |
+| Carmel Valley Middle | 107 | $2.6M | 178 |
 | 4x4 Construction, Almeria, Alta Del Mar, Alta Mar, Amador, Arabella, Bayshore, Belmont, and more |  |  |  |
 | Earl Warren Middle | 13 | $3.5M | 25 |
 | Alta Del Mar-Coastal, Artesana, Brightwater, Carmel, Olvera, Palomar, Rancho Pacifica, Senterra, and more |  |  |  |
-| Pacific Trails Middle | 54 | $2.8M | 75 |
+| Pacific Trails Middle | 54 | $2.81M | 74 |
 | Almeria, Amador, Arabella, Artesana, Bordeaux, Bougainvillea, Brightwater, Canterra, and more |  |  |  |
 | High school |  |  |  |
-| Torrey Pines High | 118 | $2.65M | 205 |
+| Torrey Pines High | 118 | $2.65M | 203 |
 | 4x4 Construction, Almeria, Alta Del Mar, Alta Del Mar-Coastal, Alta Mar, Amador, Arabella, Artesana, and more |  |  |  |
 
 Single-family homes inside each attendance boundary. Confirm any address with [Del Mar Union School District](https://www.dmusd.org/Page/191) or the [Solana Beach SD locator](https://www.schoolsitelocator.com/apps/solanabeach/).

@@ -6,8 +6,8 @@ Homes for Sale ▾ · Neighborhoods ▾ · Homes by School ▾ · Contact
 Each drop-down lists the site's own pages: area pages and the luxury page,
 community pages (NEIGHBORHOOD_PAGES in make_neighborhood.py, so a new
 community page joins the menu once it is added there) and the school pages.
-On desktop the lists open on hover; inside the phone Menu they open with the
-arrow button. The "Also in Carmel Valley" groups below stay as they are.
+On desktop the lists open on hover or with the arrow button (keyboard: Tab to
+the arrow, Enter); inside the phone Menu they open with the arrow button. The "Also in Carmel Valley" groups below stay as they are.
 
 build_llm_files.py runs this next to bottom_nav.py, so the normal build
 order applies it automatically. It can also run on its own:
@@ -62,7 +62,9 @@ CSS = """<style id="tn-style">
   .dd-btn{background:none;border:0;margin-left:-10px;padding:9px 8px 9px 2px;color:#37404a;cursor:pointer;display:flex;align-items:center;border-radius:7px}
   .dd-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2;transition:transform .2s}
   .dd-panel{display:none;position:absolute;top:100%;left:0;min-width:270px;background:var(--white);border:1px solid var(--line);border-radius:10px;box-shadow:0 16px 32px rgba(16,20,24,.12);padding:6px;z-index:60}
-  .dd:hover .dd-panel,.dd:focus-within .dd-panel,.dd.open .dd-panel{display:block}
+  .dd:hover .dd-panel,.dd.open .dd-panel{display:block}
+  .primary-nav .dd a:focus-visible,.dd-btn:focus-visible{outline:2px solid var(--lake);outline-offset:-2px}
+  @media(forced-colors:active){.primary-nav .dd-panel a[aria-current]{outline:2px solid CanvasText;outline-offset:-2px}}
   .dd:hover .dd-btn svg,.dd.open .dd-btn svg{transform:rotate(180deg)}
   .primary-nav .dd-panel a{display:block;padding:9px 12px;white-space:nowrap}
   .primary-nav .dd-panel a.dd-all{color:var(--lake);font-weight:600;border-bottom:1px solid var(--mist);border-radius:7px 7px 0 0;margin-bottom:4px}
@@ -75,7 +77,7 @@ CSS = """<style id="tn-style">
     .dd-btn svg{width:18px;height:18px}
     .dd:hover .dd-btn svg{transform:none}
     .dd.open .dd-btn svg{transform:rotate(180deg)}
-    .dd .dd-panel,.dd:hover .dd-panel,.dd:focus-within .dd-panel{display:none;position:static;min-width:0;border:0;border-radius:0;box-shadow:none;padding:0;background:var(--paper)}
+    .dd .dd-panel,.dd:hover .dd-panel{display:none;position:static;min-width:0;border:0;border-radius:0;box-shadow:none;padding:0;background:var(--paper)}
     .dd.open .dd-panel{display:block}
     .primary-nav .dd-panel a{padding:13px 28px 13px 44px;font-size:14px;white-space:normal;border-bottom:1px solid var(--mist);border-radius:0;margin:0}
   }
@@ -87,11 +89,13 @@ JS = """<script id="tn-script">
   dds.forEach(function(d){var b=d.querySelector('.dd-btn');
     b.addEventListener('click',function(e){e.preventDefault();var o=!d.classList.contains('open');shut(d);
       d.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');});});
+  dds.forEach(function(d){d.addEventListener('focusout',function(e){if(e.relatedTarget&&!d.contains(e.relatedTarget)&&d.classList.contains('open'))shut(null);});});
   document.addEventListener('click',function(e){if(!e.target.closest('#pnav .dd'))shut(null);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')shut(null);});})();
 </script>"""
 
-NAV_RE = re.compile(r'(<nav class="primary-nav" id="pnav">)(.*?)(\n\s*<div class="nav-group">)', re.S)
+NAV_RE = re.compile(r'(<nav class="primary-nav" id="pnav")[^>]*>(.*?)(\n\s*<div class="nav-group">)', re.S)
+NAV_OPEN = '<nav class="primary-nav" id="pnav" aria-label="Main menu">'
 OLD_RE = re.compile(r'\n?<style id="tn-style">.*?</style>|\n?<script id="tn-script">.*?</script>', re.S)
 
 
@@ -101,7 +105,7 @@ def apply(path, here):
     if not NAV_RE.search(s):
         return False
     s2 = OLD_RE.sub("", s)
-    s2 = NAV_RE.sub(lambda m: m.group(1) + nav_links(here) + m.group(3), s2, count=1)
+    s2 = NAV_RE.sub(lambda m: NAV_OPEN + nav_links(here) + m.group(3), s2, count=1)
     s2 = s2.replace("</head>", CSS + "\n</head>", 1)
     i = s2.rfind("</body>")
     s2 = s2[:i] + JS + "\n" + s2[i:]

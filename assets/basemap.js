@@ -12,11 +12,19 @@
   var ML = 'https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl';
   var MLL = 'https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js';
   var STYLE = 'https://tiles.openfreemap.org/styles/bright';
+  // Subresource Integrity hashes (sha384), checked against the signed npm packages.
+  // If a version above changes, recompute: openssl dgst -sha384 -binary FILE | openssl base64 -A
+  var SRI = {
+    css: 'sha384-MinO0mNliZ3vwppuPOUnGa+iq619pfMhLVUXfC4LHwSCvF9H+6P/KO4Q7qBOYV5V',
+    js: 'sha384-SYKAG6cglRMN0RVvhNeBY0r3FYKNOJtznwA0v7B5Vp9tr31xAHsZC0DqkQ/pZDmj',
+    leaflet: 'sha384-4CB9Vtol9LN6lGgBCvmPLbUEZwilrqIvPieSRurgAXAB7FVJaLS9n8WyAIA5wjQ+'
+  };
   var libs = null;
 
-  function load(src, css) {
+  function load(src, css, sri) {
     return new Promise(function (res, rej) {
       var n = document.createElement(css ? 'link' : 'script');
+      n.integrity = sri; n.crossOrigin = 'anonymous'; n.referrerPolicy = 'no-referrer';
       if (css) { n.rel = 'stylesheet'; n.href = src; } else { n.src = src; }
       n.onload = res; n.onerror = rej;
       document.head.appendChild(n);
@@ -24,7 +32,7 @@
   }
   function maplibre() {
     if (!libs) {
-      libs = Promise.all([load(ML + '.css', true), load(ML + '.js')]).then(function () { return load(MLL); });
+      libs = Promise.all([load(ML + '.css', true, SRI.css), load(ML + '.js', false, SRI.js)]).then(function () { return load(MLL, false, SRI.leaflet); });
       libs.catch(function () { libs = null; });
     }
     return libs;

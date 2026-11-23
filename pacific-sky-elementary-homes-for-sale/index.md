@@ -60,7 +60,7 @@ From where homes sold in the last 12 months.
 
 3 sales · about $773/sq ft · last sold $2.39M, Nov 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 18, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
 
 ## Recently sold in the Pacific Sky area
 
@@ -107,7 +107,7 @@ In the last 12 months, 16 single-family homes in the Pacific Sky Elementary atte
 
 ### Which neighborhoods are in the Pacific Sky Elementary area?
 
-Based on where homes have sold, the area includes Elms, Cassavia, Verana, Casabella, Canterra, Costa Del Sol, Sterling, Ivy, and more. Elms has had the most sales. Boundaries can split a neighborhood, so check the exact address.
+Based on where homes have sold, the area includes Elms, Verana, Casabella, Cassavia, Canterra, Costa Del Sol, Sterling, Ivy, and more. Elms has had the most sales. Boundaries can split a neighborhood, so check the exact address.
 
 ### What middle and high school go with Pacific Sky Elementary?
 

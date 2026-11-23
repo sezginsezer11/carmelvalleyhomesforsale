@@ -28,7 +28,7 @@ Median per sq ft
 
 Median on market
 
-Single-family closed sales, ZIP 92130, as of November 22, 2026.
+Single-family closed sales, ZIP 92130, as of November 23, 2026.
 
 ## Carmel Valley houses for sale now
 
