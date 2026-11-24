@@ -33,7 +33,7 @@ Live single-family listings in 92130. Set **Price Min** to $3,000,000 to see onl
 | [Torrey Hills](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/) — 16% of its sales | 4 | $3.1M–$4.8M |
 | [Torrey Highlands](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/) — 33% of its sales | 1 | $4.2M |
 
-Single-family sales of $3 million or more in the last 12 months, and their share of each area’s sales, as of November 23, 2026. 5 more were in parts of 92130 outside these areas.
+Single-family sales of $3 million or more in the last 12 months, and their share of each area’s sales, as of November 24, 2026. 5 more were in parts of 92130 outside these areas.
 
 ## Neighborhoods with the most $3M+ sales
 

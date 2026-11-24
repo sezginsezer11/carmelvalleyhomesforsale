@@ -55,7 +55,7 @@ From where homes sold in the last 12 months.
 
 2 sales · about $790/sq ft · last sold $3.1M, Feb 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
 
 ## Recently sold in the Torrey Hills area
 

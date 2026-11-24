@@ -147,7 +147,7 @@ def render_hoa(c):
       <div class="hoa-compare">
         <h3>How {c["name"]}'s HOA Compares</h3>
 {rows}
-        <p style="margin-top:20px;font-size:13.5px;color:#7a8389">{h["compare_note"]}</p>
+        <p style="margin-top:20px;font-size:13.5px;color:var(--label)">{h["compare_note"]}</p>
       </div>
     </div>
   </div>

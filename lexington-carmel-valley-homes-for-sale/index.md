@@ -128,7 +128,7 @@ Next door in Carmel Country Highlands.
 
 ## Lexington Prices & Sales
 
-In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 23, 2026.
+In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 24, 2026.
 
 The stats reflect the trailing 12 months; the table breaks the same data out by calendar year.
 

@@ -74,7 +74,7 @@
   /* ============ BREADCRUMB ============ */
   .breadcrumb{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px}
   .breadcrumb .wrap{display:flex;align-items:center;gap:8px;padding:12px 28px;color:var(--label)}
-  .breadcrumb a{color:var(--label)}
+  .breadcrumb a{color:var(--label);display:inline-block;padding:4px 0;margin:-4px 0}
   .breadcrumb a:hover{color:var(--lake)}
   .breadcrumb .sep{color:#c3c8cf}
   .breadcrumb .current{color:var(--ink);font-weight:500}
@@ -450,7 +450,7 @@
   .agent-info{min-width:0}
   .contact-cta .agent-name{font-size:21px;font-weight:800;color:var(--ink);line-height:1.2}
   .contact-cta .agent-role{font-size:13px;color:var(--label);margin:2px 0 4px;font-weight:500}
-  .agent-phone{font-size:15px;font-weight:700;color:var(--lake);white-space:nowrap}
+  .agent-phone{font-size:15px;font-weight:700;color:var(--lake);white-space:nowrap;display:inline-block;padding:4px 0;margin:-4px 0}
   .contact-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .contact-btns .contact-btn{margin:0;text-align:center}
   .contact-btns .contact-btn.wide{grid-column:1/-1}
@@ -463,19 +463,19 @@
   /* ============ FOOTER (light) ============ */
   .footer{background:var(--paper);color:var(--label);padding:52px 0 0;font-size:14.5px;border-top:1px solid var(--line)}
   .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line)}
-  .footer h4{font-size:14px;color:var(--ink);font-weight:700;margin-bottom:14px}
+  .footer h2{font-size:14px;color:var(--ink);font-weight:700;margin-bottom:14px}
   .footer .f-brand .b-name{font-size:20px;color:var(--ink);font-weight:800;line-height:1.1}
   .footer .f-brand .b-sub{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--label);margin:6px 0 14px;font-weight:600}
   .footer .f-brand p{font-size:14px;color:var(--label);max-width:300px}
   .footer-nav{list-style:none}
   .footer-nav li{margin-bottom:10px}
-  .footer-nav a{color:#333a42;font-size:14px}
+  .footer-nav a{color:#333a42;font-size:14px;display:inline-block;padding:4px 0;margin:-4px 0}
   .footer-nav a:hover{color:var(--lake)}
   .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding:20px 0;font-size:12.5px;color:var(--label)}
   .footer-bottom .secondary-nav{display:flex;gap:22px;flex-wrap:wrap}
-  .footer-bottom .secondary-nav a{color:var(--label)}
+  .footer-bottom .secondary-nav a{color:var(--label);display:inline-block;padding:4px 0;margin:-4px 0}
   .footer-bottom .secondary-nav a:hover{color:var(--lake)}
-  .disclaimer{padding:18px 0 32px;font-size:11.5px;line-height:1.7;color:#7a8389;border-top:1px solid var(--line)}
+  .disclaimer{padding:18px 0 32px;font-size:11.5px;line-height:1.7;color:var(--label);border-top:1px solid var(--line)}
   @media(max-width:860px){.footer-top{grid-template-columns:1fr 1fr;gap:32px}}
   @media(max-width:520px){.footer-top{grid-template-columns:1fr}}
   @media(max-width:860px){.footer-top{grid-template-columns:1fr 1fr;gap:32px}}
@@ -641,7 +641,7 @@
     .footer .f-brand{grid-column:1/-1}
     .footer .f-brand p,.footer .f-explore{display:none}
     .footer .f-brand .b-sub{margin:4px 0 0}
-    .footer h4{margin-bottom:8px;font-size:14px}
+    .footer h2{margin-bottom:8px;font-size:14px}
     .footer-nav li{margin-bottom:6px;font-size:13px}
     .footer-nav a{font-size:13px}
     .footer-bottom{padding:12px 0;gap:6px}
@@ -661,7 +661,7 @@
     }
     .bottom-nav a{
       flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-      gap:2px;padding:5px 1px;color:#8b909a;font-size:9.5px;font-weight:600;
+      gap:2px;padding:5px 1px;color:var(--label);font-size:9.5px;font-weight:600;
       text-align:center;letter-spacing:0;line-height:1.1;white-space:nowrap;
     }
     .bottom-nav a svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8}
@@ -724,7 +724,7 @@
 <style id="bn-style">
   @media(max-width:760px){
     .bottom-nav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-      gap:2px;padding:5px 1px;color:#8b909a;font:600 9.5px/1.1 var(--sans,system-ui);text-align:center;white-space:nowrap}
+      gap:2px;padding:5px 1px;color:var(--label,#5b6470);font:600 9.5px/1.1 var(--sans,system-ui);text-align:center;white-space:nowrap}
     .bottom-nav .is-here{color:var(--lake,#0b5c8c)}
   }
 </style>
@@ -839,7 +839,7 @@
     <div id="prices">
       <h2 class="h3">Prices by home size</h2>
       <div class="bcs"><div class="bc"><div class="bc-h"><h3>2,000&ndash;3,000 sq ft</h3><b>$1.84M&ndash;$3.54M</b></div><div class="bc-bar"><i style="width:100%"></i></div><div class="bc-m">14 sales &middot; about $917/sq ft &middot; last sold $3.54M, Nov 2026</div></div><div class="bc"><div class="bc-h"><h3>3,000&ndash;4,000 sq ft</h3><b>$2.3M&ndash;$4.8M</b></div><div class="bc-bar"><i style="width:64%"></i></div><div class="bc-m">9 sales &middot; about $804/sq ft &middot; last sold $2.97M, Oct 2026</div></div></div>
-      <p class="note">25 single-family sales inside Torrey Hills, last 12 months, as of November 23, 2026.</p>
+      <p class="note">25 single-family sales inside Torrey Hills, last 12 months, as of November 24, 2026.</p>
     </div>
   </div>
 </section>
@@ -908,7 +908,7 @@
         <p>Single-family homes for sale in Carmel Valley, San Diego, by price, school area and neighborhood, with real sold data for every community.</p>
       </div>
       <div class="f-explore">
-        <h4>Explore</h4>
+        <h2>Explore</h2>
         <ul class="footer-nav">
           <li><a href="/">Home</a></li>
           <li><a href="/carmel-valley-neighborhoods/">Neighborhoods</a></li>
@@ -917,7 +917,7 @@
         </ul>
       </div>
       <div>
-        <h4>Our Network</h4>
+        <h2>Our Network</h2>
         <ul class="footer-nav">
           <li><a href="https://carmelvalley.com">All Carmel Valley listings</a></li>
           <li><a href="https://carmelvalleycondos.com">Carmel Valley condos and townhomes</a></li>
@@ -925,7 +925,7 @@
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <ul class="footer-nav">
           <li>12750 High Bluff Drive</li>
           <li>San Diego, CA 92130</li>

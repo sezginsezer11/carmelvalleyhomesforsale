@@ -65,7 +65,7 @@ From where homes sold in the last 12 months.
 
 3 sales · about $702/sq ft · last sold $3.04M, Jun 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
 
 ## Recently sold in the Sycamore Ridge area
 

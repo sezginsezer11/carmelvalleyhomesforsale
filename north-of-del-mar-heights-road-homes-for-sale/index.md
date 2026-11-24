@@ -75,7 +75,7 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 2 sales · about $855/sq ft · last sold $2.87M, Oct 2026
 
-30 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 23, 2026.
+30 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 24, 2026.
 
 ## Elementary schools
 

@@ -61,7 +61,7 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 
 9 sales · about $804/sq ft · last sold $2.97M, Oct 2026
 
-25 single-family sales inside Torrey Hills, last 12 months, as of November 23, 2026.
+25 single-family sales inside Torrey Hills, last 12 months, as of November 24, 2026.
 
 ## Elementary schools
 

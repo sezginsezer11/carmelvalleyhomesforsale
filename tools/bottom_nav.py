@@ -33,7 +33,7 @@ ICONS = {
 CSS = """<style id="bn-style">
   @media(max-width:760px){
     .bottom-nav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-      gap:2px;padding:5px 1px;color:#8b909a;font:600 9.5px/1.1 var(--sans,system-ui);text-align:center;white-space:nowrap}
+      gap:2px;padding:5px 1px;color:var(--label,#5b6470);font:600 9.5px/1.1 var(--sans,system-ui);text-align:center;white-space:nowrap}
     .bottom-nav .is-here{color:var(--lake,#0b5c8c)}
   }
 </style>"""

@@ -83,7 +83,7 @@ From where homes sold in the last 12 months. 1 more sales had no neighborhood na
 
 6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
 
 ## Recently sold in the Sage Canyon area
 

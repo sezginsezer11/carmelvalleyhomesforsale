@@ -45,7 +45,7 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 
 2 sales · about $745/sq ft · last sold $1.95M, Sep 2026
 
-3 single-family sales inside Torrey Highlands, last 12 months, as of November 23, 2026.
+3 single-family sales inside Torrey Highlands, last 12 months, as of November 24, 2026.
 
 ## Elementary schools
 

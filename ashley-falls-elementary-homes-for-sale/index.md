@@ -63,7 +63,7 @@ From where homes sold in the last 12 months.
 
 4 sales · about $805/sq ft · last sold $3.44M, Sep 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 23, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
 
 ## Recently sold in the Ashley Falls area
 

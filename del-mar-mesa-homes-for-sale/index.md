@@ -58,7 +58,7 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 
 6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-10 single-family sales inside Del Mar Mesa, last 12 months, as of November 23, 2026.
+10 single-family sales inside Del Mar Mesa, last 12 months, as of November 24, 2026.
 
 ## Elementary schools
 

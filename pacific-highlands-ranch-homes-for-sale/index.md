@@ -92,7 +92,7 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 2 sales · about $1,059/sq ft · last sold $4.15M, Oct 2026
 
-57 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 23, 2026.
+57 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 24, 2026.
 
 ## Elementary schools
 
