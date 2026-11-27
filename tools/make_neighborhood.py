@@ -24,7 +24,10 @@ from sold_data import load_sales, AREA_LABELS  # noqa: E402
 from schools import elementary_for, DMUSD  # noqa: E402
 
 # Neighborhood and school pages that exist on the site (name -> path).
-NEIGHBORHOOD_PAGES = {"Lexington": "/lexington-carmel-valley-homes-for-sale/"}
+# Community pages come from tools/communities/*.json; pages with a future
+# "publish_on" date are drafts and are left out, so nothing links to them yet.
+from publish import live_pages  # noqa: E402
+NEIGHBORHOOD_PAGES = live_pages()
 SCHOOL_PAGES = {n: "/" + re.sub(r"[^a-z0-9]+", "-", n.lower()).strip("-") + "-homes-for-sale/" for n in [
     "Sage Canyon Elementary", "Pacific Sky Elementary", "Ocean Air Elementary", "Ashley Falls Elementary",
     "Sycamore Ridge Elementary", "Torrey Hills Elementary"]}
@@ -61,7 +64,9 @@ def centroid(rings):
     return round(sum(p[0] for p in pts) / len(pts), 6), round(sum(p[1] for p in pts) / len(pts), 6)
 
 
-def draft(name):
+def draft(name, name_focus=False):
+    """name_focus: another network site owns "<name> homes for sale", so this page leads with the
+    community name (prices, HOA, schools) instead of "homes for sale"."""
     atlas = json.load(open(os.path.join(TOOLS, "atlas_data.json"), encoding="utf-8"))
     comms = atlas["c"]
     c = next((x for x in comms if x["n"].lower() == name.lower()), None)
@@ -97,7 +102,7 @@ def draft(name):
     homes = c.get("homes")
     yb_txt = (f"{min(yb)}&ndash;{max(yb)}" if max(yb) > min(yb) else str(min(yb))) if yb else None
     sq_txt = f"{min(sqft):,}&ndash;{max(sqft):,}" if sqft else None
-    path = f"/{slug(name)}-carmel-valley-homes-for-sale/"
+    path = f"/{slug(name)}-carmel-valley/"  # SEO plan pattern for community pages
 
     facts = [{"icon": "price", "value": f"{short(min(p12))}&ndash;{short(max(p12))}", "label": "Sold, last 12 mo"}] if p12 else []
     if m12:
@@ -174,7 +179,7 @@ def draft(name):
         {"q": f"How much do homes in {name} cost?",
          "a": (f"<p>In the last 12 months, {len(t12)} single-family homes in {name} sold between {short(min(p12))} and {short(max(p12))}, "
                f"at a median of {short(m12)}. " if t12 else f"<p>No single-family homes in {name} sold in the last 12 months. ")
-              + "See the price-by-bedroom cards and recent sales on this page for what each kind of home sold for.</p>"},
+              + "See the price-by-size cards and recent sales on this page for what each kind of home sold for.</p>"},
         {"q": f"What school area is {name} in?",
          "a": f"<p>{school_line} High school is Torrey Pines High (San Dieguito Union HSD), with Canyon Crest Academy and San Dieguito Academy "
               "available by lottery. School boundaries change, so confirm any address with the district before you buy.</p>"},
@@ -194,11 +199,13 @@ def draft(name):
     return slug(name), {
         "slug": slug(name), "name": name, "path": path, "type": "sfr",
         "parent_name": "Neighborhoods", "parent_url": HUB, "api_community": name,
-        "seo": {"title": f"{name} Homes for Sale | Carmel Valley, San Diego 92130",
-                "description": f"{name} homes for sale in Carmel Valley 92130: live listings, sold prices by bedroom, school area, map and FAQs.",
+        "seo": {"title": (f"{name} Carmel Valley: Prices &amp; HOA | Sez Sezer" if name_focus else f"{name} Carmel Valley Homes for Sale | Sez Sezer"),
+                "description": (f"{name} in {area}, Carmel Valley: what homes sell for by size, HOA dues, Mello-Roos, schools and recent sales, from Sez Sezer, Keller Williams Realty."
+                                if name_focus else
+                                f"{name} homes for sale in Carmel Valley, San Diego: listings, prices by home size, HOA, schools and recent sales from Sez Sezer, Keller Williams Realty."),
                 "jsonld_description": f"{name} single-family homes for sale in {area}, Carmel Valley, San Diego." + (f" 12-month median sale {short(m12)}." if m12 else "")},
         "geo": {"lat": lat, "lng": lng}, "boundary": c["p"],
-        "hero": {"eyebrow": f"{area} &middot; Single-family", "h1": f"{name} Homes for Sale",
+        "hero": {"eyebrow": f"{area} &middot; Single-family", "h1": (f"{name} in {area}, Carmel Valley" if name_focus else f"{name} Homes for Sale in Carmel Valley"),
                  "lead": f"{homes or 'A'}{' ' if homes else ' '}single-family homes{f' built {yb_txt}' if yb_txt else ''} in {area}"
                          f"{f', in the {school} area' if school else ''}. Live listings, real sold prices and what to know before you buy.",
                  "img": "", "alt": ""},
@@ -206,7 +213,7 @@ def draft(name):
         "location_intro": (f'{name} is in <a href="{AREA_PAGES[c["sub"]]}">{area}</a>.' if c.get("sub") in AREA_PAGES else f"{name} is in {area}.")
                           + f" Its closest neighbors are {', '.join(n for n, _ in nearby[:3])}.",
         "schools": schools, "nearby": nearby,
-        "glance": {"h2": f"What a {name} Home Costs by Bedrooms",
+        "glance": {"mode": "auto", "h2": f"What a {name} Home Costs by Bedrooms",
                    "lede": f"Closed single-family sales in {name} in the last 12 months, by bedroom count: what each size sold for and the most recent sale.",
                    "cards": [{"beds": b, "count": "", "size": "", "latest": "", "range": ""} for b in card_beds],
                    "ratio": f"{common[0]}-bedroom homes made up {beds[common[0]]} of the {len(t12)} sales." if common else ""},
@@ -214,7 +221,7 @@ def draft(name):
                          f"{f' built {yb_txt}' if yb_txt else ''} in {area}. Homes run {sq_txt} sq ft"
                          f"{f' on lots around {med(lots):,.0f} sq ft' if lots else ''}, and about {per_year:.0f} sell each year.",
                  "reasons": reasons},
-        "similar": {"h2": f"Neighborhoods Near {name}", "intro": f"Worth comparing if you like {name}'s location.", "cards": similar},
+        "similar": {"auto": True, "h2": f"Neighborhoods Near {name}", "intro": f"Worth comparing if you like {name}'s location.", "cards": similar},
         "fit": {"good": good, "weigh": weigh},
         "faq_h2": f"{name} Homes: Common Questions", "faq": faq,
         "contact_lead": f"Buying or selling in {name}? I track every sale here and can tell you what a home is really worth, with the comps to back it up.",
@@ -222,10 +229,10 @@ def draft(name):
 
 
 def main(argv):
-    force = "--force" in argv
-    names = [a for a in argv if a != "--force"]
+    force, focus = "--force" in argv, "--name-focus" in argv
+    names = [a for a in argv if not a.startswith("--")]
     for n in names:
-        s, data = draft(n)
+        s, data = draft(n, focus)
         dest = os.path.join(TOOLS, "communities", s + ".json")
         if os.path.exists(dest) and not force:
             print(f"skip {dest} (exists; use --force to overwrite)")

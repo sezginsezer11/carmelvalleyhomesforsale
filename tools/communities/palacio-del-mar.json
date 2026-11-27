@@ -1,0 +1,345 @@
+{
+ "slug": "palacio-del-mar",
+ "name": "Palacio Del Mar",
+ "path": "/palacio-del-mar-carmel-valley/",
+ "type": "sfr",
+ "parent_name": "Neighborhoods",
+ "parent_url": "/carmel-valley-neighborhoods/",
+ "api_community": "Palacio Del Mar",
+ "seo": {
+  "title": "Palacio Del Mar Carmel Valley: Prices &amp; HOA | Sez Sezer",
+  "description": "Palacio Del Mar in Del Mar Mesa, Carmel Valley: what homes sell for by size, HOA dues, Mello-Roos, schools and recent sales, from Sez Sezer, Keller Williams Realty.",
+  "jsonld_description": "Palacio Del Mar single-family homes for sale in Del Mar Mesa, Carmel Valley, San Diego. 12-month median sale $2.18M."
+ },
+ "geo": {
+  "lat": 32.944781,
+  "lng": -117.206376
+ },
+ "boundary": [
+  [
+   [
+    32.94122,
+    -117.21289
+   ],
+   [
+    32.94159,
+    -117.211
+   ],
+   [
+    32.94249,
+    -117.21014
+   ],
+   [
+    32.94316,
+    -117.20895
+   ],
+   [
+    32.94315,
+    -117.20764
+   ],
+   [
+    32.94303,
+    -117.20585
+   ],
+   [
+    32.94336,
+    -117.20495
+   ],
+   [
+    32.94395,
+    -117.20517
+   ],
+   [
+    32.9439,
+    -117.20366
+   ],
+   [
+    32.94524,
+    -117.20198
+   ],
+   [
+    32.94566,
+    -117.19942
+   ],
+   [
+    32.94636,
+    -117.19787
+   ],
+   [
+    32.94675,
+    -117.19775
+   ],
+   [
+    32.9478,
+    -117.19787
+   ],
+   [
+    32.94766,
+    -117.20065
+   ],
+   [
+    32.94704,
+    -117.20217
+   ],
+   [
+    32.94796,
+    -117.20217
+   ],
+   [
+    32.94859,
+    -117.20261
+   ],
+   [
+    32.94818,
+    -117.20413
+   ],
+   [
+    32.94686,
+    -117.20656
+   ],
+   [
+    32.94627,
+    -117.20783
+   ],
+   [
+    32.94556,
+    -117.21007
+   ],
+   [
+    32.94479,
+    -117.21203
+   ],
+   [
+    32.94416,
+    -117.21287
+   ],
+   [
+    32.94347,
+    -117.21353
+   ],
+   [
+    32.94257,
+    -117.21304
+   ],
+   [
+    32.94189,
+    -117.21285
+   ],
+   [
+    32.94122,
+    -117.21289
+   ]
+  ]
+ ],
+ "hero": {
+  "eyebrow": "Del Mar Mesa &middot; Single-family",
+  "h1": "Palacio Del Mar in Del Mar Mesa, Carmel Valley",
+  "lead": "422 single-family homes built 1989&ndash;2020 in Del Mar Mesa, in the Sage Canyon Elementary area. Live listings, real sold prices and what to know before you buy.",
+  "img": "",
+  "alt": ""
+ },
+ "facts": [
+  {
+   "icon": "price",
+   "value": "$1.98M&ndash;$2.34M",
+   "label": "Sold, last 12 mo"
+  },
+  {
+   "icon": "price",
+   "value": "$2.18M",
+   "label": "Median, last 12 mo"
+  },
+  {
+   "icon": "units",
+   "value": "422",
+   "label": "Homes"
+  },
+  {
+   "icon": "built",
+   "value": "1989&ndash;2020",
+   "label": "Built"
+  },
+  {
+   "icon": "sqft",
+   "value": "1,912&ndash;4,922",
+   "label": "Sq ft"
+  },
+  {
+   "icon": "sqft",
+   "value": "5,056 sq ft",
+   "label": "Median lot"
+  },
+  {
+   "icon": "time",
+   "value": "11 days",
+   "label": "Days on market, 12 mo"
+  }
+ ],
+ "location_intro": "Palacio Del Mar is in <a href=\"/del-mar-mesa-homes-for-sale/\">Del Mar Mesa</a>. Its closest neighbors are Ridge, Watercolors, Palisades.",
+ "schools": [
+  {
+   "level": "Elementary",
+   "name": "Sage Canyon Elementary",
+   "district": "Del Mar Union School District"
+  },
+  {
+   "level": "Middle School",
+   "name": "Confirm with the district",
+   "district": "San Dieguito Union High School District"
+  },
+  {
+   "level": "High School",
+   "name": "Torrey Pines High",
+   "district": "San Dieguito Union High School District (Canyon Crest Academy and San Dieguito Academy by lottery)"
+  }
+ ],
+ "nearby": [
+  [
+   "Ridge",
+   "next door"
+  ],
+  [
+   "Watercolors",
+   "next door"
+  ],
+  [
+   "Palisades",
+   "next door"
+  ],
+  [
+   "Whitehorse",
+   "0.1 mi"
+  ],
+  [
+   "Sonoma",
+   "0.1 mi"
+  ],
+  [
+   "La Plage",
+   "0.1 mi"
+  ]
+ ],
+ "glance": {
+  "mode": "auto",
+  "h2": "What a Palacio Del Mar Home Costs by Bedrooms",
+  "lede": "Closed single-family sales in Palacio Del Mar in the last 12 months, by bedroom count: what each size sold for and the most recent sale.",
+  "cards": [
+   {
+    "beds": 3,
+    "count": "",
+    "size": "",
+    "latest": "",
+    "range": ""
+   },
+   {
+    "beds": 4,
+    "count": "",
+    "size": "",
+    "latest": "",
+    "range": ""
+   },
+   {
+    "beds": 5,
+    "count": "",
+    "size": "",
+    "latest": "",
+    "range": ""
+   }
+  ],
+  "ratio": "4-bedroom homes made up 4 of the 9 sales."
+ },
+ "life": {
+  "lead": "Palacio Del Mar is a neighborhood of 422 homes built 1989&ndash;2020 in Del Mar Mesa. Homes run 1,912&ndash;4,922 sq ft on lots around 5,056 sq ft, and about 7 sell each year.",
+  "reasons": [
+   [
+    "Family-sized homes.",
+    "4-bedroom homes are the most common, around 2,475 sq ft."
+   ],
+   [
+    "School area.",
+    "Homes here are in the <a href=\"/sage-canyon-elementary-homes-for-sale/\">Sage Canyon Elementary</a> attendance area."
+   ]
+  ]
+ },
+ "similar": {
+  "auto": true,
+  "h2": "Neighborhoods Near Palacio Del Mar",
+  "intro": "Worth comparing if you like Palacio Del Mar's location.",
+  "cards": [
+   {
+    "href": "/del-mar-mesa-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Ridge",
+    "meta": "3 sales in 5 yrs",
+    "desc": "Next door in Del Mar Mesa.",
+    "cta": "Del Mar Mesa guide"
+   },
+   {
+    "href": "/south-of-del-mar-heights-road-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Watercolors",
+    "meta": "6 sales in 5 yrs &middot; 12-mo median $2.18M",
+    "desc": "Next door in South of Del Mar Heights Road.",
+    "cta": "South of Del Mar Heights Road guide"
+   },
+   {
+    "href": "/south-of-del-mar-heights-road-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Palisades",
+    "meta": "10 sales in 5 yrs &middot; 12-mo median $2.34M",
+    "desc": "Next door in South of Del Mar Heights Road.",
+    "cta": "South of Del Mar Heights Road guide"
+   }
+  ]
+ },
+ "fit": {
+  "good": [
+   [
+    "Buyers who want space",
+    "1,912&ndash;4,922 sq ft homes with 3, 4, 5 bedrooms."
+   ],
+   [
+    "School-focused families",
+    "Sage Canyon Elementary for elementary, Torrey Pines High for high school."
+   ],
+   [
+    "Buyers who like predictable comps",
+    "About 7 sales a year, so pricing is easy to check."
+   ]
+  ],
+  "weigh": [
+   [
+    "Prices below the Carmel Valley median",
+    "Palacio Del Mar's median over the last 12 months is $2.18M, versus $2.63M for all Carmel Valley houses."
+   ]
+  ]
+ },
+ "faq_h2": "Palacio Del Mar Homes: Common Questions",
+ "faq": [
+  {
+   "q": "How much do homes in Palacio Del Mar cost?",
+   "a": "<p>In the last 12 months, 9 single-family homes in Palacio Del Mar sold between $1.98M and $2.34M, at a median of $2.18M. See the price-by-size cards and recent sales on this page for what each kind of home sold for.</p>"
+  },
+  {
+   "q": "How many homes are in Palacio Del Mar?",
+   "a": "<p>Palacio Del Mar has about 422 homes, built 1989 to 2020.</p>"
+  },
+  {
+   "q": "What school area is Palacio Del Mar in?",
+   "a": "<p>Palacio Del Mar is in the Sage Canyon Elementary attendance area (Del Mar Union School District). High school is Torrey Pines High (San Dieguito Union HSD), with Canyon Crest Academy and San Dieguito Academy available by lottery. School boundaries change, so confirm any address with the district before you buy.</p>"
+  },
+  {
+   "q": "How fast do homes sell in Palacio Del Mar?",
+   "a": "<p>Over the last 12 months, the median Palacio Del Mar home sold in 11 days on market. Well-priced homes often go under contract in the first week.</p>"
+  },
+  {
+   "q": "Where is Palacio Del Mar in Carmel Valley?",
+   "a": "<p>Palacio Del Mar is in Del Mar Mesa, next to Ridge, Watercolors, Palisades. See the map on this page for its boundary.</p>"
+  }
+ ],
+ "contact_lead": "Buying or selling in Palacio Del Mar? I track every sale here and can tell you what a home is really worth, with the comps to back it up.",
+ "publish_on": "2026-11-29"
+}

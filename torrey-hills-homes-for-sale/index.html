@@ -260,6 +260,14 @@
   .prices{background:var(--white)}
   .data-stamp{font-size:12.5px;color:var(--label);margin-top:8px}
   .glance .data-stamp{text-align:center;margin-top:10px}
+  .glance-card.tier .tier-sales{list-style:none;margin:12px 0 0;padding:10px 0 0;border-top:1px solid var(--line)}
+  .glance-card.tier .tier-sales li{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:5px 0;font-size:13.5px}
+  .glance-card.tier .ts-p{font-weight:700;font-variant-numeric:tabular-nums}
+  .glance-card.tier .ts-m{color:var(--label)}
+  .glance-card.tier .tier-note{font-size:12px;color:var(--label);margin:8px 0 0}
+  .glance-grid.g4{grid-template-columns:repeat(2,1fr)}
+  .hoa-grid.solo{grid-template-columns:1fr}
+  @media(max-width:640px){.glance-grid:has(.tier){grid-template-columns:1fr}.glance-card.tier{padding:14px 14px 12px}}
   .px-tabs{display:flex;gap:4px;max-width:760px;margin:0 auto 22px;padding:4px;background:var(--mist);border-radius:12px;overflow-x:auto;scrollbar-width:none}
   .px-tabs::-webkit-scrollbar{display:none}
   .px-tabs button{flex:1 0 auto;border:0;background:none;font:inherit;font-size:14px;font-weight:600;color:var(--label);padding:9px 14px;border-radius:9px;cursor:pointer;white-space:nowrap}
@@ -707,6 +715,10 @@
   .bc-bar{height:6px;background:#e6f0f6;border-radius:3px;margin:8px 0 6px}
   .bc-bar i{display:block;height:6px;background:var(--lake);border-radius:3px}
   .bc-m{font-size:13px;color:var(--label)}
+  .bcs.guide{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+  .bcs.guide .bc-h{gap:10px}
+  .bcs.guide .bc-h b{font-size:13px;white-space:nowrap;color:var(--lake-dark)}
+  .bcs.guide .bc-m+.bc-m{margin-top:2px}
   .sch{list-style:none;border:1px solid var(--line);border-radius:12px;overflow:hidden}
   .sch li{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-top:1px solid var(--mist);font-weight:600}
   .sch li:first-child{border-top:0}
@@ -839,10 +851,12 @@
     <div id="prices">
       <h2 class="h3">Prices by home size</h2>
       <div class="bcs"><div class="bc"><div class="bc-h"><h3>2,000&ndash;3,000 sq ft</h3><b>$1.84M&ndash;$3.54M</b></div><div class="bc-bar"><i style="width:100%"></i></div><div class="bc-m">14 sales &middot; about $917/sq ft &middot; last sold $3.54M, Nov 2026</div></div><div class="bc"><div class="bc-h"><h3>3,000&ndash;4,000 sq ft</h3><b>$2.3M&ndash;$4.8M</b></div><div class="bc-bar"><i style="width:64%"></i></div><div class="bc-m">9 sales &middot; about $804/sq ft &middot; last sold $2.97M, Oct 2026</div></div></div>
-      <p class="note">25 single-family sales inside Torrey Hills, last 12 months, as of November 24, 2026.</p>
+      <p class="note">25 single-family sales inside Torrey Hills, last 12 months, as of November 27, 2026.</p>
     </div>
   </div>
 </section>
+
+
 
 <section id="schools" style="padding-top:8px">
   <div class="wrap two">
@@ -942,7 +956,7 @@
       </nav>
     </div>
     <div class="disclaimer">
-      Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+      Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
     </div>
   </div>
 </footer>

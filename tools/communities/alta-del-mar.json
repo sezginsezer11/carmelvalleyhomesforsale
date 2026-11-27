@@ -1,0 +1,342 @@
+{
+ "slug": "alta-del-mar",
+ "name": "Alta Del Mar",
+ "path": "/alta-del-mar-carmel-valley/",
+ "type": "sfr",
+ "parent_name": "Neighborhoods",
+ "parent_url": "/carmel-valley-neighborhoods/",
+ "api_community": "Alta Del Mar",
+ "seo": {
+  "title": "Alta Del Mar Carmel Valley Homes for Sale | Sez Sezer",
+  "description": "Alta Del Mar homes for sale in Carmel Valley, San Diego: listings, prices by home size, HOA, schools and recent sales from Sez Sezer, Keller Williams Realty.",
+  "jsonld_description": "Alta Del Mar single-family homes for sale in Del Mar Mesa, Carmel Valley, San Diego. 12-month median sale $4.5M."
+ },
+ "geo": {
+  "lat": 32.934355,
+  "lng": -117.184234
+ },
+ "boundary": [
+  [
+   [
+    32.94119,
+    -117.18682
+   ],
+   [
+    32.94119,
+    -117.18694
+   ],
+   [
+    32.93748,
+    -117.18692
+   ],
+   [
+    32.93541,
+    -117.18667
+   ],
+   [
+    32.93484,
+    -117.18663
+   ],
+   [
+    32.93435,
+    -117.18792
+   ],
+   [
+    32.93261,
+    -117.19031
+   ],
+   [
+    32.93075,
+    -117.19085
+   ],
+   [
+    32.93016,
+    -117.18996
+   ],
+   [
+    32.92908,
+    -117.18989
+   ],
+   [
+    32.92868,
+    -117.18862
+   ],
+   [
+    32.92848,
+    -117.18622
+   ],
+   [
+    32.92833,
+    -117.18338
+   ],
+   [
+    32.92814,
+    -117.18163
+   ],
+   [
+    32.92841,
+    -117.18155
+   ],
+   [
+    32.92988,
+    -117.18125
+   ],
+   [
+    32.93192,
+    -117.18079
+   ],
+   [
+    32.93291,
+    -117.18048
+   ],
+   [
+    32.9352,
+    -117.17932
+   ],
+   [
+    32.93538,
+    -117.18014
+   ],
+   [
+    32.93574,
+    -117.18018
+   ],
+   [
+    32.93603,
+    -117.17997
+   ],
+   [
+    32.93751,
+    -117.18026
+   ],
+   [
+    32.93766,
+    -117.17972
+   ],
+   [
+    32.93907,
+    -117.17985
+   ],
+   [
+    32.93907,
+    -117.18271
+   ],
+   [
+    32.94128,
+    -117.18276
+   ],
+   [
+    32.94119,
+    -117.18682
+   ]
+  ]
+ ],
+ "hero": {
+  "eyebrow": "Del Mar Mesa &middot; Single-family",
+  "h1": "Alta Del Mar Homes for Sale in Carmel Valley",
+  "lead": "216 single-family homes built 2013&ndash;2016 in Del Mar Mesa, in the Sage Canyon Elementary area. Live listings, real sold prices and what to know before you buy.",
+  "img": "",
+  "alt": ""
+ },
+ "facts": [
+  {
+   "icon": "price",
+   "value": "$4.21M&ndash;$5.1M",
+   "label": "Sold, last 12 mo"
+  },
+  {
+   "icon": "price",
+   "value": "$4.5M",
+   "label": "Median, last 12 mo"
+  },
+  {
+   "icon": "units",
+   "value": "216",
+   "label": "Homes"
+  },
+  {
+   "icon": "built",
+   "value": "2013&ndash;2016",
+   "label": "Built"
+  },
+  {
+   "icon": "sqft",
+   "value": "4,191&ndash;6,235",
+   "label": "Sq ft"
+  },
+  {
+   "icon": "sqft",
+   "value": "17,424 sq ft",
+   "label": "Median lot"
+  },
+  {
+   "icon": "time",
+   "value": "49 days",
+   "label": "Days on market, 12 mo"
+  }
+ ],
+ "location_intro": "Alta Del Mar is in <a href=\"/del-mar-mesa-homes-for-sale/\">Del Mar Mesa</a>. Its closest neighbors are Ridge Estates, Meadows Del Mar, Duck Pond Ranch.",
+ "schools": [
+  {
+   "level": "Elementary",
+   "name": "Sage Canyon Elementary",
+   "district": "Del Mar Union School District"
+  },
+  {
+   "level": "Middle School",
+   "name": "Confirm with the district",
+   "district": "San Dieguito Union High School District"
+  },
+  {
+   "level": "High School",
+   "name": "Torrey Pines High",
+   "district": "San Dieguito Union High School District (Canyon Crest Academy and San Dieguito Academy by lottery)"
+  }
+ ],
+ "nearby": [
+  [
+   "Ridge Estates",
+   "next door"
+  ],
+  [
+   "Meadows Del Mar",
+   "next door"
+  ],
+  [
+   "Duck Pond Ranch",
+   "next door"
+  ],
+  [
+   "Bougainvillea",
+   "next door"
+  ],
+  [
+   "Valencia",
+   "next door"
+  ],
+  [
+   "Lexington",
+   "0.1 mi"
+  ]
+ ],
+ "glance": {
+  "mode": "auto",
+  "h2": "What a Alta Del Mar Home Costs by Bedrooms",
+  "lede": "Closed single-family sales in Alta Del Mar in the last 12 months, by bedroom count: what each size sold for and the most recent sale.",
+  "cards": [
+   {
+    "beds": 4,
+    "count": "",
+    "size": "",
+    "latest": "",
+    "range": ""
+   },
+   {
+    "beds": 5,
+    "count": "",
+    "size": "",
+    "latest": "",
+    "range": ""
+   }
+  ],
+  "ratio": "5-bedroom homes made up 2 of the 3 sales."
+ },
+ "life": {
+  "lead": "Alta Del Mar is a neighborhood of 216 homes built 2013&ndash;2016 in Del Mar Mesa. Homes run 4,191&ndash;6,235 sq ft on lots around 17,424 sq ft, and about 2 sell each year.",
+  "reasons": [
+   [
+    "Big floor plans.",
+    "The median home here has 5,193 sq ft, and 5-bedroom homes are the most common."
+   ],
+   [
+    "Bigger lots.",
+    "The median lot is about 17,424 sq ft, larger than the Carmel Valley median of 6,977."
+   ],
+   [
+    "School area.",
+    "Homes here are in the <a href=\"/sage-canyon-elementary-homes-for-sale/\">Sage Canyon Elementary</a> attendance area."
+   ]
+  ]
+ },
+ "similar": {
+  "auto": true,
+  "h2": "Neighborhoods Near Alta Del Mar",
+  "intro": "Worth comparing if you like Alta Del Mar's location.",
+  "cards": [
+   {
+    "href": "/meadows-del-mar-carmel-valley/",
+    "img": "",
+    "alt": "",
+    "name": "Meadows Del Mar",
+    "meta": "18 sales in 5 yrs &middot; 12-mo median $4.28M",
+    "desc": "Next door in Del Mar Mesa.",
+    "cta": "Neighborhood guide"
+   },
+   {
+    "href": "/del-mar-mesa-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Bougainvillea",
+    "meta": "5 sales in 5 yrs &middot; 12-mo median $3.95M",
+    "desc": "Next door in Del Mar Mesa.",
+    "cta": "Del Mar Mesa guide"
+   },
+   {
+    "href": "/del-mar-mesa-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Valencia",
+    "meta": "3 sales in 5 yrs",
+    "desc": "Next door in Del Mar Mesa.",
+    "cta": "Del Mar Mesa guide"
+   }
+  ]
+ },
+ "fit": {
+  "good": [
+   [
+    "Buyers who want space",
+    "4,191&ndash;6,235 sq ft homes with 4, 5 bedrooms."
+   ],
+   [
+    "School-focused families",
+    "Sage Canyon Elementary for elementary, Torrey Pines High for high school."
+   ],
+   [
+    "Buyers who want a quieter neighborhood",
+    "Only about 2 sales a year, so homes don't come up often."
+   ]
+  ],
+  "weigh": [
+   [
+    "Prices above the Carmel Valley median",
+    "Alta Del Mar's median over the last 12 months is $4.5M, versus $2.63M for all Carmel Valley houses."
+   ]
+  ]
+ },
+ "faq_h2": "Alta Del Mar Homes: Common Questions",
+ "faq": [
+  {
+   "q": "How much do homes in Alta Del Mar cost?",
+   "a": "<p>In the last 12 months, 3 single-family homes in Alta Del Mar sold between $4.21M and $5.1M, at a median of $4.5M. See the price-by-size cards and recent sales on this page for what each kind of home sold for.</p>"
+  },
+  {
+   "q": "How many homes are in Alta Del Mar?",
+   "a": "<p>Alta Del Mar has about 216 homes, built 2013 to 2016.</p>"
+  },
+  {
+   "q": "What school area is Alta Del Mar in?",
+   "a": "<p>Alta Del Mar is in the Sage Canyon Elementary attendance area (Del Mar Union School District). High school is Torrey Pines High (San Dieguito Union HSD), with Canyon Crest Academy and San Dieguito Academy available by lottery. School boundaries change, so confirm any address with the district before you buy.</p>"
+  },
+  {
+   "q": "How fast do homes sell in Alta Del Mar?",
+   "a": "<p>Over the last 12 months, the median Alta Del Mar home sold in 49 days on market. Well-priced homes often go under contract in the first week.</p>"
+  },
+  {
+   "q": "Where is Alta Del Mar in Carmel Valley?",
+   "a": "<p>Alta Del Mar is in Del Mar Mesa, next to Ridge Estates, Meadows Del Mar, Duck Pond Ranch. See the map on this page for its boundary.</p>"
+  }
+ ],
+ "contact_lead": "Buying or selling in Alta Del Mar? I track every sale here and can tell you what a home is really worth, with the comps to back it up.",
+ "publish_on": "2026-12-04"
+}

@@ -81,7 +81,7 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 
 6 sales · about $799/sq ft · last sold $3.44M, Sep 2026
 
-44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 24, 2026.
+44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 27, 2026.
 
 ## Elementary schools
 
@@ -145,4 +145,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.

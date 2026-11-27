@@ -1,0 +1,338 @@
+{
+ "slug": "bougainvillea",
+ "name": "Bougainvillea",
+ "path": "/bougainvillea-carmel-valley/",
+ "type": "sfr",
+ "parent_name": "Neighborhoods",
+ "parent_url": "/carmel-valley-neighborhoods/",
+ "api_community": "Bougainvillea",
+ "seo": {
+  "title": "Bougainvillea Carmel Valley Homes for Sale | Sez Sezer",
+  "description": "Bougainvillea homes for sale in Carmel Valley, San Diego: listings, prices by home size, HOA, schools and recent sales from Sez Sezer, Keller Williams Realty.",
+  "jsonld_description": "Bougainvillea single-family homes for sale in Del Mar Mesa, Carmel Valley, San Diego. 12-month median sale $3.95M."
+ },
+ "geo": {
+  "lat": 32.944685,
+  "lng": -117.179618
+ },
+ "boundary": [
+  [
+   [
+    32.94678,
+    -117.17833
+   ],
+   [
+    32.94725,
+    -117.17836
+   ],
+   [
+    32.94764,
+    -117.17862
+   ],
+   [
+    32.94842,
+    -117.17848
+   ],
+   [
+    32.94874,
+    -117.17911
+   ],
+   [
+    32.94876,
+    -117.18
+   ],
+   [
+    32.94842,
+    -117.18072
+   ],
+   [
+    32.94666,
+    -117.17976
+   ],
+   [
+    32.94669,
+    -117.18153
+   ],
+   [
+    32.94669,
+    -117.18256
+   ],
+   [
+    32.94317,
+    -117.18258
+   ],
+   [
+    32.94326,
+    -117.17843
+   ],
+   [
+    32.94291,
+    -117.17843
+   ],
+   [
+    32.94266,
+    -117.17841
+   ],
+   [
+    32.94259,
+    -117.18256
+   ],
+   [
+    32.942,
+    -117.18259
+   ],
+   [
+    32.9413,
+    -117.18265
+   ],
+   [
+    32.94132,
+    -117.17981
+   ],
+   [
+    32.94178,
+    -117.17958
+   ],
+   [
+    32.94182,
+    -117.17956
+   ],
+   [
+    32.94184,
+    -117.17838
+   ],
+   [
+    32.94268,
+    -117.17838
+   ],
+   [
+    32.94291,
+    -117.17838
+   ],
+   [
+    32.94314,
+    -117.17839
+   ],
+   [
+    32.94337,
+    -117.1784
+   ],
+   [
+    32.94506,
+    -117.17847
+   ],
+   [
+    32.94655,
+    -117.1785
+   ],
+   [
+    32.94678,
+    -117.17833
+   ]
+  ]
+ ],
+ "hero": {
+  "eyebrow": "Del Mar Mesa &middot; Single-family",
+  "h1": "Bougainvillea Homes for Sale in Carmel Valley",
+  "lead": "76 single-family homes built 2002&ndash;2003 in Del Mar Mesa, in the Sycamore Ridge Elementary area. Live listings, real sold prices and what to know before you buy.",
+  "img": "",
+  "alt": ""
+ },
+ "facts": [
+  {
+   "icon": "price",
+   "value": "$3.95M&ndash;$3.95M",
+   "label": "Sold, last 12 mo"
+  },
+  {
+   "icon": "price",
+   "value": "$3.95M",
+   "label": "Median, last 12 mo"
+  },
+  {
+   "icon": "units",
+   "value": "76",
+   "label": "Homes"
+  },
+  {
+   "icon": "built",
+   "value": "2002&ndash;2003",
+   "label": "Built"
+  },
+  {
+   "icon": "sqft",
+   "value": "4,560&ndash;4,982",
+   "label": "Sq ft"
+  },
+  {
+   "icon": "sqft",
+   "value": "18,263 sq ft",
+   "label": "Median lot"
+  },
+  {
+   "icon": "time",
+   "value": "0 days",
+   "label": "Days on market, 12 mo"
+  }
+ ],
+ "location_intro": "Bougainvillea is in <a href=\"/del-mar-mesa-homes-for-sale/\">Del Mar Mesa</a>. Its closest neighbors are Valencia, Duck Pond Ranch, Three Canyons.",
+ "schools": [
+  {
+   "level": "Elementary",
+   "name": "Sycamore Ridge Elementary",
+   "district": "Del Mar Union School District"
+  },
+  {
+   "level": "Middle School",
+   "name": "Confirm with the district",
+   "district": "San Dieguito Union High School District"
+  },
+  {
+   "level": "High School",
+   "name": "Torrey Pines High",
+   "district": "San Dieguito Union High School District (Canyon Crest Academy and San Dieguito Academy by lottery)"
+  }
+ ],
+ "nearby": [
+  [
+   "Valencia",
+   "next door"
+  ],
+  [
+   "Duck Pond Ranch",
+   "next door"
+  ],
+  [
+   "Three Canyons",
+   "next door"
+  ],
+  [
+   "Del Mar Mesa Estates",
+   "next door"
+  ],
+  [
+   "Alta Del Mar",
+   "next door"
+  ],
+  [
+   "Paso Fino",
+   "next door"
+  ]
+ ],
+ "glance": {
+  "mode": "auto",
+  "h2": "What a Bougainvillea Home Costs by Bedrooms",
+  "lede": "Closed single-family sales in Bougainvillea in the last 12 months, by bedroom count: what each size sold for and the most recent sale.",
+  "cards": [
+   {
+    "beds": 5,
+    "count": "",
+    "size": "",
+    "latest": "",
+    "range": ""
+   }
+  ],
+  "ratio": "5-bedroom homes made up 1 of the 1 sales."
+ },
+ "life": {
+  "lead": "Bougainvillea is a neighborhood of 76 homes built 2002&ndash;2003 in Del Mar Mesa. Homes run 4,560&ndash;4,982 sq ft on lots around 18,263 sq ft, and about 1 sell each year.",
+  "reasons": [
+   [
+    "Big floor plans.",
+    "The median home here has 4,560 sq ft, and 5-bedroom homes are the most common."
+   ],
+   [
+    "Bigger lots.",
+    "The median lot is about 18,263 sq ft, larger than the Carmel Valley median of 6,977."
+   ],
+   [
+    "School area.",
+    "Homes here are in the <a href=\"/sycamore-ridge-elementary-homes-for-sale/\">Sycamore Ridge Elementary</a> attendance area."
+   ],
+   [
+    "Homes sell quickly.",
+    "Over the last 12 months the median home sold in 0 days, versus 10 across Carmel Valley."
+   ]
+  ]
+ },
+ "similar": {
+  "auto": true,
+  "h2": "Neighborhoods Near Bougainvillea",
+  "intro": "Worth comparing if you like Bougainvillea's location.",
+  "cards": [
+   {
+    "href": "/del-mar-mesa-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Valencia",
+    "meta": "3 sales in 5 yrs",
+    "desc": "Next door in Del Mar Mesa.",
+    "cta": "Del Mar Mesa guide"
+   },
+   {
+    "href": "/del-mar-mesa-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Alta Del Mar",
+    "meta": "11 sales in 5 yrs &middot; 12-mo median $4.5M",
+    "desc": "Next door in Del Mar Mesa.",
+    "cta": "Del Mar Mesa guide"
+   }
+  ]
+ },
+ "fit": {
+  "good": [
+   [
+    "Buyers who want space",
+    "4,560&ndash;4,982 sq ft homes with 5 bedrooms."
+   ],
+   [
+    "School-focused families",
+    "Sycamore Ridge Elementary for elementary, Torrey Pines High for high school."
+   ],
+   [
+    "Buyers who want a quieter neighborhood",
+    "Only about 1 sales a year, so homes don't come up often."
+   ]
+  ],
+  "weigh": [
+   [
+    "Prices above the Carmel Valley median",
+    "Bougainvillea's median over the last 12 months is $3.95M, versus $2.63M for all Carmel Valley houses."
+   ],
+   [
+    "Homes are 20+ years old",
+    "Check roofs, windows and HVAC, and budget for updates in homes that haven't been remodeled."
+   ],
+   [
+    "Move fast",
+    "In the last 12 months, half of all homes sold within 0 days. Get pre-approved before you start touring."
+   ]
+  ]
+ },
+ "faq_h2": "Bougainvillea Homes: Common Questions",
+ "faq": [
+  {
+   "q": "How much do homes in Bougainvillea cost?",
+   "a": "<p>In the last 12 months, 1 single-family homes in Bougainvillea sold between $3.95M and $3.95M, at a median of $3.95M. See the price-by-size cards and recent sales on this page for what each kind of home sold for.</p>"
+  },
+  {
+   "q": "How many homes are in Bougainvillea?",
+   "a": "<p>Bougainvillea has about 76 homes, built 2002 to 2003.</p>"
+  },
+  {
+   "q": "What school area is Bougainvillea in?",
+   "a": "<p>Bougainvillea is in the Sycamore Ridge Elementary attendance area (Del Mar Union School District). High school is Torrey Pines High (San Dieguito Union HSD), with Canyon Crest Academy and San Dieguito Academy available by lottery. School boundaries change, so confirm any address with the district before you buy.</p>"
+  },
+  {
+   "q": "How fast do homes sell in Bougainvillea?",
+   "a": "<p>Over the last 12 months, the median Bougainvillea home sold in 0 days on market. Well-priced homes often go under contract in the first week.</p>"
+  },
+  {
+   "q": "Where is Bougainvillea in Carmel Valley?",
+   "a": "<p>Bougainvillea is in Del Mar Mesa, next to Valencia, Duck Pond Ranch, Three Canyons. See the map on this page for its boundary.</p>"
+  }
+ ],
+ "contact_lead": "Buying or selling in Bougainvillea? I track every sale here and can tell you what a home is really worth, with the comps to back it up.",
+ "publish_on": "2026-12-06"
+}

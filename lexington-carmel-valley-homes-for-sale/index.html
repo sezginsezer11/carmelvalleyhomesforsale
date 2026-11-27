@@ -258,6 +258,14 @@
   .prices{background:var(--white)}
   .data-stamp{font-size:12.5px;color:var(--label);margin-top:8px}
   .glance .data-stamp{text-align:center;margin-top:10px}
+  .glance-card.tier .tier-sales{list-style:none;margin:12px 0 0;padding:10px 0 0;border-top:1px solid var(--line)}
+  .glance-card.tier .tier-sales li{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:5px 0;font-size:13.5px}
+  .glance-card.tier .ts-p{font-weight:700;font-variant-numeric:tabular-nums}
+  .glance-card.tier .ts-m{color:var(--label)}
+  .glance-card.tier .tier-note{font-size:12px;color:var(--label);margin:8px 0 0}
+  .glance-grid.g4{grid-template-columns:repeat(2,1fr)}
+  .hoa-grid.solo{grid-template-columns:1fr}
+  @media(max-width:640px){.glance-grid:has(.tier){grid-template-columns:1fr}.glance-card.tier{padding:14px 14px 12px}.hoa-fee{flex-direction:column;align-items:flex-start;gap:6px}}
   .px-tabs{display:flex;gap:4px;max-width:760px;margin:0 auto 22px;padding:4px;background:var(--mist);border-radius:12px;overflow-x:auto;scrollbar-width:none}
   .px-tabs::-webkit-scrollbar{display:none}
   .px-tabs button{flex:1 0 auto;border:0;background:none;font:inherit;font-size:14px;font-weight:600;color:var(--label);padding:9px 14px;border-radius:9px;cursor:pointer;white-space:nowrap}
@@ -767,7 +775,7 @@
     <h1>Lexington Homes for Sale</h1>
     <p>265 single-family homes built 1998&ndash;2003 in Carmel Country Highlands, in the Sage Canyon Elementary area. Live listings, real sold prices and what to know before you buy.</p>
     <div class="hero-ctas">
-      <a href="#glance" class="btn btn-solid">See Prices by Bedroom</a>
+      <a href="#glance" class="btn btn-solid">See Prices by Size</a>
       <a href="tel:+18584366585" class="btn btn-outline">Talk to Sez</a>
     </div>
   </div>
@@ -784,6 +792,8 @@
     <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h7v7H3zM14 14h7v7h-7z"/><path d="M10 3 21 14"/></svg><div class="num">2,945&ndash;4,930</div><div class="lbl">Sq ft</div></div>
     <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h7v7H3zM14 14h7v7h-7z"/><path d="M10 3 21 14"/></svg><div class="num">8,448 sq ft</div><div class="lbl">Median lot</div></div>
     <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg><div class="num">8 days</div><div class="lbl">Days on market, 12 mo</div></div>
+    <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><div class="num">Confirm</div><div class="lbl">HOA</div></div>
+    <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 8l8 8"/></svg><div class="num">Check tax bill</div><div class="lbl">Mello-Roos</div></div>
   </div>
 </section>
 
@@ -919,31 +929,34 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">The First Question</div>
-      <h2>What a Lexington Home Costs by Bedrooms</h2>
+      <h2>What a Lexington Home Costs by Size</h2>
     </div>
-    <p class="glance-lede">Closed single-family sales in Lexington in the last 12 months, by bedroom count: what each size sold for and the most recent sale.</p>
+    <p class="glance-lede">Lexington homes come in a few floor-plan sizes. Each card shows the most recent sales of that size, so you can compare like with like.</p>
     <div class="glance-grid g3">
-      <div class="glance-card" data-beds="4">
-        <div class="gc-head"><h3>4 Bedroom</h3><div class="gc-count" id="g4-count">1 sale &middot; 12 mo</div></div>
-        <div class="glance-row"><span class="gr-lbl">Size</span><span class="gr-val" id="g4-size">4,620 sq ft</span></div>
-        <div class="glance-row"><span class="gr-lbl">Sold for</span><span class="gr-val" id="g4-range">$3.5M</span></div>
-        <div class="glance-row"><span class="gr-lbl">Most recent sale</span><span class="gr-val" id="g4-latest">$3,500,000 &middot; May 2026</span></div>
+      <div class="glance-card tier">
+        <div class="gc-head"><h3>About 3,850 sq ft</h3><div class="gc-count">3,708&ndash;3,827 sq ft &middot; usually 5 bed</div></div>
+        <div class="glance-row"><span class="gr-lbl">Sold for</span><span class="gr-val">$2.8M&ndash;$3.7M</span></div>
+        <div class="glance-row"><span class="gr-lbl">Per sq ft</span><span class="gr-val">about $836</span></div>
+        <ul class="tier-sales" aria-label="Most recent sales, About 3,850 sq ft"><li><span class="ts-p">$3,100,825</span><span class="ts-m">3,827 sq ft &middot; 5 bd &middot; Oct 2026</span></li><li><span class="ts-p">$3,300,000</span><span class="ts-m">3,827 sq ft &middot; 5 bd &middot; Jul 2026</span></li><li><span class="ts-p">$3,700,000</span><span class="ts-m">3,827 sq ft &middot; 5 bd &middot; Apr 2026</span></li><li><span class="ts-p">$2,750,000</span><span class="ts-m">3,827 sq ft &middot; 5 bd &middot; Aug 2025</span></li></ul>
+        <p class="tier-note">4 most recent sales, last 2 years</p>
       </div>
-      <div class="glance-card" data-beds="5">
-        <div class="gc-head"><h3>5 Bedroom</h3><div class="gc-count" id="g5-count">4 sales &middot; 12 mo</div></div>
-        <div class="glance-row"><span class="gr-lbl">Size</span><span class="gr-val" id="g5-size">2,945&ndash;3,827 sq ft</span></div>
-        <div class="glance-row"><span class="gr-lbl">Sold for</span><span class="gr-val" id="g5-range">$3.1M&ndash;$3.7M</span></div>
-        <div class="glance-row"><span class="gr-lbl">Most recent sale</span><span class="gr-val" id="g5-latest">$3,100,825 &middot; Oct 2026</span></div>
+      <div class="glance-card tier">
+        <div class="gc-head"><h3>About 4,450 sq ft</h3><div class="gc-count">4,433&ndash;4,454 sq ft &middot; usually 6 bed</div></div>
+        <div class="glance-row"><span class="gr-lbl">Sold for</span><span class="gr-val">$2.6M&ndash;$3.5M</span></div>
+        <div class="glance-row"><span class="gr-lbl">Per sq ft</span><span class="gr-val">about $685</span></div>
+        <ul class="tier-sales" aria-label="Most recent sales, About 4,450 sq ft"><li><span class="ts-p">$3,500,000</span><span class="ts-m">4,454 sq ft &middot; 6 bd &middot; Oct 2026</span></li><li><span class="ts-p">$2,600,000</span><span class="ts-m">4,454 sq ft &middot; 5 bd &middot; Apr 2024</span></li></ul>
+        <p class="tier-note">2 most recent sales, last 5 years</p>
       </div>
-      <div class="glance-card" data-beds="6">
-        <div class="gc-head"><h3>6 Bedroom</h3><div class="gc-count" id="g6-count">4 sales &middot; 12 mo</div></div>
-        <div class="glance-row"><span class="gr-lbl">Size</span><span class="gr-val" id="g6-size">4,454&ndash;4,687 sq ft</span></div>
-        <div class="glance-row"><span class="gr-lbl">Sold for</span><span class="gr-val" id="g6-range">$3.1M&ndash;$3.5M</span></div>
-        <div class="glance-row"><span class="gr-lbl">Most recent sale</span><span class="gr-val" id="g6-latest">$3,500,000 &middot; Oct 2026</span></div>
+      <div class="glance-card tier">
+        <div class="gc-head"><h3>About 4,700 sq ft</h3><div class="gc-count">4,620&ndash;4,740 sq ft &middot; usually 6 bed</div></div>
+        <div class="glance-row"><span class="gr-lbl">Sold for</span><span class="gr-val">$3.1M&ndash;$3.5M</span></div>
+        <div class="glance-row"><span class="gr-lbl">Per sq ft</span><span class="gr-val">about $722</span></div>
+        <ul class="tier-sales" aria-label="Most recent sales, About 4,700 sq ft"><li><span class="ts-p">$3,118,896</span><span class="ts-m">4,687 sq ft &middot; 6 bd &middot; Jul 2026</span></li><li><span class="ts-p">$3,298,765</span><span class="ts-m">4,687 sq ft &middot; 6 bd &middot; Jun 2026</span></li><li><span class="ts-p">$3,500,000</span><span class="ts-m">4,620 sq ft &middot; 4 bd &middot; May 2026</span></li><li><span class="ts-p">$3,455,000</span><span class="ts-m">4,670 sq ft &middot; 6 bd &middot; May 2026</span></li></ul>
+        <p class="tier-note">4 most recent sales, last 2 years</p>
       </div>
     </div>
-    <p class="glance-lede" style="margin-top:14px;margin-bottom:0"><span id="g-ratio">6-bedroom homes made up 4 of the 10 sales.</span> See the <a href="#sold-data">price history</a>.</p>
-    <p class="data-stamp" id="g-stamp">Closed MLS sales, last 12 months.</p>
+    
+    <p class="data-stamp" id="g-stamp">Closed MLS sales: up to 4 most recent per size from the last 2 years (5 years when a size has fewer than 2 recent sales). As of Nov 27, 2026.</p>
   </div>
 </section>
 
@@ -963,7 +976,24 @@
 </section>
 
 <!-- ============ HOA: FEE & AMENITIES ============ -->
-
+<section class="hoa" id="cost">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">HOA &amp; Mello-Roos</div>
+      <h2>Does Lexington Have an HOA?</h2>
+      <p>Whether there is an HOA, what it costs, and Mello-Roos.</p>
+    </div>
+    <div class="hoa-fee">
+      <div class="hf-amt">Confirm</div>
+      <div class="hf-text"><strong>HOA dues for Lexington are being confirmed.</strong> The listing and the seller&rsquo;s HOA documents show the exact monthly amount. Ask me and I&rsquo;ll check it for the home you like.</div>
+    </div>
+    <div class="hoa-grid solo">
+      <div>
+        <p class="hoa-also"><strong>Mello-Roos:</strong> check the property tax bill for the home; special taxes (CFDs) show up as separate lines and can differ from street to street.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ COMPARE TO OTHER COMMUNITIES ============ -->
 <section class="compare" id="similar">
@@ -980,8 +1010,8 @@
           <div class="cmp-img ph" aria-hidden="true">Steeplechase</div>
           <div class="cmp-body">
             <h3>Steeplechase</h3>
-            <div class="cmp-meta">13 sales in 5 yrs &middot; 12-mo median $2.41M</div>
-            <p>Next door in Carmel Country Highlands.</p>
+            <div class="cmp-meta">12-mo median $2.4M</div>
+            <p>Next door in Carmel Country Highlands. Homes about 2,507&ndash;3,049 sq ft, built 1999&ndash;2001.</p>
             <span class="cmp-go">Carmel Country Highlands guide &rarr;</span>
           </div>
         </a>
@@ -989,8 +1019,8 @@
           <div class="cmp-img ph" aria-hidden="true">Belmont</div>
           <div class="cmp-body">
             <h3>Belmont</h3>
-            <div class="cmp-meta">28 sales in 5 yrs &middot; 12-mo median $2.66M</div>
-            <p>Next door in Carmel Country Highlands.</p>
+            <div class="cmp-meta">12-mo median $2.7M</div>
+            <p>Next door in Carmel Country Highlands. Homes about 2,720&ndash;4,670 sq ft, built 1999&ndash;2011.</p>
             <span class="cmp-go">Carmel Country Highlands guide &rarr;</span>
           </div>
         </a>
@@ -999,8 +1029,17 @@
           <div class="cmp-body">
             <h3>Breakers</h3>
             <div class="cmp-meta">7 sales in 5 yrs</div>
-            <p>Next door in Carmel Country Highlands.</p>
+            <p>Next door in Carmel Country Highlands. Homes about 3,470&ndash;3,927 sq ft, built 2000&ndash;2001.</p>
             <span class="cmp-go">Carmel Country Highlands guide &rarr;</span>
+          </div>
+        </a>
+        <a class="cmp-card" href="/del-mar-mesa-homes-for-sale/">
+          <div class="cmp-img ph" aria-hidden="true">Alta Del Mar</div>
+          <div class="cmp-body">
+            <h3>Alta Del Mar</h3>
+            <div class="cmp-meta">12-mo median $4.5M</div>
+            <p>0.1 miles away in Del Mar Mesa. Homes about 4,191&ndash;6,235 sq ft, built 2013&ndash;2016.</p>
+            <span class="cmp-go">Del Mar Mesa guide &rarr;</span>
           </div>
         </a>
       </div>
@@ -1028,7 +1067,7 @@
       <h2>Lexington Prices &amp; Sales</h2>
       <p class="data-stamp" id="px-stamp"></p>
     </div>
-    <p class="px-summary">In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. <span class="data-stamp">MLS closed sales as of Nov 24, 2026.</span></p>
+    <p class="px-summary">In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. <span class="data-stamp">MLS closed sales as of Nov 27, 2026.</span></p>
     <div class="px-tabs btn-tabs px-wide" role="tablist" aria-label="Lexington price and sales views">
       <button type="button" role="tab" id="tab-overview" aria-controls="px-overview" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Overview</button>
       <button type="button" role="tab" id="tab-sold" aria-controls="px-sold" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg>Recent Sales</button>
@@ -1520,6 +1559,18 @@
         <summary>Where is Lexington in Carmel Valley?</summary>
         <p>Lexington is in Carmel Country Highlands, next to Steeplechase, Belmont, Breakers. See the map on this page for its boundary.</p>
       </details>
+      <details>
+        <summary>Does Lexington have an HOA?</summary>
+        <p>The listing for each Lexington home shows whether it pays HOA dues and how much. Ask me and I'll confirm it for the home you're considering.</p>
+      </details>
+      <details>
+        <summary>Is there Mello-Roos in Lexington?</summary>
+        <p>Check the property tax bill for the Lexington home you like: Mello-Roos and other special taxes (CFDs) appear as separate lines. Ask the title company for the exact amount during escrow.</p>
+      </details>
+      <details>
+        <summary>How big are homes in Lexington, and what do they sell for?</summary>
+        <p>Homes here come in a few floor-plan sizes: about 3,850 sq ft ($2.8M to $3.7M); about 4,450 sq ft ($2.6M to $3.5M); about 4,700 sq ft ($3.1M to $3.5M). These ranges use the most recent sales of each size; see the size cards on this page.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -1593,7 +1644,7 @@
       </nav>
     </div>
     <div class="disclaimer">
-      Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+      Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
     </div>
   </div>
 </footer>
@@ -1703,6 +1754,30 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Lexington is in Carmel Country Highlands, next to Steeplechase, Belmont, Breakers. See the map on this page for its boundary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Lexington have an HOA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The listing for each Lexington home shows whether it pays HOA dues and how much. Ask me and I'll confirm it for the home you're considering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there Mello-Roos in Lexington?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check the property tax bill for the Lexington home you like: Mello-Roos and other special taxes (CFDs) appear as separate lines. Ask the title company for the exact amount during escrow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How big are homes in Lexington, and what do they sell for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Homes here come in a few floor-plan sizes: about 3,850 sq ft ($2.8M to $3.7M); about 4,450 sq ft ($2.6M to $3.5M); about 4,700 sq ft ($3.1M to $3.5M). These ranges use the most recent sales of each size; see the size cards on this page."
       }
     }
   ]

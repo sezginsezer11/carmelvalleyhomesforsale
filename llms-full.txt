@@ -23,11 +23,11 @@ $2.63M
 
 Median sale price
 
-209
+206
 
 Homes sold
 
-$879
+$881
 
 Median per sq ft
 
@@ -35,7 +35,7 @@ Median per sq ft
 
 Median on market
 
-Single-family closed sales, ZIP 92130, as of November 24, 2026.
+Single-family closed sales, ZIP 92130, as of November 27, 2026.
 
 ### Carmel Valley houses for sale now
 
@@ -51,13 +51,13 @@ How the last 12 months of single-family sales break down by price. Most homes se
 
 26 sold
 
-12% of sales · median $1.86M
+13% of sales · median $1.86M
 
 #### $2M to $3M
 
-112 sold
+110 sold
 
-54% of sales · median $2.41M
+53% of sales · median $2.4M
 
 #### $3M to $4M
 
@@ -67,9 +67,9 @@ How the last 12 months of single-family sales break down by price. Most homes se
 
 #### $4M and up
 
-21 sold
+20 sold
 
-10% of sales · median $4.55M
+10% of sales · median $4.53M
 
 Shopping above $3 million? See [Carmel Valley luxury homes, $3M and up](https://carmelvalleyhomesforsale.com/carmel-valley-luxury-homes-for-sale/): where they sit and the top sales.
 
@@ -81,14 +81,14 @@ Each part of Carmel Valley has its own age of homes, lot sizes and price range. 
 
 | Area | Sold, 12 mo | Median price |
 |---|---|---|
-| North of Del Mar Heights Road [Area guide →](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/) | 35 | $2.63M |
+| North of Del Mar Heights Road [Area guide →](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/) | 34 | $2.62M |
 | South of Del Mar Heights Road [Area guide →](https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/) | 48 | $2.33M |
-| Carmel Country Highlands [Area guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/) | 19 | $3.23M |
+| Carmel Country Highlands [Area guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/) | 18 | $3.24M |
 | Pacific Highlands Ranch [Area guide →](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/) | 24 | $2.17M |
 | Torrey Highlands [Area guide →](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/) | 3 | $1.95M |
 | Torrey Hills [Area guide →](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/) | 23 | $2.5M |
 | Del Mar Mesa [Area guide →](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/) | 9 | $4.28M |
-| Rancho Pacifica | 4 | $5.93M |
+| Rancho Pacifica | 3 | $6.35M |
 
 Sales without a neighborhood name are counted in the totals above but not in this table. [See every neighborhood on the map →](https://carmelvalleyhomesforsale.com/carmel-valley-neighborhoods/)
 
@@ -110,11 +110,11 @@ Every property type for sale in Carmel Valley in one search.
 
 #### What is the median price of a single-family home in Carmel Valley?
 
-$2,625,000, based on 209 single-family homes that closed in the last 12 months in ZIP 92130 (about $879 per square foot). Condos and townhomes are not included.
+$2,625,000, based on 206 single-family homes that closed in the last 12 months in ZIP 92130 (about $881 per square foot). Condos and townhomes are not included.
 
 #### Can you still buy a house in Carmel Valley for under $2 million?
 
-Yes, but there are few of them. 26 of 209 single-family sales in the last 12 months closed under $2M, mostly smaller or older homes and newer homes on compact lots. They tend to sell quickly, so set up alerts and be ready to act.
+Yes, but there are few of them. 26 of 206 single-family sales in the last 12 months closed under $2M, mostly smaller or older homes and newer homes on compact lots. They tend to sell quickly, so set up alerts and be ready to act.
 
 #### How fast do Carmel Valley houses sell?
 
@@ -144,7 +144,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -205,7 +205,7 @@ This map shows 127 single-family neighborhoods in Carmel Valley (San Diego, 9213
 
 #### Which Carmel Valley neighborhoods have the lowest and highest home prices?
 
-Among neighborhoods with at least three house sales in the last 12 months, San Remo had the lowest median ($1.91M) and Rancho Pacifica the highest ($5.93M). Lot size, home age and school area explain most of the gap.
+Among neighborhoods with at least three house sales in the last 12 months, San Remo had the lowest median ($1.91M) and Rancho Pacifica the highest ($6.35M). Lot size, home age and school area explain most of the gap.
 
 #### What are the largest single-family neighborhoods in Carmel Valley?
 
@@ -235,7 +235,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -334,7 +334,7 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 2 sales · about $1,059/sq ft · last sold $4.15M, Oct 2026
 
-57 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 24, 2026.
+57 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 27, 2026.
 
 ### Elementary schools
 
@@ -403,7 +403,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -421,7 +421,7 @@ Source page: https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-
 Established 1980s and 1990s neighborhoods north of Del Mar Heights Road, close to the beach, Torrey Pines and the I-5 / SR-56 interchange.
 
 - **Median sale, last 12 mo:** $2.68M
-- **Sold, last 12 mo:** 30
+- **Sold, last 12 mo:** 29
 - **Neighborhoods:** 19
 - **On market, last 12 mo:** 9 days
 
@@ -440,7 +440,7 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 | Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
 | Heights — 566 homes · built 1984–1989 | 11 | $2.5M–$3.44M |
-| Santa Fe Summit — 187 homes · built 1991–1995 | 5 | $2.58M–$3.68M |
+| Santa Fe Summit — 187 homes · built 1991–1995 | 4 | $2.58M–$3.68M |
 | Alta Mar — 216 homes · built 1986–1989 | 4 | $2.02M–$2.61M |
 | Promontory — 190 homes · built 1995–2002 | 2 | $3.2M–$3.43M |
 | Torrey Glen — 151 homes · built 1986–1987 | 2 | $1.7M–$2.04M |
@@ -477,7 +477,7 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 **$2.21M–$3.7M**
 
-12 sales · about $892/sq ft · last sold $2.78M, Oct 2026
+11 sales · about $892/sq ft · last sold $2.78M, Oct 2026
 
 #### 4,000–5,000 sq ft
 
@@ -485,7 +485,7 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 2 sales · about $855/sq ft · last sold $2.87M, Oct 2026
 
-30 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 24, 2026.
+29 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 27, 2026.
 
 ### Elementary schools
 
@@ -512,11 +512,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in North of Del Mar Heights Road cost?
 
-In the last 12 months, 30 single-family homes in North of Del Mar Heights Road sold at a median of $2,683,832 (about $947 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $1,595,000 and $3,700,000.
+In the last 12 months, 29 single-family homes in North of Del Mar Heights Road sold at a median of $2,680,665 (about $948 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $1,595,000 and $3,700,000.
 
 #### Which neighborhoods are in North of Del Mar Heights Road?
 
-North of Del Mar Heights Road has 19 single-family neighborhoods, including Heights, Santa Fe Summit, Alta Mar, Promontory, Torrey Glen, Vista Santa Barbara. Among those with at least three sales in the last 12 months, Alta Mar had the lowest median ($2.2M) and Santa Fe Summit the highest ($3.13M).
+North of Del Mar Heights Road has 19 single-family neighborhoods, including Heights, Santa Fe Summit, Alta Mar, Promontory, Torrey Glen, Vista Santa Barbara. Among those with at least three sales in the last 12 months, Alta Mar had the lowest median ($2.2M) and Santa Fe Summit the highest ($3.14M).
 
 #### How old are the homes in North of Del Mar Heights Road?
 
@@ -546,7 +546,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -634,7 +634,7 @@ This search shows all of 92130. Zoom the map to South of Del Mar Heights Road, o
 
 6 sales · about $799/sq ft · last sold $3.44M, Sep 2026
 
-44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 24, 2026.
+44 single-family sales inside South of Del Mar Heights Road, last 12 months, as of November 27, 2026.
 
 ### Elementary schools
 
@@ -698,14 +698,14 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
 
 ## Carmel Country Highlands Homes for Sale | Carmel Valley, San Diego 92130
 
-> Carmel Country Highlands single-family homes in Carmel Valley: 12-month median $3.23M, 8 neighborhoods, sold prices, schools and a map.
+> Carmel Country Highlands single-family homes in Carmel Valley: 12-month median $3.24M, 8 neighborhoods, sold prices, schools and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/
 
@@ -715,10 +715,10 @@ Source page: https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes
 
 Larger 1990s and early-2000s homes on bigger lots in the hills of Carmel Country Highlands, many with five or more bedrooms.
 
-- **Median sale, last 12 mo:** $3.23M
-- **Sold, last 12 mo:** 19
+- **Median sale, last 12 mo:** $3.24M
+- **Sold, last 12 mo:** 18
 - **Neighborhoods:** 8
-- **On market, last 12 mo:** 8 days
+- **On market, last 12 mo:** 6 days
 
 ### Carmel Country Highlands neighborhoods on the map
 
@@ -735,7 +735,7 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 | Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
 | [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) — 265 homes · built 1998–2003 | 10 | $3.1M–$3.7M |
-| Belmont — 316 homes · built 1999–2011 | 4 | $2.5M–$3.1M |
+| Belmont — 316 homes · built 1999–2011 | 3 | $2.5M–$3.1M |
 | Derby Hill — 172 homes · built 2005–2009 | 2 | $3.23M–$4.1M |
 | Steeplechase — 193 homes · built 1999–2001 | 2 | $2.41M–$2.42M |
 | Carriage Run — 169 homes · built 2010–2011 | 1 | $2.13M |
@@ -753,9 +753,9 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 
 #### 3,000–4,000 sq ft
 
-**$2.65M–$3.7M**
+**$2.66M–$3.7M**
 
-7 sales · about $862/sq ft · last sold $3.1M, Oct 2026
+6 sales · about $914/sq ft · last sold $3.1M, Oct 2026
 
 #### 4,000–5,000 sq ft
 
@@ -763,7 +763,7 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 
 7 sales · about $740/sq ft · last sold $3.5M, Oct 2026
 
-19 single-family sales inside Carmel Country Highlands, last 12 months, as of November 24, 2026.
+18 single-family sales inside Carmel Country Highlands, last 12 months, as of November 27, 2026.
 
 ### Elementary schools
 
@@ -791,7 +791,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 #### How much does a house in Carmel Country Highlands cost?
 
-In the last 12 months, 19 single-family homes in Carmel Country Highlands sold at a median of $3,225,000 (about $862 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $2,132,000 and $4,100,000.
+In the last 12 months, 18 single-family homes in Carmel Country Highlands sold at a median of $3,237,500 (about $877 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $2,132,000 and $4,100,000.
 
 #### Which neighborhoods are in Carmel Country Highlands?
 
@@ -807,7 +807,7 @@ Elementary school depends on the street: Sage Canyon Elementary (91% of recent s
 
 #### How fast do homes sell in Carmel Country Highlands?
 
-Over the last 12 months, the median home sold in 8 days on market.
+Over the last 12 months, the median home sold in 6 days on market.
 
 ### Looking in Carmel Country Highlands?
 
@@ -825,7 +825,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -877,7 +877,7 @@ This search shows all of 92130. Zoom the map to Torrey Highlands, or ask me for 
 
 2 sales · about $745/sq ft · last sold $1.95M, Sep 2026
 
-3 single-family sales inside Torrey Highlands, last 12 months, as of November 24, 2026.
+3 single-family sales inside Torrey Highlands, last 12 months, as of November 27, 2026.
 
 ### Elementary schools
 
@@ -938,7 +938,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -1006,7 +1006,7 @@ This search shows all of 92130. Zoom the map to Torrey Hills, or ask me for ever
 
 9 sales · about $804/sq ft · last sold $2.97M, Oct 2026
 
-25 single-family sales inside Torrey Hills, last 12 months, as of November 24, 2026.
+25 single-family sales inside Torrey Hills, last 12 months, as of November 27, 2026.
 
 ### Elementary schools
 
@@ -1068,12 +1068,12 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
 
-## Del Mar Mesa Homes for Sale | Carmel Valley, San Diego 92130
+## Del Mar Mesa, Carmel Valley: Communities, Prices & HOA
 
 > Del Mar Mesa single-family homes in Carmel Valley: 12-month median $4.39M, 14 neighborhoods, sold prices, schools and a map.
 
@@ -1081,7 +1081,7 @@ Source page: https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/
 
 *Carmel Valley · San Diego 92130*
 
-### Del Mar Mesa Homes for Sale
+### Del Mar Mesa, Carmel Valley
 
 Estate homes on large lots next to the Del Mar Mesa preserve, with horse trails and a rural feel.
 
@@ -1133,7 +1133,123 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 
 6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-10 single-family sales inside Del Mar Mesa, last 12 months, as of November 24, 2026.
+10 single-family sales inside Del Mar Mesa, last 12 months, as of November 27, 2026.
+
+### Every community in Del Mar Mesa: HOA, sizes and last sale
+
+#### Palacio Del Mar
+
+**HOA $484–$505/mo**
+
+422 homes · 1,720–6,104 sq ft
+
+Last sale $2.34M, Oct 2026 · Mello-Roos: some homes
+
+#### Alta Del Mar
+
+**HOA: ask me**
+
+216 homes · built 2013–2016 · 4,191–6,492 sq ft
+
+Last sale $4.5M, Jul 2026
+
+#### Meadows Del Mar
+
+**HOA $435–$443/mo**
+
+200 homes · built 2000–2007 · 3,588–7,755 sq ft
+
+Last sale $4.28M, Aug 2026 · Mello-Roos: yes
+
+#### Bougainvillea
+
+**HOA: ask me**
+
+76 homes · built 2003 · 3,928–5,000 sq ft
+
+Last sale $3.95M, May 2026
+
+#### Ridge
+
+**HOA: ask me**
+
+19 homes · built 2003–2020 · 5,631–8,992 sq ft
+
+Last sale $4.14M, Apr 2024
+
+#### Ridge Estates
+
+**HOA: ask me**
+
+19 homes · built 2015 · 5,342–5,475 sq ft
+
+Last sale $5.42M, Aug 2022
+
+#### Whitehorse
+
+**HOA: ask me**
+
+19 homes · built 2003–2004 · 5,163–7,980 sq ft
+
+Last sale $4.6M, May 2026
+
+#### Duck Pond Ranch
+
+**HOA: ask me**
+
+15 homes · built 2006–2008 · 4,275–15,264 sq ft
+
+Last sale $5.9M, Jul 2024
+
+#### The Preserve
+
+**HOA: ask me**
+
+14 homes · built 2015–2020 · 4,620–9,436 sq ft
+
+Last sale $6.15M, Nov 2025
+
+#### Paso Fino
+
+**HOA: ask me**
+
+12 homes · built 2005 · 3,788–5,813 sq ft
+
+Last sale $3.79M, Sep 2026
+
+#### Three Canyons
+
+**HOA: ask me**
+
+12 homes · built 2007 · 5,050–5,620 sq ft
+
+Last sale $4.3M, May 2025
+
+#### Silver Oaks Estates / Anderson Estates
+
+**HOA: ask me**
+
+8 homes · 7,382 sq ft
+
+Last sale $5.25M, Jun 2021
+
+#### Valencia
+
+**HOA: ask me**
+
+7 homes · built 2003–2006 · 5,612–6,304 sq ft
+
+Last sale $4.25M, Aug 2025
+
+#### Del Mar Mesa Estates
+
+**HOA: ask me**
+
+built 2024 · 5,764 sq ft
+
+Last sale $5.2M, May 2025
+
+Sizes and last sale come from single-family MLS sales (all years on record). HOA fees are from recent listings; confirm the current amount with the HOA.
 
 ### Elementary schools
 
@@ -1141,6 +1257,8 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 - [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) — 25% of sales
 
 Share of the last 5 years of sales inside each attendance area. High school is Torrey Pines High; Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with [Del Mar Union](https://www.dmusd.org/Page/191), Solana Beach SD or [San Dieguito Union HSD](https://www.sduhsd.net/Our-District/About-Us-History/Boundaries-Map-/).
+
+**Good to know.** Some Del Mar Mesa neighborhoods pay Mello-Roos (a special tax, such as a school or facilities CFD) on top of regular property tax, and others don't. It shows as a separate line on the property tax bill, so check the bill on every listing.
 
 ### Recently sold in Del Mar Mesa
 
@@ -1157,7 +1275,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 | 10871 Cadence Isle Ct — Alta Del Mar | 4 / 5 | $5,100,000 | Feb 19, 2026 |
 | 6286 Belmont Trail Ct — Alta Del Mar | 5 / 5 | $4,210,000 | Dec 5, 2025 |
 
-### Del Mar Mesa Homes: Common Questions
+### Del Mar Mesa: Common Questions
 
 #### How much does a house in Del Mar Mesa cost?
 
@@ -1170,6 +1288,14 @@ Del Mar Mesa has 14 single-family neighborhoods, including Meadows Del Mar, Alta
 #### How old are the homes in Del Mar Mesa?
 
 Homes that sold in the last 5 years were built between 1978 and 2024, with a median year of 2004.
+
+#### Do homes in Del Mar Mesa have an HOA?
+
+It depends on the community. Recent listings show HOA dues in Palacio Del Mar ($484 to $505 a month), Meadows Del Mar ($435 to $443 a month). Several of the smaller custom-home enclaves have small or no associations, so check each listing; the community list on this page shows what we know for each one.
+
+#### Do homes in Del Mar Mesa pay Mello-Roos?
+
+Some Del Mar Mesa neighborhoods pay Mello-Roos (a special tax, such as a school or facilities CFD) on top of regular property tax, and others don't. It shows as a separate line on the property tax bill, so check the bill on every listing.
 
 #### What schools serve Del Mar Mesa?
 
@@ -1195,7 +1321,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -1236,7 +1362,7 @@ Elementary areas from the Del Mar Union School District map and the Solana Beach
 | School | Neighborhoods | Median, 12 mo | Sold, 12 mo |
 |---|---|---|---|
 | Del Mar Union School District |  |  |  |
-| [Sage Canyon Elementary](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/) | 16 | $3.17M | 36 |
+| [Sage Canyon Elementary](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/) | 16 | $3.23M | 35 |
 | Alta Del Mar, Belmont, Breakers, Bridle Ridge, Carriage Run, Derby Hill, Lexington, Meadows Del Mar, and more |  |  |  |
 | [Pacific Sky Elementary](https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/) | 13 | $2.18M | 16 |
 | Canterra, Casabella, Cassavia, Costa Del Sol, Costa Del Sol West, Elms, Ivy, Portofino, and more |  |  |  |
@@ -1253,21 +1379,21 @@ Elementary areas from the Del Mar Union School District map and the Solana Beach
 | Solana Beach School District |  |  |  |
 | Solana Ranch Elementary | 10 | $2.41M | 22 |
 | Almeria, Arabella, Brightwater, Hampton Lane, Manzanita Trail, Olvera, Portico, Santa Barbara, and more |  |  |  |
-| Solana Highlands Elementary | 17 | $2.68M | 30 |
+| Solana Highlands Elementary | 17 | $2.68M | 29 |
 | 4x4 Construction, Alta Mar, Del Mar Summit, Derby Point, Heights, Lexington Summit, Mayfield, Promontory, and more |  |  |  |
-| Solana Santa Fe Elementary | 10 | $3.39M | 19 |
+| Solana Santa Fe Elementary | 10 | $3.33M | 18 |
 | Artesana, Casabella Collection, Meadowood, Palomar, Rancho Pacifica, Sendero Collection, Senterra, Stratford, and more |  |  |  |
 | Carmel Creek Elementary | 10 | $2.57M | 22 |
 | Bayshore, Cantamar, Carmel, Del Mar Bluffs, Del Mar Place, Granada, Heights, San Remo, and more |  |  |  |
 | Middle schools |  |  |  |
-| Carmel Valley Middle | 107 | $2.6M | 178 |
+| Carmel Valley Middle | 107 | $2.6M | 176 |
 | 4x4 Construction, Almeria, Alta Del Mar, Alta Mar, Amador, Arabella, Bayshore, Belmont, and more |  |  |  |
-| Earl Warren Middle | 13 | $3.5M | 25 |
+| Earl Warren Middle | 13 | $3.5M | 24 |
 | Alta Del Mar-Coastal, Artesana, Brightwater, Carmel, Olvera, Palomar, Rancho Pacifica, Senterra, and more |  |  |  |
 | Pacific Trails Middle | 54 | $2.81M | 74 |
 | Almeria, Amador, Arabella, Artesana, Bordeaux, Bougainvillea, Brightwater, Canterra, and more |  |  |  |
 | High school |  |  |  |
-| Torrey Pines High | 118 | $2.65M | 203 |
+| Torrey Pines High | 118 | $2.64M | 200 |
 | 4x4 Construction, Almeria, Alta Del Mar, Alta Del Mar-Coastal, Alta Mar, Amador, Arabella, Artesana, and more |  |  |  |
 
 Single-family homes inside each attendance boundary. Confirm any address with [Del Mar Union School District](https://www.dmusd.org/Page/191) or the [Solana Beach SD locator](https://www.schoolsitelocator.com/apps/solanabeach/).
@@ -1332,20 +1458,20 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
 
 ## Homes for Sale in the Sage Canyon Elementary Area | Carmel Valley 92130
 
-> Carmel Valley houses in the Sage Canyon Elementary attendance area: 12-month median $3.17M, neighborhoods in the boundary, sold prices and a map.
+> Carmel Valley houses in the Sage Canyon Elementary attendance area: 12-month median $3.23M, neighborhoods in the boundary, sold prices and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/
 
 ### Sage Canyon Elementary Homes for Sale Del Mar Union School District
 
-16 neighborhoods · 2,264+ homes · median $3.17M
+16 neighborhoods · 2,264+ homes · median $3.23M
 
 ### Sage Canyon neighborhoods
 
@@ -1363,10 +1489,10 @@ The single-family neighborhoods inside the Sage Canyon Elementary attendance bou
 
 Dashed line: the Sage Canyon Elementary attendance boundary from the Del Mar Union School District map. Neighborhood outlines are approximate. Boundaries change, so confirm any address with [the district](https://www.dmusd.org/Page/191).
 
-- **Median sale, last 12 mo:** $3.17M
-- **Sold, last 12 mo:** 36
-- **Per sq ft, last 12 mo:** $866
-- **On market, last 12 mo:** 10 days
+- **Median sale, last 12 mo:** $3.23M
+- **Sold, last 12 mo:** 35
+- **Per sq ft, last 12 mo:** $867
+- **On market, last 12 mo:** 9 days
 
 ### Carmel Valley houses for sale now
 
@@ -1380,8 +1506,8 @@ This search shows all of 92130. Ask me which listings are inside the Sage Canyon
 |---|---|---|
 | [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) | 10 | $3.1M–$3.7M |
 | Palacio Del Mar | 9 | $1.98M–$2.34M |
-| Belmont | 4 | $2.5M–$3.1M |
 | Alta Del Mar | 3 | $4.21M–$5.1M |
+| Belmont | 3 | $2.5M–$3.1M |
 | Meadows Del Mar | 3 | $3.63M–$4.75M |
 | Derby Hill | 2 | $3.23M–$4.1M |
 | Steeplechase | 2 | $2.41M–$2.42M |
@@ -1406,9 +1532,9 @@ From where homes sold in the last 12 months. 1 more sales had no neighborhood na
 
 #### 3,000–4,000 sq ft
 
-**$2.65M–$3.7M**
+**$2.66M–$3.7M**
 
-7 sales · about $862/sq ft · last sold $3.1M, Oct 2026
+6 sales · about $914/sq ft · last sold $3.1M, Oct 2026
 
 #### 4,000–5,000 sq ft
 
@@ -1422,7 +1548,7 @@ From where homes sold in the last 12 months. 1 more sales had no neighborhood na
 
 6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 27, 2026.
 
 ### Recently sold in the Sage Canyon area
 
@@ -1465,7 +1591,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 #### How much does a house in the Sage Canyon Elementary area cost?
 
-In the last 12 months, 36 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,171,948 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,980,000 and $5,250,000.
+In the last 12 months, 35 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,225,000 (about $867 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,980,000 and $5,250,000.
 
 #### Which neighborhoods are in the Sage Canyon Elementary area?
 
@@ -1481,7 +1607,7 @@ Use the Del Mar Union School District school locator with the exact address befo
 
 #### How fast do homes sell in the Sage Canyon Elementary area?
 
-Over the last 12 months, the median home sold in 10 days on market. Homes in sought-after school areas often go under contract in the first week.
+Over the last 12 months, the median home sold in 9 days on market. Homes in sought-after school areas often go under contract in the first week.
 
 ### Looking in the Sage Canyon Area?
 
@@ -1499,7 +1625,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -1566,7 +1692,7 @@ From where homes sold in the last 12 months.
 
 3 sales · about $773/sq ft · last sold $2.39M, Nov 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 27, 2026.
 
 ### Recently sold in the Pacific Sky area
 
@@ -1643,7 +1769,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -1713,7 +1839,7 @@ From where homes sold in the last 12 months. 2 more sales had no neighborhood na
 
 7 sales · about $855/sq ft · last sold $2.97M, Oct 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 27, 2026.
 
 ### Recently sold in the Ocean Air area
 
@@ -1790,7 +1916,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -1860,7 +1986,7 @@ From where homes sold in the last 12 months.
 
 4 sales · about $805/sq ft · last sold $3.44M, Sep 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 27, 2026.
 
 ### Recently sold in the Ashley Falls area
 
@@ -1937,7 +2063,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -2009,7 +2135,7 @@ From where homes sold in the last 12 months.
 
 3 sales · about $702/sq ft · last sold $3.04M, Jun 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 27, 2026.
 
 ### Recently sold in the Sycamore Ridge area
 
@@ -2086,7 +2212,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -2148,7 +2274,7 @@ From where homes sold in the last 12 months.
 
 2 sales · about $790/sq ft · last sold $3.1M, Feb 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 27, 2026.
 
 ### Recently sold in the Torrey Hills area
 
@@ -2225,7 +2351,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -2242,10 +2368,10 @@ Source page: https://carmelvalleyhomesforsale.com/carmel-valley-luxury-homes-for
 
 Carmel Valley luxury homes for sale are single-family houses of $3 million and up, from the newest homes in Pacific Highlands Ranch to the large lots of Del Mar Mesa. Here is where they sit, what the top homes sold for in the last 12 months and what to expect when you buy one.
 
-- **Sold at $3M+, last 12 mo:** 71
-- **Median $3M+ sale, 12 mo:** $3.54M
-- **Per sq ft, 12 mo:** $873
-- **On market, 12 mo:** 12 days
+- **Sold at $3M+, last 12 mo:** 70
+- **Median $3M+ sale, 12 mo:** $3.52M
+- **Per sq ft, 12 mo:** $878
+- **On market, 12 mo:** 11 days
 
 ### Carmel Valley luxury listings
 
@@ -2258,14 +2384,14 @@ Live single-family listings in 92130. Set **Price Min** to $3,000,000 to see onl
 | Area | $3M+ sold | Price range |
 |---|---|---|
 | [Pacific Highlands Ranch](https://carmelvalleyhomesforsale.com/pacific-highlands-ranch-homes-for-sale/) — 39% of its sales | 22 | $3.1M–$5.38M |
-| [Carmel Country Highlands](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/) — 68% of its sales | 13 | $3.1M–$4.1M |
+| [Carmel Country Highlands](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/) — 72% of its sales | 13 | $3.1M–$4.1M |
 | [Del Mar Mesa](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/) — 100% of its sales | 10 | $3.63M–$5.25M |
 | [South of Del Mar Heights Road](https://carmelvalleyhomesforsale.com/south-of-del-mar-heights-road-homes-for-sale/) — 20% of its sales | 9 | $3.01M–$3.84M |
-| [North of Del Mar Heights Road](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/) — 23% of its sales | 7 | $3.13M–$3.7M |
+| [North of Del Mar Heights Road](https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-homes-for-sale/) — 24% of its sales | 7 | $3.13M–$3.7M |
 | [Torrey Hills](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/) — 16% of its sales | 4 | $3.1M–$4.8M |
 | [Torrey Highlands](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/) — 33% of its sales | 1 | $4.2M |
 
-Single-family sales of $3 million or more in the last 12 months, and their share of each area’s sales, as of November 24, 2026. 5 more were in parts of 92130 outside these areas.
+Single-family sales of $3 million or more in the last 12 months, and their share of each area’s sales, as of November 27, 2026. 4 more were in parts of 92130 outside these areas.
 
 ### Neighborhoods with the most $3M+ sales
 
@@ -2274,12 +2400,6 @@ Single-family sales of $3 million or more in the last 12 months, and their share
 **$3.1M–$3.7M**
 
 10 sales of $3M+ in the last 12 months · median $3.33M
-
-#### Rancho Pacifica
-
-**$4.2M–$8.58M**
-
-4 sales of $3M+ in the last 12 months · median $5.93M
 
 #### Vista Del Mar
 
@@ -2311,6 +2431,12 @@ Single-family sales of $3 million or more in the last 12 months, and their share
 
 3 sales of $3M+ in the last 12 months · median $4.28M
 
+#### Rancho Pacifica
+
+**$4.2M–$8.58M**
+
+3 sales of $3M+ in the last 12 months · median $6.35M
+
 #### Santa Fe Summit
 
 **$3.13M–$3.68M**
@@ -2335,7 +2461,6 @@ Single-family sales of $3 million or more in the last 12 months, and their share
 |---|---|---|---|---|
 | 4760 Rancho Del Mar Trail — Rancho Pacifica | 7 / 10 | 12,028 | $8,580,000 | Jun 26, 2026 |
 | 4695 Rancho Verde Trl — Rancho Pacifica | 5 / 6 | 7,670 | $6,350,000 | Feb 13, 2026 |
-| 4955 Rancho Del Mar Trail — Rancho Pacifica | 5 / 7 | 9,145 | $5,500,000 | Nov 26, 2025 |
 | 5358 Aurora Summit — Vista Santa Fe | 5 / 5 | 4,356 | $5,380,000 | Aug 26, 2026 |
 | 5384 Aurora Summit Trl — Vista Santa Fe | 6 / 8 | 5,003 | $5,300,000 | Feb 24, 2026 |
 | 5171 Del Mar Mesa Road | 8 / 9 | 8,186 | $5,250,000 | Aug 17, 2026 |
@@ -2343,16 +2468,17 @@ Single-family sales of $3 million or more in the last 12 months, and their share
 | 3811 Via Del Mar | 4 / 2 | 3,600 | $4,800,000 | Jun 12, 2026 |
 | 5560 Meadows Del Mar — Meadows Del Mar | 6 / 7 | 6,405 | $4,750,000 | Mar 27, 2026 |
 | 12380 Angouleme Ct — Whitehorse | 5 / 6 | 5,163 | $4,600,000 | May 28, 2026 |
+| 5286 Coastal Sage Trail — The Highlands | 5 / 6 | 4,937 | $4,550,000 | Jul 22, 2026 |
 
 Closed single-family MLS sales in 92130. Information deemed reliable but not guaranteed.
 
 ### Carmel Valley homes over $3 million: the market now
 
-In the last 12 months, 71 of 209 single-family homes in Carmel Valley sold for $3 million or more. That is about 34% of all house sales, up from 32% in the 12 months before. 21 sold for $4 million or more and 7 for $5 million or more.
+In the last 12 months, 70 of 206 single-family homes in Carmel Valley sold for $3 million or more. That is about 34% of all house sales, up from 32% in the 12 months before. 20 sold for $4 million or more and 6 for $5 million or more.
 
-The typical luxury home here has 5 bedrooms (36 of the 71 sales), about 4,191 sq ft of living space and a lot of about 10,516 sq ft. They were built between 1978 and 2023, with a median year of 2003.
+The typical luxury home here has 5 bedrooms (35 of the 70 sales), about 4,176 sq ft of living space and a lot of about 10,507 sq ft. They were built between 1978 and 2023, with a median year of 2003.
 
-High end homes in Carmel Valley still move quickly: half of the $3M+ sales went under contract within 12 days on market. That leaves little time to decide, so compare a home with recent sales in its own neighborhood before you tour it.
+High end homes in Carmel Valley still move quickly: half of the $3M+ sales went under contract within 11 days on market. That leaves little time to decide, so compare a home with recent sales in its own neighborhood before you tour it.
 
 ### Carmel Valley estates for sale
 
@@ -2360,12 +2486,12 @@ For a larger lot, start with Del Mar Mesa: every one of its 10 sales in the last
 
 ### Elementary schools for $3M+ homes
 
-- [Sage Canyon Elementary](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/) — 21 of 71 sales
-- [Ashley Falls Elementary](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/) — 5 of 71 sales
-- [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) — 4 of 71 sales
-- [Ocean Air Elementary](https://carmelvalleyhomesforsale.com/ocean-air-elementary-homes-for-sale/) — 3 of 71 sales
-- [Pacific Sky Elementary](https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/) — 2 of 71 sales
-- [Torrey Hills Elementary](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/) — 1 of 71 sales
+- [Sage Canyon Elementary](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/) — 21 of 70 sales
+- [Ashley Falls Elementary](https://carmelvalleyhomesforsale.com/ashley-falls-elementary-homes-for-sale/) — 5 of 70 sales
+- [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) — 4 of 70 sales
+- [Ocean Air Elementary](https://carmelvalleyhomesforsale.com/ocean-air-elementary-homes-for-sale/) — 3 of 70 sales
+- [Pacific Sky Elementary](https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/) — 2 of 70 sales
+- [Torrey Hills Elementary](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/) — 1 of 70 sales
 
 Attendance area of each $3M+ sale, last 12 months. Confirm any address with the school district.
 
@@ -2377,7 +2503,7 @@ Most $3M+ buyers here are choosing between a school area and a lot size. Compare
 
 #### What counts as a luxury home in Carmel Valley?
 
-On this page, a luxury home is a single-family house that sells for $3 million or more. In the last 12 months 71 of the 209 single-family sales in Carmel Valley (92130) reached that mark, about 34% of them.
+On this page, a luxury home is a single-family house that sells for $3 million or more. In the last 12 months 70 of the 206 single-family sales in Carmel Valley (92130) reached that mark, about 34% of them.
 
 #### What is the most expensive home sold in Carmel Valley recently?
 
@@ -2385,19 +2511,19 @@ The top sale of the last 12 months closed at $8,580,000 in Jun 26, 2026, a 7-bed
 
 #### Which Carmel Valley neighborhoods have the most luxury homes?
 
-By sales of $3M and up over the last 12 months, Pacific Highlands Ranch led with 22. Every one of the 10 Del Mar Mesa sales was over $3M. The neighborhoods with the most $3M+ sales were Lexington (10), Rancho Pacifica (4), Vista Del Mar (4), Almeria (3).
+By sales of $3M and up over the last 12 months, Pacific Highlands Ranch led with 22. Every one of the 10 Del Mar Mesa sales was over $3M. The neighborhoods with the most $3M+ sales were Lexington (10), Vista Del Mar (4), Almeria (3), Alta Del Mar (3).
 
 #### How fast do luxury homes sell in Carmel Valley?
 
-Half of the $3M+ homes that sold in the last 12 months went under contract within 12 days on market. Compare a home with recent sales in its own neighborhood before you tour it.
+Half of the $3M+ homes that sold in the last 12 months went under contract within 11 days on market. Compare a home with recent sales in its own neighborhood before you tour it.
 
 #### What do Carmel Valley homes over $3 million cost per square foot?
 
-The median was about $873 per sq ft over the last 12 months, for a median home of about 4,191 sq ft.
+The median was about $878 per sq ft over the last 12 months, for a median home of about 4,176 sq ft.
 
 #### Which schools serve Carmel Valley's luxury homes?
 
-Sage Canyon Elementary served the most $3M+ sales (21 of 71). High school for most of Carmel Valley is Torrey Pines High in the San Dieguito Union High School District, with Canyon Crest Academy and San Dieguito Academy by lottery. School boundaries change, so confirm any address with the district.
+Sage Canyon Elementary served the most $3M+ sales (21 of 70). High school for most of Carmel Valley is Torrey Pines High in the San Dieguito Union High School District, with Canyon Crest Academy and San Dieguito Academy by lottery. School boundaries change, so confirm any address with the district.
 
 ### Looking for a luxury home in Carmel Valley?
 
@@ -2415,7 +2541,7 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 
 
 ---
@@ -2441,6 +2567,8 @@ Source page: https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-
 - **Sq ft:** 2,945–4,930
 - **Median lot:** 8,448 sq ft
 - **Days on market, 12 mo:** 8 days
+- **HOA:** Confirm
+- **Mello-Roos:** Check tax bill
 
 *Location*
 
@@ -2473,37 +2601,48 @@ School assignments can change. Verify current boundaries directly with [Del Mar 
 
 *The First Question*
 
-### What a Lexington Home Costs by Bedrooms
+### What a Lexington Home Costs by Size
 
-Closed single-family sales in Lexington in the last 12 months, by bedroom count: what each size sold for and the most recent sale.
+Lexington homes come in a few floor-plan sizes. Each card shows the most recent sales of that size, so you can compare like with like.
 
-#### 4 Bedroom
+#### About 3,850 sq ft
 
-1 sale · 12 mo
+3,708–3,827 sq ft · usually 5 bed
 
-- **Size:** 4,620 sq ft
-- **Sold for:** $3.5M
-- **Most recent sale:** $3,500,000 · May 2026
+- **Sold for:** $2.8M–$3.7M
+- **Per sq ft:** about $836
+- $3,100,825 — 3,827 sq ft · 5 bd · Oct 2026
+- $3,300,000 — 3,827 sq ft · 5 bd · Jul 2026
+- $3,700,000 — 3,827 sq ft · 5 bd · Apr 2026
+- $2,750,000 — 3,827 sq ft · 5 bd · Aug 2025
 
-#### 5 Bedroom
+4 most recent sales, last 2 years
 
-4 sales · 12 mo
+#### About 4,450 sq ft
 
-- **Size:** 2,945–3,827 sq ft
-- **Sold for:** $3.1M–$3.7M
-- **Most recent sale:** $3,100,825 · Oct 2026
+4,433–4,454 sq ft · usually 6 bed
 
-#### 6 Bedroom
+- **Sold for:** $2.6M–$3.5M
+- **Per sq ft:** about $685
+- $3,500,000 — 4,454 sq ft · 6 bd · Oct 2026
+- $2,600,000 — 4,454 sq ft · 5 bd · Apr 2024
 
-4 sales · 12 mo
+2 most recent sales, last 5 years
 
-- **Size:** 4,454–4,687 sq ft
+#### About 4,700 sq ft
+
+4,620–4,740 sq ft · usually 6 bed
+
 - **Sold for:** $3.1M–$3.5M
-- **Most recent sale:** $3,500,000 · Oct 2026
+- **Per sq ft:** about $722
+- $3,118,896 — 4,687 sq ft · 6 bd · Jul 2026
+- $3,298,765 — 4,687 sq ft · 6 bd · Jun 2026
+- $3,500,000 — 4,620 sq ft · 4 bd · May 2026
+- $3,455,000 — 4,670 sq ft · 6 bd · May 2026
 
-6-bedroom homes made up 4 of the 10 sales. See the [price history](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/#sold-data).
+4 most recent sales, last 2 years
 
-Closed MLS sales, last 12 months.
+Closed MLS sales: up to 4 most recent per size from the last 2 years (5 years when a size has fewer than 2 recent sales). As of Nov 27, 2026.
 
 ### Life at Lexington
 
@@ -2516,6 +2655,18 @@ Lexington is a neighborhood of 265 homes built 1998–2003 in Carmel Country Hig
 - **School area.** Homes here are in the [Sage Canyon Elementary](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/) attendance area.
 - **Homes sell quickly.** Over the last 12 months the median home sold in 8 days, versus 10 across Carmel Valley.
 
+*HOA & Mello-Roos*
+
+### Does Lexington Have an HOA?
+
+Whether there is an HOA, what it costs, and Mello-Roos.
+
+Confirm
+
+**HOA dues for Lexington are being confirmed.** The listing and the seller’s HOA documents show the exact monthly amount. Ask me and I’ll check it for the home you like.
+
+**Mello-Roos:** check the property tax bill for the home; special taxes (CFDs) show up as separate lines and can differ from street to street.
+
 *Explore More*
 
 ### Neighborhoods Near Lexington
@@ -2524,17 +2675,17 @@ Worth comparing if you like Lexington's location.
 
 #### Steeplechase
 
-13 sales in 5 yrs · 12-mo median $2.41M
+12-mo median $2.4M
 
-Next door in Carmel Country Highlands.
+Next door in Carmel Country Highlands. Homes about 2,507–3,049 sq ft, built 1999–2001.
 
 [Carmel Country Highlands guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/)
 
 #### Belmont
 
-28 sales in 5 yrs · 12-mo median $2.66M
+12-mo median $2.7M
 
-Next door in Carmel Country Highlands.
+Next door in Carmel Country Highlands. Homes about 2,720–4,670 sq ft, built 1999–2011.
 
 [Carmel Country Highlands guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/)
 
@@ -2542,15 +2693,23 @@ Next door in Carmel Country Highlands.
 
 7 sales in 5 yrs
 
-Next door in Carmel Country Highlands.
+Next door in Carmel Country Highlands. Homes about 3,470–3,927 sq ft, built 2000–2001.
 
 [Carmel Country Highlands guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/)
+
+#### Alta Del Mar
+
+12-mo median $4.5M
+
+0.1 miles away in Del Mar Mesa. Homes about 4,191–6,235 sq ft, built 2013–2016.
+
+[Del Mar Mesa guide →](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/)
 
 *Sold Data · Last 5 Years*
 
 ### Lexington Prices & Sales
 
-In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 24, 2026.
+In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 27, 2026.
 
 The stats reflect the trailing 12 months; the table breaks the same data out by calendar year.
 
@@ -2679,6 +2838,18 @@ Over the last 12 months, the median Lexington home sold in 8 days on market. Wel
 
 Lexington is in Carmel Country Highlands, next to Steeplechase, Belmont, Breakers. See the map on this page for its boundary.
 
+#### Does Lexington have an HOA?
+
+The listing for each Lexington home shows whether it pays HOA dues and how much. Ask me and I'll confirm it for the home you're considering.
+
+#### Is there Mello-Roos in Lexington?
+
+Check the property tax bill for the Lexington home you like: Mello-Roos and other special taxes (CFDs) appear as separate lines. Ask the title company for the exact amount during escrow.
+
+#### How big are homes in Lexington, and what do they sell for?
+
+Homes here come in a few floor-plan sizes: about 3,850 sq ft ($2.8M to $3.7M); about 4,450 sq ft ($2.6M to $3.5M); about 4,700 sq ft ($3.1M to $3.5M). These ranges use the most recent sales of each size; see the size cards on this page.
+
 ### Thinking About Lexington?
 
 Buying or selling in Lexington? I track every sale here and can tell you what a home is really worth, with the comps to back it up.
@@ -2695,5 +2866,5 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
 

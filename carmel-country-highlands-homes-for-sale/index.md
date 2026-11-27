@@ -1,6 +1,6 @@
 # Carmel Country Highlands Homes for Sale | Carmel Valley, San Diego 92130
 
-> Carmel Country Highlands single-family homes in Carmel Valley: 12-month median $3.23M, 8 neighborhoods, sold prices, schools and a map.
+> Carmel Country Highlands single-family homes in Carmel Valley: 12-month median $3.24M, 8 neighborhoods, sold prices, schools and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/
 
@@ -10,10 +10,10 @@ Source page: https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes
 
 Larger 1990s and early-2000s homes on bigger lots in the hills of Carmel Country Highlands, many with five or more bedrooms.
 
-- **Median sale, last 12 mo:** $3.23M
-- **Sold, last 12 mo:** 19
+- **Median sale, last 12 mo:** $3.24M
+- **Sold, last 12 mo:** 18
 - **Neighborhoods:** 8
-- **On market, last 12 mo:** 8 days
+- **On market, last 12 mo:** 6 days
 
 ## Carmel Country Highlands neighborhoods on the map
 
@@ -30,7 +30,7 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 | Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
 | [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) — 265 homes · built 1998–2003 | 10 | $3.1M–$3.7M |
-| Belmont — 316 homes · built 1999–2011 | 4 | $2.5M–$3.1M |
+| Belmont — 316 homes · built 1999–2011 | 3 | $2.5M–$3.1M |
 | Derby Hill — 172 homes · built 2005–2009 | 2 | $3.23M–$4.1M |
 | Steeplechase — 193 homes · built 1999–2001 | 2 | $2.41M–$2.42M |
 | Carriage Run — 169 homes · built 2010–2011 | 1 | $2.13M |
@@ -48,9 +48,9 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 
 ### 3,000–4,000 sq ft
 
-**$2.65M–$3.7M**
+**$2.66M–$3.7M**
 
-7 sales · about $862/sq ft · last sold $3.1M, Oct 2026
+6 sales · about $914/sq ft · last sold $3.1M, Oct 2026
 
 ### 4,000–5,000 sq ft
 
@@ -58,7 +58,7 @@ This search shows all of 92130. Zoom the map to Carmel Country Highlands, or ask
 
 7 sales · about $740/sq ft · last sold $3.5M, Oct 2026
 
-19 single-family sales inside Carmel Country Highlands, last 12 months, as of November 24, 2026.
+18 single-family sales inside Carmel Country Highlands, last 12 months, as of November 27, 2026.
 
 ## Elementary schools
 
@@ -86,7 +86,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in Carmel Country Highlands cost?
 
-In the last 12 months, 19 single-family homes in Carmel Country Highlands sold at a median of $3,225,000 (about $862 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $2,132,000 and $4,100,000.
+In the last 12 months, 18 single-family homes in Carmel Country Highlands sold at a median of $3,237,500 (about $877 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $2,132,000 and $4,100,000.
 
 ### Which neighborhoods are in Carmel Country Highlands?
 
@@ -102,7 +102,7 @@ Elementary school depends on the street: Sage Canyon Elementary (91% of recent s
 
 ### How fast do homes sell in Carmel Country Highlands?
 
-Over the last 12 months, the median home sold in 8 days on market.
+Over the last 12 months, the median home sold in 6 days on market.
 
 ## Looking in Carmel Country Highlands?
 
@@ -120,4 +120,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.

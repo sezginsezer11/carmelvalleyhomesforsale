@@ -1,0 +1,457 @@
+{
+ "slug": "meadows-del-mar",
+ "name": "Meadows Del Mar",
+ "path": "/meadows-del-mar-carmel-valley/",
+ "type": "sfr",
+ "parent_name": "Neighborhoods",
+ "parent_url": "/carmel-valley-neighborhoods/",
+ "api_community": "Meadows Del Mar",
+ "seo": {
+  "title": "Meadows Del Mar Carmel Valley: Prices &amp; HOA | Sez Sezer",
+  "description": "Meadows Del Mar in Del Mar Mesa, Carmel Valley: what homes sell for by size, HOA dues, Mello-Roos, schools and recent sales, from Sez Sezer, Keller Williams Realty.",
+  "jsonld_description": "Meadows Del Mar single-family homes for sale in Del Mar Mesa, Carmel Valley, San Diego. 12-month median sale $4.28M."
+ },
+ "geo": {
+  "lat": 32.940014,
+  "lng": -117.195986
+ },
+ "boundary": [
+  [
+   [
+    32.93768,
+    -117.19368
+   ],
+   [
+    32.93723,
+    -117.19202
+   ],
+   [
+    32.93653,
+    -117.18989
+   ],
+   [
+    32.93676,
+    -117.18897
+   ],
+   [
+    32.93559,
+    -117.18835
+   ],
+   [
+    32.9353,
+    -117.18689
+   ],
+   [
+    32.93564,
+    -117.18681
+   ],
+   [
+    32.93656,
+    -117.18691
+   ],
+   [
+    32.93674,
+    -117.18693
+   ],
+   [
+    32.93686,
+    -117.18694
+   ],
+   [
+    32.93787,
+    -117.18703
+   ],
+   [
+    32.93954,
+    -117.18702
+   ],
+   [
+    32.9412,
+    -117.18703
+   ],
+   [
+    32.94127,
+    -117.18825
+   ],
+   [
+    32.94129,
+    -117.19017
+   ],
+   [
+    32.94131,
+    -117.19144
+   ],
+   [
+    32.94131,
+    -117.19306
+   ],
+   [
+    32.94131,
+    -117.19395
+   ],
+   [
+    32.94138,
+    -117.19484
+   ],
+   [
+    32.9414,
+    -117.19547
+   ],
+   [
+    32.94167,
+    -117.19574
+   ],
+   [
+    32.9421,
+    -117.1958
+   ],
+   [
+    32.94248,
+    -117.19565
+   ],
+   [
+    32.94292,
+    -117.1957
+   ],
+   [
+    32.94326,
+    -117.19597
+   ],
+   [
+    32.94341,
+    -117.19679
+   ],
+   [
+    32.94357,
+    -117.19733
+   ],
+   [
+    32.94359,
+    -117.1979
+   ],
+   [
+    32.94353,
+    -117.19848
+   ],
+   [
+    32.94347,
+    -117.19923
+   ],
+   [
+    32.94302,
+    -117.1997
+   ],
+   [
+    32.94245,
+    -117.1997
+   ],
+   [
+    32.94182,
+    -117.19968
+   ],
+   [
+    32.94151,
+    -117.1998
+   ],
+   [
+    32.94165,
+    -117.20409
+   ],
+   [
+    32.93986,
+    -117.20412
+   ],
+   [
+    32.93971,
+    -117.2037
+   ],
+   [
+    32.94011,
+    -117.20319
+   ],
+   [
+    32.94061,
+    -117.20275
+   ],
+   [
+    32.94061,
+    -117.20253
+   ],
+   [
+    32.94037,
+    -117.20252
+   ],
+   [
+    32.94007,
+    -117.20262
+   ],
+   [
+    32.93975,
+    -117.20283
+   ],
+   [
+    32.93931,
+    -117.20282
+   ],
+   [
+    32.93826,
+    -117.20262
+   ],
+   [
+    32.93803,
+    -117.20217
+   ],
+   [
+    32.93822,
+    -117.20164
+   ],
+   [
+    32.93863,
+    -117.20118
+   ],
+   [
+    32.93921,
+    -117.20076
+   ],
+   [
+    32.93987,
+    -117.20025
+   ],
+   [
+    32.94035,
+    -117.19984
+   ],
+   [
+    32.94028,
+    -117.19453
+   ],
+   [
+    32.93886,
+    -117.19419
+   ],
+   [
+    32.93775,
+    -117.19409
+   ],
+   [
+    32.93768,
+    -117.19368
+   ]
+  ]
+ ],
+ "hero": {
+  "eyebrow": "Del Mar Mesa &middot; Single-family",
+  "h1": "Meadows Del Mar in Del Mar Mesa, Carmel Valley",
+  "lead": "200 single-family homes built 2000&ndash;2017 in Del Mar Mesa, in the Sage Canyon Elementary area. Live listings, real sold prices and what to know before you buy.",
+  "img": "",
+  "alt": ""
+ },
+ "facts": [
+  {
+   "icon": "price",
+   "value": "$3.63M&ndash;$4.75M",
+   "label": "Sold, last 12 mo"
+  },
+  {
+   "icon": "price",
+   "value": "$4.28M",
+   "label": "Median, last 12 mo"
+  },
+  {
+   "icon": "units",
+   "value": "200",
+   "label": "Homes"
+  },
+  {
+   "icon": "built",
+   "value": "2000&ndash;2017",
+   "label": "Built"
+  },
+  {
+   "icon": "sqft",
+   "value": "4,264&ndash;7,755",
+   "label": "Sq ft"
+  },
+  {
+   "icon": "sqft",
+   "value": "16,575 sq ft",
+   "label": "Median lot"
+  },
+  {
+   "icon": "time",
+   "value": "38 days",
+   "label": "Days on market, 12 mo"
+  }
+ ],
+ "location_intro": "Meadows Del Mar is in <a href=\"/del-mar-mesa-homes-for-sale/\">Del Mar Mesa</a>. Its closest neighbors are Whitehorse, Ridge Estates, Alta Del Mar.",
+ "schools": [
+  {
+   "level": "Elementary",
+   "name": "Sage Canyon Elementary",
+   "district": "Del Mar Union School District"
+  },
+  {
+   "level": "Middle School",
+   "name": "Confirm with the district",
+   "district": "San Dieguito Union High School District"
+  },
+  {
+   "level": "High School",
+   "name": "Torrey Pines High",
+   "district": "San Dieguito Union High School District (Canyon Crest Academy and San Dieguito Academy by lottery)"
+  }
+ ],
+ "nearby": [
+  [
+   "Whitehorse",
+   "next door"
+  ],
+  [
+   "Ridge Estates",
+   "next door"
+  ],
+  [
+   "Alta Del Mar",
+   "next door"
+  ],
+  [
+   "Ridge",
+   "0.1 mi"
+  ],
+  [
+   "Silver Oaks Estates / Anderson Estates",
+   "0.1 mi"
+  ],
+  [
+   "Palacio Del Mar",
+   "0.1 mi"
+  ]
+ ],
+ "glance": {
+  "mode": "auto",
+  "h2": "What a Meadows Del Mar Home Costs by Bedrooms",
+  "lede": "Closed single-family sales in Meadows Del Mar in the last 12 months, by bedroom count: what each size sold for and the most recent sale.",
+  "cards": [
+   {
+    "beds": 3,
+    "count": "",
+    "size": "",
+    "latest": "",
+    "range": ""
+   },
+   {
+    "beds": 5,
+    "count": "",
+    "size": "",
+    "latest": "",
+    "range": ""
+   },
+   {
+    "beds": 6,
+    "count": "",
+    "size": "",
+    "latest": "",
+    "range": ""
+   }
+  ],
+  "ratio": "5-bedroom homes made up 1 of the 3 sales."
+ },
+ "life": {
+  "lead": "Meadows Del Mar is a neighborhood of 200 homes built 2000&ndash;2017 in Del Mar Mesa. Homes run 4,264&ndash;7,755 sq ft on lots around 16,575 sq ft, and about 4 sell each year.",
+  "reasons": [
+   [
+    "Big floor plans.",
+    "The median home here has 5,926 sq ft, and 5-bedroom homes are the most common."
+   ],
+   [
+    "Bigger lots.",
+    "The median lot is about 16,575 sq ft, larger than the Carmel Valley median of 6,977."
+   ],
+   [
+    "School area.",
+    "Homes here are in the <a href=\"/sage-canyon-elementary-homes-for-sale/\">Sage Canyon Elementary</a> attendance area."
+   ]
+  ]
+ },
+ "similar": {
+  "auto": true,
+  "h2": "Neighborhoods Near Meadows Del Mar",
+  "intro": "Worth comparing if you like Meadows Del Mar's location.",
+  "cards": [
+   {
+    "href": "/del-mar-mesa-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Whitehorse",
+    "meta": "4 sales in 5 yrs &middot; 12-mo median $4.6M",
+    "desc": "Next door in Del Mar Mesa.",
+    "cta": "Del Mar Mesa guide"
+   },
+   {
+    "href": "/del-mar-mesa-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Alta Del Mar",
+    "meta": "11 sales in 5 yrs &middot; 12-mo median $4.5M",
+    "desc": "Next door in Del Mar Mesa.",
+    "cta": "Del Mar Mesa guide"
+   },
+   {
+    "href": "/del-mar-mesa-homes-for-sale/",
+    "img": "",
+    "alt": "",
+    "name": "Ridge",
+    "meta": "3 sales in 5 yrs",
+    "desc": "0.1 miles away in Del Mar Mesa.",
+    "cta": "Del Mar Mesa guide"
+   }
+  ]
+ },
+ "fit": {
+  "good": [
+   [
+    "Buyers who want space",
+    "4,264&ndash;7,755 sq ft homes with 3, 5, 6 bedrooms."
+   ],
+   [
+    "School-focused families",
+    "Sage Canyon Elementary for elementary, Torrey Pines High for high school."
+   ],
+   [
+    "Buyers who want a quieter neighborhood",
+    "Only about 4 sales a year, so homes don't come up often."
+   ]
+  ],
+  "weigh": [
+   [
+    "Prices above the Carmel Valley median",
+    "Meadows Del Mar's median over the last 12 months is $4.28M, versus $2.63M for all Carmel Valley houses."
+   ]
+  ]
+ },
+ "faq_h2": "Meadows Del Mar Homes: Common Questions",
+ "faq": [
+  {
+   "q": "How much do homes in Meadows Del Mar cost?",
+   "a": "<p>In the last 12 months, 3 single-family homes in Meadows Del Mar sold between $3.63M and $4.75M, at a median of $4.28M. See the price-by-size cards and recent sales on this page for what each kind of home sold for.</p>"
+  },
+  {
+   "q": "How many homes are in Meadows Del Mar?",
+   "a": "<p>Meadows Del Mar has about 200 homes, built 2000 to 2017.</p>"
+  },
+  {
+   "q": "What school area is Meadows Del Mar in?",
+   "a": "<p>Meadows Del Mar is in the Sage Canyon Elementary attendance area (Del Mar Union School District). High school is Torrey Pines High (San Dieguito Union HSD), with Canyon Crest Academy and San Dieguito Academy available by lottery. School boundaries change, so confirm any address with the district before you buy.</p>"
+  },
+  {
+   "q": "How fast do homes sell in Meadows Del Mar?",
+   "a": "<p>Over the last 12 months, the median Meadows Del Mar home sold in 38 days on market. Well-priced homes often go under contract in the first week.</p>"
+  },
+  {
+   "q": "Where is Meadows Del Mar in Carmel Valley?",
+   "a": "<p>Meadows Del Mar is in Del Mar Mesa, next to Whitehorse, Ridge Estates, Alta Del Mar. See the map on this page for its boundary.</p>"
+  }
+ ],
+ "contact_lead": "Buying or selling in Meadows Del Mar? I track every sale here and can tell you what a home is really worth, with the comps to back it up.",
+ "publish_on": "2026-12-01"
+}

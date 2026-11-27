@@ -60,9 +60,12 @@ PAGES = [
      "Houses in the Torrey Hills Elementary attendance area (Del Mar Union SD): boundary map, neighborhoods inside it, prices, recent sales, FAQs."),
     ("/carmel-valley-luxury-homes-for-sale/", "Overview",
      "Carmel Valley luxury homes for sale ($3M and up): live listings, where luxury homes sit by area and neighborhood, the top sales of the last 12 months, market notes, FAQs."),
-    ("/lexington-carmel-valley-homes-for-sale/", "Neighborhoods",
-     "Lexington: single-family neighborhood in Carmel Country Highlands, in the Sage Canyon Elementary area - prices by bedroom, sold data, schools, map, FAQs."),
 ]
+# Community pages: every published tools/communities/*.json (drafts with a future publish_on are left out).
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from publish import communities as _communities, is_live as _is_live  # noqa: E402
+PAGES += [(c["path"], "Neighborhoods", c.get("llm") or f'{c["name"]}: single-family community in Carmel Valley - prices by home size, HOA and Mello-Roos, sold data, schools, map, FAQs.')
+          for c in _communities() if _is_live(c)]
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
         "meta", "param", "source", "track", "wbr"}

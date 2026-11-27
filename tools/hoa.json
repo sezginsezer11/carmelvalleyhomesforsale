@@ -1,0 +1,69 @@
+{
+ "_about": "HOA and Mello-Roos facts per community, used by build_communities.py (HOA box, compare bars, nearby cards, FAQ). status: yes | no | confirm. Fill fee_low/fee_high in dollars per month. 'confirm' shows a 'confirm with the HOA' notice and keeps the page from guessing.",
+ "Meadows Del Mar": {
+  "status": "yes",
+  "fee_low": 435,
+  "fee_high": 443,
+  "mello": "yes",
+  "source": "2024-2026 MLS listings",
+  "note": "Recent listings show $435-$443 a month.",
+  "mello_note": "Homes here are in a Mello-Roos district (CFD), billed on the property tax bill."
+ },
+ "Palacio Del Mar": {
+  "status": "yes",
+  "fee_low": 484,
+  "fee_high": 505,
+  "mello": "some",
+  "gated": "guard",
+  "source": "2025-2026 MLS listings",
+  "note": "Recent listings show $484-$505 a month. The community is guard-gated.",
+  "amenities": [
+   [
+    "path",
+    "Private 9-hole executive golf course"
+   ],
+   [
+    "pool",
+    "Pools and spas"
+   ],
+   [
+    "tennis",
+    "Tennis and pickleball courts"
+   ],
+   [
+    "gym",
+    "Fitness center"
+   ],
+   [
+    "clubhouse",
+    "Clubhouse"
+   ],
+   [
+    "trees",
+    "Walking paths and greenbelts"
+   ]
+  ],
+  "mello_note": "At least some homes list a Mello-Roos (CFD) assessment. Check the tax bill for the home you're looking at."
+ },
+ "Alta Del Mar": {
+  "status": "confirm"
+ },
+ "Bougainvillea": {
+  "status": "confirm"
+ },
+ "Paso Fino": {
+  "status": "confirm"
+ },
+ "Whitehorse": {
+  "status": "confirm"
+ },
+ "The Preserve": {
+  "status": "confirm"
+ },
+ "Valencia": {
+  "status": "confirm"
+ },
+ "Duck Pond Ranch": {
+  "status": "confirm"
+ }
+}

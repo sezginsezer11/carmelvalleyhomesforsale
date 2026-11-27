@@ -1,4 +1,4 @@
-# Del Mar Mesa Homes for Sale | Carmel Valley, San Diego 92130
+# Del Mar Mesa, Carmel Valley: Communities, Prices & HOA
 
 > Del Mar Mesa single-family homes in Carmel Valley: 12-month median $4.39M, 14 neighborhoods, sold prices, schools and a map.
 
@@ -6,7 +6,7 @@ Source page: https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/
 
 *Carmel Valley · San Diego 92130*
 
-## Del Mar Mesa Homes for Sale
+## Del Mar Mesa, Carmel Valley
 
 Estate homes on large lots next to the Del Mar Mesa preserve, with horse trails and a rural feel.
 
@@ -58,7 +58,123 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 
 6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-10 single-family sales inside Del Mar Mesa, last 12 months, as of November 24, 2026.
+10 single-family sales inside Del Mar Mesa, last 12 months, as of November 27, 2026.
+
+## Every community in Del Mar Mesa: HOA, sizes and last sale
+
+### Palacio Del Mar
+
+**HOA $484–$505/mo**
+
+422 homes · 1,720–6,104 sq ft
+
+Last sale $2.34M, Oct 2026 · Mello-Roos: some homes
+
+### Alta Del Mar
+
+**HOA: ask me**
+
+216 homes · built 2013–2016 · 4,191–6,492 sq ft
+
+Last sale $4.5M, Jul 2026
+
+### Meadows Del Mar
+
+**HOA $435–$443/mo**
+
+200 homes · built 2000–2007 · 3,588–7,755 sq ft
+
+Last sale $4.28M, Aug 2026 · Mello-Roos: yes
+
+### Bougainvillea
+
+**HOA: ask me**
+
+76 homes · built 2003 · 3,928–5,000 sq ft
+
+Last sale $3.95M, May 2026
+
+### Ridge
+
+**HOA: ask me**
+
+19 homes · built 2003–2020 · 5,631–8,992 sq ft
+
+Last sale $4.14M, Apr 2024
+
+### Ridge Estates
+
+**HOA: ask me**
+
+19 homes · built 2015 · 5,342–5,475 sq ft
+
+Last sale $5.42M, Aug 2022
+
+### Whitehorse
+
+**HOA: ask me**
+
+19 homes · built 2003–2004 · 5,163–7,980 sq ft
+
+Last sale $4.6M, May 2026
+
+### Duck Pond Ranch
+
+**HOA: ask me**
+
+15 homes · built 2006–2008 · 4,275–15,264 sq ft
+
+Last sale $5.9M, Jul 2024
+
+### The Preserve
+
+**HOA: ask me**
+
+14 homes · built 2015–2020 · 4,620–9,436 sq ft
+
+Last sale $6.15M, Nov 2025
+
+### Paso Fino
+
+**HOA: ask me**
+
+12 homes · built 2005 · 3,788–5,813 sq ft
+
+Last sale $3.79M, Sep 2026
+
+### Three Canyons
+
+**HOA: ask me**
+
+12 homes · built 2007 · 5,050–5,620 sq ft
+
+Last sale $4.3M, May 2025
+
+### Silver Oaks Estates / Anderson Estates
+
+**HOA: ask me**
+
+8 homes · 7,382 sq ft
+
+Last sale $5.25M, Jun 2021
+
+### Valencia
+
+**HOA: ask me**
+
+7 homes · built 2003–2006 · 5,612–6,304 sq ft
+
+Last sale $4.25M, Aug 2025
+
+### Del Mar Mesa Estates
+
+**HOA: ask me**
+
+built 2024 · 5,764 sq ft
+
+Last sale $5.2M, May 2025
+
+Sizes and last sale come from single-family MLS sales (all years on record). HOA fees are from recent listings; confirm the current amount with the HOA.
 
 ## Elementary schools
 
@@ -66,6 +182,8 @@ This search shows all of 92130. Zoom the map to Del Mar Mesa, or ask me for ever
 - [Sycamore Ridge Elementary](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/) — 25% of sales
 
 Share of the last 5 years of sales inside each attendance area. High school is Torrey Pines High; Canyon Crest Academy and San Dieguito Academy by lottery. Confirm any address with [Del Mar Union](https://www.dmusd.org/Page/191), Solana Beach SD or [San Dieguito Union HSD](https://www.sduhsd.net/Our-District/About-Us-History/Boundaries-Map-/).
+
+**Good to know.** Some Del Mar Mesa neighborhoods pay Mello-Roos (a special tax, such as a school or facilities CFD) on top of regular property tax, and others don't. It shows as a separate line on the property tax bill, so check the bill on every listing.
 
 ## Recently sold in Del Mar Mesa
 
@@ -82,7 +200,7 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 | 10871 Cadence Isle Ct — Alta Del Mar | 4 / 5 | $5,100,000 | Feb 19, 2026 |
 | 6286 Belmont Trail Ct — Alta Del Mar | 5 / 5 | $4,210,000 | Dec 5, 2025 |
 
-## Del Mar Mesa Homes: Common Questions
+## Del Mar Mesa: Common Questions
 
 ### How much does a house in Del Mar Mesa cost?
 
@@ -95,6 +213,14 @@ Del Mar Mesa has 14 single-family neighborhoods, including Meadows Del Mar, Alta
 ### How old are the homes in Del Mar Mesa?
 
 Homes that sold in the last 5 years were built between 1978 and 2024, with a median year of 2004.
+
+### Do homes in Del Mar Mesa have an HOA?
+
+It depends on the community. Recent listings show HOA dues in Palacio Del Mar ($484 to $505 a month), Meadows Del Mar ($435 to $443 a month). Several of the smaller custom-home enclaves have small or no associations, so check each listing; the community list on this page shows what we know for each one.
+
+### Do homes in Del Mar Mesa pay Mello-Roos?
+
+Some Del Mar Mesa neighborhoods pay Mello-Roos (a special tax, such as a school or facilities CFD) on top of regular property tax, and others don't. It shows as a separate line on the property tax bill, so check the bill on every listing.
 
 ### What schools serve Del Mar Mesa?
 
@@ -120,4 +246,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.

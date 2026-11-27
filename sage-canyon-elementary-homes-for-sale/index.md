@@ -1,12 +1,12 @@
 # Homes for Sale in the Sage Canyon Elementary Area | Carmel Valley 92130
 
-> Carmel Valley houses in the Sage Canyon Elementary attendance area: 12-month median $3.17M, neighborhoods in the boundary, sold prices and a map.
+> Carmel Valley houses in the Sage Canyon Elementary attendance area: 12-month median $3.23M, neighborhoods in the boundary, sold prices and a map.
 
 Source page: https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/
 
 ## Sage Canyon Elementary Homes for Sale Del Mar Union School District
 
-16 neighborhoods · 2,264+ homes · median $3.17M
+16 neighborhoods · 2,264+ homes · median $3.23M
 
 ## Sage Canyon neighborhoods
 
@@ -24,10 +24,10 @@ The single-family neighborhoods inside the Sage Canyon Elementary attendance bou
 
 Dashed line: the Sage Canyon Elementary attendance boundary from the Del Mar Union School District map. Neighborhood outlines are approximate. Boundaries change, so confirm any address with [the district](https://www.dmusd.org/Page/191).
 
-- **Median sale, last 12 mo:** $3.17M
-- **Sold, last 12 mo:** 36
-- **Per sq ft, last 12 mo:** $866
-- **On market, last 12 mo:** 10 days
+- **Median sale, last 12 mo:** $3.23M
+- **Sold, last 12 mo:** 35
+- **Per sq ft, last 12 mo:** $867
+- **On market, last 12 mo:** 9 days
 
 ## Carmel Valley houses for sale now
 
@@ -41,8 +41,8 @@ This search shows all of 92130. Ask me which listings are inside the Sage Canyon
 |---|---|---|
 | [Lexington](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/) | 10 | $3.1M–$3.7M |
 | Palacio Del Mar | 9 | $1.98M–$2.34M |
-| Belmont | 4 | $2.5M–$3.1M |
 | Alta Del Mar | 3 | $4.21M–$5.1M |
+| Belmont | 3 | $2.5M–$3.1M |
 | Meadows Del Mar | 3 | $3.63M–$4.75M |
 | Derby Hill | 2 | $3.23M–$4.1M |
 | Steeplechase | 2 | $2.41M–$2.42M |
@@ -67,9 +67,9 @@ From where homes sold in the last 12 months. 1 more sales had no neighborhood na
 
 ### 3,000–4,000 sq ft
 
-**$2.65M–$3.7M**
+**$2.66M–$3.7M**
 
-7 sales · about $862/sq ft · last sold $3.1M, Oct 2026
+6 sales · about $914/sq ft · last sold $3.1M, Oct 2026
 
 ### 4,000–5,000 sq ft
 
@@ -83,7 +83,7 @@ From where homes sold in the last 12 months. 1 more sales had no neighborhood na
 
 6 sales · about $811/sq ft · last sold $5.25M, Aug 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 27, 2026.
 
 ## Recently sold in the Sage Canyon area
 
@@ -126,7 +126,7 @@ Confirm middle and high school with [San Dieguito Union HSD](https://www.sduhsd.
 
 ### How much does a house in the Sage Canyon Elementary area cost?
 
-In the last 12 months, 36 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,171,948 (about $866 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,980,000 and $5,250,000.
+In the last 12 months, 35 single-family homes in the Sage Canyon Elementary attendance area sold at a median of $3,225,000 (about $867 per sq ft), versus $2,625,000 for all Carmel Valley houses. They sold for between $1,980,000 and $5,250,000.
 
 ### Which neighborhoods are in the Sage Canyon Elementary area?
 
@@ -142,7 +142,7 @@ Use the Del Mar Union School District school locator with the exact address befo
 
 ### How fast do homes sell in the Sage Canyon Elementary area?
 
-Over the last 12 months, the median home sold in 10 days on market. Homes in sought-after school areas often go under contract in the first week.
+Over the last 12 months, the median home sold in 9 days on market. Homes in sought-after school areas often go under contract in the first week.
 
 ## Looking in the Sage Canyon Area?
 
@@ -160,4 +160,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.

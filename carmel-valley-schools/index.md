@@ -34,7 +34,7 @@ Elementary areas from the Del Mar Union School District map and the Solana Beach
 | School | Neighborhoods | Median, 12 mo | Sold, 12 mo |
 |---|---|---|---|
 | Del Mar Union School District |  |  |  |
-| [Sage Canyon Elementary](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/) | 16 | $3.17M | 36 |
+| [Sage Canyon Elementary](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/) | 16 | $3.23M | 35 |
 | Alta Del Mar, Belmont, Breakers, Bridle Ridge, Carriage Run, Derby Hill, Lexington, Meadows Del Mar, and more |  |  |  |
 | [Pacific Sky Elementary](https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/) | 13 | $2.18M | 16 |
 | Canterra, Casabella, Cassavia, Costa Del Sol, Costa Del Sol West, Elms, Ivy, Portofino, and more |  |  |  |
@@ -51,21 +51,21 @@ Elementary areas from the Del Mar Union School District map and the Solana Beach
 | Solana Beach School District |  |  |  |
 | Solana Ranch Elementary | 10 | $2.41M | 22 |
 | Almeria, Arabella, Brightwater, Hampton Lane, Manzanita Trail, Olvera, Portico, Santa Barbara, and more |  |  |  |
-| Solana Highlands Elementary | 17 | $2.68M | 30 |
+| Solana Highlands Elementary | 17 | $2.68M | 29 |
 | 4x4 Construction, Alta Mar, Del Mar Summit, Derby Point, Heights, Lexington Summit, Mayfield, Promontory, and more |  |  |  |
-| Solana Santa Fe Elementary | 10 | $3.39M | 19 |
+| Solana Santa Fe Elementary | 10 | $3.33M | 18 |
 | Artesana, Casabella Collection, Meadowood, Palomar, Rancho Pacifica, Sendero Collection, Senterra, Stratford, and more |  |  |  |
 | Carmel Creek Elementary | 10 | $2.57M | 22 |
 | Bayshore, Cantamar, Carmel, Del Mar Bluffs, Del Mar Place, Granada, Heights, San Remo, and more |  |  |  |
 | Middle schools |  |  |  |
-| Carmel Valley Middle | 107 | $2.6M | 178 |
+| Carmel Valley Middle | 107 | $2.6M | 176 |
 | 4x4 Construction, Almeria, Alta Del Mar, Alta Mar, Amador, Arabella, Bayshore, Belmont, and more |  |  |  |
-| Earl Warren Middle | 13 | $3.5M | 25 |
+| Earl Warren Middle | 13 | $3.5M | 24 |
 | Alta Del Mar-Coastal, Artesana, Brightwater, Carmel, Olvera, Palomar, Rancho Pacifica, Senterra, and more |  |  |  |
 | Pacific Trails Middle | 54 | $2.81M | 74 |
 | Almeria, Amador, Arabella, Artesana, Bordeaux, Bougainvillea, Brightwater, Canterra, and more |  |  |  |
 | High school |  |  |  |
-| Torrey Pines High | 118 | $2.65M | 203 |
+| Torrey Pines High | 118 | $2.64M | 200 |
 | 4x4 Construction, Almeria, Alta Del Mar, Alta Del Mar-Coastal, Alta Mar, Amador, Arabella, Artesana, and more |  |  |  |
 
 Single-family homes inside each attendance boundary. Confirm any address with [Del Mar Union School District](https://www.dmusd.org/Page/191) or the [Solana Beach SD locator](https://www.schoolsitelocator.com/apps/solanabeach/).
@@ -130,4 +130,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.

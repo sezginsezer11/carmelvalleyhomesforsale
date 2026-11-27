@@ -54,7 +54,7 @@ This map shows 127 single-family neighborhoods in Carmel Valley (San Diego, 9213
 
 ### Which Carmel Valley neighborhoods have the lowest and highest home prices?
 
-Among neighborhoods with at least three house sales in the last 12 months, San Remo had the lowest median ($1.91M) and Rancho Pacifica the highest ($5.93M). Lot size, home age and school area explain most of the gap.
+Among neighborhoods with at least three house sales in the last 12 months, San Remo had the lowest median ($1.91M) and Rancho Pacifica the highest ($6.35M). Lot size, home age and school area explain most of the gap.
 
 ### What are the largest single-family neighborhoods in Carmel Valley?
 
@@ -84,4 +84,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.

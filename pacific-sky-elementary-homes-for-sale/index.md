@@ -60,7 +60,7 @@ From where homes sold in the last 12 months.
 
 3 sales · about $773/sq ft · last sold $2.39M, Nov 2026
 
-What single-family homes inside the boundary sold for in the last 12 months. As of November 24, 2026.
+What single-family homes inside the boundary sold for in the last 12 months. As of November 27, 2026.
 
 ## Recently sold in the Pacific Sky area
 
@@ -137,4 +137,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.

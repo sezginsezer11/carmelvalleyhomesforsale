@@ -19,7 +19,7 @@ Every page listed below has a clean Markdown version at the same path (index.md)
 - [Carmel Country Highlands Homes for Sale](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/index.md): Carmel Country Highlands: larger homes on bigger lots - 12-month prices, neighborhoods, prices by home size, schools, FAQs.
 - [Torrey Highlands Homes for Sale](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/index.md): Torrey Highlands - 12-month prices, neighborhoods, prices by home size, schools, recent sales, FAQs.
 - [Torrey Hills Homes for Sale](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/index.md): Torrey Hills - 12-month prices, neighborhoods, prices by home size, schools, recent sales, FAQs.
-- [Del Mar Mesa Homes for Sale](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): Del Mar Mesa - 12-month prices, neighborhoods, prices by home size, schools, recent sales, FAQs.
+- [Del Mar Mesa, Carmel Valley: Communities, Prices & HOA](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): Del Mar Mesa - 12-month prices, neighborhoods, prices by home size, schools, recent sales, FAQs.
 
 ## Schools
 
@@ -44,7 +44,7 @@ Every page listed below has a clean Markdown version at the same path (index.md)
 - [Carmel Country Highlands Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/).
 - [Torrey Highlands Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/torrey-highlands-homes-for-sale/).
 - [Torrey Hills Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/torrey-hills-homes-for-sale/).
-- [Del Mar Mesa Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/).
+- [Del Mar Mesa, Carmel Valley: Communities, Prices & HOA - FAQs](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/index.md): 7 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/).
 - [Carmel Valley Schools Map: Homes by Elementary School Area - FAQs](https://carmelvalleyhomesforsale.com/carmel-valley-schools/index.md): 4 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/carmel-valley-schools/).
 - [Homes for Sale in the Sage Canyon Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/).
 - [Homes for Sale in the Pacific Sky Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/pacific-sky-elementary-homes-for-sale/).
@@ -53,7 +53,7 @@ Every page listed below has a clean Markdown version at the same path (index.md)
 - [Homes for Sale in the Sycamore Ridge Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/sycamore-ridge-elementary-homes-for-sale/).
 - [Homes for Sale in the Torrey Hills Elementary Area - FAQs](https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/torrey-hills-elementary-homes-for-sale/).
 - [Carmel Valley Luxury Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/carmel-valley-luxury-homes-for-sale/index.md): 6 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/carmel-valley-luxury-homes-for-sale/).
-- [Lexington Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/index.md): 5 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/).
+- [Lexington Homes for Sale - FAQs](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/index.md): 8 questions and answers (the FAQ section near the end of https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/).
 
 ## Contact
 

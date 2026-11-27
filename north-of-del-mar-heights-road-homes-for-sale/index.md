@@ -11,7 +11,7 @@ Source page: https://carmelvalleyhomesforsale.com/north-of-del-mar-heights-road-
 Established 1980s and 1990s neighborhoods north of Del Mar Heights Road, close to the beach, Torrey Pines and the I-5 / SR-56 interchange.
 
 - **Median sale, last 12 mo:** $2.68M
-- **Sold, last 12 mo:** 30
+- **Sold, last 12 mo:** 29
 - **Neighborhoods:** 19
 - **On market, last 12 mo:** 9 days
 
@@ -30,7 +30,7 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 | Neighborhood | Sales, 12 mo | Sold for, 12 mo |
 |---|---|---|
 | Heights — 566 homes · built 1984–1989 | 11 | $2.5M–$3.44M |
-| Santa Fe Summit — 187 homes · built 1991–1995 | 5 | $2.58M–$3.68M |
+| Santa Fe Summit — 187 homes · built 1991–1995 | 4 | $2.58M–$3.68M |
 | Alta Mar — 216 homes · built 1986–1989 | 4 | $2.02M–$2.61M |
 | Promontory — 190 homes · built 1995–2002 | 2 | $3.2M–$3.43M |
 | Torrey Glen — 151 homes · built 1986–1987 | 2 | $1.7M–$2.04M |
@@ -67,7 +67,7 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 **$2.21M–$3.7M**
 
-12 sales · about $892/sq ft · last sold $2.78M, Oct 2026
+11 sales · about $892/sq ft · last sold $2.78M, Oct 2026
 
 ### 4,000–5,000 sq ft
 
@@ -75,7 +75,7 @@ This search shows all of 92130. Zoom the map to North of Del Mar Heights Road, o
 
 2 sales · about $855/sq ft · last sold $2.87M, Oct 2026
 
-30 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 24, 2026.
+29 single-family sales inside North of Del Mar Heights Road, last 12 months, as of November 27, 2026.
 
 ## Elementary schools
 
@@ -102,11 +102,11 @@ Share of the last 5 years of sales inside each attendance area. High school is T
 
 ### How much does a house in North of Del Mar Heights Road cost?
 
-In the last 12 months, 30 single-family homes in North of Del Mar Heights Road sold at a median of $2,683,832 (about $947 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $1,595,000 and $3,700,000.
+In the last 12 months, 29 single-family homes in North of Del Mar Heights Road sold at a median of $2,680,665 (about $948 per sq ft), above the Carmel Valley median of $2,625,000. They sold for between $1,595,000 and $3,700,000.
 
 ### Which neighborhoods are in North of Del Mar Heights Road?
 
-North of Del Mar Heights Road has 19 single-family neighborhoods, including Heights, Santa Fe Summit, Alta Mar, Promontory, Torrey Glen, Vista Santa Barbara. Among those with at least three sales in the last 12 months, Alta Mar had the lowest median ($2.2M) and Santa Fe Summit the highest ($3.13M).
+North of Del Mar Heights Road has 19 single-family neighborhoods, including Heights, Santa Fe Summit, Alta Mar, Promontory, Torrey Glen, Vista Santa Barbara. Among those with at least three sales in the last 12 months, Alta Mar had the lowest median ($2.2M) and Santa Fe Summit the highest ($3.14M).
 
 ### How old are the homes in North of Del Mar Heights Road?
 
@@ -136,4 +136,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.

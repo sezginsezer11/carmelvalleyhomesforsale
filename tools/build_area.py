@@ -38,7 +38,13 @@ KML_AREA = {"Torrey Del Mar": "tdm", "Torrey Highlands": "tdm", "Pacific Highlan
             "Carmel Country Highlands": "cch", "Torrey Hills": "th", "South of Del Mar Heights Road": "s",
             "North of Del Mar Heights Road": "n", "Rancho Pacifica": "rp"}
 # Extra, hand-checked notes per area (shown under "Good to know"). Keep these factual.
+# Areas whose page lists every community with homes, sizes, HOA, Mello-Roos and last sale.
+GUIDE_AREAS = {"dmm"}
+# Another network site owns "<area> homes for sale" here, so this page leads with the area name.
+NAME_FOCUS = {"dmm": ("Del Mar Mesa, Carmel Valley: Communities, Prices &amp; HOA", "Del Mar Mesa, Carmel Valley")}
 NOTES = {
+    "dmm": ["Some Del Mar Mesa neighborhoods pay Mello-Roos (a special tax, such as a school or facilities CFD) on top of regular "
+            "property tax, and others don't. It shows as a separate line on the property tax bill, so check the bill on every listing."],
     "phr": ["Many Pacific Highlands Ranch neighborhoods pay Mello-Roos (a special tax for local infrastructure) on top of "
             "regular property tax. The amount differs by neighborhood and year, so check the tax bill on every listing."],
 }
@@ -134,6 +140,41 @@ def build(key, shapes, hub_comms, all_rows):
     lo = min(priced, key=lambda x: x["med"]) if priced else None
     hi = max(priced, key=lambda x: x["med"]) if priced else None
 
+    # every community: homes, sizes, HOA, Mello-Roos, last sale (all years, so small enclaves still show)
+    guide_html, hoa_faq = "", None
+    if key in GUIDE_AREAS:
+        from build_communities import hoa_info, hoa_fee_text, MELLO_TEXT
+        all_by = collections.defaultdict(list)
+        for r in all_rows:  # by community name: some homes sit just outside the drawn area outline
+            all_by[(r.get("community_name") or "").strip().lower()].append(r)
+        cards, known_fee = [], []
+        for x in sorted(nb, key=lambda x: (-(x["homes"] or 0), x["n"])):
+            g = all_by.get(x["n"].lower(), [])
+            h = hoa_info(x["n"])
+            sizes = sorted(r["living_area"] for r in g if r.get("living_area"))
+            hoa_txt = ("No HOA" if h["status"] == "no" else f'HOA {hoa_fee_text(h)}/mo' if h["status"] == "yes" and h.get("fee_low")
+                       else "HOA: yes" if h["status"] == "yes" else "HOA: ask me")
+            if h["status"] == "yes" and h.get("fee_low"):
+                known_fee.append(f'{x["n"]} ({hoa_fee_text(h).replace("&ndash;", " to ")} a month)')
+            bits = [b for b in [f'{x["homes"]} homes' if x["homes"] else "", f'built {x["built"]}' if x["built"] else "",
+                                (f"{sizes[0]:,}&ndash;{sizes[-1]:,} sq ft" if sizes[-1] > sizes[0] else f"{sizes[0]:,} sq ft") if sizes else ""] if b]
+            last = f'Last sale {short(g[0]["close_price"])}, {g[0]["_d"].strftime("%b")} {g[0]["_d"].year}' if g else "No recent MLS sales"
+            mello = f'Mello-Roos: {MELLO_TEXT[h["mello"]].lower()}' if h.get("mello") in MELLO_TEXT else ""
+            name_html = f'<a href="{x["url"]}">{e(x["n"])}</a>' if x["url"] else e(x["n"])
+            cards.append(f'<div class="bc"><div class="bc-h"><h3>{name_html}</h3><b>{hoa_txt}</b></div>'
+                         f'<div class="bc-m">{" &middot; ".join(bits)}</div>'
+                         f'<div class="bc-m">{" &middot; ".join(b for b in [last, mello] if b)}</div></div>')
+        guide_html = f'''<section id="communities" style="padding-top:8px">
+  <div class="wrap">
+    <h2 class="h3">Every community in {e(label)}: HOA, sizes and last sale</h2>
+    <div class="bcs guide">{"".join(cards)}</div>
+    <p class="note">Sizes and last sale come from single-family MLS sales (all years on record). HOA fees are from recent listings; confirm the current amount with the HOA.</p>
+  </div>
+</section>'''
+        hoa_faq = (f"Do homes in {label} have an HOA?",
+                   "It depends on the community. " + (f"Recent listings show HOA dues in {', '.join(known_fee)}. " if known_fee else "")
+                   + "Several of the smaller custom-home enclaves have small or no associations, so check each listing; the community list on this page shows what we know for each one.")
+
     # price by home size
     bed_cards = size_cards(t12, span, short, min_sales=2)
 
@@ -177,6 +218,8 @@ def build(key, shapes, hub_comms, all_rows):
     ]
     if key in NOTES:
         faqs.insert(3, (f"Do homes in {label} pay Mello-Roos?", NOTES[key][0]))
+    if hoa_faq:
+        faqs.insert(3, hoa_faq)
     faq_html = "\n".join(f'      <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faqs)
     ld = [
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -196,7 +239,8 @@ def build(key, shapes, hub_comms, all_rows):
         "{{contact_lead}}", f"Tell me your budget and must-haves and I&rsquo;ll send you the {label} homes that fit, including ones that haven&rsquo;t hit the market yet.")
     hide_js = tpl[tpl.rindex("<script>"):tpl.rindex("</script>") + len("</script>")]
 
-    title = f"{label} Homes for Sale | Carmel Valley, San Diego 92130"
+    title = html.unescape(NAME_FOCUS[key][0]) if key in NAME_FOCUS else f"{label} Homes for Sale | Carmel Valley, San Diego 92130"
+    h1 = NAME_FOCUS[key][1] if key in NAME_FOCUS else f"{label} Homes for Sale"
     desc = f"{label} single-family homes in Carmel Valley: 12-month median {short(m12)}, {len(comms)} neighborhoods, sold prices, schools and a map."
     if len(desc) > 160:
         desc = f"{label} homes in Carmel Valley: 12-month median {short(m12)}, {len(comms)} neighborhoods, sold prices and a map."
@@ -265,6 +309,10 @@ def build(key, shapes, hub_comms, all_rows):
   .bc-bar{{height:6px;background:#e6f0f6;border-radius:3px;margin:8px 0 6px}}
   .bc-bar i{{display:block;height:6px;background:var(--lake);border-radius:3px}}
   .bc-m{{font-size:13px;color:var(--label)}}
+  .bcs.guide{{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}}
+  .bcs.guide .bc-h{{gap:10px}}
+  .bcs.guide .bc-h b{{font-size:13px;white-space:nowrap;color:var(--lake-dark)}}
+  .bcs.guide .bc-m+.bc-m{{margin-top:2px}}
   .sch{{list-style:none;border:1px solid var(--line);border-radius:12px;overflow:hidden}}
   .sch li{{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-top:1px solid var(--mist);font-weight:600}}
   .sch li:first-child{{border-top:0}}
@@ -291,7 +339,7 @@ def build(key, shapes, hub_comms, all_rows):
 <section class="ar-hero" style="padding-left:0;padding-right:0">
   <div class="wrap">
     <span class="eyebrow"><i></i>Carmel Valley &middot; San Diego 92130</span>
-    <h1>{e(label)} Homes for Sale</h1>
+    <h1>{e(h1)}</h1>
     <p>{e(AREA_TEXT.get(key, ""))}</p>
   </div>
 </section>
@@ -338,6 +386,8 @@ def build(key, shapes, hub_comms, all_rows):
   </div>
 </section>
 
+{guide_html}
+
 <section id="schools" style="padding-top:8px">
   <div class="wrap two">
     <div>
@@ -356,7 +406,7 @@ def build(key, shapes, hub_comms, all_rows):
 
 <section class="faq" id="faq">
   <div class="wrap">
-    <div class="sec-head"><h2>{e(label)} Homes: Common Questions</h2></div>
+    <div class="sec-head"><h2>{e(label)}{"" if key in NAME_FOCUS else " Homes"}: Common Questions</h2></div>
     <div class="faq-list">
 {faq_html}
     </div>

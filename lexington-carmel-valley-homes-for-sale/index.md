@@ -19,6 +19,8 @@ Source page: https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-
 - **Sq ft:** 2,945–4,930
 - **Median lot:** 8,448 sq ft
 - **Days on market, 12 mo:** 8 days
+- **HOA:** Confirm
+- **Mello-Roos:** Check tax bill
 
 *Location*
 
@@ -51,37 +53,48 @@ School assignments can change. Verify current boundaries directly with [Del Mar 
 
 *The First Question*
 
-## What a Lexington Home Costs by Bedrooms
+## What a Lexington Home Costs by Size
 
-Closed single-family sales in Lexington in the last 12 months, by bedroom count: what each size sold for and the most recent sale.
+Lexington homes come in a few floor-plan sizes. Each card shows the most recent sales of that size, so you can compare like with like.
 
-### 4 Bedroom
+### About 3,850 sq ft
 
-1 sale · 12 mo
+3,708–3,827 sq ft · usually 5 bed
 
-- **Size:** 4,620 sq ft
-- **Sold for:** $3.5M
-- **Most recent sale:** $3,500,000 · May 2026
+- **Sold for:** $2.8M–$3.7M
+- **Per sq ft:** about $836
+- $3,100,825 — 3,827 sq ft · 5 bd · Oct 2026
+- $3,300,000 — 3,827 sq ft · 5 bd · Jul 2026
+- $3,700,000 — 3,827 sq ft · 5 bd · Apr 2026
+- $2,750,000 — 3,827 sq ft · 5 bd · Aug 2025
 
-### 5 Bedroom
+4 most recent sales, last 2 years
 
-4 sales · 12 mo
+### About 4,450 sq ft
 
-- **Size:** 2,945–3,827 sq ft
-- **Sold for:** $3.1M–$3.7M
-- **Most recent sale:** $3,100,825 · Oct 2026
+4,433–4,454 sq ft · usually 6 bed
 
-### 6 Bedroom
+- **Sold for:** $2.6M–$3.5M
+- **Per sq ft:** about $685
+- $3,500,000 — 4,454 sq ft · 6 bd · Oct 2026
+- $2,600,000 — 4,454 sq ft · 5 bd · Apr 2024
 
-4 sales · 12 mo
+2 most recent sales, last 5 years
 
-- **Size:** 4,454–4,687 sq ft
+### About 4,700 sq ft
+
+4,620–4,740 sq ft · usually 6 bed
+
 - **Sold for:** $3.1M–$3.5M
-- **Most recent sale:** $3,500,000 · Oct 2026
+- **Per sq ft:** about $722
+- $3,118,896 — 4,687 sq ft · 6 bd · Jul 2026
+- $3,298,765 — 4,687 sq ft · 6 bd · Jun 2026
+- $3,500,000 — 4,620 sq ft · 4 bd · May 2026
+- $3,455,000 — 4,670 sq ft · 6 bd · May 2026
 
-6-bedroom homes made up 4 of the 10 sales. See the [price history](https://carmelvalleyhomesforsale.com/lexington-carmel-valley-homes-for-sale/#sold-data).
+4 most recent sales, last 2 years
 
-Closed MLS sales, last 12 months.
+Closed MLS sales: up to 4 most recent per size from the last 2 years (5 years when a size has fewer than 2 recent sales). As of Nov 27, 2026.
 
 ## Life at Lexington
 
@@ -94,6 +107,18 @@ Lexington is a neighborhood of 265 homes built 1998–2003 in Carmel Country Hig
 - **School area.** Homes here are in the [Sage Canyon Elementary](https://carmelvalleyhomesforsale.com/sage-canyon-elementary-homes-for-sale/) attendance area.
 - **Homes sell quickly.** Over the last 12 months the median home sold in 8 days, versus 10 across Carmel Valley.
 
+*HOA & Mello-Roos*
+
+## Does Lexington Have an HOA?
+
+Whether there is an HOA, what it costs, and Mello-Roos.
+
+Confirm
+
+**HOA dues for Lexington are being confirmed.** The listing and the seller’s HOA documents show the exact monthly amount. Ask me and I’ll check it for the home you like.
+
+**Mello-Roos:** check the property tax bill for the home; special taxes (CFDs) show up as separate lines and can differ from street to street.
+
 *Explore More*
 
 ## Neighborhoods Near Lexington
@@ -102,17 +127,17 @@ Worth comparing if you like Lexington's location.
 
 ### Steeplechase
 
-13 sales in 5 yrs · 12-mo median $2.41M
+12-mo median $2.4M
 
-Next door in Carmel Country Highlands.
+Next door in Carmel Country Highlands. Homes about 2,507–3,049 sq ft, built 1999–2001.
 
 [Carmel Country Highlands guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/)
 
 ### Belmont
 
-28 sales in 5 yrs · 12-mo median $2.66M
+12-mo median $2.7M
 
-Next door in Carmel Country Highlands.
+Next door in Carmel Country Highlands. Homes about 2,720–4,670 sq ft, built 1999–2011.
 
 [Carmel Country Highlands guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/)
 
@@ -120,15 +145,23 @@ Next door in Carmel Country Highlands.
 
 7 sales in 5 yrs
 
-Next door in Carmel Country Highlands.
+Next door in Carmel Country Highlands. Homes about 3,470–3,927 sq ft, built 2000–2001.
 
 [Carmel Country Highlands guide →](https://carmelvalleyhomesforsale.com/carmel-country-highlands-homes-for-sale/)
+
+### Alta Del Mar
+
+12-mo median $4.5M
+
+0.1 miles away in Del Mar Mesa. Homes about 4,191–6,235 sq ft, built 2013–2016.
+
+[Del Mar Mesa guide →](https://carmelvalleyhomesforsale.com/del-mar-mesa-homes-for-sale/)
 
 *Sold Data · Last 5 Years*
 
 ## Lexington Prices & Sales
 
-In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 24, 2026.
+In the last 12 months, 10 Lexington homes sold, at a median of $3,325,000 ($811/sq ft). They sold for between $3,100,825 and $3,700,000. The most recent sale was a 6-bedroom, 4,454 sq ft home that closed at $3,500,000 on Oct 30, 2026. MLS closed sales as of Nov 27, 2026.
 
 The stats reflect the trailing 12 months; the table breaks the same data out by calendar year.
 
@@ -257,6 +290,18 @@ Over the last 12 months, the median Lexington home sold in 8 days on market. Wel
 
 Lexington is in Carmel Country Highlands, next to Steeplechase, Belmont, Breakers. See the map on this page for its boundary.
 
+### Does Lexington have an HOA?
+
+The listing for each Lexington home shows whether it pays HOA dues and how much. Ask me and I'll confirm it for the home you're considering.
+
+### Is there Mello-Roos in Lexington?
+
+Check the property tax bill for the Lexington home you like: Mello-Roos and other special taxes (CFDs) appear as separate lines. Ask the title company for the exact amount during escrow.
+
+### How big are homes in Lexington, and what do they sell for?
+
+Homes here come in a few floor-plan sizes: about 3,850 sq ft ($2.8M to $3.7M); about 4,450 sq ft ($2.6M to $3.5M); about 4,700 sq ft ($3.1M to $3.5M). These ranges use the most recent sales of each size; see the size cards on this page.
+
 ## Thinking About Lexington?
 
 Buying or selling in Lexington? I track every sale here and can tell you what a home is really worth, with the comps to back it up.
@@ -273,4 +318,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.

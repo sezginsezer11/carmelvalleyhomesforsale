@@ -92,7 +92,7 @@ This search shows all of 92130. Zoom the map to Pacific Highlands Ranch, or ask 
 
 2 sales · about $1,059/sq ft · last sold $4.15M, Oct 2026
 
-57 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 24, 2026.
+57 single-family sales inside Pacific Highlands Ranch, last 12 months, as of November 27, 2026.
 
 ## Elementary schools
 
@@ -161,4 +161,4 @@ Keller Williams Realty · DRE #01988197
 
 ---
 
-Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity.
+Sez Sezer, California DRE #01988197, Keller Williams Realty. Each office is independently owned and operated. Information deemed reliable but not guaranteed. This is not intended to solicit properties already listed. Equal Housing Opportunity. This site is not the homeowners association or its management company.
